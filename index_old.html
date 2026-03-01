@@ -89,7 +89,7 @@
     <!-- Header & Navigation -->
     <header id="mainHeader">
         <nav>
-            <a class='logo' href='/'>
+            <a href="index.html" class="logo">
                 <img src="images/LOGO002.png" alt="Alabama Mayflower Society" class="logo-img">
             </a>
             
@@ -100,14 +100,14 @@
             </button>
             
             <ul class="nav-links" id="navLinks">
-                <li><a href='/about-us'>About Us</a></li>
-                <li><a href='/our-history'>Our History</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="our-history.html">Our History</a></li>
                 <li><a href="#membership">Membership</a></li>
-                <li><a href='/events'>Events</a></li>
-                <li><a href='/news'>News</a></li>
-                <li><a href='/wewillplymouthrockyouweekend'>2026 Conference</a></li>
-                <li><a href='/useful-links'>Useful Links</a></li>
-                <li><a href='/contact_submit'>Contact Us</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="wewillplymouthrockyouweekend.html">2026 Conference</a></li>
+                <li><a href="useful-links.html">Useful Links</a></li>
+                <li><a href="contact_submit.html">Contact Us</a></li>
                 <li><a href="#support"><img src="images/LOGO001.png" alt="Mayflower Society" style="height: 45px; width: auto; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3)); background: none;"></a></li>
             </ul>
         </nav>
@@ -125,7 +125,7 @@
                     Become a Member
                     <span>→</span>
                 </a>
-                <a class='btn btn-secondary' href='/about-us'>
+                <a href="about-us.html" class="btn btn-secondary">
                     Discover Your Heritage
                 </a>
             </div>
@@ -147,7 +147,7 @@
             </div>
             
             <div class="features-grid">
-                <a class='feature-card' href='/our-history'>
+                <a href="our-history.html" class="feature-card">
                     <div class="feature-image" style="background: linear-gradient(135deg, var(--bronze), var(--gold)); padding: 3rem; display: flex; align-items: center; justify-content: center; min-height: 250px;">
                         <h3 style="color: white; font-size: 2.5rem; margin: 0;">Our Heritage</h3>
                     </div>
@@ -169,7 +169,7 @@
                     </div>
                 </a>
                 
-                <a class='feature-card' href='/mayflower-compact'>
+                <a href="mayflower-compact.html" class="feature-card">
                     <div class="feature-image" style="background: linear-gradient(135deg, var(--navy-blue), var(--royal-blue)); padding: 3rem; display: flex; align-items: center; justify-content: center; min-height: 250px;">
                         <h3 style="color: white; font-size: 2.5rem; margin: 0;">Foundation</h3>
                     </div>
@@ -192,22 +192,20 @@
     <section id="annual-conference" style="background: var(--cream); padding: 4rem 2rem;">
         <div class="container">
             <div class="conference-card" style="max-width: 900px; margin: 0 auto;">
-                <div class="feature-card">
-                    <!-- Video is OUTSIDE the anchor tag so clicks play the video, not navigate -->
-                    <div class="feature-image" style="height: auto;">
-                        <div class="video-wrapper">
-                            <video id="conferenceVideo">
-                                <source src="images/Teaser_27FEB26.mp4" type="video/mp4">
-                                Your browser doesn't support video playback.
-                            </video>
-                            <div class="video-play-overlay" id="conferencePlayOverlay" onclick="playConferenceVideo(event)">
-                                <div class="play-button"></div>
-                                <div class="play-text">We Will Plymouth Rock You!</div>
+                <a href="wewillplymouthrockyouweekend.html" style="text-decoration: none; color: inherit; display: block;">
+                    <div class="feature-card" style="cursor: pointer;">
+                        <div class="feature-image" style="height: auto;">
+                            <div class="video-wrapper">
+                                <video id="conferenceVideo">
+                                    <source src="images/Teaser_27FEB26.mp4" type="video/mp4">
+                                    Your browser doesn't support video playback.
+                                </video>
+                                <div class="video-play-overlay" id="conferencePlayOverlay" onclick="playConferenceVideo(event)">
+                                    <div class="play-button"></div>
+                                    <div class="play-text">We Will Plymouth Rock You!</div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- Link is only around the text/button content below the video -->
-                    <a href='/wewillplymouthrockyouweekend' style='text-decoration: none; color: inherit; display: block;'>
                         <div class="feature-content" style="text-align: center; padding: 3rem;">
                             <h2 style="font-size: 2rem; margin-bottom: 1rem; color: var(--navy-blue);">The Society of Mayflower Descendants</h2>
                             <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--royal-blue);">in the State of (Sweet Home) Alabama</h3>
@@ -217,8 +215,8 @@
                             </div>
                             <span class="feature-link" style="font-size: 1.25rem;">Click for More Information →</span>
                         </div>
-                    </a>
-                </div>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
@@ -277,7 +275,7 @@
                     <div class="feature-content">
                         <h3>Member Benefits</h3>
                         <p>Access to exclusive events, research resources, quarterly newsletter, and connection with fellow descendants across Alabama and the nation.</p>
-                        <a class='feature-link' href='/member-benefits'>View Benefits →</a>
+                        <a href="member-benefits.html" class="feature-link">View Benefits →</a>
                     </div>
                 </div>
                 
@@ -288,7 +286,7 @@
                     <div class="feature-content">
                         <h3>Application Process</h3>
                         <p>We'll guide you through documenting your lineage from you back to your Mayflower ancestor. Our genealogists are here to help every step of the way.</p>
-                        <a class='feature-link' href='/application-process'>Get Started →</a>
+                        <a href="application-process.html" class="feature-link">Get Started →</a>
                     </div>
                 </div>
                 
@@ -299,7 +297,7 @@
                     <div class="feature-content">
                         <h3>Junior Membership</h3>
                         <p>Enroll children and grandchildren for just $10. Engage the next generation in preserving our Mayflower heritage and American history.</p>
-                        <a class='feature-link' href='/junior-membership'>Learn More →</a>
+                        <a href="junior-membership.html" class="feature-link">Learn More →</a>
                     </div>
                 </div>
             </div>
@@ -348,13 +346,13 @@
                 <div class="footer-section">
                     <h3>Quick Links</h3>
                     <ul>
-                        <li><a href='/about-us'>About Us</a></li>
-                        <li><a href='/our-history'>Our History</a></li>
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="our-history.html">Our History</a></li>
                         <li><a href="#membership">Membership</a></li>
-                        <li><a href='/events'>Events</a></li>
-                        <li><a href='/news'>News</a></li>
-                        <li><a href='/wewillplymouthrockyouweekend'>2026 Conference</a></li>
-                        <li><a href='/useful-links'>Useful Links</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="wewillplymouthrockyouweekend.html">2026 Conference</a></li>
+                        <li><a href="useful-links.html">Useful Links</a></li>
                     </ul>
                 </div>
                 
@@ -374,7 +372,7 @@
                         <li>📧 <a href="mailto:governor@alabamasmd.org">governor@alabamasmd.org</a></li>
                         <li>🔗 <a href="https://themayflowersociety.org" target="_blank" rel="noopener">General Society of Mayflower Descendants</a></li>
                         <li>📍 Alabama, USA</li>
-                        <li><a href='/contact-us'>Contact Form</a></li>
+                        <li><a href="contact-us.html">Contact Form</a></li>
                     </ul>
                 </div>
             </div>
@@ -389,8 +387,8 @@
     <script>
         // Play conference video when play button is clicked
         function playConferenceVideo(event) {
-            event.preventDefault();
-            event.stopPropagation();
+            event.preventDefault(); // Prevent link navigation
+            event.stopPropagation(); // Stop event from bubbling
             
             const video = document.getElementById('conferenceVideo');
             const overlay = document.getElementById('conferencePlayOverlay');
