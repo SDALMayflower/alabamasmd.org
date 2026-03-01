@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact the Alabama Society of Mayflower Descendants">
+    <title>Contact Us | Alabama Society of Mayflower Descendants</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/logo-fix.css">
+    <link rel="icon" type="image/png" href="images/LOGO001.png">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header id="mainHeader">
+        <nav>
+            <a href="index.html" class="logo">
+                <img src="images/LOGO002.png" alt="Alabama Mayflower Society" class="logo-img">
+            </a>
+            
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="our-history.html">Our History</a></li>
+                <li><a href="index.html#membership">Membership</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="wewillplymouthrockyouweekend.html">2026 Conference</a></li>
+                <li><a href="useful-links.html">Useful Links</a></li>
+                <li><a href="contact_submit.html">Contact Us</a></li>
+                <li><a href="index.html#support"><img src="images/LOGO001.png" alt="Mayflower Society" style="height: 45px; width: auto; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3)); background: none;"></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contact Section -->
+    <section style="background: var(--cream); padding: 6rem 2rem 4rem;">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contact Us</h2>
+                <p>Thank you for visiting The Alabama Society of Mayflower Descendants. Please fill out the form below so we can provide a quick and efficient response.</p>
+            </div>
+            
+            <!-- Separator -->
+            <div class="separator-container">
+                <img src="images/Mayflower_separator_line.jpg" alt="Separator" class="mayflower-separator">
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; margin-top: 3rem; align-items: start;">
+                <!-- Contact Form -->
+                <div style="background: white; padding: 3rem; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                    <form action="send-email.php" method="POST" style="display: flex; flex-direction: column; gap: 1.5rem;">
+                        <div>
+                            <label for="name" style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--navy-blue);">Name <span style="color: var(--deep-red);">*</span></label>
+                            <input type="text" id="name" name="name" required 
+                                   style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 5px; font-family: inherit; font-size: 1rem;">
+                        </div>
+                        
+                        <div>
+                            <label for="email" style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--navy-blue);">Email <span style="color: var(--deep-red);">*</span></label>
+                            <input type="email" id="email" name="email" required 
+                                   style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 5px; font-family: inherit; font-size: 1rem;">
+                        </div>
+                        
+                        <div>
+                            <label for="subject" style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--navy-blue);">Subject</label>
+                            <input type="text" id="subject" name="subject" 
+                                   style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 5px; font-family: inherit; font-size: 1rem;">
+                        </div>
+                        
+                        <div>
+                            <label for="message" style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--navy-blue);">Message <span style="color: var(--deep-red);">*</span></label>
+                            <textarea id="message" name="message" rows="6" required 
+                                      style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 5px; font-family: inherit; font-size: 1rem; resize: vertical;"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" style="align-self: flex-start; margin-top: 1rem;">
+                            Send Message
+                            <span>→</span>
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Image -->
+                <div style="text-align: center;">
+                    <img src="images/Mobile_Bay_Mayflower.jpg" alt="Mobile Bay Mayflower" 
+                         style="width: 100%; max-width: 500px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+                    <p style="margin-top: 1rem; font-style: italic; color: var(--slate);">Mobile Bay at sunset, Alabama</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <img src="images/LOGO002.png" alt="Alabama Mayflower Society" class="footer-logo">
+                    <p>Preserving the legacy of the Mayflower Pilgrims since 1952</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="Twitter">𝕏</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="YouTube">📺</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="our-history.html">Our History</a></li>
+                        <li><a href="index.html#membership">Membership</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="wewillplymouthrockyouweekend.html">2026 Conference</a></li>
+                        <li><a href="useful-links.html">Useful Links</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Our Colonies</h3>
+                    <ul>
+                        <li><a href="#">Cahaba River Colony<br><small>Birmingham Area</small></a></li>
+                        <li><a href="#">Capital Colony<br><small>Montgomery Area</small></a></li>
+                        <li><a href="#">Gulf Coast Colony<br><small>Mobile Area</small></a></li>
+                        <li><a href="#">Tennessee Valley Colony<br><small>Huntsville Area</small></a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li>📧 <a href="mailto:governor@alabamasmd.org">governor@alabamasmd.org</a></li>
+                        <li>🔗 <a href="https://themayflowersociety.org" target="_blank" rel="noopener">General Society of Mayflower Descendants</a></li>
+                        <li>📍 Alabama, USA</li>
+                        <li><a href="contact_submit.html">Contact Form</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Alabama Society of Mayflower Descendants | All Rights Reserved | <a href="#" style="color: var(--gold);">Privacy Policy</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
