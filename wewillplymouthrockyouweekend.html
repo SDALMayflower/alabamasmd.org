@@ -21,9 +21,11 @@
             font-size: clamp(2.5rem, 6vw, 4.5rem);
             margin-bottom: 1rem;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-            -webkit-text-stroke: 2px #ff0000;
-            text-stroke: 2px #ff0000;
-            paint-order: stroke fill;
+            background: linear-gradient(135deg, var(--gold), var(--bronze));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            -webkit-text-stroke: 0;
         }
         
         .conference-hero .subtitle {
@@ -355,78 +357,25 @@
     <!-- Hero Section -->
     <section class="conference-hero">
         <div class="container">
-            <h1>We Will Plymouth Rock You Weekend</h1>
-            <p class="subtitle">The Society of Mayflower Descendants<br>in the State of (Sweet Home) Alabama</p>
+            <h1>"We Will Plymouth Rock You" Weekend</h1>
+            <p class="subtitle">The Society of Mayflower Descendants<br>in the State of <em>(Sweet Home)</em> Alabama</p>
             
             <div class="conference-date">
                 📅 Friday, April 24 & Saturday, April 25, 2026
+            </div>
+            
+            <div style="margin-top: 2rem;">
+                <a href="https://mailchi.mp/453535e44454/get_on_the_waiting_list" target="_blank" class="conference-date" style="text-decoration: none; display: inline-block;">
+                    📋 Get on the Waitlist
+                </a>
             </div>
         </div>
     </section>
 
     <!-- Separator -->
     <div class="separator-container">
-        <img src="images/Mayflower_separator_line.jpg" alt="Separator" class="mayflower-separator">
+        <img src="images/Mayflower_separator_line.jpg" alt="Separator" class="mayflower-separator" style="max-width: 85%; width: 85%;">
     </div>
-
-    <!-- Governor's Letter -->
-    <section class="governor-letter">
-        <div class="container">
-            <div class="letter-container">
-                <h2>Join Us for the "We Will Plymouth Rock You" Weekend!</h2>
-                
-                <p>As we approach our organization's 75th year in 2027, we are endeavoring to make 2026 one of the biggest years in our Society's history. To kick things off, we invite you to join us in Mobile, Alabama, for a landmark celebration during the last weekend of April.</p>
-                
-                <h3>Weekend Schedule</h3>
-                
-                <p><strong>Friday Night: Welcome Dinner</strong><br>
-                Kick off the weekend with a social dinner at one of downtown Mobile's iconic restaurants. It is the perfect time to reconnect with old friends and meet fellow descendants.</p>
-                
-                <p><strong>Saturday Daytime: 2026 Spring Conference</strong></p>
-                <ul>
-                    <li><strong>Location:</strong> National Maritime Museum of the Gulf (situated right on the bank of the Mobile River).</li>
-                    <li><strong>Program:</strong> Member meeting, luncheon, and a keynote presentation.</li>
-                    <li><strong>Featured Speaker:</strong> Mr. Tom Begley, Executive Director of Plimoth-Patuxet Museums. As the head of the homeport for the Mayflower II and the 17th-century Pilgrim Village, Mr. Begley brings unparalleled expertise to our event.</li>
-                </ul>
-                
-                <p><strong>Saturday Night: 40th Anniversary Gala</strong><br>
-                Finally, on Saturday night, we will be celebrating the local Gulf Coast Mayflower Colony's 40th Anniversary by having a Pilgrim Families Reunion.</p>
-                
-                <h3>Experience the Museum</h3>
-                
-                <p>Everyone who registers for and attends our conference will have an all-day pass to tour the National Maritime Museum of the Gulf (10:00 a.m. to 4:00 p.m.). After our featured speaker is finished, everyone will still have two hours to tour the museum's plethora of exhibits.</p>
-                
-                <p><strong>Bring the Family:</strong> I strongly encourage you to bring your whole Mayflower-descended family, regardless of whether they are "official" members of the society. They are always welcome at our events.</p>
-                
-                <h3>Watch and Plan</h3>
-                
-                <p>Be sure to check out the videos and flyers on this page! The video highlights all the amazing things to see at the museum to help you plan your visit. We also encourage you to come a day or two early, or stay a day or two after. Make it a long weekend and enjoy all our area of the Gulf Coast has to offer.</p>
-                
-                <h3>Registration & Waitlist</h3>
-                
-                <p>We need an accurate headcount so we know how many attendees to plan for. You will be able to register and pay for the events starting on or before April 1st, but please get on the waitlist NOW.</p>
-                
-                <div class="waitlist-highlight">
-                    <p><strong>How to Join the Waitlist:</strong></p>
-                </div>
-                
-                <ul>
-                    <li>Fill out the form below on this page.</li>
-                    <li>OR email your name and email address to: governor@alabamasmd.org</li>
-                </ul>
-                
-                <p style="text-align: center; font-size: 1.3rem; font-weight: 600; color: var(--royal-blue); margin: 2rem 0;">
-                    No matter if you arrive by car, train, plane, ship, or horse-drawn wagon, just remember:<br>
-                    <span style="font-size: 1.5rem; color: var(--gold);">We Will Plymouth Rock You!</span>
-                </p>
-                
-                <p class="letter-signature">
-                    Kevin Sewell<br>
-                    Governor, Alabama Society of Mayflower Descendants
-                </p>
-            </div>
-        </div>
-    </section>
 
     <!-- Separator -->
     <div class="separator-container" style="background: var(--cream);">
@@ -485,51 +434,15 @@
                         <h3>Tom Begley - Featured Speaker</h3>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- QR Code Section -->
-    <section class="qr-section">
-        <div class="container">
-            <h2 style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1rem;">Share the Event!</h2>
-            <p style="font-size: 1.2rem; margin-bottom: 2rem;">Scan the QR code to share with friends and family</p>
-            
-            <div class="qr-container">
-                <img src="images/ROCK_YOU_QR.jpg" alt="Event QR Code">
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Form -->
-    <section class="contact-form-section">
-        <div class="container">
-            <div class="contact-form-container">
-                <h2>Join the Waitlist</h2>
-                <p style="text-align: center; color: var(--slate); margin-bottom: 2rem;">
-                    Fill out the form below to get on the waitlist and receive registration details!
-                </p>
-                
-                <form action="send-email.php" method="POST">
-                    <input type="hidden" name="subject" value="Conference Waitlist Registration">
-                    
-                    <div class="form-group">
-                        <label for="name">Name <span style="color: var(--deep-red);">*</span></label>
-                        <input type="text" id="name" name="name" required>
+                <div class="video-card">
+                    <video controls>
+                        <source src="images/National_Maritime_Museum_Movie.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="video-title">
+                        <h3>National Maritime Museum of the Gulf</h3>
                     </div>
-                    
-                    <div class="form-group">
-                        <label for="email">Email <span style="color: var(--deep-red);">*</span></label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="message">Questions or Special Requests</label>
-                        <textarea id="message" name="message" placeholder="Let us know if you have any questions..."></textarea>
-                    </div>
-                    
-                    <button type="submit" class="submit-btn">Join the Waitlist →</button>
-                </form>
+                </div>
             </div>
         </div>
     </section>
@@ -580,7 +493,7 @@
                 <div class="footer-section">
                     <h3>Contact</h3>
                     <ul>
-                        <li>📧 <a href="mailto:governor@alabamasmd.org">governor@alabamasmd.org</a></li>
+                        <li>📧 <a href="/cdn-cgi/l/email-protection#e2858d9487908c8d90a2838e8380838f83918f86cc8d9085"><span class="__cf_email__" data-cfemail="63040c1506110d0c1123020f0201020e02100e074d0c1104">[email&#160;protected]</span></a></li>
                         <li>🔗 <a href="https://themayflowersociety.org" target="_blank" rel="noopener">General Society of Mayflower Descendants</a></li>
                         <li>📍 Alabama, USA</li>
                         <li><a href="contact_submit.html">Contact Form</a></li>
@@ -588,12 +501,4 @@
                 </div>
             </div>
             
-            <div class="footer-bottom">
-                <p>&copy; 2026 Alabama Society of Mayflower Descendants | All Rights Reserved | <a href="#" style="color: var(--gold);">Privacy Policy</a></p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="js/main.js"></script>
-</body>
-</html>
+            <div class="footer-bot
