@@ -45,74 +45,6 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.3);
         }
         
-        /* Governor's Letter */
-        .governor-letter {
-            background: white;
-            padding: 4rem 2rem;
-        }
-        
-        .letter-container {
-            max-width: 900px;
-            margin: 0 auto;
-            background: var(--cream);
-            padding: 3rem;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-        
-        .letter-container h2 {
-            color: var(--navy-blue);
-            text-align: center;
-            font-size: clamp(1.8rem, 4vw, 2.5rem);
-            margin-bottom: 2rem;
-        }
-        
-        .letter-container h3 {
-            color: var(--royal-blue);
-            font-size: clamp(1.3rem, 3vw, 1.8rem);
-            margin: 2rem 0 1rem;
-        }
-        
-        .letter-container p {
-            color: var(--slate);
-            line-height: 1.8;
-            margin-bottom: 1.5rem;
-            font-size: 1.1rem;
-        }
-        
-        .letter-container ul {
-            margin: 1rem 0 1.5rem 2rem;
-            color: var(--slate);
-            line-height: 1.8;
-        }
-        
-        .letter-container ul li {
-            margin-bottom: 0.5rem;
-        }
-        
-        .letter-signature {
-            margin-top: 2rem;
-            font-style: italic;
-            color: var(--navy-blue);
-            font-weight: 600;
-        }
-        
-        .waitlist-highlight {
-            background: linear-gradient(135deg, var(--gold), var(--bronze));
-            color: white;
-            padding: 1.5rem;
-            border-radius: 10px;
-            margin: 2rem 0;
-            text-align: center;
-        }
-        
-        .waitlist-highlight p {
-            color: white;
-            margin: 0;
-            font-size: 1.2rem;
-            font-weight: 600;
-        }
-        
         /* Flyers Section */
         .flyers-section {
             background: var(--cream);
@@ -156,9 +88,15 @@
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 2rem;
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 3rem auto 0;
             align-items: start;
+        }
+        
+        @media (max-width: 1024px) {
+            .videos-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
         
         @media (max-width: 768px) {
@@ -174,7 +112,7 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
         
-      .video-card video {
+        .video-card video {
             width: 100%;
             height: auto;
             display: block;
@@ -189,96 +127,8 @@
         
         .video-card h3 {
             color: var(--navy-blue);
-            font-size: 1.5rem;
-            margin: 0;
-        }
-        
-        /* QR Code Section */
-        .qr-section {
-            background: linear-gradient(135deg, var(--royal-blue), var(--accent-teal));
-            padding: 4rem 2rem;
-            text-align: center;
-            color: white;
-        }
-        
-        .qr-container {
-            max-width: 600px;
-            margin: 2rem auto;
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-        }
-        
-        .qr-container img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-        }
-        
-        /* Contact Form Section */
-        .contact-form-section {
-            background: var(--cream);
-            padding: 4rem 2rem;
-        }
-        
-        .contact-form-container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: white;
-            padding: 3rem;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-        }
-        
-        .contact-form-container h2 {
-            color: var(--navy-blue);
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-        
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-            color: var(--navy-blue);
-        }
-        
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 0.75rem;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-family: inherit;
-            font-size: 1rem;
-        }
-        
-        .form-group textarea {
-            resize: vertical;
-            min-height: 150px;
-        }
-        
-        .submit-btn {
-            width: 100%;
-            padding: 1rem;
-            background: linear-gradient(135deg, var(--navy-blue), var(--royal-blue));
-            color: white;
-            border: none;
-            border-radius: 50px;
             font-size: 1.2rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        
-        .submit-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            margin: 0;
         }
         
         /* Section Headers */
@@ -359,36 +209,49 @@
         <div class="container">
             <h1>"We Will Plymouth Rock You" Weekend</h1>
             <p class="subtitle">The Society of Mayflower Descendants<br>in the State of <em>(Sweet Home)</em> Alabama</p>
-            
             <div class="conference-date">
                 📅 Friday, April 24 & Saturday, April 25, 2026
             </div>
-            
-           
         </div>
     </section>
 
-   
-
-    <!-- Separator -->
+        <!-- Separator -->
     <div class="separator-container" style="background: var(--cream);">
         <img src="images/Mayflower_separator_line.png" alt="Separator" class="mayflower-separator">
     </div>
+
+    <!-- Governor's Address Video -->
+    <section style="background: var(--cream); padding: 2rem 2rem 0; text-align: center;">
+        <div style="max-width: 700px; margin: 0 auto; background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+            <video controls poster="images/Kev_Talk.jpg" style="width: 100%; display: block; background: #000;">
+                <source src="images/Governors_AddressV7.mp4" type="video/mp4">
+            </video>
+            <div style="padding: 1.5rem; text-align: center;">
+                 <h3 style="color: var(--navy-blue); font-size: 1.5rem; margin: 0;">Governor's Address</h3>
+<p>Please watch this important message and be sure to view it <strong>FULL SCREEN</strong>.</p>
+    </div>
+               
+            </div>
+        </div>
+    </section>
 
     <!-- Event Flyers -->
     <section class="flyers-section">
         <div class="container">
             <div class="section-header">
-                <h2>Join Us for Two Amazing Events!</h2>
-                <p>Celebrate 40 years of the Gulf Coast Colony and our Annual State Conference</p>
+                <h2>Event Flyers</h2>
+                <p>Click on an image for a printable PDF version of that flyer</p>
             </div>
-            
             <div class="flyers-grid">
                 <div class="flyer-card">
-                    <img src="images/MayflowerFamiliesReunio_flyer2026.jpg" alt="Mayflower Families Reunion - Saturday Night, April 25, 2026">
+                    <a href="images/Mayflower Families Reunion flyer.pdf" target="_blank">
+                        <img src="images/MayflowerFamiliesReunio_flyer2026.jpg" alt="Mayflower Families Reunion - Saturday Night, April 25, 2026">
+                    </a>
                 </div>
                 <div class="flyer-card">
-                    <img src="images/SpringConferenceFlyer2026.jpg" alt="2026 Annual State Conference - National Maritime Museum">
+                    <a href="images/SMDAL Spring Conference flyer.pdf" target="_blank">
+                        <img src="images/SpringConferenceFlyer2026.jpg" alt="2026 Annual State Conference - National Maritime Museum">
+                    </a>
                 </div>
             </div>
         </div>
@@ -399,7 +262,7 @@
         <div class="container">
             <div class="section-header">
                 <h2>Event Videos</h2>
-                <p>Watch our promotional videos and hear from special guests</p>
+                <p>Watch these videos and be sure to view each FULL SCREEN.</p>
             </div>
             
             <!-- Separator -->
@@ -408,6 +271,8 @@
             </div>
             
             <div class="videos-grid">
+              
+
                 <div class="video-card">
                     <video controls>
                         <source src="images/2026_Rish_Conversations_Ad.mp4" type="video/mp4">
@@ -427,6 +292,7 @@
                         <h3>Tom Begley - Featured Speaker</h3>
                     </div>
                 </div>
+
                 <div class="video-card">
                     <video controls>
                         <source src="images/National_Maritime_Museum_Movie.mp4" type="video/mp4">
@@ -440,14 +306,25 @@
         </div>
     </section>
 
-     <!-- Waitlist Button -->
+    <!-- Visit Mobile Section -->
+    <section style="background: var(--cream); padding: 3rem 2rem; text-align: center;">
+        <div class="container" style="max-width: 800px;">
+            <h2 style="color: var(--navy-blue); font-size: clamp(1.8rem, 4vw, 2.5rem); margin-bottom: 1rem;">Your Trip to Mobile</h2>
+            <p style="font-size: 1.2rem; color: var(--slate); margin-bottom: 1.5rem;">Coming a day or two early or staying a day or two after? Visit Mobile.org to learn about area attractions, restaurants and you can even check out and download destination guides for visitors.</p>
+            <a href="https://mobile.org" target="_blank">
+                <img src="images/Mobile_CMYK_transparent.png" alt="Visit Mobile Alabama" style="max-width: 300px; width: 100%; height: auto;">
+            </a>
+        </div>
+    </section>
+
+    <!-- Waitlist Button -->
     <section style="background: white; padding: 3rem 2rem; text-align: center;">
         <a href="https://mailchi.mp/453535e44454/get_on_the_waiting_list" target="_blank" class="conference-date" style="text-decoration: none; display: inline-block;">
-            📋 Get on the Waitlist
+            📋 We Need a Headcount! Get on the Waitlist.
         </a>
     </section>
 
-     <section class="back-button-section">
+    <section class="back-button-section">
         <a href="index.html" class="back-button">← Return to Home</a>
     </section>
 
@@ -492,7 +369,7 @@
                 <div class="footer-section">
                     <h3>Contact</h3>
                     <ul>
-                        <li>📧 <a href="/cdn-cgi/l/email-protection#e2858d9487908c8d90a2838e8380838f83918f86cc8d9085"><span class="__cf_email__" data-cfemail="63040c1506110d0c1123020f0201020e02100e074d0c1104">[email&#160;protected]</span></a></li>
+                        <li>📧 <a href="mailto:info@alabamasmd.org">info@alabamasmd.org</a></li>
                         <li>🔗 <a href="https://themayflowersociety.org" target="_blank" rel="noopener">General Society of Mayflower Descendants</a></li>
                         <li>📍 Alabama, USA</li>
                         <li><a href="contact_submit.html">Contact Form</a></li>
@@ -500,4 +377,12 @@
                 </div>
             </div>
             
-            <div class="footer-bot
+            <div class="footer-bottom">
+                <p>&copy; 2026 Society of Mayflower Descendants in the State of Alabama. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
