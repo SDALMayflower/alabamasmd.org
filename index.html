@@ -3,85 +3,168 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Alabama Society of Mayflower Descendants - Preserving the legacy of the Mayflower Pilgrims since 1952">
-    <title>Alabama Society of Mayflower Descendants</title>
+    <title>We Will Plymouth Rock You Weekend | Alabama SMD</title>
+    <meta name="description" content="Join us for the ultimate Plymouth Rock You Weekend! Event details, tickets, and more. Alabama SMD.">
+    
+    <meta property="og:title" content="We Will Plymouth Rock You Weekend">
+    <meta property="og:description" content="Epic event coming soon!">
+    <meta property="og:image" content="https://alabamasmd.org/images/Mobile_Bay_Mayflower.jpg"> 
+    <meta property="og:url" content="https://alabamasmd.org/wewillplymouthrockyouweekend.html">
+
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/logo-fix.css">
     <link rel="icon" type="image/png" href="images/LOGO001.png?v=3">
+
     <style>
-        /* Inline Video with Play Button Overlay */
-        .video-wrapper {
-            position: relative;
-            width: 100%;
-            max-height: 500px;
-            overflow: hidden;
+        /* Hero Section */
+        .conference-hero {
+            background: linear-gradient(135deg, var(--navy-blue), var(--royal-blue));
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+            color: white;
         }
-        
-        .video-wrapper video {
+
+        .conference-hero h1 {
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+
+        .conference-date {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--gold), var(--bronze));
+            padding: 1.5rem 3rem;
+            border-radius: 50px;
+            font-size: clamp(1.3rem, 3vw, 2rem);
+            font-weight: 700;
+            margin-top: 1rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        /* Flyers Section */
+        .flyers-section {
+            background: var(--cream);
+            padding: 4rem 2rem;
+        }
+
+        .flyers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .flyer-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            transition: all 0.3s ease;
+        }
+
+        .flyer-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+        }
+
+        .flyer-card img {
             width: 100%;
-            max-height: 500px;
-            object-fit: cover;
+            height: auto;
             display: block;
         }
-        
-        .video-play-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
+
+        /* Videos Section */
+        .videos-section {
+            background: white;
+            padding: 4rem 2rem;
+        }
+
+        .videos-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 3rem auto 0;
+            align-items: start;
+        }
+
+        @media (max-width: 1024px) {
+            .videos-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 768px) {
+            .videos-grid { grid-template-columns: 1fr; }
+        }
+
+        .video-card {
+            background: var(--cream);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .video-card video {
             width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: all 0.3s ease;
+            height: auto;
+            display: block;
+            background: #000;
         }
-        
-        .video-play-overlay:hover {
-            background: rgba(0, 0, 0, 0.7);
-        }
-        
-        .video-play-overlay.hidden {
-            display: none;
-        }
-        
-        .play-button {
-            width: 100px;
-            height: 100px;
-            background: linear-gradient(135deg, var(--gold), var(--bronze));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1.5rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 10px 30px rgba(218, 165, 32, 0.5);
-        }
-        
-        .video-play-overlay:hover .play-button {
-            transform: scale(1.1);
-            box-shadow: 0 15px 40px rgba(218, 165, 32, 0.7);
-        }
-        
-        .play-button::after {
-            content: '';
-            width: 0;
-            height: 0;
-            border-left: 30px solid white;
-            border-top: 20px solid transparent;
-            border-bottom: 20px solid transparent;
-            margin-left: 8px;
-        }
-        
-        .play-text {
-            color: white;
-            font-size: clamp(1.5rem, 4vw, 2.5rem);
-            font-weight: 700;
+
+        .video-card-title {
+            padding: 1.5rem;
+            background: white;
             text-align: center;
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
-            padding: 0 2rem;
+        }
+
+        .video-card h3 {
+            color: var(--navy-blue);
+            font-size: 1.2rem;
+            margin: 0;
+        }
+
+        /* Section Headers */
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            color: var(--navy-blue);
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            font-size: 1.2rem;
+            color: var(--slate);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Back Button */
+        .back-button-section {
+            text-align: center;
+            padding: 3rem 2rem;
+            background: white;
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 1rem 3rem;
+            background: var(--navy-blue);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .back-button:hover {
+            background: var(--royal-blue);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
         }
     </style>
 </head>
@@ -104,217 +187,83 @@
                 <li><a href="index.html#membership">Membership</a></li>
                 <li><a href="events.html">Events</a></li>
                 <li><a href="news.html">News</a></li>
-                <li><a href="wewillplymouthrockyouweekend.html">2026 Conference</a></li>
+                <li><a href="wewillplymouthrockyouweekend.html" class="active">2026 Conference</a></li>
                 <li><a href="useful-links.html">Useful Links</a></li>
                 <li><a href="contact_submit.html">Contact Us</a></li>
-                <li><a href="#support"><img src="images/LOGO001.png" alt="Mayflower Society" style="height: 45px; width: auto; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3)); background: none;"></a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="hero" style="background-image: url('images/Mobile_Bay_Mayflower.jpg'); background-size: cover; background-position: center;">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <div class="hero-badge">⚓ Since 1952</div>
-            <h1>Alabama Society of<br>Mayflower Descendants</h1>
-            <p class="hero-subtitle">Preserving the legacy of the brave Pilgrims who crossed the Atlantic in 1620 and established the foundations of American democracy through the Mayflower Compact</p>
-            <div class="hero-buttons">
-                <a href="#membership" class="btn btn-primary">
-                    Become a Member
-                    <span>→</span>
-                </a>
-                <a class="btn btn-secondary" href="about-us.html">
-                    Discover Your Heritage
-                </a>
+    <section class="conference-hero">
+        <div class="container">
+            <h1>"We Will Plymouth Rock You"</h1>
+            <p style="font-size: 1.5rem; opacity: 0.9; margin-bottom: 2rem;">2026 Annual State Conference</p>
+            <div class="conference-date">
+                April 24 - 25, 2026 • Mobile, Alabama
             </div>
         </div>
     </section>
 
-    <div class="separator-container">
-        <img src="images/Mayflower_separator_line.png" alt="Separator" class="mayflower-separator">
-    </div>
-
-    <section id="about">
+    <section class="flyers-section">
         <div class="container">
             <div class="section-header">
-                <h2>Alabama Society of Mayflower Descendants</h2>
-                <p>The Alabama Society of Mayflower Descendants welcomes inquiries and appreciates interest in our activities and publications. Our members all have demonstrated direct descent from the Pilgrims or their companions who bravely crossed the gale-ridden Atlantic in the Mayflower in 1620.</p>
-                <p>Founded in 1952, we organized as a society to commemorate the spirit of these brave people who had such strength in times of adversity. Beginning with the signing of The Mayflower Compact, our ancestors created a self-governing community founded upon democratic principles.</p>
+                <h2>Conference Information</h2>
+                <p>Download or view our latest conference flyers and schedules</p>
             </div>
-            
-            <div class="features-grid">
-                <a class="feature-card" href="our-history.html">
-                    <div class="feature-image" style="background: linear-gradient(135deg, var(--bronze), var(--gold)); padding: 3rem; display: flex; align-items: center; justify-content: center; min-height: 250px;">
-                        <h3 style="color: white; font-size: 2.5rem; margin: 0;">Our Heritage</h3>
-                    </div>
-                    <div class="feature-content">
-                        <h3>Our History</h3>
-                        <p>The Alabama Society was founded to commemorate the brave Pilgrims who crossed the Atlantic in the Mayflower in 1620, establishing Plymouth Colony and the democratic principles that would shape America.</p>
-                        <span class="feature-link">Learn More →</span>
-                    </div>
-                </a>
-                
-                <a href="#membership" class="feature-card">
-                    <div class="feature-image" style="background: linear-gradient(135deg, var(--royal-blue), var(--accent-teal)); padding: 3rem; display: flex; align-items: center; justify-content: center; min-height: 250px;">
-                        <h3 style="color: white; font-size: 2.5rem; margin: 0;">Genealogy</h3>
-                    </div>
-                    <div class="feature-content">
-                        <h3>Prove Your Lineage</h3>
-                        <p>Discover if you're a Mayflower descendant. We provide comprehensive resources and expert guidance to help you trace your ancestry back to the original Mayflower passengers.</p>
-                        <span class="feature-link">Start Your Journey →</span>
-                    </div>
-                </a>
-                
-                <a class="feature-card" href="mayflower-compact.html">
-                    <div class="feature-image" style="background: linear-gradient(135deg, var(--navy-blue), var(--royal-blue)); padding: 3rem; display: flex; align-items: center; justify-content: center; min-height: 250px;">
-                        <h3 style="color: white; font-size: 2.5rem; margin: 0;">Foundation</h3>
-                    </div>
-                    <div class="feature-content">
-                        <h3>The Mayflower Compact</h3>
-                        <p>Explore the document that became the foundation of American self-governance, written and signed aboard the Mayflower in November 1620.</p>
-                        <span class="feature-link">Read the Story →</span>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <div class="separator-container">
-        <img src="images/Mayflower_separator_line.jpg" alt="Separator" class="mayflower-separator">
-    </div>
-
-    <section id="annual-conference" style="background: var(--cream); padding: 4rem 2rem;">
-        <div class="container">
-            <div class="conference-card" style="max-width: 900px; margin: 0 auto;">
-                <div class="feature-card">
-                    <div class="feature-image" style="height: auto;">
-                        <div class="video-wrapper">
-                            <video id="conferenceVideo">
-                                <source src="images/ConferencePromo2026.mp4" type="video/mp4">
-                                Your browser doesn't support video playback.
-                            </video>
-                            <div class="video-play-overlay" id="conferencePlayOverlay" onclick="playConferenceVideo(event)">
-                                <div class="play-button"></div>
-                                <div class="play-text">We Will Plymouth Rock You!</div>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="wewillplymouthrockyouweekend.html" style="text-decoration: none; color: inherit; display: block;">
-                        <div class="feature-content" style="text-align: center; padding: 3rem;">
-                            <h2 style="font-size: 2rem; margin-bottom: 1rem; color: var(--navy-blue);">The Society of Mayflower Descendants</h2>
-                            <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--royal-blue);">in the State of (Sweet Home) Alabama</h3>
-                            <div style="margin: 2rem 0; padding: 1.5rem; background: linear-gradient(135deg, var(--gold), var(--bronze)); border-radius: 15px;">
-                                <h2 style="font-size: 2.5rem; color: white; margin-bottom: 0.5rem;">2026 Annual State Conference</h2>
-                                <p style="font-size: 1.75rem; color: white; font-weight: 600;">Friday, April 24 & Saturday, April 25, 2026</p>
-                            </div>
-                            <span class="feature-link" style="font-size: 1.25rem;">Click for More Information →</span>
-                        </div>
+            <div class="flyers-grid">
+                <div class="flyer-card">
+                    <a href="images/SMDAL Spring Conference flyer.pdf" target="_blank">
+                        <img src="images/SMDAL Spring Conference flyer.png" alt="Conference Flyer">
+                    </a>
+                </div>
+                <div class="flyer-card">
+                    <a href="images/SpringConferenceFlyer2026.pdf" target="_blank">
+                        <img src="images/SpringConferenceFlyer2026.png" alt="Detailed Schedule">
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <div class="separator-container">
-        <img src="images/Mayflower_separator_line.jpg" alt="Separator" class="mayflower-separator">
-    </div>
-
-    <section class="stats-section">
+    <section class="videos-section">
         <div class="container">
             <div class="section-header">
-                <h2 style="color: white; background: none; -webkit-text-fill-color: white;">Our Legacy in Numbers</h2>
+                <h2>Event Previews</h2>
+                <p>Get a glimpse of what's coming to Mobile in 2026</p>
             </div>
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <div class="stat-number">1620</div>
-                    <div class="stat-label">Mayflower Voyage</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">1952</div>
-                    <div class="stat-label">Society Founded</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">102</div>
-                    <div class="stat-label">Original Passengers</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">4</div>
-                    <div class="stat-label">Alabama Colonies</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div class="separator-container" style="background: var(--navy-blue);">
-        <img src="images/Mayflower_separator_line.jpg" alt="Separator" class="mayflower-separator" style="filter: invert(1) brightness(2);">
-    </div>
-
-    <section id="membership">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Join Us</span>
-                <h2>Become a Member</h2>
-                <p>Join our community of Mayflower descendants and help preserve the legacy of the Pilgrims for future generations.</p>
-            </div>
-            
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-image" style="background: linear-gradient(135deg, var(--gold), var(--bronze)); padding: 3rem; display: flex; align-items: center; justify-content: center; min-height: 250px;">
-                        <h3 style="color: white; font-size: 2.5rem; margin: 0;">Member Benefits</h3>
-                    </div>
-                    <div class="feature-content">
-                        <h3>Member Benefits</h3>
-                        <p>Access to exclusive events, research resources, quarterly newsletter, and connection with fellow descendants across Alabama and the nation.</p>
-                        <a class="feature-link" href="member-benefits.html">View Benefits →</a>
+            <div class="videos-grid">
+                <div class="video-card">
+                    <video controls poster="images/Mobile_Bay_Mayflower.jpg">
+                        <source src="images/ConferencePromo2026.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="video-card-title">
+                        <h3>Conference Promo</h3>
                     </div>
                 </div>
-                
-                <div class="feature-card">
-                    <div class="feature-image" style="background: linear-gradient(135deg, var(--navy-blue), var(--royal-blue)); padding: 3rem; display: flex; align-items: center; justify-content: center; min-height: 250px;">
-                        <h3 style="color: white; font-size: 2.5rem; margin: 0;">Application Process</h3>
-                    </div>
-                    <div class="feature-content">
-                        <h3>Application Process</h3>
-                        <p>We'll guide you through documenting your lineage from you back to your Mayflower ancestor. Our genealogists are here to help every step of the way.</p>
-                        <a class="feature-link" href="application-process.html">Get Started →</a>
+                <div class="video-card">
+                    <video controls>
+                        <source src="images/Kev_Talk.mp4" type="video/mp4">
+                    </video>
+                    <div class="video-card-title">
+                        <h3>Governor's Address</h3>
                     </div>
                 </div>
-                
-                <div class="feature-card">
-                    <div class="feature-image" style="background: linear-gradient(135deg, var(--royal-blue), var(--accent-teal)); padding: 3rem; display: flex; align-items: center; justify-content: center; min-height: 250px;">
-                        <h3 style="color: white; font-size: 2.5rem; margin: 0;">Junior Membership</h3>
-                    </div>
-                    <div class="feature-content">
-                        <h3>Junior Membership</h3>
-                        <p>Enroll children and grandchildren for just $10. Engage the next generation in preserving our Mayflower heritage and American history.</p>
-                        <a class="feature-link" href="junior-membership.html">Learn More →</a>
+                <div class="video-card">
+                    <video controls>
+                        <source src="images/Tom Begley_Alabama_Promo.mp4" type="video/mp4">
+                    </video>
+                    <div class="video-card-title">
+                        <h3>Special Invitation</h3>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <div class="separator-container">
-        <img src="images/Mayflower_separator_line.jpg" alt="Separator" class="mayflower-separator">
+    <div class="back-button-section">
+        <a href="index.html" class="back-button">← Back to Home Page</a>
     </div>
-
-    <section id="support" class="cta-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Support the Alabama Mayflower Society</h2>
-                <p>Help us preserve the legacy of the Mayflower Pilgrims and educate future generations about their contributions to American democracy and freedom.</p>
-            </div>
-            <div class="hero-buttons">
-                <a href="#" class="btn" style="background: var(--navy-blue); color: white;">
-                    Make a Donation
-                    <span>→</span>
-                </a>
-                <a href="#" class="btn" style="background: white; color: var(--navy-blue);">
-                    Learn About Giving
-                </a>
-            </div>
-        </div>
-    </section>
 
     <footer id="contact">
         <div class="container">
@@ -322,66 +271,19 @@
                 <div class="footer-section">
                     <img src="images/LOGO002.png" alt="Alabama Mayflower Society" class="footer-logo">
                     <p>Preserving the legacy of the Mayflower Pilgrims since 1952</p>
-                    <div class="social-links" style="margin-top: 1.5rem;">
-    <a href="https://www.facebook.com/groups/AlabamaMayflowerSociety" 
-       target="_blank" 
-       rel="noopener" 
-       aria-label="Facebook Group" 
-       style="display: inline-block; text-decoration: none; transition: opacity 0.3s ease;">
-        <span style="background: white; color: var(--navy-blue); width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; border-radius: 4px; font-family: sans-serif; font-weight: bold; font-size: 22px;">f</span>
-    </a>
-</div>
                 </div>
-
                 <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="about-us.html">About Us</a></li>
-                        <li><a href="our-history.html">Our History</a></li>
-                        <li><a href="index.html#membership">Membership</a></li>
-                        <li><a href="events.html">Events</a></li>
-                        <li><a href="news.html">News</a></li>
-                        <li><a href="wewillplymouthrockyouweekend.html">2026 Conference</a></li>
-                        <li><a href="useful-links.html">Useful Links</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-section">
-                    <h3>Our Colonies</h3>
-                    <ul style="list-style: none; padding: 0; color: rgba(255, 255, 255, 0.8);">
-                        <li style="margin-bottom: 1rem;">Cahaba River Colony<br><small>Birmingham Area</small></li>
-                        <li style="margin-bottom: 1rem;">Capital Colony<br><small>Montgomery Area</small></li>
-                        <li style="margin-bottom: 1rem;">Gulf Coast Colony<br><small>Mobile Area</small></li>
-                        <li style="margin-bottom: 1rem;">Tennessee Valley Colony<br><small>Huntsville Area</small></li>
-                    </ul>
-                </div>
-
-                <div class="footer-section">
-                    <h3>Contact</h3>
-                    <ul>
-                        <li><a href="mailto:SMDAL.Info@gmail.com">info@alabamasmd.org</a></li>
-                        <li><a href="https://themayflowersociety.org" target="_blank" rel="noopener">General Society of Mayflower Descendants</a></li>
-                        <li><a href="contact_submit.html">Contact Form</a></li>
-                    </ul>
+                    <h3>Contact Us</h3>
+                    <p>Email: info@alabamasmd.org</p>
+                    <p>Mobile Area Colony</p>
                 </div>
             </div>
-
             <div class="footer-bottom">
-                <p>&copy; 2026 Alabama Society of Mayflower Descendants | All Rights Reserved | <a href="#" style="color: var(--gold);">Privacy Policy</a></p>
+                <p>&copy; 2026 Alabama Society of Mayflower Descendants. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <script src="js/main.js"></script>
-    <script>
-        function playConferenceVideo(event) {
-            event.preventDefault();
-            event.stopPropagation();
-            const video = document.getElementById('conferenceVideo');
-            const overlay = document.getElementById('conferencePlayOverlay');
-            video.play();
-            overlay.classList.add('hidden');
-        }
-    </script>
 </body>
 </html>
