@@ -1,3 +1,11 @@
+I see it exactly—that "⚓ Step 2: The Homepage Restoration..." text is sitting right in the middle of your conference page. It looks like the instructions from our last session got caught in the copy-paste crossfire, and now they are showing up on the live site like an unwanted guest.
+
+Let’s perform a clean "surgery" to remove that text and get both files back to professional standards.
+
+⚓ Step 1: The Clean Conference Page
+Open wewillplymouthrockyouweekend.html in Notepad. Delete everything and paste this version, which has that instruction text completely removed.
+
+HTML
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,6 +37,7 @@
             font-size: clamp(1.3rem, 3vw, 2rem);
             font-weight: 700;
             box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            margin-top: 1rem;
         }
         .flyers-grid, .videos-grid {
             display: grid;
@@ -44,12 +53,13 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
         .video-card video { width: 100%; display: block; background: #000; }
+        .subtitle { font-size: 1.5rem; opacity: 0.9; margin-bottom: 2rem; }
     </style>
 </head>
 <body>
     <header id="mainHeader">
         <nav>
-            <a href="index.html" class="logo"><img src="images/LOGO002.png" alt="Logo" class="logo-img"></a>
+            <a href="index.html" class="logo"><img src="images/LOGO002.png" alt="Alabama Mayflower" class="logo-img"></a>
             <ul class="nav-links">
                 <li><a href="about-us.html">About Us</a></li>
                 <li><a href="wewillplymouthrockyouweekend.html">2026 Conference</a></li>
@@ -74,27 +84,27 @@
     </section>
 
     <section style="padding: 4rem 2rem;">
-        <h2 style="text-align: center; color: var(--navy-blue);">Printable Flyers</h2>
+        <h2 style="text-align: center; color: var(--navy-blue); margin-bottom: 2rem;">Printable Flyers</h2>
         <div class="flyers-grid">
-            <a href="images/Mayflower Families Reunion flyer.pdf" target="_blank"><img src="images/MayflowerFamiliesReunio_flyer2026.jpg" style="width:100%; border-radius: 15px;"></a>
-            <a href="images/SMDAL Spring Conference flyer.pdf" target="_blank"><img src="images/SpringConferenceFlyer2026.jpg" style="width:100%; border-radius: 15px;"></a>
+            <a href="images/Mayflower Families Reunion flyer.pdf" target="_blank"><img src="images/MayflowerFamiliesReunio_flyer2026.jpg" alt="Reunion Flyer" style="width:100%; border-radius: 15px;"></a>
+            <a href="images/SMDAL Spring Conference flyer.pdf" target="_blank"><img src="images/SpringConferenceFlyer2026.jpg" alt="Conference Flyer" style="width:100%; border-radius: 15px;"></a>
         </div>
     </section>
 
     <section style="background: white; padding: 4rem 2rem;">
-        <h2 style="text-align: center; color: var(--navy-blue);">Event Previews</h2>
+        <h2 style="text-align: center; color: var(--navy-blue); margin-bottom: 2rem;">Event Previews</h2>
         <div class="videos-grid">
             <div class="video-card">
                 <video controls><source src="images/2026_Rish_Conversations_Ad.mp4" type="video/mp4"></video>
-                <div style="padding: 1rem;"><h3>Plimoth-Patuxent Ad</h3></div>
+                <div style="padding: 1.5rem; text-align: center;"><h3>Plimoth-Patuxent Ad</h3></div>
             </div>
             <div class="video-card">
                 <video controls><source src="images/Tom Begley__Alabama_Promo.mp4" type="video/mp4"></video>
-                <div style="padding: 1rem;"><h3>Featured Speaker: Tom Begley</h3></div>
+                <div style="padding: 1.5rem; text-align: center;"><h3>Featured Speaker: Tom Begley</h3></div>
             </div>
             <div class="video-card">
                 <video controls><source src="images/National_Maritime_Museum_Movie.mp4" type="video/mp4"></video>
-                <div style="padding: 1rem;"><h3>National Maritime Museum</h3></div>
+                <div style="padding: 1.5rem; text-align: center;"><h3>National Maritime Museum</h3></div>
             </div>
         </div>
     </section>
@@ -103,53 +113,7 @@
         <a href="https://mailchi.mp/453535e44454/get_on_the_waiting_list" target="_blank" class="conference-date" style="text-decoration: none;">📋 Get on the Waitlist</a>
         <div style="margin-top: 3rem;">
             <h3>Your Trip to Mobile</h3>
-            <a href="https://mobile.org" target="_blank"><img src="images/Mobile_CMYK_transparent.png" style="max-width: 300px;"></a>
-        </div>
-    </section>
-</body>
-</html>
-⚓ Step 2: The Homepage Restoration
-Open index.html in Notepad, delete everything, and paste this:
-
-HTML
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alabama Society of Mayflower Descendants</title>
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/logo-fix.css">
-    <link rel="icon" type="image/png" href="images/LOGO001.png?v=3">
-</head>
-<body>
-    <header id="mainHeader">
-        <nav>
-            <a class="logo" href="index.html"><img src="images/LOGO002.png" alt="Alabama Mayflower" class="logo-img"></a>
-            <ul class="nav-links">
-                <li><a href="about-us.html">About Us</a></li>
-                <li><a href="wewillplymouthrockyouweekend.html">2026 Conference</a></li>
-                <li><a href="contact_submit.html">Contact Us</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section class="hero" style="background-image: url('images/Mobile_Bay_Mayflower.jpg'); background-size: cover; height: 80vh; display: flex; align-items: center; justify-content: center; text-align: center; color: white;">
-        <div style="background: rgba(0,0,0,0.4); padding: 3rem; border-radius: 15px;">
-            <h1 style="font-size: 4rem; text-shadow: 2px 2px 10px rgba(0,0,0,0.8);">Alabama Society of<br>Mayflower Descendants</h1>
-            <p style="font-size: 1.5rem;">Preserving the legacy of our ancestors since 1952.</p>
-        </div>
-    </section>
-
-    <div class="separator-container">
-        <img src="images/Mayflower_separator_line.png" alt="Separator" class="mayflower-separator">
-    </div>
-
-    <section style="background: var(--navy-blue); color: white; padding: 6rem 2rem; text-align: center;">
-        <div style="display: flex; justify-content: space-around; max-width: 1200px; margin: 0 auto;">
-            <div><h2 style="font-size: 4rem; color: var(--gold);">1620</h2><p>Mayflower Voyage</p></div>
-            <div><h2 style="font-size: 4rem; color: var(--gold);">1952</h2><p>Society Founded</p></div>
-            <div><h2 style="font-size: 4rem; color: var(--gold);">102</h2><p>Original Passengers</p></div>
+            <a href="https://mobile.org" target="_blank"><img src="images/Mobile_CMYK_transparent.png" alt="Visit Mobile" style="max-width: 300px; margin-top: 1rem;"></a>
         </div>
     </section>
 </body>
