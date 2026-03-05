@@ -7,57 +7,108 @@
     <title>The Mayflower Compact | Alabama Society of Mayflower Descendants</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/compact-page.css">
+    <link rel="stylesheet" href="css/logo-fix.css">
+    <link rel="icon" type="image/png" href="images/LOGO001.png?v=3">
+    <style>
+        .compact-hero {
+            background: linear-gradient(rgba(0, 32, 91, 0.6), rgba(0, 32, 91, 0.6)), url('images/Mayflower_Compact_Hero.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 12rem 2rem 8rem;
+            text-align: center;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 60vh;
+        }
+        .compact-hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            color: white;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+            margin-bottom: 1rem;
+        }
+        .compact-hero .subtitle {
+            font-size: 1.75rem;
+            color: var(--gold);
+            font-weight: 700;
+            text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+        }
+        .compact-article {
+            padding: 4rem 2rem;
+            background: white;
+        }
+        .article-content {
+            max-width: 900px;
+            margin: 0 auto;
+            line-height: 1.8;
+            font-size: 1.15rem;
+            color: #333;
+        }
+        .article-content h2 {
+            color: var(--navy-blue);
+            font-size: 2rem;
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+        }
+        .lead-paragraph {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--royal-blue);
+            margin-bottom: 2rem;
+        }
+    </style>
 </head>
 <body>
-    <!-- Header & Navigation -->
     <header id="mainHeader">
         <nav>
             <a href="index.html" class="logo">
                 <img src="images/LOGO002.png" alt="Alabama Mayflower Society" class="logo-img">
-                
             </a>
             
-            <button class="menu-toggle" id="menuToggle">
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
             
             <ul class="nav-links" id="navLinks">
-                <li><a href="index.html#about">About</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="our-history.html">Our History</a></li>
                 <li><a href="index.html#membership">Membership</a></li>
-                <li><a href="index.html#events">Events</a></li>
-                <li><a href="index.html#collections">Collections</a></li>
-                <li><a href="mayflower-compact.html">Mayflower Compact</a></li>
-                <li><a href="index.html#support" class="cta-button">Support Us</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="wewillplymouthrockyouweekend.html">2026 Conference</a></li>
+                <li><a href="useful-links.html">Useful Links</a></li>
+                <li><a href="contact_submit.html">Contact Us</a></li>
+                <li><img src="images/LOGO001.png" alt="Mayflower Society" style="height: 45px; width: auto; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));"></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="page-hero" style="background-image: url('images/compact_colorozed.jpg'); background-size: cover; background-position: center;">
-        <div class="hero-overlay"></div>
-        <div class="container">
-            <h1 class="serif">The Mayflower Compact</h1>
-            <p class="subtitle">Foundation of American Democracy and Self-Governance</p>
-        </div>
+    <section class="compact-hero">
+        <h1>The Mayflower Compact</h1>
+        <p class="subtitle">Foundation of American Democracy and Self-Governance</p>
     </section>
 
-    <!-- Main Content -->
+    <div class="separator-container">
+        <img src="images/Mayflower_separator_line.png" alt="Separator" class="mayflower-separator">
+    </div>
+
     <article class="compact-article">
         <div class="container">
-            <!-- Article Content -->
             <div class="article-content">
                 <section class="content-section">
-                    <p class="lead-paragraph">The document now referred to as the Mayflower Compact was written and signed by most of the male passengers on the Mayflower ship in November 1620 as they landed at Cape Cod. William Bradford recounts the event as "a combination made by them before they came ashore; being the first foundation of their government in this place."</p>
+                    <p class="lead-paragraph">The document now referred to as the Mayflower Compact was written and signed by most of the male passengers on the Mayflower ship in November 1620 as they landed at Cape Cod. William Bradford recounts the event as "a combination made by them before they came ashore, being the first foundation of their government in this place."</p>
 
                     <h2>The Journey to Cape Cod</h2>
                     <p>In 1620, "Virginia" extended far beyond its current boundaries and the Mayflower was originally meant to land at its "northern Parts," specifically the Hudson River. When the Mayflower attempted to sail around Cape Cod to reach the Hudson, contrary winds and dangerous shoals forced the ship to turn around and instead anchor in modern day Provincetown Harbor on November 11, 1620.</p>
 
                     <h2>The Need for a New Government</h2>
-                    <p>English colonies at the time required "patents" – documents granted by the king or authorized companies which gave permission to settle at a particular place. Since the Mayflower passengers had obtained a patent for Virginia, when they instead landed in New England, this patent was no longer valid. Any sort of authority the group's leaders could have derived from this patent was therefore also suspect, and some passengers threatened that "when they came ashore they would use their own liberty, for none had power to command them, the patent they had being for Virginia and not for New England" (Bradford).</p>
+                    <p>English colonies at the time required "patents," which were documents granted by the king or authorized companies giving permission to settle at a particular place. Since the Mayflower passengers had obtained a patent for Virginia, when they instead landed in New England, this patent was no longer valid. Any sort of authority the group's leaders could have derived from this patent was therefore also suspect, and some passengers threatened that "when they came ashore they would use their own liberty, for none had power to command them, the patent they had being for Virginia and not for New England" (Bradford).</p>
 
-                    <p>These "mutinous speeches" from some of the passengers lead to the creation of the "association and agreement" to "combine together in one body" that we now call the Mayflower Compact (Bradford, Mourt's Relation).</p>
+                    <p>These "mutinous speeches" from some of the passengers led to the creation of the "association and agreement" to "combine together in one body" that we now call the Mayflower Compact (Bradford, Mourt's Relation).</p>
 
                     <h2>A New Form of Government</h2>
                     <p>Published in 1622, Mourt's Relation, which details the beginnings of Plimoth, continues on to say that under this agreement, the colonists would "submit to such government and governors as we should by common consent agree to make and choose." Likewise, William Bradford writes that in lieu of their original patent, the Mayflower Compact "might be as firm as any patent, and in some respects more sure."</p>
@@ -70,82 +121,72 @@
                     <p>Today, local governments similar to the one created by the Mayflower Compact can be found throughout America. Plimoth Colony held a yearly election court, where the men gathered would vote for the town's governor and his assistants, as well as discuss pertinent town business. Sound familiar? If you've ever attended a town meeting, voted for your city's mayor, or acted as an alderman or city council person, you have participated in the legacy created by the remarkable document.</p>
                 </section>
 
-                <!-- The Compact Text Section -->
-                <section class="compact-text-section">
-                    <h2 class="section-title">Text of the Mayflower Compact</h2>
-                    <h3 class="compact-subtitle">Agreement Between the Settlers at New Plymouth: 1620</h3>
+                <section class="compact-text-section" style="margin-top: 4rem;">
+                    <h2 class="section-title" style="text-align: center;">Text of the Mayflower Compact</h2>
+                    <h3 class="compact-subtitle" style="text-align: center; color: var(--gold); margin-bottom: 2rem;">Agreement Between the Settlers at New Plymouth: 1620</h3>
                     
-                    <div class="compact-document">
-                        <div class="document-border">
-                            <img src="images/compact_printed.png" alt="Text of the Mayflower Compact with signatures" style="width: 100%; height: auto; display: block;">
-                        </div>
+                    <div class="compact-document" style="padding: 2rem; background: var(--cream); border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                        <img src="images/compact_printed.png" alt="Text of the Mayflower Compact with signatures" style="width: 100%; height: auto; display: block; mix-blend-mode: multiply;">
                     </div>
                 </section>
 
-                <!-- Call to Action -->
-                <section class="page-cta">
-                    <div class="cta-box">
-                        <h3>Trace Your Mayflower Lineage</h3>
-                        <p>Are you a descendant of the Pilgrims who signed the Mayflower Compact? Discover your connection to American history.</p>
-                        <a href="index.html#membership" class="btn btn-primary">Learn About Membership</a>
-                    </div>
+                <section class="page-cta" style="margin-top: 4rem; text-align: center; padding: 3rem; background: linear-gradient(135deg, var(--navy-blue), var(--royal-blue)); border-radius: 15px; color: white;">
+                    <h3 style="font-size: 2rem; margin-bottom: 1rem; color: white;">Trace Your Mayflower Lineage</h3>
+                    <p style="font-size: 1.25rem; margin-bottom: 2rem;">Are you a descendant of the Pilgrims who signed the Mayflower Compact? Discover your connection to American history.</p>
+                    <a href="index.html#membership" class="btn btn-primary" style="background: linear-gradient(135deg, var(--gold), var(--bronze)); padding: 1rem 2rem; color: white; text-decoration: none; border-radius: 5px; font-weight: bold;">Learn About Membership</a>
                 </section>
-
-                <!-- Back to Home -->
-                <div class="back-link">
-                    <a href="index.html">← Back to Home</a>
-                </div>
             </div>
         </div>
     </article>
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-grid">
-            <div class="footer-section">
-                <h3>Alabama Mayflower Society</h3>
-                <p>Preserving the legacy of the Mayflower Pilgrims since 1952</p>
-                <div class="social-links">
-                    <a href="#" aria-label="Facebook">📘</a>
-                    <a href="#" aria-label="Twitter">🐦</a>
-                    <a href="#" aria-label="Instagram">📷</a>
-                    <a href="#" aria-label="YouTube">📺</a>
+    <div class="separator-container">
+        <img src="images/Mayflower_separator_line.png" alt="Separator" class="mayflower-separator">
+    </div>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <img src="images/LOGO002.png" alt="Alabama Mayflower Society" class="footer-logo">
+                    <p>Preserving the legacy of the Mayflower Pilgrims since 1952</p>
+                    <div class="social-links" style="margin-top: 1.5rem;">
+                        <a href="https://www.facebook.com/groups/AlabamaMayflowerSociety" target="_blank" rel="noopener" style="display: inline-block; text-decoration: none;">
+                            <span style="background: white; color: var(--navy-blue); width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; border-radius: 4px; font-family: sans-serif; font-weight: bold; font-size: 22px;">f</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="our-history.html">Our History</a></li>
+                        <li><a href="wewillplymouthrockyouweekend.html">2026 Conference</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Our Colonies</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 1rem;">Cahaba River Colony<br><small>Birmingham Area</small></li>
+                        <li style="margin-bottom: 1rem;">Capital Colony<br><small>Montgomery Area</small></li>
+                        <li style="margin-bottom: 1rem;">Gulf Coast Colony<br><small>Mobile Area</small></li>
+                        <li>Tennessee Valley Colony<br><small>Huntsville Area</small></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 1rem;"><a href="mailto:SMDAL.Info@gmail.com">info@alabamasmd.org</a></li>
+                        <li><a href="https://themayflowersociety.org" target="_blank" rel="noopener">General Society of Mayflower Descendants</a></li>
+                    </ul>
                 </div>
             </div>
             
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="index.html#about">About Us</a></li>
-                    <li><a href="index.html#membership">Membership</a></li>
-                    <li><a href="index.html#events">Events</a></li>
-                    <li><a href="mayflower-compact.html">Mayflower Compact</a></li>
-                    <li><a href="index.html#contact">Contact Us</a></li>
-                </ul>
+            <div class="footer-bottom" style="text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 2rem;">
+                <p>&copy; 2026 Alabama Society of Mayflower Descendants | All Rights Reserved | <a href="privacy-policy.html" style="color: var(--gold);">Privacy Policy</a></p>
             </div>
-            
-            <div class="footer-section">
-                <h3>Our Colonies</h3>
-                <ul>
-                    <li><a href="#">Cahaba River Colony (Birmingham)</a></li>
-                    <li><a href="#">Capital Colony (Montgomery)</a></li>
-                    <li><a href="#">Gulf Coast Colony (Mobile)</a></li>
-                    <li><a href="#">Tennessee Valley Colony (Huntsville)</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-section">
-    <h3>Contact</h3>
-    <ul>
-        <li><a href="mailto:SMDAL.Info@gmail.com">info@alabamasmd.org</a></li>
-        <li><a href="https://themayflowersociety.org" target="_blank" rel="noopener">General Society of Mayflower Descendants</a></li>
-        <li><a href="contact_submit.html">Contact Form</a></li>
-    </ul>
-</div>
-        </div>
-        
-        <div class="footer-bottom">
-            <p>&copy; 2026 Alabama Society of Mayflower Descendants | All Rights Reserved</p>
         </div>
     </footer>
 
