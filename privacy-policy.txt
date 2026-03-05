@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Privacy Policy for the Alabama Society of Mayflower Descendants">
+    <title>Privacy Policy | Alabama Society of Mayflower Descendants</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/logo-fix.css">
+    <link rel="icon" type="image/png" href="images/LOGO001.png?v=3">
+    <style>
+        .policy-container { 
+            max-width: 900px; 
+            margin: 0 auto; 
+            padding: 8rem 2rem 4rem; 
+            line-height: 1.8; 
+            color: #333; 
+            font-family: serif;
+        }
+        .policy-container h1 { 
+            color: #2c3e8c; 
+            font-size: 3rem; 
+            margin-bottom: 2rem; 
+            border-bottom: 2px solid #daa520; 
+            padding-bottom: 1rem; 
+        }
+        .policy-container h2 { color: #2c3e8c; margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.8rem; }
+        .policy-container p { margin-bottom: 1.5rem; font-size: 1.15rem; }
+        .policy-container ul { margin-bottom: 1.5rem; padding-left: 2rem; }
+        .policy-container li { margin-bottom: 0.5rem; font-size: 1.15rem; }
+    </style>
+</head>
+<body>
+    <header id="mainHeader">
+        <nav>
+            <a href="index.html" class="logo">
+                <img src="images/LOGO002.png" alt="Alabama Mayflower Society" class="logo-img">
+            </a>
+            <ul class="nav-links">
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="our-history.html">Our History</a></li>
+                <li><a href="wewillplymouthrockyouweekend.html">2026 Conference</a></li>
+                <li><a href="contact_submit.html">Contact Us</a></li>
+                <li><img src="images/LOGO001.png" alt="Mayflower Society" style="height: 45px; width: auto; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));"></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="policy-container">
+        <h1>Online Privacy Policy</h1>
+        <p><em>March 2026</em></p>
+        
+        <p>The Alabama Society of Mayflower Descendants is committed to protecting your privacy. This Statement of Privacy applies to the Alabama Society of Mayflower Descendants website and governs data collection and usage. By using the Alabama Society of Mayflower Descendants website, you consent to the data practices described in this statement.</p>
+
+        <p>Please note that this Policy does not govern the collection and use of information by companies that the Alabama Society of Mayflower Descendants does not control, nor by individuals not employed or managed by us. If you visit a website that we mention or link to, be sure to review its privacy policy before providing the site with information. It is highly recommended and suggested that you review the privacy policies and statements of any website you choose to use or frequent to better understand the way in which websites garner, make use of and share the information collected.</p>
+
+        <h2>Collection of your Personal Information</h2>
+        <p>It is always up to you whether to disclose personally identifiable information to us, although if you elect not to do so, we reserve the right not to register you as a user or provide you with any products or services. This website collects various types of information, such as:</p>
+        <ul>
+            <li>Voluntarily provided information which may include your name, address, email address, billing or credit card information etc. which may be used when you purchase products or services and to deliver the services you have requested.</li>
+            <li>Information automatically collected when visiting our website, which may include cookies, third party tracking technologies and server logs.</li>
+        </ul>
+        <p>In addition, the Alabama Society of Mayflower Descendants may have the occasion to collect nonpersonal anonymous information, such as the type of browser you are using, IP address, or type of operating system, which will assist us in providing and maintaining superior quality service.</p>
+
+        <h2>Use of your Personal Information</h2>
+        <p>The Alabama Society of Mayflower Descendants collects and uses your personal information to operate the website and deliver the services you have requested. The Alabama Society of Mayflower Descendants also uses your personally identifiable information to inform you of other products or services available from The Alabama Society of Mayflower Descendants and its affiliates.</p>
+        
+        <p>The Alabama Society of Mayflower Descendants does not sell, rent or lease its member lists to third parties. The Alabama Society of Mayflower Descendants may find it beneficial to all our members to share specific data with our trusted partners in an effort to conduct statistical analysis, provide you with email or postal mail, deliver support or arrange for deliveries to be made. Those third parties shall be strictly prohibited from making use of your personal information, other than to deliver those services which you requested, and as such they are required, in accordance with this agreement, to maintain the strictest of confidentiality with regards to all your information.</p>
+
+        <p>The Alabama Society of Mayflower Descendants may not use or disclose the information provided by you except under the following circumstances:</p>
+        <ul>
+            <li>as necessary to provide services or products you have ordered;</li>
+            <li>in other ways described in this Policy or to which you have otherwise consented;</li>
+            <li>in the aggregate with other information in such a way so that your identity cannot reasonably be determined;</li>
+            <li>as required by law, or in response to a subpoena or search warrant;</li>
+            <li>to outside auditors who have agreed to keep the information confidential;</li>
+            <li>as necessary to enforce the Terms of Service;</li>
+            <li>as necessary to maintain, safeguard and preserve all the rights and property of the Alabama Society of Mayflower Descendants.</li>
+        </ul>
+
+        <p>The Alabama Society of Mayflower Descendants keeps track of the pages our users visit within The Alabama Society of Mayflower Descendants website, in order to determine what information or services are the most popular.</p>
+
+        <h2>Children under the age of 13</h2>
+        <p>The Alabama Society of Mayflower Descendants website is not directed to, and does not knowingly collect personal identifiable information from, children under the age of thirteen (13). If it is determined that such information has been inadvertently collected on anyone under the age of thirteen (13), we shall immediately take the necessary steps to ensure that such information is deleted from our system database, or in the alternative, that verifiable parental consent is obtained for the use and storage of such information. Anyone under the age of thirteen (13) must seek and obtain parent or guardian permission to use this website.</p>
+
+        <h2>Security of your Personal Information</h2>
+        <p>The Alabama Society of Mayflower Descendants secures your personal information from unauthorized access, use or disclosure. The Alabama Society of Mayflower Descendants secures the personally identifiable information you provide on computer servers in a controlled, secure environment, protected from unauthorized access, use or disclosure. When personal information (such as a credit card number) is transmitted to other websites, it is protected through the use of encryption, such as the Secure Socket Layer (SSL) protocol.</p>
+
+        <h2>Changes to this Statement</h2>
+        <p>The Alabama Society of Mayflower Descendants will occasionally update this Statement of Privacy to reflect society and user feedback. The Alabama Society of Mayflower Descendants encourages you periodically to review this Statement to be informed of how The Alabama Society of Mayflower Descendants is protecting your information.</p>
+
+        <h2>Contact Information</h2>
+        <p>If you have any questions or concerns regarding the Privacy Policy Agreement related to our website, please feel free to contact us at the following email address:</p>
+        <p><strong>Email: SMDAL.Info@gmail.com</strong></p>
+    </div>
+
+    <div class="separator-container">
+        <img src="images/Mayflower_separator_line.png" alt="Separator" class="mayflower-separator">
+    </div>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <img src="images/LOGO002.png" alt="Alabama Mayflower Society" class="footer-logo">
+                    <p>Preserving the legacy of the Mayflower Pilgrims since 1952</p>
+                    <div class="social-links" style="margin-top: 1.5rem;">
+                        <a href="https://www.facebook.com/groups/AlabamaMayflowerSociety" target="_blank" rel="noopener" style="display: inline-block; text-decoration: none;">
+                            <span style="background: white; color: #2c3e8c; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; border-radius: 4px; font-family: sans-serif; font-weight: bold; font-size: 22px;">f</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="our-history.html">Our History</a></li>
+                        <li><a href="wewillplymouthrockyouweekend.html">2026 Conference</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Our Colonies</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 1rem;">Cahaba River Colony<br><small>Birmingham Area</small></li>
+                        <li style="margin-bottom: 1rem;">Capital Colony<br><small>Montgomery Area</small></li>
+                        <li style="margin-bottom: 1rem;">Gulf Coast Colony<br><small>Mobile Area</small></li>
+                        <li>Tennessee Valley Colony<br><small>Huntsville Area</small></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 1rem;"><a href="mailto:SMDAL.Info@gmail.com">info@alabamasmd.org</a></li>
+                        <li><a href="https://themayflowersociety.org" target="_blank" rel="noopener">General Society of Mayflower Descendants</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom" style="text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 2rem;">
+                <p>&copy; 2026 Alabama Society of Mayflower Descendants | All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
