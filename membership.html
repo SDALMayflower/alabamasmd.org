@@ -1,3 +1,7 @@
+Got it. I've updated the file name in the download link to Preliminary_Review_Form.doc. Everything else remains aligned with your standards: the header/footer from about-us.html, your three technical fixes (divs, centered separators, and flex-aligned nav), and the specific Word-only download.
+
+⚓ The Finalized membership.html
+HTML
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,8 +13,9 @@
     <link rel="stylesheet" href="css/logo-fix.css">
     <link rel="icon" type="image/png" href="images/LOGO001.png?v=3">
     <style>
+        /* ── Hero ─────────────────────────────────────────────────── */
         .membership-hero {
-            background: linear-gradient(rgba(0, 32, 91, 0.4), rgba(0, 32, 91, 0.4)), url('images/membership-hero.jpg');
+            background: linear-gradient(rgba(0, 32, 91, 0.4), rgba(0, 32, 91, 0.4)), url('images/HEADER_GENRIC_IMAGE.jpg');
             background-size: cover;
             background-position: center;
             padding: 8rem 2rem 4rem;
@@ -22,44 +27,167 @@
             justify-content: center;
             min-height: 40vh;
         }
-        .content-section {
+        .membership-hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            color: white;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+            margin-bottom: 0.5rem;
+        }
+        .membership-hero .subtitle {
+            font-size: 1.75rem;
+            color: var(--gold);
+            font-weight: 700;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+        }
+
+        /* ── Content ──────────────────────────────────────────────── */
+        .membership-article {
+            padding: 2rem 2rem;
+            background: white;
+        }
+        .article-content {
             max-width: 900px;
             margin: 0 auto;
-            padding: 0; /* Fix 1: Zeroed out padding for content divs */
             line-height: 1.8;
+            font-size: 1.15rem;
+            color: #333;
         }
+        
+        /* Fix 1: Using div and zeroing out padding */
+        .content-section {
+            padding: 0;
+            margin-bottom: 2.5rem;
+        }
+
+        .article-content h2 {
+            color: var(--navy-blue);
+            font-size: 1.75rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            border-bottom: 2px solid var(--gold);
+            padding-bottom: 0.25rem;
+            display: inline-block;
+        }
+
+        /* Fix 2: Explicit block and centering for separator */
         .mayflower-separator {
-            display: block; /* Fix 2: Explicit block and centering */
+            display: block;
             width: 100%;
             margin: 2rem auto;
+            max-width: 600px;
         }
-        .nav-links li:last-child {
-            display: flex; /* Fix 3: Flex alignment for the insignia */
-            align-items: center;
+
+        .download-links {
+            background: #f9f9f9;
+            padding: 1.5rem;
+            border-left: 4px solid var(--gold);
+            margin-top: 1rem;
+        }
+        .download-links a {
+            color: var(--navy-blue);
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .download-links a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
+    <header id="mainHeader">
+        <nav>
+            <a href="index.html" class="logo">
+                <img src="images/LOGO002.png" alt="Alabama Mayflower Society" class="logo-img">
+            </a>
+            <ul class="nav-links">
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="our-history.html">Our History</a></li>
+                <li><a href="membership.html" style="color: var(--gold);">Membership</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="wewillplymouthrockyouweekend.html">2026 Conference</a></li>
+                <li><a href="useful-links.html">Useful Links</a></li>
+                <li><a href="contact_submit.html">Contact Us</a></li>
+                <li style="display:flex; align-items:center;">
+                    <img src="images/LOGO001.png" alt="Mayflower Society" style="height: 45px; width: auto; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));">
+                </li>
+            </ul>
+        </nav>
+    </header>
+
     <section class="membership-hero">
         <h1>Membership</h1>
         <p class="subtitle">Honor Your Ancestors, Preserve Their Legacy</p>
     </section>
 
-    <main class="container">
+    <div class="separator-container page-separator">
         <img src="images/Mayflower_separator_line.png" alt="Separator" class="mayflower-separator">
+    </div>
 
-        <div class="content-section">
-            <h2>Eligibility</h2>
-            <p>Membership is open to any person able to document their direct lineage from one or more of the passengers on the Mayflower voyage that terminated at Plymouth, New England, in December 1620.</p>
+    <article class="membership-article">
+        <div class="article-content">
+            <div class="content-section">
+                <h2>Eligibility</h2>
+                <p>Membership is open to any person able to document their direct lineage from one or more of the passengers on the Mayflower voyage that terminated at Plymouth, New England, in December 1620.</p>
+            </div>
+
+            <div class="content-section">
+                <h2>The Application Process</h2>
+                <p>Our State Historian and local colonies are here to assist you in navigating the genealogical requirements. The process begins with a preliminary review of your lineage documentation to ensure all standards of the General Society of Mayflower Descendants are met.</p>
+            </div>
+
+            <img src="images/Mayflower_separator_line.png" alt="Separator" class="mayflower-separator">
+
+            <div class="content-section">
+                <h2>Lineage Submission Form</h2>
+                <p>This is a Synopsis of the Lineage of an applicant seeking membership in The Society of Mayflower Descendants in the State of Alabama.</p>
+                <p>Please fill in the line carrier spaces from you to the Mayflower passenger (including spouses), for each generation, wherever possible. The spouses of the direct lineage from your Mayflower ancestor are always placed in the right column after the word "Married." The final name cited should be your own name along with that of your spouse if you have been or are currently married.</p>
+                <p>Let us know if there has been any blood relative who has been a member of the Mayflower Society, in any state, (with state and state number & General Society number if known). If available please include a copy of the member's application and inform us at the end of this form that you are providing this additional information. Any other information that you cannot fit into the rest of the form can be provided here as well.</p>
+                
+                <div class="download-links">
+                    <p>Download the Lineage Submission Form in MS Word Format: <a href="documents/Preliminary_Review_Form.doc">Lineage Submission Form</a></p>
+                </div>
+            </div>
+
+            <div class="separator-container page-separator">
+                <img src="images/Mayflower_separator_line.png" alt="Separator" class="mayflower-separator">
+            </div>
         </div>
+    </article>
 
-        <div class="content-section">
-            <h2>The Application Process</h2>
-            <p>Our State Historian and local colonies are here to assist you in navigating the genealogical requirements. The process begins with a preliminary review of your lineage documentation.</p>
+    <footer id="mainFooter" style="background: var(--navy-blue); color: white; padding: 4rem 2rem 2rem;">
+        <div class="container" style="max-width: 1200px; margin: 0 auto;">
+            <div class="footer-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem;">
+                <div class="footer-section">
+                    <img src="images/LOGO002.png" alt="Alabama Mayflower Society" class="footer-logo" style="height: 80px; margin-bottom: 1.5rem;">
+                    <p>Preserving the legacy of the Mayflower Pilgrims in Alabama since 1952.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Our Colonies</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 1rem;">Cahaba River Colony<br><small>Birmingham Area</small></li>
+                        <li style="margin-bottom: 1rem;">Capital Colony<br><small>Montgomery Area</small></li>
+                        <li style="margin-bottom: 1rem;">Gulf Coast Colony<br><small>Mobile Area</small></li>
+                        <li>Tennessee Valley Colony<br><small>Huntsville Area</small></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 1rem;"><a href="mailto:SMDAL.Info@gmail.com" style="color: white; text-decoration: none;">info@alabamasmd.org</a></li>
+                        <li><a href="https://themayflowersociety.org" target="_blank" rel="noopener" style="color: white; text-decoration: none;">General Society of Mayflower Descendants</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom" style="text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 2rem;">
+                <p>&copy; 2026 Alabama Society of Mayflower Descendants | All Rights Reserved | <a href="privacy-policy.html" style="color: var(--gold); text-decoration: none;">Privacy Policy</a></p>
+            </div>
         </div>
+    </footer>
 
-        <img src="images/Mayflower_separator_line.png" alt="Separator" class="mayflower-separator">
-    </main>
-
-    </body>
+    <script src="js/main.js"></script>
+</body>
 </html>
