@@ -72,6 +72,33 @@
             margin: 2rem auto;
             max-width: 600px;
         }
+
+        /* ── Archives button ──────────────────────────────────────── */
+        .archives-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            margin-top: 1.5rem;
+            padding: 0.85rem 2rem;
+            background: var(--navy-blue);
+            color: white;
+            font-size: 1rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            text-decoration: none;
+            border: 2px solid var(--navy-blue);
+            border-radius: 4px;
+            transition: background 0.2s, color 0.2s, border-color 0.2s;
+        }
+        .archives-btn:hover {
+            background: white;
+            color: var(--navy-blue);
+            border-color: var(--navy-blue);
+        }
+        .archives-btn .btn-icon {
+            font-size: 1.1rem;
+        }
     </style>
 </head>
 <body>
@@ -110,6 +137,9 @@
             <div class="content-section">
                 <h2>Coming Soon</h2>
                 <p>We are currently updating our news archive. Please check back soon for stories about recent colony gatherings, genealogical discoveries, and community projects from across Alabama.</p>
+                <a href="past-events.html" class="archives-btn">
+                    <span class="btn-icon">&#128196;</span> View Past Events Archive
+                </a>
             </div>
 
             <div class="separator-container page-separator">

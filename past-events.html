@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Past events archive for the Alabama Society of Mayflower Descendants">
+    <title>Past Events Archive | Alabama Society of Mayflower Descendants</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/logo-fix.css">
+    <link rel="icon" type="image/png" href="images/LOGO001.png?v=3">
+    <style>
+        /* ── Hero ─────────────────────────────────────────────────── */
+        .archive-hero {
+            background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url('images/LOGO002.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+            color: var(--navy-blue);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 40vh;
+        }
+        .archive-hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.1);
+            margin-bottom: 0.5rem;
+        }
+        .archive-hero .subtitle {
+            font-size: 1.75rem;
+            color: var(--gold);
+            font-weight: 700;
+        }
+
+        /* ── Layout ───────────────────────────────────────────────── */
+        .archive-section {
+            padding: 3rem 2rem;
+            background: white;
+        }
+        .archive-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* ── Back link ────────────────────────────────────────────── */
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            color: var(--navy-blue);
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-decoration: none;
+            margin-bottom: 2rem;
+            transition: color 0.2s;
+        }
+        .back-link:hover { color: var(--gold); }
+        .back-link::before { content: "← "; }
+
+        /* ── Year group ───────────────────────────────────────────── */
+        .year-group {
+            margin-bottom: 2.5rem;
+        }
+        .year-heading {
+            color: var(--navy-blue);
+            font-size: 1.75rem;
+            margin-top: 0;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--gold);
+            padding-bottom: 0.25rem;
+            display: inline-block;
+        }
+
+        /* ── Event card ───────────────────────────────────────────── */
+        .event-card {
+            border: 1px solid #e0e0e0;
+            border-left: 4px solid var(--navy-blue);
+            border-radius: 0 6px 6px 0;
+            padding: 1.2rem 1.5rem;
+            margin-bottom: 1rem;
+            background: #fafafa;
+            line-height: 1.7;
+            font-size: 1rem;
+            color: #333;
+        }
+        .event-card:hover {
+            background: #f3f6fb;
+            border-left-color: var(--gold);
+        }
+        .event-date {
+            font-size: 0.88rem;
+            font-weight: 700;
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            margin-bottom: 0.25rem;
+        }
+        .event-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--navy-blue);
+            margin: 0 0 0.4rem 0;
+        }
+        .event-location {
+            font-size: 0.93rem;
+            color: #555;
+            margin-bottom: 0.4rem;
+        }
+        .event-speaker {
+            font-size: 0.96rem;
+            font-style: italic;
+            color: var(--navy-blue);
+            margin-bottom: 0.4rem;
+        }
+        .event-detail {
+            font-size: 0.95rem;
+            color: #444;
+        }
+        .event-detail em {
+            font-style: italic;
+            color: #666;
+        }
+
+        /* ── Separator image ──────────────────────────────────────── */
+        .mayflower-separator {
+            display: block;
+            width: 100%;
+            margin: 2rem auto;
+            max-width: 600px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ── Header / Nav (matches new site) ───────────────────────── -->
+    <header id="mainHeader">
+        <nav>
+            <a href="index.html" class="logo">
+                <img src="images/LOGO002.png" alt="Alabama Mayflower Society" class="logo-img">
+            </a>
+            <ul class="nav-links">
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="our-history.html">Our History</a></li>
+                <li><a href="membership.html">Membership</a></li>
+                <li><a href="events.html" style="color: var(--gold);">Events</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="wewillplymouthrockyouweekend.html">2026 Conference</a></li>
+                <li><a href="useful-links.html">Useful Links</a></li>
+                <li><a href="contact_submit.html">Contact Us</a></li>
+                <li style="display:flex; align-items:center;">
+                    <img src="images/LOGO001.png" alt="Mayflower Society" style="height: 45px; width: auto; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));">
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ── Hero ──────────────────────────────────────────────────── -->
+    <section class="archive-hero">
+        <h1>Past Events Archive</h1>
+        <p class="subtitle">Meetings &amp; Gatherings: 2013 – 2022</p>
+    </section>
+
+    <div class="separator-container page-separator">
+        <img src="images/Mayflower_separator_line.png" alt="Separator" class="mayflower-separator">
+    </div>
+
+    <!-- ── Archive Content ───────────────────────────────────────── -->
+    <section class="archive-section">
+        <div class="archive-content">
+
+            <a href="events.html" class="back-link">Back to Upcoming Events</a>
+
+            <!-- ══════════════════════════════════════════════════════
+                 2022
+            ══════════════════════════════════════════════════════ -->
+            <div class="year-group">
+                <h2 class="year-heading">2022</h2>
+
+                <div class="event-card">
+                    <div class="event-date">November 19, 2022</div>
+                    <div class="event-title">Compact Day Commemoration &amp; SMDAL 70th Anniversary Celebration</div>
+                    <div class="event-location">The American Village Trust &bull; Montevallo, Shelby County, AL &bull; 11:30 a.m. &bull; $25.00 per person</div>
+                    <div class="event-speaker">Featured Speaker: Robert Scott Davis</div>
+                    <div class="event-detail">
+                        The State Society held its business meeting, a buffet lunch, and an update from <strong>Dr. Erin Kate Scheopner</strong>, GSMD Director of Genealogy and Research Services. Robert S. Davis is a senior professor of History and director of the Genealogy Program at Wallace State Community College, Hanceville, AL. His publications include <em>Tracing Your Alabama Past</em>, <em>Research In Georgia</em>, <em>Andersonville Civil War Prison</em>, <em>The 1833 Land Lottery of Georgia</em>, and <em>Georgia Citizens and Soldiers of the American Revolution</em>.
+                    </div>
+                </div>
+            </div>
+
+            <!-- ══════════════════════════════════════════════════════
+                 2021
+            ══════════════════════════════════════════════════════ -->
+            <div class="year-group">
+                <h2 class="year-heading">2021</h2>
+
+                <div class="event-card">
+                    <div class="event-date">October 30, 2021 &mdash; 11:00 a.m.</div>
+                    <div class="event-title">Alabama State Meeting</div>
+                    <div class="event-location">The American Village &bull; 3727 Highway 119, Montevallo, AL 35115</div>
+                    <div class="event-speaker">Speaker: Governor General Jane Hurt</div>
+                </div>
+            </div>
+
+            <!-- ══════════════════════════════════════════════════════
+                 2019
+            ══════════════════════════════════════════════════════ -->
+            <div class="year-group">
+                <h2 class="year-heading">2019</h2>
+
+                <div class="event-card">
+                    <div class="event-date">August 17, 2019</div>
+                    <div class="event-title">Capital Colony Meeting</div>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-date">April 6, 2019</div>
+                    <div class="event-title">Capital Colony Meeting</div>
+                </div>
+            </div>
+
+            <!-- ══════════════════════════════════════════════════════
+                 2018
+            ══════════════════════════════════════════════════════ -->
+            <div class="year-group">
+                <h2 class="year-heading">2018</h2>
+
+                <div class="event-card">
+                    <div class="event-date">April 28, 2018</div>
+                    <div class="event-title">Alabama State Meeting</div>
+                    <div class="event-location">Huntsville Country Club &bull; 2601 Oakwood Avenue, Huntsville, AL &bull; Board of Assistants 9:30 a.m. &bull; Meeting 11:00 a.m.</div>
+                    <div class="event-speaker">Guest Speaker: GSMD Governor General George Garmony</div>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-date">February 17, 2018</div>
+                    <div class="event-title">Capital Colony Meeting</div>
+                    <div class="event-location">Montgomery Country Club, Beauvoir Room &bull; Business Meeting 11:00 a.m. &bull; Meal 12:00 Noon</div>
+                    <div class="event-speaker">Speaker: Miss Haley Aaron &mdash; Manuscripts Archivist, Alabama Department of Archives and History</div>
+                </div>
+            </div>
+
+            <!-- ══════════════════════════════════════════════════════
+                 2017
+            ══════════════════════════════════════════════════════ -->
+            <div class="year-group">
+                <h2 class="year-heading">2017</h2>
+
+                <div class="event-card">
+                    <div class="event-date">October 28, 2017</div>
+                    <div class="event-title">Alabama State Meeting &mdash; Compact Day Meeting &amp; Luncheon</div>
+                    <div class="event-location">The Club, Glen Iris Room &bull; 1 Robert S. Smith Drive, Birmingham, AL 35209 &bull; Board of Assistants 9:30 a.m. &bull; Meeting 11:00 a.m.</div>
+                    <div class="event-detail"><em>Menu:</em> Chicken Cordon Bleu with Chicken Velout&eacute; sauce, Southern Green Beans, and Roasted New Potatoes. Dessert: Banana Pudding Parfait &amp; Chocolate Pecan Tart.</div>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-date">April 29, 2017</div>
+                    <div class="event-title">Alabama State Meeting</div>
+                    <div class="event-location">Wynlakes Country Club &bull; Board of Assistants 9:30 a.m. &bull; Business Meeting 11:30 a.m. &bull; Lunch 12:00 Noon</div>
+                    <div class="event-speaker">Guest Speaker: Mary Ann Neeley &mdash; &ldquo;Historian of Montgomery&rdquo;</div>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-date">February 4, 2017</div>
+                    <div class="event-title">Cahaba River Colony Meeting</div>
+                    <div class="event-location">Montgomery Country Club, Beauvoir Room &bull; Business Meeting 11:00 a.m. &bull; Lunch 12:00 Noon &bull; $28.00 per person</div>
+                    <div class="event-speaker">Speaker: Mr. William Dean</div>
+                    <div class="event-detail">Associate Professor of Comparative Military Studies, Air Command and Staff College, Maxwell AFB, AL; Adjunct Professor, Joint Special Operations University (JSOU). PhD from the University of Chicago. <em>Menu: Mediterranean Chicken with Roasted Red Potatoes, Frenched Green Beans, and Key Lime Pie.</em></div>
+                </div>
+            </div>
+
+            <!-- ══════════════════════════════════════════════════════
+                 2016
+            ══════════════════════════════════════════════════════ -->
+            <div class="year-group">
+                <h2 class="year-heading">2016</h2>
+
+                <div class="event-card">
+                    <div class="event-date">October 29, 2016</div>
+                    <div class="event-title">State Compact Day Meeting</div>
+                    <div class="event-location">The Club &bull; Birmingham, AL &bull; Board of Assistants 10:00 a.m. &bull; Meeting 11:00 a.m.</div>
+                    <div class="event-speaker">Guest Speaker: Elder William Brewster (1566&ndash;1644), introduced by Michel Marcoux</div>
+                    <div class="event-detail"><em>&ldquo;Why we sailed on the Mayflower and colonized Plimoth.&rdquo;</em> &mdash; Plimoth Colony, circa 1633.</div>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-date">August 6, 2016</div>
+                    <div class="event-title">Cahaba River Colony Meeting</div>
+                    <div class="event-location">Montgomery Country Club &bull; Business Meeting 11:00 a.m. &bull; Lunch 12:00 Noon &bull; $20.00 per person</div>
+                    <div class="event-speaker">Speaker: Ret. Col. Jeffrey Benton</div>
+                    <div class="event-detail">Col. Benton spoke on how our ancestors traveled along the Federal Road to come to Alabama and westward. <em>Menu: Chicken stuffed with Goat Cheese, Apricot and Sage, Roasted Red Potatoes, French Green Beans, Fresh Rolls and Butter.</em></div>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-date">May 7, 2016 &mdash; 11:30 a.m.</div>
+                    <div class="event-title">State Compact Day Meeting</div>
+                    <div class="event-location">Heron Lakes Country Club, Heron Nest Room &bull; 3851 Government Blvd West (Hwy 90 West, Exit 1 off I-65), Mobile, AL &bull; $26.00 buffet &bull; Guests Welcome</div>
+                    <div class="event-speaker">Guest Speaker: Mr. Michael Bailey &mdash; Executive Director, Fort Morgan Historical Site</div>
+                    <div class="event-detail"><em>&ldquo;Fort Bowyer and its Place in the War of 1812.&rdquo;</em></div>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-date">March 12, 2016</div>
+                    <div class="event-title">Cahaba River Colony Meeting</div>
+                    <div class="event-location">Wynlakes Country Club &bull; Business Meeting 11:30 a.m. &bull; Lunch 12:00 Noon</div>
+                    <div class="event-speaker">Speaker: Mr. William Dean</div>
+                    <div class="event-detail">Associate Professor of Comparative Military Studies, Air Command and Staff College, Maxwell AFB, AL. PhD from the University of Chicago.</div>
+                </div>
+            </div>
+
+            <!-- ══════════════════════════════════════════════════════
+                 2015
+            ══════════════════════════════════════════════════════ -->
+            <div class="year-group">
+                <h2 class="year-heading">2015</h2>
+
+                <div class="event-card">
+                    <div class="event-date">November 14, 2015</div>
+                    <div class="event-title">State Compact Day Meeting</div>
+                    <div class="event-location">The Club &bull; Birmingham, AL &bull; Board of Assistants 10:00 a.m. &bull; Meeting 11:00 a.m.</div>
+                    <div class="event-speaker">Guest Speaker: Governor General Lea Filson</div>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-date">July 25, 2015</div>
+                    <div class="event-title">Cahaba River Colony Compact Day Meeting</div>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-date">April 25, 2015</div>
+                    <div class="event-title">State Society Meeting</div>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-date">February 7, 2015</div>
+                    <div class="event-title">Cahaba River Colony Compact Day Meeting</div>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-date">2015 (date unrecorded)</div>
+                    <div class="event-title">Gulf Coast Colony Meeting</div>
+                </div>
+            </div>
+
+            <!-- ══════════════════════════════════════════════════════
+                 2014
+            ══════════════════════════════════════════════════════ -->
+            <div class="year-group">
+                <h2 class="year-heading">2014</h2>
+
+                <div class="event-card">
+                    <div class="event-date">November 1, 2014</div>
+                    <div class="event-title">State Compact Day Meeting</div>
+                    <div class="event-location">The Club &bull; Birmingham, AL &bull; Board of Assistants 10:00 a.m. &bull; Meeting 11:00 a.m.</div>
+                    <div class="event-speaker">Guest Speaker: Dr. Jeffrey Engler, Jamestowne Society</div>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-date">October 25, 2014</div>
+                    <div class="event-title">Gulf Coast Colony Compact Day Meeting</div>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-date">February 1, 2014</div>
+                    <div class="event-title">Cahaba River Colony Meeting</div>
+                    <div class="event-location">Wynlakes Country Club &bull; Business Meeting 11:30 a.m. &bull; Lunch 12:00 Noon</div>
+                    <div class="event-speaker">Speaker: Mr. Bill Stone</div>
+                    <div class="event-detail">Mr. Stone presented one of the original copies of the Articles of Confederation, on loan from a private collection &mdash; a rare opportunity for members and their families.</div>
+                </div>
+            </div>
+
+            <!-- ══════════════════════════════════════════════════════
+                 2013
+            ══════════════════════════════════════════════════════ -->
+            <div class="year-group">
+                <h2 class="year-heading">2013</h2>
+
+                <div class="event-card">
+                    <div class="event-date">November 23, 2013 &mdash; 11:00 a.m.</div>
+                    <div class="event-title">State Society Meeting</div>
+                    <div class="event-location">The Club &bull; Birmingham, AL &bull; Board of Assistants 10:00 a.m.</div>
+                    <div class="event-speaker">Speaker: Governor General Bruce MacGunnigle &mdash; 32nd Governor General, General Society of Mayflower Descendants</div>
+                    <div class="event-detail">A member for 40 years, Governor General MacGunnigle joined the Rhode Island Society at age 24. He is a descendant of William Brewster, James Chilton, Francis Cooke, Edward Fuller, Stephen Hopkins, Thomas Rogers, and Richard Warren, with twelve lines of descent to seven of the twenty-three Mayflower families.</div>
+                </div>
+            </div>
+
+            <div class="separator-container page-separator">
+                <img src="images/Mayflower_separator_line.png" alt="Separator" class="mayflower-separator">
+            </div>
+
+            <p style="text-align:center; color:#666; font-size:0.95rem;">
+                For upcoming events, visit the <a href="events.html" style="color: var(--navy-blue); font-weight:600;">Events page</a>.
+            </p>
+
+        </div>
+    </section>
+
+    <!-- ── Footer (matches new site) ─────────────────────────────── -->
+    <footer id="mainFooter" style="background: var(--navy-blue); color: white; padding: 4rem 2rem 2rem;">
+        <div class="container" style="max-width: 1200px; margin: 0 auto;">
+            <div class="footer-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem;">
+                <div class="footer-section">
+                    <img src="images/LOGO002.png" alt="Alabama Mayflower Society" class="footer-logo" style="height: 80px; margin-bottom: 1.5rem;">
+                    <p>Preserving the legacy of the Mayflower Pilgrims in Alabama since 1952.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Our Colonies</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 1rem;">Cahaba River Colony<br><small>Birmingham Area</small></li>
+                        <li style="margin-bottom: 1rem;">Capital Colony<br><small>Montgomery Area</small></li>
+                        <li style="margin-bottom: 1rem;">Gulf Coast Colony<br><small>Mobile Area</small></li>
+                        <li>Tennessee Valley Colony<br><small>Huntsville Area</small></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 1rem;"><a href="mailto:SMDAL.Info@gmail.com" style="color: white; text-decoration: none;">info@alabamasmd.org</a></li>
+                        <li><a href="https://themayflowersociety.org" target="_blank" rel="noopener" style="color: white; text-decoration: none;">General Society of Mayflower Descendants</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom" style="text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 2rem;">
+                <p>&copy; 2026 Alabama Society of Mayflower Descendants | All Rights Reserved | <a href="privacy-policy.html" style="color: var(--gold); text-decoration: none;">Privacy Policy</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
