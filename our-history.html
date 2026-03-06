@@ -3,89 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="The history of the Alabama Society of Mayflower Descendants and our local colonies">
+    <meta name="description" content="History of the Alabama Society of Mayflower Descendants">
     <title>Our History | Alabama Society of Mayflower Descendants</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/logo-fix.css">
     <link rel="icon" type="image/png" href="images/LOGO001.png?v=3">
     <style>
         .history-hero {
-            /* Lightened the overlay so the image is now clearly visible */
-            background: linear-gradient(rgba(0, 32, 91, 0.3), rgba(0, 32, 91, 0.3)), url('images/history.jpg');
+            /* Targeting your specific file name */
+            background: linear-gradient(rgba(0, 32, 91, 0.2), rgba(0, 32, 91, 0.2)), url('images/history.jpg');
             background-size: cover;
             background-position: center;
-            padding: 8rem 2rem 4rem; /* Tightened from 12rem top padding */
+            padding: 4rem 2rem; /* Reduced from 8rem to tighten vertical space */
             text-align: center;
             color: white;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            min-height: 40vh; /* Reduced from 50vh to pull content up */
+            min-height: 30vh; /* Lowered from 40vh to pull content up */
         }
         .history-hero h1 {
-            font-size: clamp(2.5rem, 6vw, 4.5rem);
-            color: white;
-            text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
-            margin-bottom: 0.5rem;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            margin-bottom: 0.25rem;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.9);
         }
         .history-hero .subtitle {
-            font-size: 1.75rem;
+            font-size: 1.4rem;
             color: var(--gold);
             font-weight: 700;
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.9);
         }
         .history-article {
-            padding: 2rem 2rem 2rem;
+            padding: 0.5rem 2rem; /* Minimal padding to remove big gaps */
             background: white;
         }
         .article-content {
-            max-width: 900px;
+            max-width: 850px;
             margin: 0 auto;
-            line-height: 1.8;
-            font-size: 1.15rem;
-            color: #333;
+            line-height: 1.7;
+            font-size: 1.1rem;
         }
         .article-content h2 {
             color: var(--navy-blue);
-            font-size: 1.75rem;
-            margin-top: 1.5rem; /* Tightened from 2.5rem */
-            margin-bottom: 0.75rem;
+            font-size: 1.6rem;
+            margin-top: 1rem; /* Tightened from 1.5rem */
+            margin-bottom: 0.5rem;
             border-bottom: 2px solid var(--gold);
-            padding-bottom: 0.25rem;
+            padding-bottom: 0.2rem;
             display: inline-block;
         }
         .colony-table {
             width: 100%;
             border-collapse: collapse;
-            margin: 1.5rem 0; /* Tightened margin */
-            background: #fdfaf5;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            border-radius: 8px;
-            overflow: hidden;
+            margin: 1rem 0;
+            font-size: 0.95rem;
         }
         .colony-table th {
             background: var(--navy-blue);
             color: white;
-            padding: 1rem;
+            padding: 0.6rem;
             text-align: left;
-            font-weight: 600;
         }
         .colony-table td {
-            padding: 1rem;
-            border-bottom: 1px solid #e0e0e0;
-        }
-        .colony-table tr:last-child td {
-            border-bottom: none;
-        }
-        .colony-name {
-            font-weight: bold;
-            color: var(--royal-blue);
+            padding: 0.6rem;
+            border-bottom: 1px solid #eee;
         }
         .page-separator {
-            margin: 2rem auto !important; /* Made perfectly uniform for all separators */
-            padding: 0 !important;
+            margin: 1rem auto !important; /* Unified tight spacing for all lines */
             display: block;
+            max-width: 600px;
         }
     </style>
 </head>
@@ -95,23 +82,12 @@
             <a href="index.html" class="logo">
                 <img src="images/LOGO002.png" alt="Alabama Mayflower Society" class="logo-img">
             </a>
-            
-            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            
-            <ul class="nav-links" id="navLinks">
+            <ul class="nav-links">
                 <li><a href="about-us.html">About Us</a></li>
                 <li><a href="our-history.html" style="color: var(--gold);">Our History</a></li>
                 <li><a href="index.html#membership">Membership</a></li>
                 <li><a href="events.html">Events</a></li>
-                <li><a href="news.html">News</a></li>
-                <li><a href="wewillplymouthrockyouweekend.html">2026 Conference</a></li>
-                <li><a href="useful-links.html">Useful Links</a></li>
-                <li><a href="contact_submit.html">Contact Us</a></li>
-                <li><img src="images/LOGO001.png" alt="Mayflower Society" style="height: 45px; width: auto; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));"></li>
+                <li><a href="contact_submit.html">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -126,117 +102,37 @@
     </div>
 
     <article class="history-article">
-        <div class="container">
-            <div class="article-content">
-                
-                <section class="content-section">
-                    <h2>A Vision Founded in Plymouth</h2>
-                    <p>The Mayflower Society was founded in Plymouth, Massachusetts, in 1897. A group of descendants recognized the urgent need for a national society to honor the memory of the 1620 Pilgrims. Their primary intention was to preserve the legacy of those who established Plymouth Colony in what was then called the northern part of Virginia. While the national headquarters maintains the official lineage records and the historic Mayflower Society House, the true heartbeat of the organization lives within the individual State Societies. These organizations ensure that the Pilgrim story is celebrated across the entire country rather than being confined to New England.</p>
-                </section>
+        <div class="article-content">
+            <section>
+                <h2>A Vision Founded in Plymouth</h2>
+                <p>The Mayflower Society was founded in Plymouth, Massachusetts, in 1897. A group of descendants recognized the urgent need for a national society to honor the memory of the 1620 Pilgrims. Their primary intention was to preserve the legacy of those who established Plymouth Colony. While the national headquarters maintains the official lineage records, the true heartbeat of the organization lives within the individual State Societies.</p>
+            </section>
 
-                <section class="content-section">
-                    <h2>Bringing the Legacy to the South</h2>
-                    <p>As the national movement grew, state societies became the essential connective tissue of the overall narrative. The Society of Mayflower Descendants in Alabama was established on December 6, 1952, in Birmingham. We serve as the vital link between Alabama residents and their ancestral roots. By organizing at the state level, we provide personalized genealogical assistance and regional gatherings that keep our shared heritage vibrant for tens of millions of descendants nationwide.</p>
-                </section>
+            <section>
+                <h2>Bringing the Legacy to the South</h2>
+                <p>The Society of Mayflower Descendants in Alabama was established on December 6, 1952, in Birmingham. We serve as the vital link between Alabama residents and their ancestral roots. By organizing at the state level, we provide personalized genealogical assistance and regional gatherings that keep our shared heritage vibrant.</p>
+            </section>
 
-                <section class="content-section">
-                    <h2>Local Homes for a Historic Mission</h2>
-                    <p>To better serve our members across the state, we have established four distinct colony charters. These colonies are where our history meets our daily lives. They represent the most personal level of the Mayflower narrative, allowing descendants to gather, share research, and participate in community service.</p>
+            <section>
+                <h2>Local Homes for a Historic Mission</h2>
+                <p>To better serve our members across the state, we have established four distinct colony charters. These colonies allow descendants to gather, share research, and participate in community service.</p>
+                <table class="colony-table">
+                    <thead>
+                        <tr><th>Colony</th><th>Founded</th><th>Region</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Gulf Coast</td><td>1986</td><td>Mobile and Spanish Fort</td></tr>
+                        <tr><td>Capital</td><td>1990</td><td>Montgomery</td></tr>
+                        <tr><td>Tennessee Valley</td><td>1991</td><td>Madison and North Alabama</td></tr>
+                        <tr><td>Cahaba River</td><td>2016</td><td>Birmingham</td></tr>
+                    </tbody>
+                </table>
+            </section>
 
-                    <table class="colony-table">
-                        <thead>
-                            <tr>
-                                <th>Colony Name</th>
-                                <th>Founding Date</th>
-                                <th>Role in the Alabama Narrative</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="colony-name">Gulf Coast</td>
-                                <td>April 26, 1986</td>
-                                <td>Preserving maritime and colonial history along the Alabama coast.</td>
-                            </tr>
-                            <tr>
-                                <td class="colony-name">Capital</td>
-                                <td>April 7, 1990</td>
-                                <td>Engaging with state leadership and historical archives in Montgomery.</td>
-                            </tr>
-                            <tr>
-                                <td class="colony-name">Tennessee Valley</td>
-                                <td>October 21, 1991</td>
-                                <td>Bringing the Pilgrim spirit to the communities of North Alabama.</td>
-                            </tr>
-                            <tr>
-                                <td class="colony-name">Cahaba River</td>
-                                <td>February 18, 2016</td>
-                                <td>Serving as a modern hub for genealogical excellence in Birmingham.</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </section>
-
-                <section class="content-section">
-                    <h2>Membership and National Connection</h2>
-                    <p>Membership in the Alabama Society provides a direct connection to the General Society in Plymouth. Every third September, members from all over the country gather in Massachusetts for meetings and tours. You also receive the Mayflower Quarterly, which provides a wealth of information about history and genealogy. By joining a local committee like Education or Finance, you help keep our Mayflower Society strong and vital in a rapidly changing world.</p>
-                </section>
-
-                <div class="separator-container page-separator">
-                    <img src="images/Mayflower_separator_line.png" alt="Separator" class="mayflower-separator">
-                </div>
-
+            <div class="separator-container page-separator">
+                <img src="images/Mayflower_separator_line.png" alt="Separator" class="mayflower-separator">
             </div>
         </div>
     </article>
-
-    <footer id="contact">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-section">
-                    <img src="images/LOGO002.png" alt="Alabama Mayflower Society" class="footer-logo">
-                    <p>Preserving the legacy of the Mayflower Pilgrims since 1952</p>
-                    <div class="social-links" style="margin-top: 1.5rem;">
-                        <a href="https://www.facebook.com/groups/AlabamaMayflowerSociety" target="_blank" rel="noopener" style="display: inline-block; text-decoration: none;">
-                            <span style="background: white; color: var(--navy-blue); width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; border-radius: 4px; font-family: sans-serif; font-weight: bold; font-size: 22px;">f</span>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="about-us.html">About Us</a></li>
-                        <li><a href="our-history.html">Our History</a></li>
-                        <li><a href="wewillplymouthrockyouweekend.html">2026 Conference</a></li>
-                        <li><a href="mayflower-compact.html">Mayflower Compact</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Our Colonies</h3>
-                    <ul style="list-style: none; padding: 0;">
-                        <li style="margin-bottom: 1rem;">Cahaba River Colony<br><small>Birmingham Area</small></li>
-                        <li style="margin-bottom: 1rem;">Capital Colony<br><small>Montgomery Area</small></li>
-                        <li style="margin-bottom: 1rem;">Gulf Coast Colony<br><small>Mobile Area</small></li>
-                        <li>Tennessee Valley Colony<br><small>Huntsville Area</small></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Contact</h3>
-                    <ul style="list-style: none; padding: 0;">
-                        <li style="margin-bottom: 1rem;"><a href="mailto:SMDAL.Info@gmail.com">info@alabamasmd.org</a></li>
-                        <li><a href="https://themayflowersociety.org" target="_blank" rel="noopener">General Society of Mayflower Descendants</a></li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="footer-bottom" style="text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 2rem;">
-                <p>&copy; 2026 Alabama Society of Mayflower Descendants | All Rights Reserved | <a href="privacy-policy.html" style="color: var(--gold);">Privacy Policy</a></p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="js/main.js"></script>
 </body>
 </html>
