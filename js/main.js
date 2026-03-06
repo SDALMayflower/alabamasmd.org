@@ -23,10 +23,15 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
+    // Helper: true when the mobile hamburger menu is active (CSS-driven check)
+    function isMobileNav() {
+        return menuToggle && window.getComputedStyle(menuToggle).display !== 'none';
+    }
+
     // Close mobile menu when clicking a non-dropdown link
     document.querySelectorAll('.nav-links a').forEach(link => {
         link.addEventListener('click', function() {
-            if (window.innerWidth <= 768) {
+            if (isMobileNav()) {
                 // Only close the whole menu if it's NOT a dropdown toggle
                 if (!this.classList.contains('dropdown-toggle')) {
                     navLinks.classList.remove('active');
@@ -42,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Dropdown navigation — mobile accordion
     document.querySelectorAll('.nav-dropdown > a.dropdown-toggle').forEach(function(toggle) {
         toggle.addEventListener('click', function(e) {
-            if (window.innerWidth <= 768) {
+            if (isMobileNav()) {
                 e.preventDefault();
                 var parent = this.closest('.nav-dropdown');
                 var isOpen = parent.classList.contains('open');

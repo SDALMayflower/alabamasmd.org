@@ -188,7 +188,7 @@ nav img {
 .dropdown-menu {
     display: none;
     position: absolute;
-    top: calc(100% + 0.75rem);
+    top: 100%;           /* flush — no gap so hover stays connected */
     left: 50%;
     transform: translateX(-50%);
     min-width: 215px;
@@ -198,20 +198,32 @@ nav img {
     border-radius: 10px;
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
     list-style: none;
-    padding: 0.5rem 0;
+    padding: 0.75rem 0 0.5rem; /* top padding replaces the old gap */
     z-index: 200;
 }
 
-/* Arrow pointer on dropdown */
+/* Arrow pointer sits inside the top padding */
 .dropdown-menu::before {
     content: '';
     position: absolute;
-    top: -7px;
+    top: 0;
     left: 50%;
     transform: translateX(-50%);
     border-left: 7px solid transparent;
     border-right: 7px solid transparent;
     border-bottom: 7px solid rgba(30, 64, 175, 0.99);
+}
+
+/* Bridge: invisible padding extends hover area upward so cursor
+   can travel from trigger to menu without dropping the hover */
+.nav-dropdown::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 0.75rem;
+    background: transparent;
 }
 
 /* Show on hover — desktop only */
