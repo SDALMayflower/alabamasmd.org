@@ -3,48 +3,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>News | Alabama Mayflower Society</title>
+    <meta name="description" content="Latest news and announcements from the Alabama Society of Mayflower Descendants">
+    <title>News | Alabama Society of Mayflower Descendants</title>
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/compact-page.css">
+    <link rel="stylesheet" href="css/logo-fix.css">
+    <link rel="icon" type="image/png" href="images/LOGO001.png?v=3">
+    <style>
+        /* ── Hero ─────────────────────────────────────────────────── */
+        .news-hero {
+            /* Using LOGO002.png with a light watermark overlay */
+            background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('images/LOGO002.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+            color: var(--navy-blue);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 40vh;
+        }
+        .news-hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.1);
+            margin-bottom: 0.5rem;
+        }
+        .news-hero .subtitle {
+            font-size: 1.75rem;
+            color: var(--gold);
+            font-weight: 700;
+        }
+
+        /* ── Content ──────────────────────────────────────────────── */
+        .news-article {
+            padding: 2rem 2rem;
+            background: white;
+        }
+        .article-content {
+            max-width: 900px;
+            margin: 0 auto;
+            line-height: 1.8;
+            font-size: 1.15rem;
+            color: #333;
+        }
+        
+        /* Fix 1: Using div and zeroing out padding */
+        .content-section {
+            padding: 0;
+            margin-bottom: 2.5rem;
+        }
+
+        .article-content h2 {
+            color: var(--navy-blue);
+            font-size: 1.75rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            border-bottom: 2px solid var(--gold);
+            padding-bottom: 0.25rem;
+            display: inline-block;
+        }
+
+        /* Fix 2: Explicit block and centering for separator */
+        .mayflower-separator {
+            display: block;
+            width: 100%;
+            margin: 2rem auto;
+            max-width: 600px;
+        }
+    </style>
 </head>
 <body>
     <header id="mainHeader">
         <nav>
             <a href="index.html" class="logo">
                 <img src="images/LOGO002.png" alt="Alabama Mayflower Society" class="logo-img">
-                
             </a>
-            <button class="menu-toggle" id="menuToggle"><span></span><span></span><span></span></button>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="about-us.html">About</a></li>
-                <li><a href="index.html#membership">Membership</a></li>
+            <ul class="nav-links">
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="our-history.html">Our History</a></li>
+                <li><a href="membership.html">Membership</a></li>
                 <li><a href="events.html">Events</a></li>
-                <li><a href="mayflower-compact.html">Mayflower Compact</a></li>
-                <li><a href="contact-us.html">Contact</a></li>
-                <li><a href="index.html#support"><img src="images/LOGO001.png" alt="Mayflower Society" style="height: 45px; width: auto;"></a></li>
+                <li><a href="news.html" style="color: var(--gold);">News</a></li>
+                <li><a href="wewillplymouthrockyouweekend.html">2026 Conference</a></li>
+                <li><a href="useful-links.html">Useful Links</a></li>
+                <li><a href="contact_submit.html">Contact Us</a></li>
+                <li style="display:flex; align-items:center;">
+                    <img src="images/LOGO001.png" alt="Mayflower Society" style="height: 45px; width: auto; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));">
+                </li>
             </ul>
         </nav>
     </header>
 
-    <section class="page-hero" style="background-image: url('images/pilgrims001.jpg'); background-size: cover; background-position: center;">
-        <div class="hero-overlay"></div>
-        <div class="container"><h1 class="serif">News</h1></div>
+    <section class="news-hero">
+        <h1>Society News</h1>
+        <p class="subtitle">Latest Announcements and Updates</p>
     </section>
 
-    <article class="compact-article">
-        <div class="container">
-            <div class="separator-container"><img src="images/Mayflower_separator_line.jpg" alt="Separator" class="mayflower-separator"></div>
-            <div class="article-content">
-                <section class="content-section">
-                    <h2>Coming Soon</h2>
-                    <p>Content for this page is being developed.</p>
-                </section>
-                <div class="back-link"><a href="index.html">← Back to Home</a></div>
+    <div class="separator-container page-separator">
+        <img src="images/Mayflower_separator_line.png" alt="Separator" class="mayflower-separator">
+    </div>
+
+    <article class="news-article">
+        <div class="article-content">
+            <div class="content-section">
+                <h2>Coming Soon</h2>
+                <p>We are currently updating our news archive. Please check back soon for stories about recent colony gatherings, genealogical discoveries, and community projects from across Alabama.</p>
+            </div>
+
+            <div class="separator-container page-separator">
+                <img src="images/Mayflower_separator_line.png" alt="Separator" class="mayflower-separator">
             </div>
         </div>
     </article>
 
-    <footer><div class="container"><div class="footer-bottom"><p>&copy; 2026 Alabama Society of Mayflower Descendants</p></div></div></footer>
+    <footer id="mainFooter" style="background: var(--navy-blue); color: white; padding: 4rem 2rem 2rem;">
+        <div class="container" style="max-width: 1200px; margin: 0 auto;">
+            <div class="footer-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem;">
+                <div class="footer-section">
+                    <img src="images/LOGO002.png" alt="Alabama Mayflower Society" class="footer-logo" style="height: 80px; margin-bottom: 1.5rem;">
+                    <p>Preserving the legacy of the Mayflower Pilgrims in Alabama since 1952.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Our Colonies</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 1rem;">Cahaba River Colony<br><small>Birmingham Area</small></li>
+                        <li style="margin-bottom: 1rem;">Capital Colony<br><small>Montgomery Area</small></li>
+                        <li style="margin-bottom: 1rem;">Gulf Coast Colony<br><small>Mobile Area</small></li>
+                        <li>Tennessee Valley Colony<br><small>Huntsville Area</small></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 1rem;"><a href="mailto:SMDAL.Info@gmail.com" style="color: white; text-decoration: none;">info@alabamasmd.org</a></li>
+                        <li><a href="https://themayflowersociety.org" target="_blank" rel="noopener" style="color: white; text-decoration: none;">General Society of Mayflower Descendants</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom" style="text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 2rem;">
+                <p>&copy; 2026 Alabama Society of Mayflower Descendants | All Rights Reserved | <a href="privacy-policy.html" style="color: var(--gold); text-decoration: none;">Privacy Policy</a></p>
+            </div>
+        </div>
+    </footer>
+
     <script src="js/main.js"></script>
 </body>
 </html>
