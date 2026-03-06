@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mayflower family society websites and related genealogical resources for Mayflower descendants.">
+    <title>Mayflower Family Societies | Alabama Society of Mayflower Descendants</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/logo-fix.css">
+    <link rel="icon" type="image/png" href="images/LOGO001.png?v=3">
+    <style>
+        /* ── Hero ─────────────────────────────────────────────────── */
+        .societies-hero {
+            background: linear-gradient(rgba(0, 32, 91, 0.45), rgba(0, 32, 91, 0.45)), url('images/engraving_mayflower_ship.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 40vh;
+        }
+        .societies-hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            color: white;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+            margin-bottom: 0.5rem;
+        }
+        .societies-hero .subtitle {
+            font-size: 1.75rem;
+            color: var(--gold);
+            font-weight: 700;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+        }
+
+        /* ── Content ──────────────────────────────────────────────── */
+        .societies-article {
+            padding: 2rem 2rem;
+            background: white;
+        }
+        .article-content {
+            max-width: 900px;
+            margin: 0 auto;
+            line-height: 1.8;
+            font-size: 1.15rem;
+            color: #333;
+        }
+        .content-section {
+            padding: 0;
+            margin-bottom: 2.5rem;
+        }
+        .article-content h2 {
+            color: var(--navy-blue);
+            font-size: 1.75rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            border-bottom: 2px solid var(--gold);
+            padding-bottom: 0.25rem;
+            display: inline-block;
+        }
+        .article-content ul {
+            list-style: none;
+            padding: 0;
+        }
+        .article-content li {
+            margin-bottom: 1rem;
+        }
+        .article-content a {
+            color: var(--royal-blue);
+            text-decoration: underline;
+            font-weight: 600;
+        }
+
+        /* ── Disclaimer banner ────────────────────────────────────── */
+        .disclaimer {
+            background: #fdf8ec;
+            border-left: 4px solid var(--gold);
+            border-radius: 0 6px 6px 0;
+            padding: 1rem 1.4rem;
+            margin-bottom: 2rem;
+            font-size: 1rem;
+            color: #555;
+        }
+        .disclaimer strong {
+            color: var(--navy-blue);
+        }
+
+        /* ── Family society cards ─────────────────────────────────── */
+        .society-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .society-card {
+            border: 1px solid #e0e0e0;
+            border-left: 4px solid var(--navy-blue);
+            border-radius: 0 6px 6px 0;
+            padding: 1rem 1.2rem;
+            background: #fafafa;
+            transition: background 0.2s, border-left-color 0.2s;
+        }
+        .society-card:hover {
+            background: #f0f4fb;
+            border-left-color: var(--gold);
+        }
+        .society-name {
+            font-size: 0.78rem;
+            font-weight: 800;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 0.25rem;
+        }
+        .society-card a {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--navy-blue);
+            text-decoration: none;
+        }
+        .society-card a:hover {
+            text-decoration: underline;
+            color: var(--royal-blue);
+        }
+
+        /* ── Back link ────────────────────────────────────────────── */
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            color: var(--navy-blue);
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-decoration: none;
+            margin-bottom: 2rem;
+        }
+        .back-link:hover { color: var(--gold); }
+
+        /* ── Separator ────────────────────────────────────────────── */
+        .mayflower-separator {
+            display: block;
+            width: 100%;
+            margin: 2rem auto;
+            max-width: 600px;
+        }
+    </style>
+</head>
+<body>
+    <header id="mainHeader">
+        <nav>
+            <a href="index.html" class="logo">
+                <img src="images/LOGO002.png" alt="Alabama Mayflower Society" class="logo-img">
+            </a>
+            <ul class="nav-links">
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="our-history.html">Our History</a></li>
+                <li><a href="mayflower-compact.html">Mayflower Compact</a></li>
+                <li><a href="membership.html">Membership</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="wewillplymouthrockyouweekend.html">2026 Conference</a></li>
+                <li><a href="useful-links.html" style="color: var(--gold);">Useful Links</a></li>
+                <li><a href="contact_submit.html">Contact Us</a></li>
+                <li style="display:flex; align-items:center;">
+                    <img src="images/LOGO001.png" alt="Mayflower Society" style="height: 45px; width: auto; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));">
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="societies-hero">
+        <h1>Mayflower Family Societies</h1>
+        <p class="subtitle">Passenger Family Organizations &amp; Related Resources</p>
+    </section>
+
+    <div class="separator-container page-separator">
+        <img src="images/Mayflower_separator_line.png" alt="Separator" class="mayflower-separator">
+    </div>
+
+    <article class="societies-article">
+        <div class="article-content">
+
+            <a href="useful-links.html" class="back-link">&#8592; Back to Useful Links</a>
+
+            <!-- ── Mayflower Research Resources ────────────────────── -->
+            <div class="content-section">
+                <h2>Mayflower Research Resources</h2>
+                <ul>
+                    <li>
+                        <a href="https://www.newenglandancestors.org" target="_blank" rel="noopener">New England Historic Genealogical Society</a> —
+                        A fabulous website for New England research. Members have access to premier record databases. The library in Boston, Massachusetts holds one of the largest collections of New England genealogies, vital records, and manuscripts, staffed by well-trained specialists.
+                    </li>
+                    <li>
+                        <a href="https://www.pilgrimhall.org" target="_blank" rel="noopener">Pilgrim Hall Museum</a> —
+                        The nation's oldest continuously operating museum. Learn more about its extraordinary collection of Pilgrim possessions and artifacts.
+                    </li>
+                    <li>
+                        <a href="http://etext.lib.virginia.edu/users/deetz/" target="_blank" rel="noopener">The Plymouth Colony Archive Project</a> —
+                        University of Virginia project with primary source documents from Plymouth Colony. <em>(Link may be inactive.)</em>
+                    </li>
+                    <li>
+                        <a href="https://www.themayflowersociety.org" target="_blank" rel="noopener">General Society of Mayflower Descendants</a> —
+                        The national organization for all Mayflower descendants.
+                    </li>
+                    <li>
+                        <a href="https://mayflowerhistory.com" target="_blank" rel="noopener">Caleb Johnson's MayflowerHistory.com</a> —
+                        Comprehensive online reference for Mayflower passengers, the voyage, and Plymouth Colony history.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="separator-container page-separator">
+                <img src="images/Mayflower_separator_line.png" alt="Separator" class="mayflower-separator">
+            </div>
+
+            <!-- ── Mayflower Family Society Websites ───────────────── -->
+            <div class="content-section">
+                <h2>Mayflower Family Society Websites</h2>
+                <p>Each of the organizations below is dedicated to the descendants of a specific Mayflower passenger family.</p>
+
+                <div class="disclaimer">
+                    <strong>Please note:</strong> These links are maintained by independent family societies. Some may be temporarily inactive or under reconstruction. If you find a broken link, please <a href="contact_submit.html">let us know</a>.
+                </div>
+
+                <div class="society-grid">
+
+                    <div class="society-card">
+                        <div class="society-name">Allerton</div>
+                        <a href="http://www.isaacallerton.com/" target="_blank" rel="noopener">Pilgrim Isaac Allerton Society</a>
+                    </div>
+
+                    <div class="society-card">
+                        <div class="society-name">Bartlett</div>
+                        <a href="http://www.bartlettsociety.org/" target="_blank" rel="noopener">The Bartlett Society</a>
+                    </div>
+
+                    <div class="society-card">
+                        <div class="society-name">Billington</div>
+                        <a href="https://billingtonfamilysociety.com/" target="_blank" rel="noopener">Billington Family Society</a>
+                    </div>
+
+                    <div class="society-card">
+                        <div class="society-name">Brewster</div>
+                        <a href="http://www.brewsterfamily.org" target="_blank" rel="noopener">Brewster Society</a>
+                    </div>
+
+                    <div class="society-card">
+                        <div class="society-name">Brown</div>
+                        <a href="http://www.pilgrimpeterbrownsociety.org/" target="_blank" rel="noopener">Pilgrim Peter Brown Society</a>
+                    </div>
+
+                    <div class="society-card">
+                        <div class="society-name">Cooke</div>
+                        <a href="http://www.franciscookesociety.org" target="_blank" rel="noopener">Francis Cooke Society</a>
+                    </div>
+
+                    <div class="society-card">
+                        <div class="society-name">Doty</div>
+                        <a href="http://www.edwarddoty.org/" target="_blank" rel="noopener">Pilgrim Edward Doty Society</a>
+                    </div>
+
+                    <div class="society-card">
+                        <div class="society-name">Fuller</div>
+                        <a href="http://www.thefullersociety.org" target="_blank" rel="noopener">The Fuller Society</a>
+                    </div>
+
+                    <div class="society-card">
+                        <div class="society-name">Hopkins</div>
+                        <a href="http://pilgrimhopkins.com/site1" target="_blank" rel="noopener">Hopkins Society</a>
+                    </div>
+
+                    <div class="society-card">
+                        <div class="society-name">Howland</div>
+                        <a href="http://pilgrimjohnhowlandsociety.org" target="_blank" rel="noopener">Pilgrim John Howland Society</a>
+                    </div>
+
+                    <div class="society-card">
+                        <div class="society-name">Kindred &mdash; Alden</div>
+                        <a href="http://www.alden.org" target="_blank" rel="noopener">Alden Kindred of America</a>
+                    </div>
+
+                    <div class="society-card">
+                        <div class="society-name">Kindred &mdash; Soule</div>
+                        <a href="http://www.soulekindred.org" target="_blank" rel="noopener">Soule Kindred in America</a>
+                    </div>
+
+                    <div class="society-card">
+                        <div class="society-name">Rogers</div>
+                        <a href="http://www.thomasrogerssociety.com" target="_blank" rel="noopener">Thomas Rogers Society</a>
+                    </div>
+
+                    <div class="society-card">
+                        <div class="society-name">Samson</div>
+                        <a href="http://pilgrimhenrysamsonkindred.org/" target="_blank" rel="noopener">Pilgrim Henry Samson Kindred</a>
+                    </div>
+
+                    <div class="society-card">
+                        <div class="society-name">Standish</div>
+                        <a href="http://www.mylesstandishsociety.org/" target="_blank" rel="noopener">Miles Standish Society</a>
+                    </div>
+
+                    <div class="society-card">
+                        <div class="society-name">Warren</div>
+                        <a href="https://www.facebook.com/thewarrencousins/" target="_blank" rel="noopener">Warren Cousins</a>
+                    </div>
+
+                    <div class="society-card">
+                        <div class="society-name">White</div>
+                        <a href="http://thepilgrimwilliamwhitesociety.org/" target="_blank" rel="noopener">Pilgrim William White Society</a>
+                    </div>
+
+                    <div class="society-card">
+                        <div class="society-name">Winslow</div>
+                        <a href="https://www.winslowheritagesociety.org" target="_blank" rel="noopener">Winslow Heritage Society</a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="separator-container page-separator">
+                <img src="images/Mayflower_separator_line.png" alt="Separator" class="mayflower-separator">
+            </div>
+
+            <p style="text-align:center; color:#666; font-size:0.95rem;">
+                Return to <a href="useful-links.html" style="color: var(--navy-blue); font-weight:600;">Useful Links</a> &nbsp;|&nbsp;
+                <a href="index.html" style="color: var(--navy-blue); font-weight:600;">Home</a>
+            </p>
+            <br>
+
+        </div>
+    </article>
+
+    <footer id="mainFooter" style="background: var(--navy-blue); color: white; padding: 4rem 2rem 2rem;">
+        <div class="container" style="max-width: 1200px; margin: 0 auto;">
+            <div class="footer-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem;">
+                <div class="footer-section">
+                    <img src="images/LOGO002.png" alt="Alabama Mayflower Society" class="footer-logo" style="height: 80px; margin-bottom: 1.5rem;">
+                    <p>Preserving the legacy of the Mayflower Pilgrims in Alabama since 1952.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Our Colonies</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 1rem;">Cahaba River Colony<br><small>Birmingham Area</small></li>
+                        <li style="margin-bottom: 1rem;">Capital Colony<br><small>Montgomery Area</small></li>
+                        <li style="margin-bottom: 1rem;">Gulf Coast Colony<br><small>Mobile Area</small></li>
+                        <li>Tennessee Valley Colony<br><small>Huntsville Area</small></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 1rem;"><a href="mailto:SMDAL.Info@gmail.com" style="color: white; text-decoration: none;">info@alabamasmd.org</a></li>
+                        <li><a href="https://themayflowersociety.org" target="_blank" rel="noopener" style="color: white; text-decoration: none;">General Society of Mayflower Descendants</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom" style="text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 2rem;">
+                <p>&copy; 2026 Alabama Society of Mayflower Descendants | All Rights Reserved | <a href="privacy-policy.html" style="color: var(--gold); text-decoration: none;">Privacy Policy</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
