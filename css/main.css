@@ -168,6 +168,120 @@ nav img {
     transform: translateY(-2px);
 }
 
+/* ── Navigation Dropdown ─────────────────────────────────────── */
+.nav-dropdown {
+    position: relative;
+}
+
+.dropdown-arrow {
+    font-size: 0.65em;
+    margin-left: 0.25rem;
+    display: inline-block;
+    transition: transform 0.3s ease;
+    vertical-align: middle;
+}
+
+.nav-dropdown.open .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 0.75rem);
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 215px;
+    background: linear-gradient(160deg, rgba(10, 37, 64, 0.99), rgba(30, 64, 175, 0.99));
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+    list-style: none;
+    padding: 0.5rem 0;
+    z-index: 200;
+}
+
+/* Arrow pointer on dropdown */
+.dropdown-menu::before {
+    content: '';
+    position: absolute;
+    top: -7px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid rgba(30, 64, 175, 0.99);
+}
+
+/* Show on hover — desktop only */
+.nav-dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    list-style: none;
+}
+
+.dropdown-menu li + li {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 0.7rem 1.4rem;
+    white-space: nowrap;
+    font-size: 0.95rem;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+/* Suppress underline animation for dropdown items */
+.dropdown-menu li a::before {
+    display: none !important;
+}
+
+.dropdown-menu li a:hover {
+    background: rgba(255, 255, 255, 0.12);
+    color: var(--gold) !important;
+    transform: none;
+}
+
+/* ── Mobile dropdown ─────────────────────────────────────────── */
+@media (max-width: 768px) {
+    /* Suppress hover-based show on touch devices */
+    .nav-dropdown:hover .dropdown-menu {
+        display: none;
+    }
+
+    .nav-dropdown.open .dropdown-menu {
+        display: block;
+        position: static;
+        transform: none;
+        background: rgba(255, 255, 255, 0.07);
+        border: none;
+        border-left: 3px solid var(--gold);
+        border-radius: 0 0 6px 6px;
+        box-shadow: none;
+        padding: 0;
+        margin: 0.25rem 0 0.5rem 1rem;
+        min-width: unset;
+    }
+
+    .dropdown-menu::before {
+        display: none;
+    }
+
+    .dropdown-menu li a {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .dropdown-menu li + li {
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+}
+/* ─────────────────────────────────────────────────────────────── */
+
 .cta-nav-button {
     background: linear-gradient(135deg, var(--gold), var(--bronze));
     color: var(--navy-blue);

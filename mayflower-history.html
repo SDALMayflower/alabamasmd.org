@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The story of the Mayflower voyage — storms, rescues, near-shipwreck, and the ship's final fate. Historical narratives with paintings by Mike Haywood.">
+    <title>Mayflower History | Alabama Society of Mayflower Descendants</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/logo-fix.css">
+    <link rel="icon" type="image/png" href="images/LOGO001.png?v=3">
+    <style>
+        /* ── Hero ─────────────────────────────────────────────────── */
+        .history-hero {
+            background: linear-gradient(rgba(0, 20, 60, 0.72), rgba(0, 20, 60, 0.72)),
+                        url('images/engraving_mayflower_ship.jpg');
+            background-size: cover;
+            background-position: center top;
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 42vh;
+        }
+        .history-hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            color: white;
+            text-shadow: 2px 2px 12px rgba(0,0,0,0.9);
+            margin-bottom: 0.5rem;
+        }
+        .history-hero .subtitle {
+            font-size: 1.35rem;
+            color: var(--gold);
+            font-weight: 600;
+            text-shadow: 1px 1px 6px rgba(0,0,0,0.8);
+            max-width: 700px;
+        }
+
+        /* ── Article wrapper ───────────────────────────────────────── */
+        .narratives-article {
+            padding: 2.5rem 2rem 3rem;
+            background: white;
+        }
+        .article-content {
+            max-width: 900px;
+            margin: 0 auto;
+            line-height: 1.85;
+            font-size: 1.1rem;
+            color: #333;
+        }
+
+        /* ── Suppress global section padding ──────────────────────── */
+        .content-section {
+            padding: 0;
+            margin-bottom: 0;
+        }
+
+        /* ── Back link ─────────────────────────────────────────────── */
+        .back-link {
+            display: inline-block;
+            margin-bottom: 1.75rem;
+            color: var(--royal-blue);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+        .back-link:hover { color: var(--navy-blue); }
+
+        /* ── Intro paragraph ───────────────────────────────────────── */
+        .intro-paragraph {
+            font-size: 1.2rem;
+            color: #444;
+            border-left: 4px solid var(--gold);
+            padding-left: 1.25rem;
+            margin-bottom: 2.5rem;
+            line-height: 1.8;
+        }
+
+        /* ── Narrative section ─────────────────────────────────────── */
+        .narrative-section {
+            margin-bottom: 3rem;
+            overflow: hidden; /* clearfix for floated painting */
+        }
+        .narrative-section h2 {
+            font-size: clamp(1.4rem, 3vw, 1.9rem);
+            color: var(--navy-blue);
+            border-bottom: 2px solid var(--gold);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.25rem;
+        }
+
+        /* ── Painting figure ───────────────────────────────────────── */
+        .painting-figure {
+            float: right;
+            margin: 0.25rem 0 1.25rem 2rem;
+            max-width: 300px;
+            width: 100%;
+            border: 3px solid var(--gold);
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.18);
+        }
+        .painting-figure img {
+            width: 100%;
+            height: auto;
+            display: block;
+            background: var(--navy-blue);
+            min-height: 220px;
+        }
+        .painting-figure figcaption {
+            background: var(--navy-blue);
+            color: var(--gold);
+            text-align: center;
+            padding: 0.5rem 0.75rem;
+            font-size: 0.82rem;
+            font-style: italic;
+            line-height: 1.4;
+        }
+
+        /* ── Bradford quote ────────────────────────────────────────── */
+        .bradford-quote {
+            margin: 1.25rem 0;
+            padding: 1.1rem 1.5rem;
+            background: #f8f5ee;
+            border-left: 5px solid var(--bronze);
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+            color: #444;
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+        .bradford-quote cite {
+            display: block;
+            margin-top: 0.75rem;
+            font-size: 0.9rem;
+            font-style: normal;
+            font-weight: 600;
+            color: var(--navy-blue);
+        }
+
+        /* ── Voyage stats callout ──────────────────────────────────── */
+        .voyage-stats {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        .stat-chip {
+            background: var(--navy-blue);
+            color: white;
+            padding: 0.5rem 1.1rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        .stat-chip span {
+            color: var(--gold);
+        }
+
+        /* ── Artist credit ─────────────────────────────────────────── */
+        .artist-credit {
+            background: linear-gradient(135deg, var(--navy-blue), #1a3a6e);
+            color: white;
+            border-radius: 10px;
+            padding: 1.5rem 2rem;
+            margin: 2.5rem 0;
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+            flex-wrap: wrap;
+        }
+        .artist-credit .anchor-icon {
+            font-size: 2.5rem;
+            flex-shrink: 0;
+        }
+        .artist-credit p { margin: 0; line-height: 1.6; font-size: 0.95rem; }
+        .artist-credit a { color: var(--gold); font-weight: 600; }
+        .artist-credit a:hover { color: white; }
+
+        /* ── Paintings notice ──────────────────────────────────────── */
+        .paintings-notice {
+            background: #fff8e7;
+            border: 1px dashed var(--gold);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            margin-bottom: 2rem;
+            font-size: 0.92rem;
+            color: #555;
+        }
+        .paintings-notice strong { color: var(--navy-blue); }
+
+        /* ── Separator ─────────────────────────────────────────────── */
+        .separator-container { padding: 0 !important; margin: 2rem auto !important; }
+        .mayflower-separator { display: block; width: 100%; max-width: 400px; margin: 0 auto; }
+
+        /* ── Responsive ────────────────────────────────────────────── */
+        @media (max-width: 650px) {
+            .painting-figure {
+                float: none;
+                margin: 0 auto 1.5rem;
+                max-width: 100%;
+            }
+            .voyage-stats { justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+    <header id="mainHeader">
+        <nav>
+            <a href="index.html" class="logo">
+                <img src="images/LOGO002.png" alt="Alabama Mayflower Society" class="logo-img">
+            </a>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="about-us.html">About Us</a></li>
+                <li class="nav-dropdown">
+                    <a href="our-history.html" class="dropdown-toggle" style="color: var(--gold);">Our History <span class="dropdown-arrow">&#9662;</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="our-history.html">Our History</a></li>
+                        <li><a href="mayflower-history.html" style="color: var(--gold);">Mayflower History</a></li>
+                        <li><a href="mayflower-compact.html">Mayflower Compact</a></li>
+                    </ul>
+                </li>
+                <li><a href="membership.html">Membership</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="wewillplymouthrockyouweekend.html">2026 Conference</a></li>
+                <li><a href="useful-links.html">Useful Links</a></li>
+                <li><a href="contact_submit.html">Contact Us</a></li>
+                <li style="display:flex; align-items:center;">
+                    <img src="images/LOGO001.png" alt="Mayflower Society" style="height: 45px; width: auto; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));">
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="history-hero">
+        <h1>Mayflower History</h1>
+        <p class="subtitle">Storms, Rescues &amp; the Voyage That Shaped America</p>
+    </section>
+
+    <div class="separator-container">
+        <img src="images/Mayflower_separator_line.png" alt="Separator" class="mayflower-separator">
+    </div>
+
+    <article class="narratives-article">
+        <div class="article-content">
+
+            <a href="our-history.html" class="back-link">&#8592; Back to Our History</a>
+
+            <p class="intro-paragraph">
+                The following narratives chronicle four pivotal moments of the Mayflower's 1620 voyage —
+                told through the eyes of those who lived it, drawing on the firsthand account of Governor
+                William Bradford. Accompanying paintings are the work of marine artist
+                <strong>Mike Haywood of Cornwall, United Kingdom</strong>.
+            </p>
+
+            <!-- ── PAINTING NOTICE ─────────────────────────────────── -->
+            <!-- Once you have the painting image files, place them in the images/ folder
+                 with these names and remove this notice box:
+                   images/haywood-winds.jpg
+                   images/haywood-howland.jpg
+                   images/haywood-cape-cod.jpg
+                   images/haywood-mayflowers-end.jpg  -->
+            <div class="paintings-notice">
+                <strong>Note for webmaster:</strong> The four Mike Haywood paintings referenced here
+                are not yet in the images folder. Once located, save them as
+                <code>haywood-winds.jpg</code>, <code>haywood-howland.jpg</code>,
+                <code>haywood-cape-cod.jpg</code>, and <code>haywood-mayflowers-end.jpg</code>
+                in the <code>images/</code> directory and remove this notice.
+            </div>
+
+            <div class="separator-container">
+                <img src="images/Mayflower_separator_line.png" alt="Separator" class="mayflower-separator">
+            </div>
+
+            <!-- ── NARRATIVE 1: STORMS ─────────────────────────────── -->
+            <div class="narrative-section">
+                <h2>The Mayflower Battered by Mountainous Seas and Gale Force Winds</h2>
+
+                <figure class="painting-figure">
+                    <img src="images/haywood-winds.jpg"
+                         alt="Painting: The Mayflower battered by Atlantic storms — by Mike Haywood">
+                    <figcaption>"The Wind Freshens"<br>Mike Haywood, Cornwall, UK</figcaption>
+                </figure>
+
+                <p>
+                    In 1620, fierce Atlantic storms pounded the tiny Mayflower relentlessly. Captain
+                    Jones was forced to take in every stitch of canvas and leave the vessel to drift
+                    helplessly like a piece of flotsam. The passengers endured the fetid, overcrowded
+                    conditions below decks in utter misery — seawater had soaked their bedding and
+                    clothing for weeks on end.
+                </p>
+
+                <p>
+                    One of the main beams amidships bowed and cracked under the strain, raising fears
+                    that the ship could not complete the voyage. Remarkably, it held. Governor William
+                    Bradford recorded the ordeal in his own words:
+                </p>
+
+                <blockquote class="bradford-quote">
+                    <p>…and met with many fierce storms, with which the ship was shroudly shaken, and
+                    her upper works made very leaky; and one of the main beams in the mid ships was
+                    bowed and cracked, which put them in some fear that the ship could not be able to
+                    perform the voyage. In sundry of these storms the winds were so fierce, and the
+                    seas so high, as they could not bear a knot of sail, but were forced to hull, for
+                    divers days together.</p>
+                    <cite>— William Bradford, <em>Of Plymouth Plantation</em></cite>
+                </blockquote>
+            </div>
+
+            <div class="separator-container">
+                <img src="images/Mayflower_separator_line.png" alt="Separator" class="mayflower-separator">
+            </div>
+
+            <!-- ── NARRATIVE 2: HOWLAND ────────────────────────────── -->
+            <div class="narrative-section">
+                <h2>Mayflower Drowning Man Shapes the Course of American History</h2>
+
+                <figure class="painting-figure">
+                    <img src="images/haywood-howland.jpg"
+                         alt="Painting: John Howland rescued from the sea — by Mike Haywood">
+                    <figcaption>"Yet He Held His Hold"<br>Mike Haywood, Cornwall, UK</figcaption>
+                </figure>
+
+                <p>
+                    In mid-Atlantic, another disaster struck the storm-tossed Mayflower. A servant
+                    named <strong>John Howland</strong> was swept overboard by a mountainous wave —
+                    and then, miraculously, rescued. He caught hold of the topsail halyards hanging
+                    over the side and clung on, even as the ropes dragged him fathoms beneath the
+                    surface. He was hauled back up by the rope and brought aboard with a boat hook.
+                </p>
+
+                <p>
+                    John Howland went on to become the <strong>thirteenth signatory of the Mayflower
+                    Compact</strong> and was present at the first Thanksgiving. He and his wife
+                    Elizabeth Tilley had ten children and eighty-two grandchildren. Had he lost his
+                    grip that day, the course of American history would have changed: among his
+                    direct descendants are <strong>Presidents George H.W. Bush and George W. Bush,
+                    President Franklin D. Roosevelt, and Humphrey Bogart</strong>.
+                </p>
+
+                <blockquote class="bradford-quote">
+                    <p>…in a mighty storm, a lusty young man (called John Howland) coming upon some
+                    occasion above the gratings, was, with a seele of the ship thrown in the sea;
+                    but it pleased God that he caught hold of the top-sail halyards, which hung over
+                    board, and ran out at length; yet he held his hold (though he was sundrie fathomes
+                    under water) till he was hald up by the same rope to the brime of the water, and
+                    then with a boat hook and other means got into the ship again, and his life saved;
+                    and though he was something ill with it, yet he lived many years after, and became
+                    a profitable member both in church and common wealth.</p>
+                    <cite>— William Bradford, <em>Of Plymouth Plantation</em></cite>
+                </blockquote>
+            </div>
+
+            <div class="separator-container">
+                <img src="images/Mayflower_separator_line.png" alt="Separator" class="mayflower-separator">
+            </div>
+
+            <!-- ── NARRATIVE 3: CAPE COD ───────────────────────────── -->
+            <div class="narrative-section">
+                <h2>Mayflower Almost Shipwrecked Off Cape Cod</h2>
+
+                <figure class="painting-figure">
+                    <img src="images/haywood-cape-cod.jpg"
+                         alt="Painting: Mayflower in riptide off Monomoy Point — by Mike Haywood">
+                    <figcaption>"In the Riptide off Monomoy Point"<br>Mike Haywood, Cornwall, UK</figcaption>
+                </figure>
+
+                <p>
+                    On <strong>November 9, 1620</strong>, the Mayflower's crew sighted Cape Cod and
+                    attempted to sail south toward the mouth of the Hudson River — their original
+                    destination near modern-day Long Island, New York. The weather was fine, but they
+                    were caught in a dangerous riptide and nearly shipwrecked on the shallow sandbars
+                    south of the Cape at <strong>Monomoy Point</strong>. Bradford described the
+                    terrifying moment of decision:
+                </p>
+
+                <blockquote class="bradford-quote">
+                    <p>After some deliberation had amongst them selves and with the master of the ship,
+                    they tacked about and resolved to stand for the southward (the wind and weather
+                    being faire) to find some place about Hudson's River for their habitation. But
+                    after they had sailed that course about half the day, they fell amongst dangerous
+                    should and roaring breakers, and they were so far entangled there with as they
+                    conceived them selves in great danger; and the wind shrinking upon them withal,
+                    they resolved to bear up again for the Cape, and thought themselves happy to get
+                    out of those dangers before night overtook them, as by God's providence they did.</p>
+                    <cite>— William Bradford, <em>Of Plymouth Plantation</em></cite>
+                </blockquote>
+
+                <p>
+                    The Mayflower anchored off what is now <strong>Provincetown Harbor</strong> on
+                    November 11, and over the following month sent out several expeditions to survey
+                    Cape Cod and the surrounding coast before finally landing at Plymouth.
+                </p>
+
+                <div class="voyage-stats">
+                    <div class="stat-chip">Distance: <span>~2,750 miles</span></div>
+                    <div class="stat-chip">Duration: <span>66 days</span></div>
+                    <div class="stat-chip">Passengers: <span>102</span></div>
+                    <div class="stat-chip">Crew: <span>~25–30</span></div>
+                    <div class="stat-chip">Born at sea: <span>Oceanus Hopkins</span></div>
+                    <div class="stat-chip">Born in harbor: <span>Peregrine White</span></div>
+                </div>
+
+                <p>
+                    Of the 102 passengers, only one died during the voyage itself — along with one
+                    crewman. Yet within six months of landing, no fewer than <strong>52 passengers
+                    perished in an epidemic</strong>, including 14 of 18 wives and 13 of 24 husbands.
+                    Remarkably, the survivors resolved to remain.
+                </p>
+            </div>
+
+            <div class="separator-container">
+                <img src="images/Mayflower_separator_line.png" alt="Separator" class="mayflower-separator">
+            </div>
+
+            <!-- ── NARRATIVE 4: END OF THE MAYFLOWER ──────────────── -->
+            <div class="narrative-section">
+                <h2>The End of the Mayflower</h2>
+
+                <figure class="painting-figure">
+                    <img src="images/haywood-mayflowers-end.jpg"
+                         alt="Painting: The Mayflower in ruins on the River Thames, 1624 — by Mike Haywood">
+                    <figcaption>"The End of the Mayflower, 1624"<br>Mike Haywood, Cornwall, UK</figcaption>
+                </figure>
+
+                <p>
+                    On <strong>April 5, 1621</strong>, the Mayflower set sail for England, arriving
+                    on May 6 with news of the successful establishment of Plymouth — but bearing the
+                    devastating toll of fifty percent of the Pilgrims having lost their lives, and
+                    carrying no profitable cargo of lumber, furs, or fish.
+                </p>
+
+                <p>
+                    The Mayflower then sailed to France, bringing back a cargo of salt. Shortly
+                    after, her master and quarter-owner <strong>Captain Christopher Jones</strong>
+                    fell gravely ill. He died in <strong>March 1623</strong>. By 1624, the
+                    Mayflower was sitting in ruins on the River Thames, appraised at a mere
+                    <strong>£128</strong> — including five anchors, a worn suit of sails, an old
+                    pitch pot, and a kettle. The ship was likely sold off as scrap lumber.
+                </p>
+
+                <p>
+                    In 1920, J. Rendal Harris claimed to have discovered Mayflower timbers in a
+                    medieval barn at Jordans, 25 miles northwest of London. Despite a complete
+                    absence of supporting documentation, this theory found its way into
+                    <em>National Geographic</em> and even onto <em>Jeopardy</em>. The evidence,
+                    however, points almost certainly elsewhere — it is not the Mayflower.
+                </p>
+            </div>
+
+            <div class="separator-container">
+                <img src="images/Mayflower_separator_line.png" alt="Separator" class="mayflower-separator">
+            </div>
+
+            <!-- ── ARTIST CREDIT ───────────────────────────────────── -->
+            <div class="artist-credit">
+                <div class="anchor-icon">&#9875;</div>
+                <div>
+                    <p>
+                        <strong>About the Artist:</strong> The paintings accompanying these narratives
+                        are the work of <strong>Mike Haywood of Cornwall, United Kingdom</strong>, a
+                        painter of marine subjects. His full portfolio can be found at
+                        <a href="http://www.mikehaywoodart.co.uk/" target="_blank" rel="noopener">
+                            www.mikehaywoodart.co.uk
+                        </a>.
+                        We are grateful for his vivid depictions of these historic moments.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer id="mainFooter" style="background: var(--navy-blue); color: white; padding: 4rem 2rem 2rem;">
+        <div class="container" style="max-width: 1200px; margin: 0 auto;">
+            <div class="footer-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem;">
+                <div>
+                    <img src="images/LOGO002.png" alt="SMDAL Logo"
+                         style="height: 80px; margin-bottom: 1rem; filter: drop-shadow(0 2px 8px rgba(0,0,0,0.3));">
+                    <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem; line-height: 1.7;">
+                        Preserving the heritage of the Mayflower Pilgrims in the Heart of Dixie since 1952.
+                    </p>
+                </div>
+                <div>
+                    <h4 style="color: var(--gold); margin-bottom: 1rem; font-size: 1rem; letter-spacing: 1px; text-transform: uppercase;">The Colonies</h4>
+                    <ul style="list-style: none; color: rgba(255,255,255,0.7); font-size: 0.9rem; line-height: 2.2;">
+                        <li>Cahaba River Colony</li>
+                        <li>Capital Colony</li>
+                        <li>Gulf Coast Colony</li>
+                        <li>Tennessee Valley Colony</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: var(--gold); margin-bottom: 1rem; font-size: 1rem; letter-spacing: 1px; text-transform: uppercase;">Contact</h4>
+                    <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem; line-height: 2;">
+                        <a href="contact_submit.html" style="color: rgba(255,255,255,0.7); text-decoration: none;">Send a Message</a><br>
+                        <a href="https://www.facebook.com/groups/AlabamaMayflowerSociety"
+                           target="_blank" rel="noopener"
+                           style="color: rgba(255,255,255,0.7); text-decoration: none;">
+                            Facebook Group
+                        </a><br>
+                        <a href="https://themayflowersociety.org" target="_blank" rel="noopener"
+                           style="color: rgba(255,255,255,0.7); text-decoration: none;">
+                            General Society of Mayflower Descendants
+                        </a>
+                    </p>
+                </div>
+            </div>
+            <div style="border-top: 1px solid rgba(255,255,255,0.1); margin-top: 3rem; padding-top: 2rem; text-align: center; color: rgba(255,255,255,0.5); font-size: 0.85rem;">
+                <p>&copy; 2025 Society of Mayflower Descendants in the State of Alabama. All rights reserved.</p>
+                <p style="margin-top: 0.5rem;">
+                    <a href="privacy-policy.html" style="color: rgba(255,255,255,0.5); text-decoration: none;">Privacy Policy</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
