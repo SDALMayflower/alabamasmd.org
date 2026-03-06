@@ -3,72 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="History of the Alabama Society of Mayflower Descendants">
+    <meta name="description" content="History of the Alabama Society of Mayflower Descendants - Established 1952">
     <title>Our History | Alabama Society of Mayflower Descendants</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/logo-fix.css">
     <link rel="icon" type="image/png" href="images/LOGO001.png?v=3">
     <style>
         .history-hero {
-            /* Fallback color if history.jpg is missing from the server */
-            background-color: #00205b; 
-            background-image: linear-gradient(rgba(0, 32, 91, 0.4), rgba(0, 32, 91, 0.4)), url('images/history.jpg');
+            /* Using history.jpg with the dark overlay for readability */
+            background: linear-gradient(rgba(0, 32, 91, 0.4), rgba(0, 32, 91, 0.4)), url('images/history.jpg');
             background-size: cover;
             background-position: center;
-            padding: 3rem 1rem; /* Tightened vertical space */
+            padding: 8rem 2rem 4rem; /* Tightened compared to about-us.html */
             text-align: center;
             color: white;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            min-height: 250px;
+            min-height: 40vh;
         }
-        .history-hero h1 {
-            font-size: clamp(2rem, 5vw, 3.5rem);
-            margin-bottom: 0.25rem;
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.9);
-        }
-        .history-hero .subtitle {
-            font-size: 1.3rem;
-            color: var(--gold);
-            font-weight: 700;
-            text-shadow: 2px 2px 6px rgba(0,0,0,0.9);
-        }
-        .article-content {
+        .history-content {
             max-width: 900px;
             margin: 0 auto;
-            padding: 1rem 1.5rem; /* Reduced padding to eliminate big spaces */
+            padding: 2rem 2rem; /* Reduced padding to fix the "big spaces" */
+            line-height: 1.8;
         }
-        .article-content section {
-            margin-bottom: 1.5rem;
-        }
-        .article-content h2 {
+        .history-content h2 {
             color: var(--navy-blue);
-            font-size: 1.7rem;
-            margin-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
             border-bottom: 2px solid var(--gold);
             display: inline-block;
         }
         .colony-table {
             width: 100%;
             border-collapse: collapse;
-            margin: 1rem 0;
-            background: #f9f9f9;
+            margin: 2rem 0;
+            font-size: 0.95rem;
         }
         .colony-table th {
             background: var(--navy-blue);
             color: white;
-            padding: 0.8rem;
+            padding: 1rem;
             text-align: left;
         }
         .colony-table td {
-            padding: 0.8rem;
-            border-bottom: 1px solid #ddd;
+            padding: 1rem;
+            border-bottom: 1px solid #eee;
         }
-        .page-separator {
-            margin: 1rem auto !important;
-            max-width: 500px;
+        .separator-line {
+            display: block;
+            margin: 2rem auto;
+            max-width: 600px;
         }
     </style>
 </head>
@@ -92,14 +79,12 @@
     </header>
 
     <section class="history-hero">
-        <h1>Our History</h1>
-        <p class="subtitle">From Plymouth Rock to the Heart of Dixie</p>
+        <h1 style="font-size: 3.5rem; text-shadow: 2px 2px 10px rgba(0,0,0,0.5);">Our History</h1>
+        <p style="font-size: 1.5rem; color: var(--gold); font-weight: 700;">From Plymouth Rock to the Heart of Dixie</p>
     </section>
 
-    <div class="article-content">
-        <div class="separator-container page-separator">
-            <img src="images/Mayflower_separator_line.png" alt="Separator" class="mayflower-separator">
-        </div>
+    <main class="history-content">
+        <img src="images/Mayflower_separator_line.png" alt="Separator" class="separator-line">
 
         <section>
             <h2>A Vision Founded in Plymouth</h2>
@@ -114,9 +99,14 @@
         <section>
             <h2>Local Homes for a Historic Mission</h2>
             <p>To better serve our members across the state, we have established four distinct colony charters. These colonies allow descendants to gather, share research, and participate in community service.</p>
+            
             <table class="colony-table">
                 <thead>
-                    <tr><th>Colony</th><th>Founded</th><th>Region</th></tr>
+                    <tr>
+                        <th>Colony</th>
+                        <th>Founded</th>
+                        <th>Region</th>
+                    </tr>
                 </thead>
                 <tbody>
                     <tr><td>Gulf Coast</td><td>1986</td><td>Mobile and Spanish Fort</td></tr>
@@ -127,33 +117,42 @@
             </table>
         </section>
 
-        <div class="separator-container page-separator">
-            <img src="images/Mayflower_separator_line.png" alt="Separator" class="mayflower-separator">
-        </div>
-    </div>
+        <img src="images/Mayflower_separator_line.png" alt="Separator" class="separator-line">
+    </main>
 
-    <footer id="contact">
-        <div class="footer-grid" style="display: flex; justify-content: space-around; padding: 2rem; background: var(--navy-blue); color: white;">
-            <div class="footer-section">
-                <img src="images/LOGO002.png" alt="Alabama Mayflower Society" class="footer-logo" style="height: 60px;">
-                <p>Preserving the legacy since 1952</p>
+    <footer id="mainFooter" style="background: var(--navy-blue); color: white; padding: 4rem 2rem 2rem;">
+        <div class="container" style="max-width: 1200px; margin: 0 auto;">
+            <div class="footer-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem;">
+                <div class="footer-section">
+                    <img src="images/LOGO002.png" alt="Alabama Mayflower Society" class="footer-logo" style="height: 80px; margin-bottom: 1.5rem;">
+                    <p>Preserving the legacy of the Mayflower Pilgrims in Alabama since 1952.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Our Colonies</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 1rem;">Cahaba River Colony<br><small>Birmingham Area</small></li>
+                        <li style="margin-bottom: 1rem;">Capital Colony<br><small>Montgomery Area</small></li>
+                        <li style="margin-bottom: 1rem;">Gulf Coast Colony<br><small>Mobile Area</small></li>
+                        <li>Tennessee Valley Colony<br><small>Huntsville Area</small></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 1rem;"><a href="mailto:SMDAL.Info@gmail.com" style="color: white; text-decoration: none;">info@alabamasmd.org</a></li>
+                        <li><a href="https://themayflowersociety.org" target="_blank" rel="noopener" style="color: white; text-decoration: none;">General Society of Mayflower Descendants</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul style="list-style: none; padding: 0;">
-                    <li><a href="about-us.html" style="color: white;">About Us</a></li>
-                    <li><a href="our-history.html" style="color: white;">Our History</a></li>
-                    <li><a href="contact_submit.html" style="color: white;">Contact</a></li>
-                </ul>
+            
+            <div class="footer-bottom" style="text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 2rem;">
+                <p>&copy; 2026 Alabama Society of Mayflower Descendants | All Rights Reserved | <a href="privacy-policy.html" style="color: var(--gold); text-decoration: none;">Privacy Policy</a></p>
             </div>
-            <div class="footer-section">
-                <h3>Contact</h3>
-                <p>info@alabamasmd.org</p>
-            </div>
-        </div>
-        <div style="text-align: center; background: #001540; color: rgba(255,255,255,0.6); padding: 1rem;">
-            <p>&copy; 2026 Alabama Society of Mayflower Descendants</p>
         </div>
     </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
