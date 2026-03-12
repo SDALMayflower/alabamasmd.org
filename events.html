@@ -3,276 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Upcoming events from the Alabama Society of Mayflower Descendants">
-    <title>Events | Alabama Society of Mayflower Descendants</title>
+    <title>Events | Alabama Mayflower Society</title>
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/logo-fix.css">
-    <link rel="icon" type="image/png" href="images/LOGO001.png?v=3">
-    <style>
-        /* ── Hero ─────────────────────────────────────────────────── */
-        .events-hero {
-            background: linear-gradient(rgba(255,255,255,0.88), rgba(255,255,255,0.88)),
-                        url('images/Mayflower_Collage_Hero.png');
-            background-size: cover;
-            background-position: center;
-            padding: 8rem 2rem 4rem;
-            text-align: center;
-            color: var(--navy-blue);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 40vh;
-        }
-        .events-hero h1 {
-            font-size: clamp(2.5rem, 6vw, 4.5rem);
-            text-shadow: 1px 1px 4px rgba(0,0,0,0.1);
-            margin-bottom: 0.5rem;
-        }
-        .events-hero .subtitle {
-            font-size: 1.75rem;
-            color: var(--gold);
-            font-weight: 700;
-        }
-
-        /* ── Page layout ──────────────────────────────────────────── */
-        .events-section {
-            padding: 3rem 2rem;
-            background: white;
-        }
-        .events-content {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-        .section-heading {
-            color: var(--navy-blue);
-            font-size: 1.75rem;
-            margin-top: 0;
-            margin-bottom: 1.25rem;
-            border-bottom: 2px solid var(--gold);
-            padding-bottom: 0.25rem;
-            display: inline-block;
-        }
-
-        /* ── Featured event card ──────────────────────────────────── */
-        .featured-event {
-            background: linear-gradient(135deg, var(--navy-blue), #1a3a6b);
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 12px 40px rgba(0,0,0,0.18);
-            margin-bottom: 2.5rem;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-        }
-        @media (max-width: 650px) {
-            .featured-event { grid-template-columns: 1fr; }
-        }
-        .featured-event-image {
-            min-height: 280px;
-            background: url('images/Mobile_Bay_Mayflower.jpg') center/cover no-repeat;
-        }
-        .featured-event-body {
-            padding: 2.5rem 2rem;
-            color: white;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            gap: 0.75rem;
-        }
-        .featured-label {
-            font-size: 0.78rem;
-            font-weight: 800;
-            letter-spacing: 0.14em;
-            text-transform: uppercase;
-            color: var(--gold);
-        }
-        .featured-title {
-            font-size: clamp(1.3rem, 3vw, 1.65rem);
-            font-weight: 700;
-            line-height: 1.25;
-            margin: 0;
-        }
-        .featured-date-badge {
-            display: inline-block;
-            background: linear-gradient(135deg, var(--gold), var(--bronze, #b8860b));
-            padding: 0.55rem 1.4rem;
-            border-radius: 50px;
-            font-size: 1rem;
-            font-weight: 700;
-            color: white;
-            width: fit-content;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-        }
-        .featured-location {
-            font-size: 0.95rem;
-            opacity: 0.85;
-        }
-        .featured-desc {
-            font-size: 0.95rem;
-            line-height: 1.6;
-            opacity: 0.9;
-        }
-        .featured-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            margin-top: 0.5rem;
-            padding: 0.85rem 1.75rem;
-            background: linear-gradient(135deg, var(--gold), var(--bronze, #b8860b));
-            color: white;
-            font-size: 1rem;
-            font-weight: 700;
-            letter-spacing: 0.05em;
-            text-decoration: none;
-            border-radius: 6px;
-            box-shadow: 0 4px 14px rgba(0,0,0,0.25);
-            transition: transform 0.15s, box-shadow 0.15s;
-            width: fit-content;
-        }
-        .featured-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-        }
-
-        /* ── Coming soon box ──────────────────────────────────────── */
-        .coming-soon-box {
-            border: 1px dashed #ccc;
-            border-radius: 8px;
-            padding: 2rem;
-            text-align: center;
-            color: #777;
-            font-size: 1rem;
-            line-height: 1.7;
-            margin-bottom: 2rem;
-        }
-        .coming-soon-box p { margin: 0; }
-
-        /* ── Separator ────────────────────────────────────────────── */
-        .mayflower-separator {
-            display: block;
-            width: 100%;
-            margin: 2rem auto;
-            max-width: 600px;
-        }
-    </style>
+    <link rel="stylesheet" href="css/compact-page.css">
 </head>
 <body>
-    <!-- ── Header / Nav ───────────────────────────────────────────── -->
     <header id="mainHeader">
         <nav>
             <a href="index.html" class="logo">
                 <img src="images/LOGO002.png" alt="Alabama Mayflower Society" class="logo-img">
+                
             </a>
-            <ul class="nav-links">
-                <li><a href="about-us.html">About Us</a></li>
-                <li class="nav-dropdown">
-                    <a href="our-history.html" class="dropdown-toggle">Our History <span class="dropdown-arrow">&#9662;</span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="our-history.html">Our History</a></li>
-                        <li><a href="mayflower-history.html">Mayflower History</a></li>
-                        <li><a href="mayflower-compact.html">Mayflower Compact</a></li>
-                    </ul>
-                </li>
-                <li><a href="membership.html">Membership</a></li>
-                <li><a href="events.html" style="color: var(--gold);">Events</a></li>
-                <li><a href="news.html">News</a></li>
-                <li><a href="wewillplymouthrockyouweekend.html">2026 Conference</a></li>
-                <li><a href="useful-links.html">Useful Links</a></li>
-                <li><a href="contact_submit.html">Contact Us</a></li>
-                <li style="display:flex; align-items:center;">
-                    <img src="images/LOGO001.png" alt="Mayflower Society" style="height: 45px; width: auto; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));">
-                </li>
+            <button class="menu-toggle" id="menuToggle"><span></span><span></span><span></span></button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="about-us.html">About</a></li>
+                <li><a href="index.html#membership">Membership</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="mayflower-compact.html">Mayflower Compact</a></li>
+                <li><a href="contact-us.html">Contact</a></li>
+                <li><a href="index.html#support"><img src="images/LOGO001.png" alt="Mayflower Society" style="height: 45px; width: auto;"></a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- ── Hero ──────────────────────────────────────────────────── -->
-    <section class="events-hero">
-        <h1>Events</h1>
-        <p class="subtitle">Gatherings, Conferences &amp; Celebrations</p>
+    <section class="page-hero" style="background-image: url('images/pilgrims001.jpg'); background-size: cover; background-position: center;">
+        <div class="hero-overlay"></div>
+        <div class="container"><h1 class="serif">Events</h1></div>
     </section>
 
-    <div class="separator-container page-separator">
-        <img src="images/Mayflower_separator_line.png" alt="Separator" class="mayflower-separator">
-    </div>
-
-    <!-- ── Main Content ───────────────────────────────────────────── -->
-    <section class="events-section">
-        <div class="events-content">
-
-            <!-- Featured Event -->
-            <h2 class="section-heading">Featured Event</h2>
-            <div class="featured-event">
-                <div class="featured-event-image"></div>
-                <div class="featured-event-body">
-                    <div class="featured-label">&#9733; 2026 Annual Conference</div>
-                    <h3 class="featured-title">"We Will Plymouth Rock You" Weekend</h3>
-                    <div class="featured-date-badge">&#128197;&nbsp; April 24 &amp; 25, 2026</div>
-                    <div class="featured-location">&#128205;&nbsp; Mobile, Alabama</div>
-                    <p class="featured-desc">
-                        Join the Society of Mayflower Descendants in the State of Alabama for a landmark weekend of genealogy, history, and fellowship. Featuring guest speakers, event previews, printable flyers, and a waitlist for registration.
-                    </p>
-                    <a href="wewillplymouthrockyouweekend.html" class="featured-btn">
-                        View Full Conference Details &rarr;
-                    </a>
-                </div>
-            </div>
-
-            <div class="separator-container page-separator">
-                <img src="images/Mayflower_separator_line.png" alt="Separator" class="mayflower-separator">
-            </div>
-
-            <!-- Upcoming Events placeholder -->
-            <h2 class="section-heading">Upcoming Colony Meetings</h2>
-            <div class="coming-soon-box">
-                <p>Colony meeting dates and details are being finalized.<br>
-                Check back soon, or contact us at <a href="mailto:SMDAL.Info@gmail.com" style="color: var(--navy-blue); font-weight:600;">info@alabamasmd.org</a> for the latest schedule.</p>
-            </div>
-
-            <div class="separator-container page-separator">
-                <img src="images/Mayflower_separator_line.png" alt="Separator" class="mayflower-separator">
-            </div>
-
-            <!-- Link to archive -->
-            <p style="text-align:center; color:#666; font-size:0.95rem;">
-                Looking for a past meeting? Visit the <a href="past-events.html" style="color: var(--navy-blue); font-weight:600;">Past Events Archive</a>.
-            </p>
-            <br>
-
-        </div>
-    </section>
-
-    <!-- ── Footer ────────────────────────────────────────────────── -->
-    <footer id="mainFooter" style="background: var(--navy-blue); color: white; padding: 4rem 2rem 2rem;">
-        <div class="container" style="max-width: 1200px; margin: 0 auto;">
-            <div class="footer-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem;">
-                <div class="footer-section">
-                    <img src="images/LOGO002.png" alt="Alabama Mayflower Society" class="footer-logo" style="height: 80px; margin-bottom: 1.5rem;">
-                    <p>Preserving the legacy of the Mayflower Pilgrims in Alabama since 1952.</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Our Colonies</h3>
-                    <ul style="list-style: none; padding: 0;">
-                        <li style="margin-bottom: 1rem;">Cahaba River Colony<br><small>Birmingham Area</small></li>
-                        <li style="margin-bottom: 1rem;">Capital Colony<br><small>Montgomery Area</small></li>
-                        <li style="margin-bottom: 1rem;">Gulf Coast Colony<br><small>Mobile Area</small></li>
-                        <li>Tennessee Valley Colony<br><small>Huntsville Area</small></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Contact</h3>
-                    <ul style="list-style: none; padding: 0;">
-                        <li style="margin-bottom: 1rem;"><a href="mailto:SMDAL.Info@gmail.com" style="color: white; text-decoration: none;">info@alabamasmd.org</a></li>
-                        <li><a href="https://themayflowersociety.org" target="_blank" rel="noopener" style="color: white; text-decoration: none;">General Society of Mayflower Descendants</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom" style="text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 2rem;">
-                <p>&copy; 2026 Alabama Society of Mayflower Descendants | All Rights Reserved | <a href="privacy-policy.html" style="color: var(--gold); text-decoration: none;">Privacy Policy</a></p>
+    <article class="compact-article">
+        <div class="container">
+            <div class="separator-container"><img src="images/Mayflower_separator_line.jpg" alt="Separator" class="mayflower-separator"></div>
+            <div class="article-content">
+                <section class="content-section">
+                    <h2>Coming Soon</h2>
+                    <p>Content for this page is being developed.</p>
+                </section>
+                <div class="back-link"><a href="index.html">← Back to Home</a></div>
             </div>
         </div>
-    </footer>
+    </article>
 
+    <footer><div class="container"><div class="footer-bottom"><p>&copy; 2026 Alabama Society of Mayflower Descendants &nbsp;|&nbsp; <a href="privacy-policy.html" style="color: var(--gold);">Privacy Policy</a></p></div></div></footer>
     <script src="js/main.js"></script>
 </body>
 </html>
