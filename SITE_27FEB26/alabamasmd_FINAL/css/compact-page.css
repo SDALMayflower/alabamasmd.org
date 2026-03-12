@@ -1,0 +1,267 @@
+/* Mayflower Compact Page Styles */
+
+.page-hero {
+    position: relative;
+    height: 60vh;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--primary-color), #2c5f7f);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 70px;
+}
+
+.page-hero .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.page-hero .container {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: var(--text-light);
+    padding: 2rem;
+}
+
+.page-hero h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.subtitle {
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
+    font-weight: 300;
+    font-style: italic;
+}
+
+/* Article Styles */
+.compact-article {
+    padding: 4rem 2rem;
+    background: white;
+}
+
+.featured-image {
+    max-width: 900px;
+    margin: 0 auto 3rem;
+    text-align: center;
+}
+
+.featured-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+}
+
+.image-caption {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #666;
+    font-style: italic;
+}
+
+/* Article Content */
+.article-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.content-section {
+    margin-bottom: 3rem;
+}
+
+.lead-paragraph {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: var(--primary-color);
+    font-weight: 500;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: var(--bg-light);
+    border-left: 4px solid var(--accent-color);
+    border-radius: 5px;
+}
+
+.article-content h2 {
+    color: var(--primary-color);
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--accent-color);
+}
+
+.article-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    color: var(--text-dark);
+}
+
+/* Compact Text Section */
+.compact-text-section {
+    margin-top: 4rem;
+    padding-top: 3rem;
+    border-top: 3px solid var(--accent-color);
+}
+
+.compact-text-section .section-title {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.compact-subtitle {
+    text-align: center;
+    color: #666;
+    font-size: 1.2rem;
+    font-weight: 400;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+.compact-document {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+}
+
+.document-border {
+    border: 3px double var(--accent-color);
+    padding: 2rem;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.compact-text {
+    font-family: 'Crimson Text', Georgia, serif;
+    font-size: 1.15rem;
+    line-height: 1.9;
+    color: #333;
+    text-align: justify;
+    font-style: italic;
+}
+
+/* Page CTA */
+.page-cta {
+    margin: 4rem 0;
+}
+
+.cta-box {
+    background: linear-gradient(135deg, var(--primary-color), #2c5f7f);
+    color: var(--text-light);
+    padding: 3rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+}
+
+.cta-box h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--text-light);
+}
+
+.cta-box p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: rgba(255,255,255,0.9);
+}
+
+.cta-box .btn {
+    background: var(--accent-color);
+    color: var(--text-dark);
+    font-weight: 600;
+}
+
+.cta-box .btn:hover {
+    background: #d4b46d;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(200, 165, 91, 0.4);
+}
+
+/* Back Link */
+.back-link {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.back-link a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.back-link a:hover {
+    color: var(--accent-color);
+}
+
+.back-link a::before {
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-right: 8px solid var(--primary-color);
+    margin-right: 0.5rem;
+    transition: border-right-color 0.3s ease;
+}
+
+.back-link a:hover::before {
+    border-right-color: var(--accent-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .page-hero {
+        height: 50vh;
+        min-height: 350px;
+    }
+    
+    .compact-article {
+        padding: 2rem 1rem;
+    }
+    
+    .lead-paragraph {
+        font-size: 1.1rem;
+        padding: 1rem;
+    }
+    
+    .article-content p {
+        font-size: 1rem;
+    }
+    
+    .compact-document {
+        padding: 1rem;
+    }
+    
+    .document-border {
+        padding: 1.5rem;
+    }
+    
+    .compact-text {
+        font-size: 1rem;
+    }
+    
+    .cta-box {
+        padding: 2rem 1.5rem;
+    }
+    
+    .cta-box h3 {
+        font-size: 1.5rem;
+    }
+}
