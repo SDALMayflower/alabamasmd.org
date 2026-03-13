@@ -3,48 +3,624 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Events | Alabama Mayflower Society</title>
+    <meta name="description" content="Events - Alabama Society of Mayflower Descendants">
+    <title>Events | Alabama Society of Mayflower Descendants</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/compact-page.css">
+    <link rel="icon" type="image/png" href="images/LOGO001.png?v=3">
+    <style>
+        /* ── Conference Card ─────────────────────────────────── */
+        .conference-section {
+            padding: 4rem 2rem 3rem;
+            background: white;
+        }
+
+        .conference-card {
+            max-width: 860px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, #1e3a5f 0%, #2c5490 50%, #1e3a5f 100%);
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(30, 58, 95, 0.35);
+            position: relative;
+        }
+
+        /* subtle anchor-pattern overlay */
+        .conference-card::before {
+            content: '⚓';
+            position: absolute;
+            right: 3rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 8rem;
+            opacity: 0.06;
+            pointer-events: none;
+            line-height: 1;
+        }
+
+        .conference-card-inner {
+            padding: 3rem 3.5rem;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .conference-year-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #d4a574, #d4af37, #d4a574);
+            color: #1e3a5f;
+            font-weight: 700;
+            font-size: 0.8rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            padding: 0.4rem 1.6rem;
+            border-radius: 50px;
+            margin-bottom: 1.5rem;
+        }
+
+        .conference-card h2 {
+            color: white;
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            margin-bottom: 0.75rem;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            line-height: 1.25;
+        }
+
+        .conference-dates {
+            color: #d4c49a;
+            font-size: clamp(1.05rem, 2.5vw, 1.3rem);
+            font-weight: 500;
+            margin-bottom: 2rem;
+            letter-spacing: 0.03em;
+        }
+
+        .conference-divider {
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #d4a574, transparent);
+            margin: 1.25rem auto 2rem;
+        }
+
+        .conference-cta {
+            display: inline-block;
+            background: linear-gradient(135deg, #d4a574, #d4af37);
+            color: #1e3a5f;
+            font-weight: 700;
+            font-size: 0.95rem;
+            padding: 0.9rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+        }
+
+        .conference-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 14px 35px rgba(212, 175, 55, 0.55);
+            color: #1e3a5f;
+        }
+
+        /* ── Timeline ────────────────────────────────────────── */
+        .timeline-section {
+            padding: 4rem 2rem 5rem;
+            background: #f5f6f8;
+        }
+
+        .timeline-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 3.5rem;
+        }
+
+        .timeline-header h2 {
+            color: #1e3a5f;
+            font-size: clamp(1.7rem, 3.5vw, 2.4rem);
+            margin-bottom: 0.6rem;
+        }
+
+        .timeline-header p {
+            color: #777;
+            font-style: italic;
+            font-size: 1.05rem;
+        }
+
+        .timeline {
+            max-width: 820px;
+            margin: 0 auto;
+            position: relative;
+            padding-left: 150px;
+        }
+
+        /* vertical gold line */
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 118px;
+            top: 8px;
+            bottom: 8px;
+            width: 3px;
+            background: linear-gradient(to bottom, #d4a574, #d4af37 50%, #d4a574);
+            border-radius: 2px;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2.2rem;
+        }
+
+        /* circular gold marker on the line */
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -35px;
+            top: 17px;
+            width: 16px;
+            height: 16px;
+            background: linear-gradient(135deg, #d4a574, #d4af37);
+            border-radius: 50%;
+            border: 3px solid #f5f6f8;
+            box-shadow: 0 0 0 2px #d4af37;
+            z-index: 1;
+        }
+
+        /* date label to the left of the line */
+        .timeline-date {
+            position: absolute;
+            left: -148px;
+            top: 13px;
+            width: 108px;
+            text-align: right;
+            color: #1e3a5f;
+            font-weight: 700;
+            font-size: 0.78rem;
+            line-height: 1.4;
+            padding-right: 6px;
+        }
+
+        .timeline-card {
+            background: white;
+            border-radius: 10px;
+            padding: 1.35rem 1.6rem;
+            box-shadow: 0 3px 18px rgba(0,0,0,0.07);
+            border-left: 4px solid #d4a574;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .timeline-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 28px rgba(0,0,0,0.12);
+        }
+
+        .event-type-tag {
+            display: inline-block;
+            background: rgba(30, 58, 95, 0.08);
+            color: #1e3a5f;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            padding: 0.2rem 0.7rem;
+            border-radius: 20px;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-card h3 {
+            color: #1e3a5f;
+            font-size: 1rem;
+            margin-bottom: 0.3rem;
+            line-height: 1.35;
+        }
+
+        .timeline-card p {
+            color: #5a6475;
+            font-size: 0.88rem;
+            line-height: 1.65;
+            margin: 0;
+        }
+
+        .event-venue {
+            color: #999;
+            font-size: 0.82rem;
+            margin-top: 0.35rem;
+            font-style: italic;
+        }
+
+        /* ── Mobile ──────────────────────────────────────────── */
+        @media (max-width: 640px) {
+            .timeline {
+                padding-left: 28px;
+            }
+
+            .timeline::before {
+                left: 0;
+            }
+
+            .timeline-item::before {
+                left: -20px;
+                top: 14px;
+            }
+
+            .timeline-date {
+                position: static;
+                width: auto;
+                text-align: left;
+                color: #d4a574;
+                font-size: 0.8rem;
+                margin-bottom: 0.25rem;
+                padding-right: 0;
+            }
+
+            .conference-card-inner {
+                padding: 2rem 1.5rem;
+            }
+
+            .conference-card::before {
+                display: none;
+            }
+        }
+    </style>
 </head>
 <body>
+
+    <!-- ── Header / Nav ──────────────────────────────────────── -->
     <header id="mainHeader">
         <nav>
             <a href="index.html" class="logo">
                 <img src="images/LOGO002.png" alt="Alabama Mayflower Society" class="logo-img">
-                
             </a>
-            <button class="menu-toggle" id="menuToggle"><span></span><span></span><span></span></button>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
             <ul class="nav-links" id="navLinks">
-                <li><a href="about-us.html">About</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="our-history.html">Our History</a></li>
                 <li><a href="index.html#membership">Membership</a></li>
                 <li><a href="events.html">Events</a></li>
-                <li><a href="mayflower-compact.html">Mayflower Compact</a></li>
-                <li><a href="contact-us.html">Contact</a></li>
-                <li><a href="index.html#support"><img src="images/LOGO001.png" alt="Mayflower Society" style="height: 45px; width: auto;"></a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="wewillplymouthrockyouweekend.html">2026 Conference</a></li>
+                <li><a href="useful-links.html">Useful Links</a></li>
+                <li><a href="contact_submit.html">Contact Us</a></li>
+                <li><a href="index.html#support"><img src="images/LOGO001.png" alt="Mayflower Society" style="height: 45px; width: auto; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3)); background: none;"></a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="page-hero" style="background-image: url('images/pilgrims001.jpg'); background-size: cover; background-position: center;">
+    <!-- ── Hero ─────────────────────────────────────────────── -->
+    <section class="page-hero" style="background-image: url('images/Mayflower_Collage_Hero.png'); background-size: cover; background-position: center top;">
         <div class="hero-overlay"></div>
-        <div class="container"><h1 class="serif">Events</h1></div>
+        <div class="container">
+            <h1 class="serif" style="color: white; text-shadow: 2px 2px 8px rgba(0,0,0,0.5);">Events</h1>
+            <p class="subtitle" style="color: rgba(255,255,255,0.88); margin-top: 0.75rem;">Gatherings of the Alabama Society of Mayflower Descendants</p>
+        </div>
     </section>
 
-    <article class="compact-article">
-        <div class="container">
-            <div class="separator-container"><img src="images/Mayflower_separator_line.jpg" alt="Separator" class="mayflower-separator"></div>
-            <div class="article-content">
-                <section class="content-section">
-                    <h2>Coming Soon</h2>
-                    <p>Content for this page is being developed.</p>
-                </section>
-                <div class="back-link"><a href="index.html">← Back to Home</a></div>
+    <!-- ── Separator ────────────────────────────────────────── -->
+    <div class="separator-container">
+        <img src="images/Mayflower_separator_line.png" alt="Separator" class="mayflower-separator">
+    </div>
+
+    <!-- ── 2026 Conference Card ──────────────────────────────── -->
+    <section class="conference-section">
+        <div class="conference-card">
+            <div class="conference-card-inner">
+                <div class="conference-year-badge">⚓ &nbsp;Upcoming Event&nbsp; ⚓</div>
+                <h2>2026 Annual State Conference</h2>
+                <div class="conference-divider"></div>
+                <p class="conference-dates">Friday, April 24 &amp; Saturday, April 25, 2026</p>
+                <a href="wewillplymouthrockyouweekend.html" class="conference-cta">View Conference Details &rarr;</a>
             </div>
         </div>
-    </article>
+    </section>
 
-    <footer><div class="container"><div class="footer-bottom"><p>&copy; 2026 Alabama Society of Mayflower Descendants &nbsp;|&nbsp; <a href="privacy-policy.html" style="color: var(--gold);">Privacy Policy</a></p></div></div></footer>
+    <!-- ── Separator ────────────────────────────────────────── -->
+    <div class="separator-container" style="background: #f5f6f8;">
+        <img src="images/Mayflower_separator_line.png" alt="Separator" class="mayflower-separator">
+    </div>
+
+    <!-- ── Event Archives Timeline ───────────────────────────── -->
+    <section class="timeline-section">
+        <div class="timeline-header">
+            <h2>Past Events Archive</h2>
+            <p>A history of SMDAL gatherings, meetings, and commemorations &mdash; 2014&ndash;2022</p>
+        </div>
+
+        <div class="timeline">
+
+            <!-- 1 ─ November 19, 2022 -->
+            <div class="timeline-item">
+                <div class="timeline-date">Nov 19<br>2022</div>
+                <div class="timeline-card">
+                    <span class="event-type-tag">State Meeting</span>
+                    <h3>Compact Day Commemoration &amp; SMDAL 70th Anniversary Celebration</h3>
+                    <p>Business meeting, buffet lunch, and a presentation by Dr. Erin Kate Scheopner (GSMD Director of Genealogy). Featured speaker: Robert Scott Davis, senior professor of History and director of the Genealogy Program at Wallace State Community College.</p>
+                    <p class="event-venue">The American Village Trust &bull; Montevallo, Shelby County, AL &bull; 11:30 a.m. &bull; $25/person</p>
+                </div>
+            </div>
+
+            <!-- 2 ─ October 30, 2021 -->
+            <div class="timeline-item">
+                <div class="timeline-date">Oct 30<br>2021</div>
+                <div class="timeline-card">
+                    <span class="event-type-tag">State Meeting</span>
+                    <h3>State Society Meeting</h3>
+                    <p>Featured speaker: Governor General Jane Hurt.</p>
+                    <p class="event-venue">The American Village &bull; 3727 Highway 119, Montevallo, AL &bull; 11:00 a.m.</p>
+                </div>
+            </div>
+
+            <!-- 3 ─ August 17, 2019 -->
+            <div class="timeline-item">
+                <div class="timeline-date">Aug 17<br>2019</div>
+                <div class="timeline-card">
+                    <span class="event-type-tag">Colony Meeting</span>
+                    <h3>Capital Colony Meeting</h3>
+                    <p class="event-venue">Montgomery, AL</p>
+                </div>
+            </div>
+
+            <!-- 4 ─ April 6, 2019 -->
+            <div class="timeline-item">
+                <div class="timeline-date">Apr 6<br>2019</div>
+                <div class="timeline-card">
+                    <span class="event-type-tag">Colony Meeting</span>
+                    <h3>Capital Colony Meeting</h3>
+                    <p class="event-venue">Montgomery, AL</p>
+                </div>
+            </div>
+
+            <!-- 5 ─ 2019 Gulf Coast -->
+            <div class="timeline-item">
+                <div class="timeline-date">2019</div>
+                <div class="timeline-card">
+                    <span class="event-type-tag">Colony Meeting</span>
+                    <h3>Gulf Coast Colony Meeting</h3>
+                    <p class="event-venue">Mobile Area, AL</p>
+                </div>
+            </div>
+
+            <!-- 6 ─ April 28, 2018 -->
+            <div class="timeline-item">
+                <div class="timeline-date">Apr 28<br>2018</div>
+                <div class="timeline-card">
+                    <span class="event-type-tag">State Meeting</span>
+                    <h3>Alabama State Meeting</h3>
+                    <p>Board of Assistants Meeting at 9:30 a.m.; general meeting at 11:00 a.m. Guest speaker: GSMD Governor General George Garmony.</p>
+                    <p class="event-venue">Huntsville Country Club &bull; 2601 Oakwood Avenue, Huntsville, AL</p>
+                </div>
+            </div>
+
+            <!-- 7 ─ February 17, 2018 -->
+            <div class="timeline-item">
+                <div class="timeline-date">Feb 17<br>2018</div>
+                <div class="timeline-card">
+                    <span class="event-type-tag">Colony Meeting</span>
+                    <h3>Capital Colony Meeting</h3>
+                    <p>Business meeting at 11:00 a.m., luncheon at 12:00 noon. Speaker: Miss Haley Aaron, Manuscripts Archivist, Alabama Department of Archives and History.</p>
+                    <p class="event-venue">Montgomery Country Club &bull; Beauvoir Room, Montgomery, AL</p>
+                </div>
+            </div>
+
+            <!-- 8 ─ October 28, 2017 -->
+            <div class="timeline-item">
+                <div class="timeline-date">Oct 28<br>2017</div>
+                <div class="timeline-card">
+                    <span class="event-type-tag">State Meeting &bull; Compact Day</span>
+                    <h3>Alabama State Compact Day Meeting &amp; Luncheon</h3>
+                    <p>Board of Assistants Meeting at 9:30 a.m.; Compact Day Meeting &amp; Luncheon at 11:00 a.m. in the Glen Iris Room.</p>
+                    <p class="event-venue">The Club &bull; 1 Robert S. Smith Drive, Birmingham, AL</p>
+                </div>
+            </div>
+
+            <!-- 9 ─ April 29, 2017 -->
+            <div class="timeline-item">
+                <div class="timeline-date">Apr 29<br>2017</div>
+                <div class="timeline-card">
+                    <span class="event-type-tag">State Meeting</span>
+                    <h3>Alabama State Meeting</h3>
+                    <p>Board of Assistants Meeting at 9:30 a.m.; business meeting at 11:30 a.m.; lunch at 12:00 noon. Guest speaker: Mary Ann Neeley, &ldquo;Historian of Montgomery.&rdquo;</p>
+                    <p class="event-venue">Wynlakes Country Club &bull; Montgomery, AL</p>
+                </div>
+            </div>
+
+            <!-- 10 ─ February 4, 2017 -->
+            <div class="timeline-item">
+                <div class="timeline-date">Feb 4<br>2017</div>
+                <div class="timeline-card">
+                    <span class="event-type-tag">Colony Meeting</span>
+                    <h3>Cahaba River Colony Meeting</h3>
+                    <p>Business meeting at 11:00 a.m.; lunch at 12:00 noon. Speaker: Mr. William Dean, Associate Professor of Comparative Military Studies, Air Command and Staff College, Maxwell AFB.</p>
+                    <p class="event-venue">Montgomery Country Club &bull; Beauvoir Room, Montgomery, AL &bull; $28/person</p>
+                </div>
+            </div>
+
+            <!-- 11 ─ October 29, 2016 -->
+            <div class="timeline-item">
+                <div class="timeline-date">Oct 29<br>2016</div>
+                <div class="timeline-card">
+                    <span class="event-type-tag">State Meeting &bull; Compact Day</span>
+                    <h3>State Compact Day Meeting</h3>
+                    <p>Board of Assistants Meeting at 10:00 a.m.; general meeting at 11:00 a.m. Guest speaker: &ldquo;Elder William Brewster (1566&ndash;1644),&rdquo; introduced by Michel Marcoux &mdash; &ldquo;Why we sailed on the Mayflower and colonized Plimoth.&rdquo;</p>
+                    <p class="event-venue">The Club &bull; Birmingham, AL</p>
+                </div>
+            </div>
+
+            <!-- 12 ─ August 6, 2016 -->
+            <div class="timeline-item">
+                <div class="timeline-date">Aug 6<br>2016</div>
+                <div class="timeline-card">
+                    <span class="event-type-tag">Colony Meeting</span>
+                    <h3>Cahaba River Colony Meeting</h3>
+                    <p>Business meeting at 11:00 a.m.; lunch at 12:00 noon. Speaker: Ret. Col. Jeffrey Benton on how ancestors traveled the Federal Road into Alabama and westward.</p>
+                    <p class="event-venue">Montgomery Country Club &bull; Montgomery, AL &bull; $20/per</p>
+                </div>
+            </div>
+
+            <!-- 13 ─ May 7, 2016 -->
+            <div class="timeline-item">
+                <div class="timeline-date">May 7<br>2016</div>
+                <div class="timeline-card">
+                    <span class="event-type-tag">State Meeting &bull; Compact Day</span>
+                    <h3>State Compact Day Meeting</h3>
+                    <p>Meeting at 11:30 a.m. Guest speaker: Mr. Michael Bailey, Executive Director, Fort Morgan Historical Site &mdash; &ldquo;Fort Bowyer and its Place in the War of 1812.&rdquo; Buffet lunch; guests welcome.</p>
+                    <p class="event-venue">Heron Lakes Country Club, Heron Nest Room &bull; 3851 Government Blvd W, Mobile, AL &bull; $26/person</p>
+                </div>
+            </div>
+
+            <!-- 14 ─ March 12, 2016 -->
+            <div class="timeline-item">
+                <div class="timeline-date">Mar 12<br>2016</div>
+                <div class="timeline-card">
+                    <span class="event-type-tag">Colony Meeting</span>
+                    <h3>Cahaba River Colony Meeting</h3>
+                    <p>Business meeting at 11:30 a.m.; lunch at 12:00 noon. Speaker: Mr. William Dean, Associate Professor of Comparative Military Studies, Air Command and Staff College, Maxwell AFB.</p>
+                    <p class="event-venue">Wynlakes Country Club &bull; Montgomery, AL</p>
+                </div>
+            </div>
+
+            <!-- 15 ─ November 14, 2015 -->
+            <div class="timeline-item">
+                <div class="timeline-date">Nov 14<br>2015</div>
+                <div class="timeline-card">
+                    <span class="event-type-tag">State Meeting &bull; Compact Day</span>
+                    <h3>State Compact Day Meeting</h3>
+                    <p>Board of Assistants Meeting at 10:00 a.m.; general meeting at 11:00 a.m. Guest speaker: Governor General Lea Filson.</p>
+                    <p class="event-venue">The Club &bull; Birmingham, AL</p>
+                </div>
+            </div>
+
+            <!-- 16 ─ July 25, 2015 -->
+            <div class="timeline-item">
+                <div class="timeline-date">Jul 25<br>2015</div>
+                <div class="timeline-card">
+                    <span class="event-type-tag">Colony Meeting &bull; Compact Day</span>
+                    <h3>Cahaba River Colony Compact Day Meeting</h3>
+                    <p class="event-venue">Alabama</p>
+                </div>
+            </div>
+
+            <!-- 17 ─ April 25, 2015 -->
+            <div class="timeline-item">
+                <div class="timeline-date">Apr 25<br>2015</div>
+                <div class="timeline-card">
+                    <span class="event-type-tag">State Meeting</span>
+                    <h3>State Society Meeting</h3>
+                    <p class="event-venue">Alabama</p>
+                </div>
+            </div>
+
+            <!-- 18 ─ 2015 Gulf Coast -->
+            <div class="timeline-item">
+                <div class="timeline-date">2015</div>
+                <div class="timeline-card">
+                    <span class="event-type-tag">Colony Meeting</span>
+                    <h3>Gulf Coast Colony Meeting</h3>
+                    <p class="event-venue">Mobile Area, AL</p>
+                </div>
+            </div>
+
+            <!-- 19 ─ February 7, 2015 -->
+            <div class="timeline-item">
+                <div class="timeline-date">Feb 7<br>2015</div>
+                <div class="timeline-card">
+                    <span class="event-type-tag">Colony Meeting &bull; Compact Day</span>
+                    <h3>Cahaba River Colony Compact Day Meeting</h3>
+                    <p class="event-venue">Alabama</p>
+                </div>
+            </div>
+
+            <!-- 20 ─ November 1, 2014 -->
+            <div class="timeline-item">
+                <div class="timeline-date">Nov 1<br>2014</div>
+                <div class="timeline-card">
+                    <span class="event-type-tag">State Meeting &bull; Compact Day</span>
+                    <h3>State Compact Day Meeting</h3>
+                    <p>Board of Assistants Meeting at 10:00 a.m.; general meeting at 11:00 a.m. Guest speaker: Dr. Jeffrey Engler, Jamestowne Society.</p>
+                    <p class="event-venue">The Club &bull; Birmingham, AL</p>
+                </div>
+            </div>
+
+            <!-- 21 ─ October 25, 2014 -->
+            <div class="timeline-item">
+                <div class="timeline-date">Oct 25<br>2014</div>
+                <div class="timeline-card">
+                    <span class="event-type-tag">Colony Meeting &bull; Compact Day</span>
+                    <h3>Gulf Coast Colony Compact Day Meeting</h3>
+                    <p class="event-venue">Mobile Area, AL</p>
+                </div>
+            </div>
+
+            <!-- 22 ─ February 1, 2014 -->
+            <div class="timeline-item">
+                <div class="timeline-date">Feb 1<br>2014</div>
+                <div class="timeline-card">
+                    <span class="event-type-tag">Colony Meeting</span>
+                    <h3>Cahaba River Colony Meeting</h3>
+                    <p>Business meeting at 11:30 a.m.; lunch at 12:00 noon. Speaker: Mr. Bill Stone, presenting one of the original copies of the Articles of Confederation on loan.</p>
+                    <p class="event-venue">Wynlakes Country Club &bull; Montgomery, AL</p>
+                </div>
+            </div>
+
+        </div><!-- /timeline -->
+    </section>
+
+    <!-- ── Footer ────────────────────────────────────────────── -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <img src="images/LOGO002.png" alt="Alabama Mayflower Society" class="footer-logo">
+                    <p>Preserving the legacy of the Mayflower Pilgrims since 1952</p>
+                    <div class="social-links" style="margin-top: 1.5rem;">
+                        <a href="https://www.facebook.com/groups/AlabamaMayflowerSociety" target="_blank" rel="noopener" style="display: inline-block; text-decoration: none;">
+                            <span style="background: white; color: var(--navy-blue); width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; border-radius: 4px; font-family: sans-serif; font-weight: bold; font-size: 22px;">f</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="our-history.html">Our History</a></li>
+                        <li><a href="index.html#membership">Membership</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="wewillplymouthrockyouweekend.html">2026 Conference</a></li>
+                        <li><a href="useful-links.html">Useful Links</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Our Colonies</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 1rem;">Cahaba River Colony<br><small>Birmingham Area</small></li>
+                        <li style="margin-bottom: 1rem;">Capital Colony<br><small>Montgomery Area</small></li>
+                        <li style="margin-bottom: 1rem;">Gulf Coast Colony<br><small>Mobile Area</small></li>
+                        <li>Tennessee Valley Colony<br><small>Huntsville Area</small></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 1rem;"><a href="mailto:SMDAL.Info@gmail.com">info@alabamasmd.org</a></li>
+                        <li><a href="https://themayflowersociety.org" target="_blank" rel="noopener">General Society of Mayflower Descendants</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Alabama Society of Mayflower Descendants | All Rights Reserved | <a href="privacy-policy.html" style="color: var(--gold);">Privacy Policy</a></p>
+            </div>
+        </div>
+    </footer>
+
     <script src="js/main.js"></script>
 </body>
 </html>
