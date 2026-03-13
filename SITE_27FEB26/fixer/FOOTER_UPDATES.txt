@@ -1,0 +1,37 @@
+PRIVACY POLICY FOOTER UPDATES
+=============================
+
+For each of the 16 HTML files below, find the footer line and replace it.
+
+SEARCH FOR (find this exact line):
+<p>&copy; 2026 Alabama Society of Mayflower Descendants</p>
+
+REPLACE WITH (use this exact replacement):
+<p>&copy; 2026 Alabama Society of Mayflower Descendants &nbsp;|&nbsp; <a href="privacy-policy.html" style="color: var(--gold);">Privacy Policy</a></p>
+
+FILES TO UPDATE (16 total):
+1. about-us.html
+2. application-process.html
+3. contact-error.html
+4. contact-success.html
+5. contact-us.html
+6. contact_submit.html
+7. events.html
+8. index.html
+9. junior-membership.html
+10. mayflower-compact.html
+11. member-benefits.html
+12. news.html
+13. newsletter.html
+14. our-history.html
+15. useful-links.html
+16. wewillplymouthrockyouweekend.html
+
+ALSO ADD:
+- privacy-policy.html (new file, ready to upload)
+
+STEPS:
+1. Go to https://github.com/SDALMayflower/alabamasmd.org
+2. For each file above: click file → click pencil (edit) → find/replace the footer line → commit
+3. Upload privacy-policy.html as new file
+4. Done!
