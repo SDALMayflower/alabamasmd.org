@@ -1,0 +1,38 @@
+/* CRITICAL LOGO TRANSPARENCY FIX */
+/* This ensures ALL logos display with transparent backgrounds */
+
+/* Remove ALL backgrounds from logo images */
+img[src*="Logo"],
+img[src*="logo"],
+img[src*="SHA"],
+img[alt*="Mayflower"],
+img[alt*="Alabama"] {
+    background: none !important;
+    background-color: transparent !important;
+    backdrop-filter: none !important;
+}
+
+/* Remove backgrounds from logo containers */
+.logo,
+.footer-logo,
+header .logo,
+footer .footer-section,
+nav a {
+    background: none !important;
+    background-color: transparent !important;
+}
+
+/* Ensure navigation links with images have no background */
+.nav-links li a {
+    background: none !important;
+    background-color: transparent !important;
+}
+
+/* Force transparency on ALL header and footer images */
+header img,
+footer img,
+nav img {
+    background: transparent !important;
+    background-color: transparent !important;
+    box-shadow: none;
+}

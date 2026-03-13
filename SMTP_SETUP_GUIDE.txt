@@ -1,0 +1,295 @@
+╔══════════════════════════════════════════════════════════════════════╗
+║                                                                      ║
+║           📧 CONTACT FORM SMTP SETUP GUIDE 📧                       ║
+║                                                                      ║
+║      Alabama Society of Mayflower Descendants Website               ║
+║                                                                      ║
+╚══════════════════════════════════════════════════════════════════════╝
+
+🎯 SIMPLE SMTP EMAIL SOLUTION
+═══════════════════════════════════════════════════════════════════════
+
+This guide will help you configure the contact form to send emails using
+SMTP (like WP Mail SMTP does), without needing WordPress.
+
+═══════════════════════════════════════════════════════════════════════
+
+📋 WHAT'S INCLUDED:
+═══════════════════════════════════════════════════════════════════════
+
+NEW FILES:
+✓ send-email.php - Email handler with SMTP support
+✓ contact-success.html - Success page after form submission
+✓ contact-error.html - Error page if submission fails
+
+UPDATED FILES:
+✓ contact_submit.html - Form now posts to send-email.php
+
+═══════════════════════════════════════════════════════════════════════
+
+🔧 SETUP STEPS:
+═══════════════════════════════════════════════════════════════════════
+
+STEP 1: GET SMTP CREDENTIALS
+────────────────────────────────────────────────────────────────────
+
+You need SMTP credentials from your email provider. Here are common ones:
+
+OPTION A - Gmail:
+• SMTP Host: smtp.gmail.com
+• SMTP Port: 587
+• Encryption: tls
+• Username: your-email@gmail.com
+• Password: Use an "App Password" (see below)
+
+To create Gmail App Password:
+1. Go to myaccount.google.com
+2. Security → 2-Step Verification (enable if not on)
+3. App passwords
+4. Generate new app password for "Mail"
+5. Copy the 16-character password
+
+OPTION B - Microsoft/Outlook:
+• SMTP Host: smtp-mail.outlook.com
+• SMTP Port: 587
+• Encryption: tls
+• Username: your-email@outlook.com
+• Password: Your Outlook password
+
+OPTION C - Your Web Host Email:
+• Contact your hosting provider for SMTP settings
+• They often provide SMTP servers with your hosting package
+
+OPTION D - Third-Party SMTP Services:
+• SendGrid: smtp.sendgrid.net (free tier available)
+• Mailgun: smtp.mailgun.org
+• Amazon SES: email-smtp.us-east-1.amazonaws.com
+
+═══════════════════════════════════════════════════════════════════════
+
+STEP 2: CONFIGURE send-email.php
+────────────────────────────────────────────────────────────────────
+
+Open send-email.php and update these lines at the top:
+
+$smtp_host = 'smtp.gmail.com';           // Your SMTP server
+$smtp_port = 587;                        // Port number
+$smtp_username = 'your-email@gmail.com'; // Your email
+$smtp_password = 'your-app-password';    // Your password/app password
+$smtp_encryption = 'tls';                // tls or ssl
+
+$to_email = 'governor@alabamasmd.org';   // Where to send submissions
+$from_email = 'your-email@gmail.com';    // From address
+$from_name = 'Alabama Mayflower Website';
+
+EXAMPLE (Gmail):
+───────────────
+$smtp_host = 'smtp.gmail.com';
+$smtp_port = 587;
+$smtp_username = 'contact@alabamasmd.org';
+$smtp_password = 'abcd efgh ijkl mnop';  // 16-char app password
+$smtp_encryption = 'tls';
+
+$to_email = 'governor@alabamasmd.org';
+$from_email = 'contact@alabamasmd.org';
+$from_name = 'Alabama Mayflower Website';
+
+═══════════════════════════════════════════════════════════════════════
+
+STEP 3: INSTALL PHPMAILER (RECOMMENDED)
+────────────────────────────────────────────────────────────────────
+
+PHPMailer is what WP Mail SMTP uses. It's more reliable than basic PHP.
+
+METHOD A - Download from GitHub:
+1. Go to: https://github.com/PHPMailer/PHPMailer
+2. Click "Code" → "Download ZIP"
+3. Extract the ZIP
+4. Upload the "src" folder to your website
+5. Rename "src" to "PHPMailer"
+
+Your structure should be:
+alabamasmd_FINAL/
+├── send-email.php
+├── PHPMailer/
+│   ├── PHPMailer.php
+│   ├── SMTP.php
+│   └── Exception.php
+
+METHOD B - Use FTP/File Manager:
+If your host has Composer or file manager, you can install via:
+composer require phpmailer/phpmailer
+
+NOTE: If you don't install PHPMailer, the script will use basic PHP
+mail() function as a fallback (less reliable).
+
+═══════════════════════════════════════════════════════════════════════
+
+STEP 4: UPLOAD FILES TO YOUR WEB HOSTING
+────────────────────────────────────────────────────────────────────
+
+Upload these files to your website:
+✓ send-email.php
+✓ contact_submit.html (updated version)
+✓ contact-success.html
+✓ contact-error.html
+✓ PHPMailer/ folder (if using)
+
+═══════════════════════════════════════════════════════════════════════
+
+STEP 5: TEST THE FORM
+────────────────────────────────────────────────────────────────────
+
+1. Go to: yourwebsite.com/contact_submit.html
+2. Fill out the form
+3. Click "Send Message"
+4. You should be redirected to contact-success.html
+5. Check your email (governor@alabamasmd.org) for the message
+
+If you see contact-error.html:
+• Check your SMTP credentials
+• Check PHP error logs on your server
+• Verify PHPMailer is installed correctly
+• Try using a different SMTP provider
+
+═══════════════════════════════════════════════════════════════════════
+
+🔒 SECURITY NOTES:
+═══════════════════════════════════════════════════════════════════════
+
+⚠️ IMPORTANT - PROTECT YOUR CREDENTIALS:
+
+1. NEVER commit send-email.php to public Git repositories
+   (Add it to .gitignore if using version control)
+
+2. Set proper file permissions:
+   chmod 644 send-email.php
+
+3. Consider using environment variables for sensitive data:
+   - Create a .env file (add to .gitignore)
+   - Use: $smtp_password = getenv('SMTP_PASSWORD');
+
+4. Enable spam protection:
+   - The form includes basic validation
+   - Consider adding reCAPTCHA for additional protection
+
+═══════════════════════════════════════════════════════════════════════
+
+📧 COMMON SMTP PROVIDERS - QUICK REFERENCE:
+═══════════════════════════════════════════════════════════════════════
+
+Gmail:
+• Host: smtp.gmail.com
+• Port: 587 (TLS) or 465 (SSL)
+• Requires: App Password (not regular password)
+
+Outlook/Hotmail:
+• Host: smtp-mail.outlook.com  
+• Port: 587
+
+Yahoo:
+• Host: smtp.mail.yahoo.com
+• Port: 587 or 465
+
+GoDaddy:
+• Host: smtpout.secureserver.net or relay-hosting.secureserver.net
+• Port: 465 or 587
+
+Bluehost:
+• Host: box####.bluehost.com (provided by Bluehost)
+• Port: 465
+
+HostGator:
+• Host: gator####.hostgator.com (provided by HostGator)
+• Port: 465
+
+SendGrid (Free tier: 100 emails/day):
+• Host: smtp.sendgrid.net
+• Port: 587
+• Username: apikey
+• Password: Your SendGrid API key
+
+═══════════════════════════════════════════════════════════════════════
+
+🆘 TROUBLESHOOTING:
+═══════════════════════════════════════════════════════════════════════
+
+PROBLEM: "Could not authenticate"
+SOLUTION:
+• Double-check username and password
+• For Gmail, use App Password, not regular password
+• Verify 2-step verification is enabled (Gmail)
+
+PROBLEM: "Connection refused"
+SOLUTION:
+• Check SMTP host and port are correct
+• Try alternate port (587 vs 465)
+• Check if your host blocks outgoing SMTP
+
+PROBLEM: "Form redirects to error page"
+SOLUTION:
+• Check PHP error logs on your server
+• Verify all required fields are filled
+• Test with a different email address
+
+PROBLEM: "Email goes to spam"
+SOLUTION:
+• Use authenticated SMTP (you're already doing this)
+• Ensure "from" email matches SMTP username
+• Set up SPF and DKIM records for your domain
+
+PROBLEM: "PHPMailer not found"
+SOLUTION:
+• Verify PHPMailer folder is uploaded
+• Check folder name is exactly "PHPMailer"
+• Check file names: PHPMailer.php, SMTP.php, Exception.php
+• Fallback: Script will use basic mail() function
+
+═══════════════════════════════════════════════════════════════════════
+
+✅ TESTING CHECKLIST:
+═══════════════════════════════════════════════════════════════════════
+
+Before going live, test these scenarios:
+
+□ Submit form with all fields filled
+□ Submit form with missing required fields (should show error)
+□ Submit form with invalid email (should show error)
+□ Verify email arrives at governor@alabamasmd.org
+□ Check email contains all form data (name, email, subject, message)
+□ Verify reply-to works (reply should go to form submitter)
+□ Test on mobile device
+□ Test on different browsers
+
+═══════════════════════════════════════════════════════════════════════
+
+📝 WHAT USERS WILL SEE:
+═══════════════════════════════════════════════════════════════════════
+
+1. User fills out form on contact_submit.html
+2. Clicks "Send Message"
+3. Form processes via send-email.php
+4. Success: Redirects to contact-success.html (thank you page)
+5. Error: Redirects to contact-error.html (try again page)
+6. Email arrives at governor@alabamasmd.org
+
+═══════════════════════════════════════════════════════════════════════
+
+🎯 SUMMARY:
+═══════════════════════════════════════════════════════════════════════
+
+This is a simple, reliable SMTP email solution that:
+✓ Works like WP Mail SMTP (uses PHPMailer)
+✓ Doesn't require WordPress
+✓ Works on most web hosting
+✓ Sends authenticated emails (less likely to be spam)
+✓ Provides user-friendly success/error pages
+✓ Is easy to configure
+
+Just update the SMTP credentials in send-email.php and you're ready!
+
+═══════════════════════════════════════════════════════════════════════
+
+Need help? Email: governor@alabamasmd.org
+
+═══════════════════════════════════════════════════════════════════════
