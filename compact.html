@@ -3,88 +3,263 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Mayflower Compact | Alabama SMD</title>
-    <link rel="stylesheet" href="0styles.css">
+    <title>The Mayflower Compact | Alabama Society of Mayflower Descendants</title>
+    <link rel="icon" type="image/png" href="images/LOGO001.png?v=3">
     <style>
-        /* Matching your new site's color palette */
-        body { background-color: #fdf5e6; margin: 0; padding: 0; font-family: Arial, sans-serif; }
-        .main-container { max-width: 1100px; margin: 20px auto; background: #fffef0; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden; }
-        .page-content { padding: 40px; line-height: 1.7; color: #333; }
-        .compact-document { background-color: #64300a; color: #f3e2a7; padding: 40px; border-radius: 5px; margin: 30px 0; border: 4px double #f3e2a7; }
-        .passenger-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; margin-top: 30px; border-top: 2px solid #64300a; padding-top: 20px; }
-        .passenger-list a { color: #2546cb; text-decoration: none; font-weight: bold; }
-        .passenger-list a:hover { text-decoration: underline; }
-        h1 { font-size: 2.5rem; color: #f3e2a7; margin: 0; }
-        .header-bg { background: linear-gradient(to bottom, #003399, #001a4d); padding: 40px 20px; text-align: center; color: white; }
+        :root {
+            --navy-blue: #002147;
+            --royal-blue: #003366;
+            --gold: #d4af37;
+            --bronze: #cd7f32;
+            --cream: #fdfaf2;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            scroll-behavior: smooth;
+            background-color: #f4f4f4;
+        }
+
+        /* Fixed Navigation Header */
+        header {
+            background: rgba(0, 0, 0, 0.4);
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+            backdrop-filter: blur(5px);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, var(--navy-blue), var(--royal-blue));
+            padding: 10rem 2rem 6rem;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-section h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--gold), var(--bronze));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 800;
+        }
+
+        /* Compact Content Section */
+        .compact-container {
+            max-width: 1000px;
+            margin: -4rem auto 4rem;
+            background: white;
+            padding: 4rem;
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+            position: relative;
+        }
+
+        .compact-text-box {
+            background: var(--cream);
+            border: 1px solid #e0d0b0;
+            padding: 3rem;
+            border-radius: 8px;
+            line-height: 1.9;
+            font-family: 'Georgia', serif;
+            margin-top: 2rem;
+            color: #2c3e50;
+        }
+
+        .signers-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            font-size: 0.85rem;
+            margin-top: 2rem;
+            border-top: 1px solid #e0d0b0;
+            padding-top: 1.5rem;
+        }
+
+        /* Footer Section */
+        footer {
+            background: var(--navy-blue);
+            color: white;
+            padding: 5rem 2rem 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 4rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-section h3 {
+            color: var(--gold);
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section li { margin-bottom: 0.8rem; }
+
+        .footer-section a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.2s;
+        }
+
+        .footer-section a:hover { opacity: 1; color: var(--gold); }
+
+        .footer-logo { height: 85px; margin-bottom: 1.5rem; }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            margin-top: 4rem;
+            padding-top: 2.5rem;
+            text-align: center;
+            font-size: 0.85rem;
+            opacity: 0.6;
+        }
     </style>
 </head>
 <body>
 
-    <header style="background: #001a4d; padding: 10px 0; text-align: center;">
-        <img src="pics/Logo.png" alt="Alabama Mayflower Society" style="max-height: 80px;">
-        <nav style="margin-top: 10px;">
-            <a href="index.html" style="color: white; margin: 0 15px; text-decoration: none;">Home</a>
-            <a href="history.html" style="color: white; margin: 0 15px; text-decoration: none;">Our History</a>
-            <a href="membership.html" style="color: white; margin: 0 15px; text-decoration: none;">Membership</a>
-            <a href="events.html" style="color: white; margin: 0 15px; text-decoration: none;">Events</a>
-            <a href="contact_us.html" style="color: white; margin: 0 15px; text-decoration: none;">Contact Us</a>
+    <header>
+        <nav>
+            <a href="index.html">
+                <img src="images/LOGO002.png" alt="Alabama Mayflower" style="height: 65px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));">
+            </a>
+            <ul class="nav-links">
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="our-history.html">Our History</a></li>
+                <li><a href="membership.html">Membership</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="wewillplymouthrockyouweekend.html">2026 Conference</a></li>
+                <li><a href="useful-links.html">Useful Links</a></li>
+                <li><a href="contact_submit.html">Contact Us</a></li>
+                <li><img src="images/LOGO001.png" alt="General Society" style="height: 50px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));"></li>
+            </ul>
         </nav>
     </header>
 
-    <div class="main-container">
-        <div class="header-bg">
-            <h1>The Mayflower Compact</h1>
-            <p style="font-size: 1.2rem; opacity: 0.9;">The Society of Mayflower Descendants in the State of (Sweet Home) Alabama</p>
-        </div>
+    <section class="hero-section">
+        <h1>The Mayflower Compact</h1>
+        <p style="font-size: 1.4rem; opacity: 0.9; font-weight: 300;">The Foundation of American Self-Governance (1620)</p>
+    </section>
 
-        <div class="page-content">
-            <p>Before coming to the New World, the Pilgrims lived in Leyden, Holland from 1068 to 1620. While there, they absorbed the liberating influences of Dutch society and shifted toward a more democratic form of self-governance.</p>
+    <div class="compact-container">
+        <h2 style="color: var(--navy-blue); margin-top: 0;">Preserving the Pilgrim Legacy</h2>
+        <p>Before coming to the New World, the Pilgrims lived in Leyden, Holland from 1608 to 1620. As the passengers aboard the Mayflower journeyed across the Atlantic, it became apparent that they needed to consent voluntarily to a cooperative form of government for their survival in an alien land.</p>
+
+        <div class="compact-text-box">
+            <h3 style="text-align: center; text-decoration: underline; margin-top: 0;">THE AGREEMENT</h3>
+            <p>"In the name of God, Amen. We, whose names are underwritten, the Loyal Subjects of our dread Sovereign Lord, King James... do by these presents, solemnly and mutually in the Presence of God and one of another, covenant and combine ourselves together into a civil Body Politick, for our better ordering and Preservation, and Furtherance of the Ends aforesaid..."</p>
             
-            <p>As the passengers aboard the <em>Mayflower</em> journeyed across the Atlantic, it became apparent that if they were to survive in an alien land, they needed to consent voluntarily to a cooperative form of government. The Mayflower Compact was signed in November 1620.</p>
-
-            <div class="compact-document">
-                <h2 style="text-align: center; margin-top: 0; color: #f3e2a7;">IN THE NAME OF GOD, AMEN.</h2>
-                <p>We, whose names are underwritten, the Loyal Subjects of our dread Sovereign Lord, King James, by the Grace of God, of Great Britain, France and Ireland, King, Defender of the Faith, etc.</p>
-                <p>Having undertaken for the Glory of God, and Advancement of the Christian Faith, and the Honour of our King and Country, a voyage to plant the first colony in the northern Parts of Virginia; do by these presents, solemnly and mutually in the Presence of God and one of another, covenant and combine ourselves together into a civil Body Politick...</p>
-                <p style="text-align: right; margin-top: 30px; font-weight: bold; font-style: italic;">Cape Cod, 11th of November, 1620</p>
+            <p style="text-align: center; font-weight: bold; margin-top: 2.5rem; letter-spacing: 0.1em;">SIGNERS</p>
+            <div class="signers-grid">
+                <div>John Carver</div><div>Edward Tilley</div><div>Degory Priest</div>
+                <div>William Bradford</div><div>John Tilley</div><div>Thomas Williams</div>
+                <div>Edward Winslow</div><div>Francis Cooke</div><div>Gilbert Winslow</div>
+                <div>William Brewster</div><div>Thomas Rogers</div><div>Edmund Margesson</div>
+                <div>Isaac Allerton</div><div>Thomas Tinker</div><div>Peter Brown</div>
+                <div>Myles Standish</div><div>John Rigsdale</div><div>Richard Britteridge</div>
+                <div>John Alden</div><div>Edward Fuller</div><div>George Soule</div>
             </div>
 
-            <h2 style="color: #64300a;">Mayflower Passengers (1620)</h2>
-            <p>Below is a complete list of passengers. Each name links to historical details provided by <em>mayflowerhistory.com</em>.</p>
-
-            <div class="passenger-list">
-                <a href="http://mayflowerhistory.com/alden/">John Alden</a>
-                <a href="http://mayflowerhistory.com/allerton-isaac/">Isaac Allerton</a>
-                <a href="http://mayflowerhistory.com/allerton-john/">John Allerton</a>
-                <a href="http://mayflowerhistory.com/billington-john/">John Billington</a>
-                <a href="http://mayflowerhistory.com/bradford-william/">William Bradford</a>
-                <a href="http://mayflowerhistory.com/brewster-william/">William Brewster</a>
-                <a href="http://mayflowerhistory.com/browne/">Peter Browne</a>
-                <a href="http://mayflowerhistory.com/carver-john/">John Carver</a>
-                <a href="http://mayflowerhistory.com/chilton-james/">James Chilton</a>
-                <a href="http://mayflowerhistory.com/cooke-francis/">Francis Cooke</a>
-                <a href="http://mayflowerhistory.com/doty/">Edward Doty</a>
-                <a href="http://mayflowerhistory.com/eaton-francis/">Francis Eaton</a>
-                <a href="http://mayflowerhistory.com/fuller-edward/">Edward Fuller</a>
-                <a href="http://mayflowerhistory.com/fuller-samuel/">Samuel Fuller</a>
-                <a href="http://mayflowerhistory.com/hopkins-stephen/">Stephen Hopkins</a>
-                <a href="http://mayflowerhistory.com/howland/">John Howland</a>
-                <a href="http://mayflowerhistory.com/mullins-william/">William Mullins</a>
-                <a href="http://mayflowerhistory.com/priest/">Degory Priest</a>
-                <a href="http://mayflowerhistory.com/rogers-thomas/">Thomas Rogers</a>
-                <a href="http://mayflowerhistory.com/soule/">George Soule</a>
-                <a href="http://mayflowerhistory.com/standish-myles/">Myles Standish</a>
-                <a href="http://mayflowerhistory.com/tilley-john/">John Tilley</a>
-                <a href="http://mayflowerhistory.com/warren/">Richard Warren</a>
-                <a href="http://mayflowerhistory.com/white-william/">William White</a>
-                <a href="http://mayflowerhistory.com/winslow-edward/">Edward Winslow</a>
+            <div style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #e0d0b0;">
+                <img src="images/compact_colorozed.jpg" alt="The Signing of the Mayflower Compact" style="max-width: 100%; height: auto; border-radius: 4px; box-shadow: 0 8px 20px rgba(0,0,0,0.2);">
+                <p style="font-size: 0.9rem; font-style: italic; margin-top: 15px; color: #444;">The Signing of the Mayflower Compact, 1620</p>
+            </div>
+            </div> </div>
             </div>
         </div>
     </div>
 
-    <footer style="background: #001a4d; color: white; padding: 40px 20px; text-align: center; margin-top: 50px;">
-        <p>© 2026 Alabama Society of Mayflower Descendants | All Rights Reserved</p>
-        <p style="font-size: 0.8rem; opacity: 0.7;">Preserving the legacy of the Mayflower Pilgrims since 1952</p>
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-section">
+                <img src="images/LOGO002.png" alt="Alabama Mayflower Society" class="footer-logo">
+                <p>Preserving the legacy of the Mayflower Pilgrims since 1952</p>
+                <div style="margin-top: 1.5rem;">
+                    <a href="https://www.facebook.com/groups/AlabamaMayflowerSociety" target="_blank" style="background: white; color: var(--navy-blue); width: 32px; height: 32px; display: inline-flex; align-items: center; justify-content: center; border-radius: 4px; font-weight: bold; font-size: 20px;">f</a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Explore</h3>
+                <ul>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="our-history.html">Our History</a></li>
+                    <li><a href="wewillplymouthrockyouweekend.html">2026 Conference</a></li>
+                    <li><a href="membership.html">Membership</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Our Colonies</h3>
+                <ul>
+                    <li>Cahaba River <small>(Birmingham)</small></li>
+                    <li>Capital <small>(Montgomery)</small></li>
+                    <li>Gulf Coast <small>(Mobile)</small></li>
+                    <li>Tennessee Valley <small>(Huntsville)</small></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <ul>
+                    <li><a href="mailto:SMDAL.Info@gmail.com">info@alabamasmd.org</a></li>
+                    <li><a href="https://themayflowersociety.org" target="_blank">General Society</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Alabama Society of Mayflower Descendants | All Rights Reserved</p>
+            <p>Webmaster: Barrett Lee Owens</p>
+        </div>
     </footer>
 
 </body>
