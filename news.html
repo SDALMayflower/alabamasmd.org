@@ -3,48 +3,274 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="News and announcements from the Alabama Society of Mayflower Descendants">
     <title>News | Alabama Mayflower Society</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/compact-page.css">
+    <link rel="icon" type="image/png" href="images/LOGO001.png?v=3">
+    <style>
+        /* ── News Card ───────────────────────────────────────────── */
+        .news-section {
+            padding: 3rem 2rem 5rem;
+            background: #f5f6f8;
+        }
+
+        .news-container {
+            max-width: 860px;
+            margin: 0 auto;
+        }
+
+        .news-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .news-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 36px rgba(0,0,0,0.15);
+        }
+
+        /* Dark hero banner — mimics Gulf Shores style */
+        .news-card-hero {
+            position: relative;
+            background: linear-gradient(135deg, #0a2540 0%, #1e40af 60%, #0a2540 100%);
+            padding: 3rem 2.5rem 2.5rem;
+            overflow: hidden;
+        }
+
+        .news-card-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url('images/Mayflower_Collage_Hero.png') center/cover no-repeat;
+            opacity: 0.18;
+        }
+
+        .news-card-hero h2 {
+            position: relative;
+            color: white;
+            font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+            line-height: 1.25;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+        }
+
+        .news-card-hero .hero-sub {
+            position: relative;
+            color: rgba(255,255,255,0.85);
+            font-size: 1.05rem;
+            font-style: italic;
+        }
+
+        /* Badge + date bar */
+        .news-meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 0.9rem 2rem;
+            border-bottom: 1px solid #eee;
+            background: white;
+        }
+
+        .news-badge {
+            display: inline-block;
+            background: transparent;
+            border: 2px solid #0a2540;
+            color: #0a2540;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 0.2rem 0.85rem;
+            border-radius: 50px;
+            white-space: nowrap;
+        }
+
+        .news-date {
+            color: #888;
+            font-size: 0.88rem;
+            font-style: italic;
+        }
+
+        /* Article body */
+        .news-card-body {
+            padding: 2rem 2.5rem 2rem;
+        }
+
+        .news-card-body p {
+            color: #444;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 1.1rem;
+        }
+
+        .news-card-body .event-day {
+            font-weight: 700;
+            color: #0a2540;
+        }
+
+        .news-divider {
+            border: none;
+            border-top: 1px solid #e8e0d0;
+            margin: 1.5rem 0;
+        }
+
+        .news-cta {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--gold), var(--bronze));
+            color: #0a2540;
+            font-weight: 700;
+            font-size: 0.95rem;
+            padding: 0.85rem 2.2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            letter-spacing: 0.05em;
+            margin-top: 0.5rem;
+            transition: all 0.25s ease;
+            box-shadow: 0 4px 16px rgba(212,175,55,0.35);
+        }
+
+        .news-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(212,175,55,0.5);
+            color: #0a2540;
+        }
+    </style>
 </head>
 <body>
+
+    <!-- ── Header / Nav ──────────────────────────────────────── -->
     <header id="mainHeader">
         <nav>
             <a href="index.html" class="logo">
                 <img src="images/LOGO002.png" alt="Alabama Mayflower Society" class="logo-img">
-                
             </a>
-            <button class="menu-toggle" id="menuToggle"><span></span><span></span><span></span></button>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
             <ul class="nav-links" id="navLinks">
-                <li><a href="about-us.html">About</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="our-history.html">Our History</a></li>
                 <li><a href="membership.html">Membership</a></li>
                 <li><a href="events.html">Events</a></li>
-                <li><a href="mayflower-compact.html">Mayflower Compact</a></li>
-                <li><a href="contact-us.html">Contact</a></li>
-                <li><a href="index.html#support"><img src="images/LOGO001.png" alt="Mayflower Society" style="height: 45px; width: auto;"></a></li>
+                <li><a href="news.html" style="color: var(--gold);">News</a></li>
+                <li><a href="wewillplymouthrockyouweekend.html">2026 Conference</a></li>
+                <li><a href="useful-links.html">Useful Links</a></li>
+                <li><a href="contact_submit.html">Contact Us</a></li>
+                <li><a href="#support"><img src="images/LOGO001.png" alt="Mayflower Society" style="height: 45px; width: auto; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3)); background: none;"></a></li>
             </ul>
         </nav>
     </header>
 
+    <!-- ── Hero ─────────────────────────────────────────────── -->
     <section class="page-hero" style="background-image: url('images/pilgrims001.jpg'); background-size: cover; background-position: center;">
         <div class="hero-overlay"></div>
-        <div class="container"><h1 class="serif">News</h1></div>
+        <div class="container">
+            <h1 class="serif" style="color: white; text-shadow: 2px 2px 8px rgba(0,0,0,0.5);">News</h1>
+        </div>
     </section>
 
-    <article class="compact-article">
+    <!-- ── Separator ────────────────────────────────────────── -->
+    <div class="separator-container">
+        <img src="images/Mayflower_separator_line.png" alt="Separator" class="mayflower-separator">
+    </div>
+
+    <!-- ── News Card ─────────────────────────────────────────── -->
+    <section class="news-section">
+        <div class="news-container">
+
+            <a href="wewillplymouthrockyouweekend.html" class="news-card">
+
+                <!-- Dark hero banner with title -->
+                <div class="news-card-hero">
+                    <h2>"We Will Plymouth Rock You!" Weekend</h2>
+                    <p class="hero-sub">The Society of Mayflower Descendants in the State of <em>(Sweet Home)</em> Alabama &mdash; April 24 &amp; 25, 2026</p>
+                </div>
+
+                <!-- Badge + date -->
+                <div class="news-meta">
+                    <span class="news-badge">Upcoming Event</span>
+                    <span class="news-date">Posted March 2026</span>
+                </div>
+
+                <!-- Article body -->
+                <div class="news-card-body">
+                    <p>As we approach our Society's 75th Anniversary in 2027, we are determined to make <strong>2026 a landmark year</strong> for the Alabama Society of Mayflower Descendants &mdash; and it begins this April in Mobile.</p>
+
+                    <hr class="news-divider">
+
+                    <p><span class="event-day">Friday, April 24</span> &mdash; Launch the weekend with a Welcome Dinner at Mobile's iconic T.P. Crockmier's restaurant in the heart of the downtown entertainment district.</p>
+
+                    <p><span class="event-day">Saturday, April 25</span> &mdash; Our 2026 Spring Conference at the National Maritime Museum of the Gulf on the Mobile River, featuring a members meeting, a luncheon, and our featured speaker <strong>Tom Begley</strong>, Executive Director of Plimoth Patuxent Museums in Plymouth, Massachusetts.</p>
+
+                    <p>Make your plans now &mdash; this is one weekend you won't want to miss.</p>
+
+                    <span class="news-cta">Full Conference Details &rarr;</span>
+                </div>
+
+            </a>
+
+        </div>
+    </section>
+
+    <!-- ── Footer ────────────────────────────────────────────── -->
+    <footer id="contact">
         <div class="container">
-            <div class="separator-container"><img src="images/Mayflower_separator_line.jpg" alt="Separator" class="mayflower-separator"></div>
-            <div class="article-content">
-                <section class="content-section">
-                    <h2>Coming Soon</h2>
-                    <p>Content for this page is being developed.</p>
-                </section>
-                <div class="back-link"><a href="index.html">← Back to Home</a></div>
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <img src="images/LOGO002.png" alt="Alabama Mayflower Society" class="footer-logo">
+                    <p>Preserving the legacy of the Mayflower Pilgrims since 1952</p>
+                    <div class="social-links" style="margin-top: 1.5rem;">
+                        <a href="https://www.facebook.com/groups/AlabamaMayflowerSociety" target="_blank" rel="noopener" style="display: inline-block; text-decoration: none;">
+                            <span style="background: white; color: var(--navy-blue); width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; border-radius: 4px; font-family: sans-serif; font-weight: bold; font-size: 22px;">f</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="our-history.html">Our History</a></li>
+                        <li><a href="membership.html">Membership</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="wewillplymouthrockyouweekend.html">2026 Conference</a></li>
+                        <li><a href="useful-links.html">Useful Links</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Our Colonies</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 1rem;">Cahaba River Colony<br><small>Birmingham Area</small></li>
+                        <li style="margin-bottom: 1rem;">Capital Colony<br><small>Montgomery Area</small></li>
+                        <li style="margin-bottom: 1rem;">Gulf Coast Colony<br><small>Mobile Area</small></li>
+                        <li>Tennessee Valley Colony<br><small>Huntsville Area</small></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 1rem;"><a href="mailto:SMDAL.Info@gmail.com">info@alabamasmd.org</a></li>
+                        <li><a href="https://themayflowersociety.org" target="_blank" rel="noopener">General Society of Mayflower Descendants</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Alabama Society of Mayflower Descendants | All Rights Reserved | <a href="privacy-policy.html" style="color: var(--gold);">Privacy Policy</a></p>
             </div>
         </div>
-    </article>
+    </footer>
 
-    <footer><div class="container"><div class="footer-bottom"><p>&copy; 2026 Alabama Society of Mayflower Descendants &nbsp;|&nbsp; <a href="privacy-policy.html" style="color: var(--gold);">Privacy Policy</a></p></div></div></footer>
     <script src="js/main.js"></script>
 </body>
 </html>

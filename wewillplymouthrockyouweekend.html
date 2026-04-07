@@ -52,6 +52,43 @@
         }
         .subtitle { font-size: 1.5rem; opacity: 0.9; margin-bottom: 2rem; }
         
+        @keyframes pulse-red {
+            0%   { box-shadow: 0 0 0 0 rgba(200, 30, 30, 0.7), 0 8px 24px rgba(200,30,30,0.4); transform: scale(1); }
+            50%  { box-shadow: 0 0 0 18px rgba(200, 30, 30, 0), 0 12px 32px rgba(200,30,30,0.3); transform: scale(1.03); }
+            100% { box-shadow: 0 0 0 0 rgba(200, 30, 30, 0), 0 8px 24px rgba(200,30,30,0.4); transform: scale(1); }
+        }
+        .waitlist-btn {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.3rem;
+            background: linear-gradient(135deg, #cc1a1a, #a80000);
+            color: white;
+            padding: 1.3rem 3rem;
+            border-radius: 50px;
+            font-family: inherit;
+            cursor: pointer;
+            animation: pulse-red 2s ease-in-out infinite;
+            transition: background 0.2s;
+        }
+        .waitlist-btn:hover {
+            background: linear-gradient(135deg, #e02020, #c00000);
+            animation: none;
+            transform: scale(1.05);
+            box-shadow: 0 12px 32px rgba(200,30,30,0.5);
+        }
+        .waitlist-top {
+            font-size: 1rem;
+            font-weight: 600;
+            opacity: 0.92;
+            letter-spacing: 0.02em;
+        }
+        .waitlist-main {
+            font-size: 1.6rem;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+        }
+
         .gov-address-container {
             max-width: 800px; 
             margin: 0 auto; 
@@ -89,9 +126,9 @@
     </header>
 
     <section class="conference-hero">
-        <h1>"We Will Plymouth Rock You" Weekend</h1>
-        <p class="subtitle">The Society of Mayflower Descendants in the State of Alabama</p>
-        <div class="conference-date">📅 April 24 & 25, 2026</div>
+        <h1>"We Will Plymouth Rock You!" Weekend</h1>
+        <p class="subtitle">The Society of Mayflower Descendants in the State of <em>(Sweet Home)</em> Alabama</p>
+        <div class="conference-date">April 24 & 25, 2026</div>
     </section>
 
     <section style="background: var(--cream); padding: 4rem 2rem; text-align: center;">
@@ -100,22 +137,25 @@
                 <source src="images/Governors_AddressV7.mp4" type="video/mp4">
             </video>
             <div style="padding: 2rem;">
-                <h3 style="margin-bottom: 0.5rem;">Governor's Address</h3>
+                <h3 style="margin-bottom: 0.5rem;">Governor's Message</h3>
                 <p style="font-style: italic; color: #666;">Please watch in FULL SCREEN.</p>
             </div>
         </div>
     </section>
 
     <section style="padding: 4rem 2rem;">
-        <h2 style="text-align: center; color: var(--navy-blue); margin-bottom: 2rem;">Printable Flyers</h2>
+        <h2 style="text-align: center; color: var(--navy-blue); margin-bottom: 0.5rem;">Event Flyers</h2>
+        <p style="text-align: center; font-size: 1.2rem; margin-bottom: 3rem;">Just click or tap on a flyer image to open up a printable version in a new tab or window</p>
         <div class="flyers-grid">
+            <a href="images/Welcome Dinner flyer.pdf" target="_blank"><img src="images/WelcomeDinner_flyer2026.jpg" alt="Welcome Dinner Flyer" style="width:100%; border-radius: 15px;"></a>
             <a href="images/Mayflower Families Reunion flyer.pdf" target="_blank"><img src="images/MayflowerFamiliesReunio_flyer2026.jpg" alt="Reunion Flyer" style="width:100%; border-radius: 15px;"></a>
             <a href="images/SMDAL Spring Conference flyer.pdf" target="_blank"><img src="images/SpringConferenceFlyer2026.jpg" alt="Conference Flyer" style="width:100%; border-radius: 15px;"></a>
+            <a href="images/Tom Begley Bio.pdf" target="_blank"><img src="images/TomBegley_flyer2026.jpg" alt="Tom Begley - Featured Speaker" style="width:100%; border-radius: 15px;"></a>
         </div>
     </section>
 
     <section style="background: white; padding: 4rem 2rem;">
-        <h2 style="text-align: center; color: var(--navy-blue); margin-bottom: 0.5rem;">Event Previews</h2>
+        <h2 style="text-align: center; color: var(--navy-blue); margin-bottom: 0.5rem;">EVENT VIDEOS</h2>
         <p style="text-align: center; font-size: 1.2rem; margin-bottom: 3rem;">Watch these videos and be sure to view each FULL SCREEN.</p>
         <div class="videos-grid">
             <div class="video-card">
@@ -134,9 +174,13 @@
     </section>
 
     <section style="background: var(--cream); padding: 4rem 2rem; text-align: center;">
-        <a href="https://mailchi.mp/453535e44454/get_on_the_waiting_list" target="_blank" class="conference-date" style="text-decoration: none;">📋 Get on the Waitlist</a>
+        <a href="https://mailchi.mp/453535e44454/get_on_the_waiting_list" target="_blank" class="waitlist-btn" style="text-decoration: none;">
+            <span class="waitlist-top">We NEED a headcount. Please&hellip;</span>
+            <span class="waitlist-main">Get on the Waitlist</span>
+        </a>
         <div style="margin-top: 3rem;">
-            <h3>Your Trip to Mobile</h3>
+            <h3>Plan Your Trip to Mobile</h3>
+            <p style="font-size: 1.1rem; margin-top: 0.5rem; color: #555;">Click or Tap on the image below.</p>
             <a href="https://mobile.org" target="_blank"><img src="images/Mobile_CMYK_transparent.png" alt="Visit Mobile" style="max-width: 300px; margin-top: 1rem;"></a>
         </div>
     </section>
