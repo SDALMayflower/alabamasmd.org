@@ -6,12 +6,12 @@
     <meta name="description" content="The Mayflower Saga: Voyage, survival, and legacy of the Plymouth colonists — Alabama Society of Mayflower Descendants">
     <title>The Mayflower Saga | Alabama Mayflower Society</title>
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/compact-page.css">
+    <link rel="stylesheet" href="css/logo-fix.css">
     <link rel="icon" type="image/png" href="images/LOGO001.png?v=3">
     <style>
         /* ── Article Hero ──────────────────────────────────────────── */
         .article-hero {
-            background: linear-gradient(135deg, var(--navy-blue) 0%, #1a3a5c 60%, var(--navy-blue) 100%);
+            background: linear-gradient(135deg, #002147 0%, #1a3a5c 60%, #002147 100%);
             padding: 8rem 2rem 5rem;
             text-align: center;
             position: relative;
@@ -26,8 +26,8 @@
         .article-hero .hero-label {
             position: relative;
             display: inline-block;
-            background: linear-gradient(135deg, var(--gold), var(--bronze));
-            color: var(--navy-blue);
+            background: linear-gradient(135deg, #c5a059, #b08d44);
+            color: #002147;
             font-size: 0.8rem;
             font-weight: 700;
             letter-spacing: 0.12em;
@@ -39,7 +39,7 @@
         .article-hero h1 {
             position: relative;
             color: white;
-            font-size: clamp(2rem, 5vw, 3.8rem);
+            font-size: clamp(2.2rem, 5vw, 3.8rem);
             line-height: 1.15;
             margin-bottom: 1rem;
             text-shadow: 0 2px 12px rgba(0,0,0,0.5);
@@ -60,66 +60,108 @@
             padding: 4rem 2rem 6rem;
         }
         .article-body p {
-            font-size: 1.1rem;
+            font-size: 1.15rem;
             line-height: 1.9;
             color: #333;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.8rem;
         }
         .article-body h2 {
-            font-size: 1.8rem;
-            color: var(--navy-blue);
-            margin: 3rem 0 1rem;
+            font-size: 2rem;
+            color: #002147;
+            margin: 3.5rem 0 1.25rem;
             padding-bottom: 0.5rem;
-            border-bottom: 2px solid var(--gold);
+            border-bottom: 3px solid #c5a059;
             display: inline-block;
         }
         .article-body h3 {
-            font-size: 1.3rem;
-            color: var(--navy-blue);
-            margin: 2rem 0 0.75rem;
+            font-size: 1.5rem;
+            color: #002147;
+            margin: 2.5rem 0 1rem;
         }
-        .article-body blockquote {
-            border-left: 4px solid var(--gold);
-            margin: 2rem 0;
-            padding: 1rem 1.5rem;
-            background: var(--cream);
-            border-radius: 0 8px 8px 0;
-            font-style: italic;
-            color: #555;
+        
+        .image-frame {
+            text-align: center;
+            margin: 3.5rem 0;
+            padding: 1.5rem;
+            background: #f8f8f8;
+            border: 1px solid #eee;
+            border-radius: 8px;
+        }
+        .image-frame img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .image-caption {
             font-size: 1.05rem;
-        }
-        .article-divider {
-            border: none;
-            border-top: 1px solid #e0d8c8;
-            margin: 3rem 0;
+            color: #555;
+            line-height: 1.6;
         }
 
-        /* ── Passenger Portal CTA ──────────────────────────────────── */
+        .article-body blockquote {
+            border-left: 5px solid #c5a059;
+            margin: 2.5rem 0;
+            padding: 1.5rem 2rem;
+            background: #fcfaf5;
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+            color: #444;
+            font-size: 1.1rem;
+        }
+        
+        .highlight-box {
+            background-color: #f0f4f8;
+            padding: 2.5rem;
+            border-left: 8px solid #002147;
+            margin: 3.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .sources-notes-section {
+            background-color: #fff9ed;
+            padding: 2.5rem;
+            border: 1px solid #c5a059;
+            margin-top: 4rem;
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        .sources-notes-section h3 {
+            margin-top: 0;
+            color: #002147;
+            text-transform: uppercase;
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+        }
+
         .portal-cta {
-            background: linear-gradient(135deg, var(--navy-blue), #1e40af);
+            background: linear-gradient(135deg, #002147, #1e40af);
             border-radius: 16px;
-            padding: 3rem 2.5rem;
+            padding: 3.5rem 2.5rem;
             text-align: center;
             margin: 4rem 0 0;
             color: white;
         }
         .portal-cta h3 {
-            color: var(--gold);
-            font-size: 1.6rem;
+            color: #c5a059;
+            font-size: 1.8rem;
             margin-bottom: 0.75rem;
+            border: none;
         }
         .portal-cta p {
-            color: rgba(255,255,255,0.8);
-            font-size: 1rem;
-            margin-bottom: 1.75rem;
+            color: rgba(255,255,255,0.85);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
         }
         .portal-cta a.cta-btn {
             display: inline-block;
-            background: linear-gradient(135deg, var(--gold), var(--bronze));
-            color: var(--navy-blue);
+            background: linear-gradient(135deg, #c5a059, #b08d44);
+            color: #002147;
             font-weight: 700;
-            font-size: 1rem;
-            padding: 0.9rem 2.5rem;
+            font-size: 1.1rem;
+            padding: 1rem 2.5rem;
             border-radius: 50px;
             text-decoration: none;
             letter-spacing: 0.05em;
@@ -138,9 +180,13 @@
             <a href="index.html" class="logo">
                 <img src="images/LOGO002.png" alt="Alabama Mayflower Society" class="logo-img">
             </a>
-            <button class="menu-toggle" onclick="document.getElementById('navLinks').classList.toggle('active')">
-                <span></span><span></span><span></span>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
+
             <ul class="nav-links" id="navLinks">
                 <li><a href="about-us.html">About Us</a></li>
                 <li><a href="our-history.html">Our History</a></li>
@@ -150,7 +196,7 @@
                 <li><a href="wewillplymouthrockyouweekend.html">2026 Conference</a></li>
                 <li><a href="useful-links.html">Useful Links</a></li>
                 <li class="has-dropdown">
-                    <a href="MayflowerSaga.html" style="color: var(--gold);">Features</a>
+                    <a href="MayflowerSaga.html" style="color: #c5a059;">Features</a>
                     <ul class="dropdown">
                         <li><a href="MayflowerSaga.html">The Mayflower Saga</a></li>
                         <li><a href="PassengerPortal.html">The Passengers: Narrative Directory</a></li>
@@ -162,169 +208,96 @@
         </nav>
     </header>
 
-    <!-- Hero -->
     <section class="article-hero">
         <div class="hero-label">Feature Article</div>
         <h1>The Mayflower Saga</h1>
         <p class="hero-subtitle">Voyage, survival, and legacy of the Plymouth colonists</p>
     </section>
 
-    <!-- Article Body -->
     <article class="article-body">
 
-        <h2>Introduction: Before They Were Pilgrims</h2>
-
-        <p>Many of these families were as much a part of the Nottinghamshire landscape and surrounding counties as the stone walls and the damp earth they farmed. These were people of the soil, and their world was defined by the rhythm of the seasons and the generational weight of the land. Many families had farmed the same patches of dirt for hundreds of years. Their identity was tied to the hearths their grandfathers had built and the specific chime of the parish bells that echoed across the North Country. Leaving wasn't just moving; it was like tearing up an ancient tree by its roots.</p>
-
-        <p>But that peaceful, ancestral life became a trap. Because they chose to worship in secret at William Brewster's manor house in Scrooby, they lived under a constant shadow. Every unexpected sound outside the manor would cause the room to go silent. They weren't just facing legal trouble. A conviction for religious nonconformity could bring fines, imprisonment, and economic ruin. For the leaders, the threat was even worse. It meant the notorious Clink Prison in London or even the very real possibility of the gallows.</p>
+        <h2>Introduction: Before they were Pilgrims</h2>
+        <p>Many of these families were as much a part of the Nottinghamshire landscape and surrounding counties as the stone walls and the damp earth they farmed. These were people of the soil, and their world was defined by the rhythm of the seasons and the generational weight of the land. Many families had farmed the same patches of dirt for hundreds of years. Their identity was tied to the hearths their grandfathers had built and the specific chime of the parish bells that echoed across the North Country. Leaving wasn't just moving, it was like tearing up an ancient tree by its roots.</p>
+        
+        <p>But that peaceful, ancestral life became a trap. Because they chose to worship in secret at William Brewster's manor house in Scrooby, they lived under a constant shadow. Every unexpected sound outside the manor would cause the room to go silent. They weren't just facing legal trouble, a conviction for religious nonconformity could bring fines, imprisonment, and economic ruin. For the leaders, the threat was even worse. It meant the notorious Clink Prison in London or even the very real possibility of the gallows.</p>
 
         <p>The break finally happened under the cover of darkness on an autumn night in 1607. They turned their backs on their warm hearths and walked sixty miles toward the coast as shadows, carrying only what they could fit in their arms. When they reached Scotia Creek, the quiet life of the country was gone forever. They appear to have walked into a betrayal. The captain they had paid to help them had already sold them out to the local militia. They were stripped of their money and their books and paraded through the streets of Boston as prisoners. They had lost their land and their status, but their resolve was only beginning to be tested.</p>
 
         <h2>Prelude: The Physical Reality</h2>
+        <p>Before the New World ever came into view, before ideals were tested or histories were written, there was only the ship, tight, dim, and unrelenting. We tend to picture the voyage of the Mayflower in broad strokes like a brave crossing, a determined people, or a vast ocean. What often gets missed is the world they actually lived in for those 66 days, a space so confined and cluttered that it shaped every breath, every movement, and every hour of the journey.</p>
 
-        <p>Before the New World ever came into view, before ideals were tested or histories were written, there was only the ship — tight, dim, and unrelenting. We tend to picture the voyage of the Mayflower in broad strokes: a brave crossing, a determined people, a vast ocean. What often gets missed is the world they actually lived in for those 66 days, a space so confined and cluttered that it shaped every breath, every movement, every hour of the journey.</p>
+        <div class="image-frame">
+            <img src="images/the-wind-freshens.jpg" alt="Mayflower in Storm">
+            <div class="image-caption">
+                <strong>The Mayflower is Battered by Mountainous Seas and Gale force Winds.</strong> Captain Jones was forced to take in every stitch of canvas and leave the vessel to drift helplessly like a piece of flotsam.
+            </div>
+        </div>
 
-        <p>For a ship the size of the Mayflower, historians estimate the living space on the "tween deck" was roughly 80 feet by 20 feet — about 1,600 square feet in total. Into that space were packed 102 passengers, a few crew members, and even a couple of dogs, all sharing quarters about the size of a modest three-bedroom apartment today. But even that comparison doesn't quite hold up. This wasn't an open room. Barrels of provisions crowded the space. Heavy sea chests served as chairs and tables. A disassembled thirty-foot shallop sat right in the middle of it all. Thick oak beams broke up what little room there was, forcing people to feel their way around, often in near darkness. And the ceiling — barely five feet high — meant most men couldn't even stand upright the entire voyage. When you take everything into account, each person had maybe 10 to 12 square feet to themselves. It wasn't just small. It was crowded, dark, damp, and more like an obstacle course than a living space.</p>
-
-        <hr class="article-divider">
+        <p>For a ship the size of the Mayflower, historians estimate the living space on the "tween deck" was roughly 80 feet by 20 feet, about 1,600 square feet in total. Into that space were packed 102 passengers, a few crew members, and even a couple of dogs. They shared quarters about the size of a modest three-bedroom apartment today, but even that comparison doesn't quite hold up. Barrels of provisions crowded the space and heavy sea chests served as chairs and tables. Thick oak beams broke up what little room there was, forcing people to feel their way around in near darkness. The ceiling was barely five feet high, so most adults spent the entire voyage bent over.</p>
 
         <h2>Chapter 1: The Radical Underground</h2>
-
-        <p>In early Stuart England, open worship outside the established church could bring prosecution and punishment. A group of rebels in the village of Scrooby decided they couldn't stay. These weren't just casual believers; they were committed Separatists willing to risk punishment and loss for conscience's sake.</p>
-
-        <p>By 1608, they fled to Leiden in Holland. For twelve years, they lived as refugees. Many took up demanding labor and trades in Leiden to support their families, and watched their children grow up speaking Dutch and losing their English heritage. They realized that to survive as a people, they had to move again. This wasn't a trip for adventure; it was a flight for survival.</p>
+        <p>In early Stuart England, open worship outside the established church could bring prosecution and punishment. A group of rebels in the village of Scrooby decided they couldn't stay. These weren't just casual believers, they were committed Separatists willing to risk punishment and loss for conscience' sake. By 1608, they fled to Leiden in Holland. For twelve years, they lived as refugees. Many took up demanding labor and trades in Leiden to support their families and watched their children grow up speaking Dutch and losing their English heritage. They realized that to survive as a people, they had to move again. This wasn't a trip for adventure, it was a flight for survival.</p>
 
         <h2>Chapter 2: The Two-Ship Disaster</h2>
-
-        <p>The voyage wasn't supposed to begin as a desperate gamble. The plan called for two ships — the Mayflower and a smaller companion, the Speedwell — intended to carry part of the company and help share the burden of the crossing. They set out in August of 1620 with cautious optimism, but almost immediately, trouble followed. The Speedwell began taking on water. At first, it seemed manageable. But it kept happening. They put in for repairs, tried again, and turned back once more. Each attempt drained time, money, and morale.</p>
-
-        <p>By the time they limped back to Plymouth, it was clear something was seriously wrong. Whether it was faulty construction, overmasting, or even sabotage has been debated ever since, but the result was undeniable. The Speedwell wasn't going to make the Atlantic crossing. What came next was a painful decision. Some passengers gave up the journey entirely. Families were split. The rest crowded aboard the Mayflower, now dangerously full, carrying far more people and provisions than originally intended.</p>
-
-        <p>The delay proved to be more than inconvenient. It was disastrous. What should have been a late-summer departure slipped into mid-September. On September 16, 1620, they finally left England with a single crowded ship, departing late in the season into rough North Atlantic weather. The margin for error was gone before they ever lost sight of land.</p>
+        <p>The voyage wasn't supposed to begin as a desperate gamble. The plan called for two ships, the Mayflower and a smaller companion called the Speedwell. They set out in August of 1620 with cautious optimism, but almost immediately, trouble followed. The Speedwell began taking on water. They put in for repairs, tried again, and turned back once more. Each attempt drained time, money, and morale. By the time they limped back to Plymouth, it was clear the Speedwell wasn't going to make the Atlantic crossing. Families were split and some passengers gave up the journey entirely. The rest crowded aboard the Mayflower, which was now dangerously full. On September 16, 1620, they finally left England with a single crowded ship.</p>
 
         <h2>Chapter 3: Saints and Strangers</h2>
+        <p>The passengers were a mix of two groups. The Saints were the religious Separatists, but the Strangers were the tradesmen and soldiers hired to help the colony survive. Among them were figures like John Alden and Myles Standish. The divide between them wasn't just about prayer, it was about how they understood authority and law. The Saints believed the Church of England was beyond saving and felt they had to separate from it entirely. They also believed they had entered into a covenant with God, which was the foundation of their whole community.</p>
 
-        <p>The passengers were a mix of two groups. The Saints were the religious Separatists, but the Strangers were the tradesmen and soldiers hired to help the colony survive. Among them were legendary figures like John Alden, a young barrel maker, and Myles Standish, the professional soldier.</p>
-
-        <p>But the divide between Saints and Strangers was not just about different ways of praying. It was about how they understood authority, law, and their place under God. The Saints believed the Church of England was beyond saving. They were radical Calvinists who felt that trying to purify the church from within was impossible, and that true believers had to separate from it entirely to avoid God's judgment.</p>
-
-        <p>They also believed they had entered into a covenant with God. This was not simply a matter of personal faith. It was the foundation of their whole community. They saw themselves as a people bound together under divine obligation, carrying that covenant with them into an uncertain wilderness. They believed God governed every event. A storm could be a test. A narrow escape could be a mercy. That belief made them resilient, but it also made them strict.</p>
-
-        <p>Their worship reflected that plain severity. They rejected what they saw as anything too close to Catholic ceremony: stained glass, elaborate vestments, set liturgy, and the Book of Common Prayer itself. They wanted worship stripped down to scripture, preaching, and the discipline of a gathered church.</p>
-
-        <p>The Strangers were not necessarily irreligious, but they did not share the Saints' radical vision. Most were more conventional English subjects in religion and outlook, accustomed to a church governed by bishops and the Crown. Some feared that once ashore, the Saints might try to bind the entire company into a religious discipline they had never agreed to.</p>
-
-        <p>In that light, some have suggested that the Mayflower Compact functioned almost as a religious peace. It required the Strangers to submit to just and equal laws for the sake of survival, while allowing the Saints to preserve their covenant community without seeing the whole venture collapse before a single house had been built. It was not full agreement. It was a practical settlement between people who did not share the same vision of authority, but who needed one another if any of them were going to survive.</p>
-
-        <p>When they realized they were landing hundreds of miles off course in New England, outside their legal charter, the Strangers threatened to strike out on their own. To prevent a mutiny, the men sat down on November 11 and signed the Mayflower Compact — a foundational civil agreement for Plymouth's government and a document that would later take on major symbolic importance in American memory.</p>
+        <p>The Strangers were not necessarily irreligious, but they did not share the Saints' radical vision. Most were more conventional English subjects accustomed to a church governed by bishops and the Crown. Some feared the Saints might try to bind the entire company into a religious discipline they never agreed to. To prevent a mutiny, the men sat down on November 11 and signed the Mayflower Compact. This became a foundational civil agreement for Plymouth's government.</p>
 
         <h2>Chapter 4: Sixty-Six Days in the Dark</h2>
 
-        <p>Picture 102 passengers and about 30 crew members crowded into a space no bigger than a modest three-bedroom home. This was the "tween deck," a cramped gap between the upper deck and the cargo hold. The ceilings were only about five feet high, so most adults spent the entire voyage bent over. They couldn't stand upright for more than a few minutes without their backs screaming in protest.</p>
+        <div class="image-frame">
+            <img src="images/Yet he held his hould.jpg" alt="John Howland held his hold">
+            <div class="image-caption">
+                <strong>Mayflower Drowning Man Shapes the Course of American History.</strong> John Howland caught hold of the top-sail halyards which hung overboard and held on until he was hauled up.
+            </div>
+        </div>
 
-        <p>There were no true windows below, very little fresh air, and almost no privacy. In rough weather, the crew had to bolt the hatches shut, which left the space dark, wet, and foul. The air was thick with body heat, sickness, and the heavy smell of too many people packed together for too long. Seawater constantly leaked through the deck seams above, soaking bedding and clothing until everything felt cold, clammy, and salted through.</p>
+        <p>Halfway through the crossing, the voyage nearly failed. A violent storm struck with enough force to bow and crack one of the ship's main beams. For a time, even the veteran sailors feared it wouldn't hold together. But the passengers had brought a great iron screw with them, probably intended for housebuilding. In the middle of that chaos, they hauled it out and used it to crank the beam back into place. Bradford's account suggests that this improvised repair was one of those rare moments of luck and grit that allowed the voyage to continue.</p>
 
-        <p>Halfway through the crossing, the voyage nearly failed. A violent storm struck with enough force to bow and crack one of the ship's main beams. For a time, the ship was under such strain that even the veteran sailors feared it wouldn't hold together. But the passengers had brought a great iron screw with them, probably intended for housebuilding once they finally landed. In the middle of that chaos, they hauled it out and used it to crank the beam back into place. Bradford's account suggests that this improvised repair was one of those rare moments of luck and grit that kept the Mayflower seaworthy and allowed the voyage to continue.</p>
-
-        <p>The sea didn't threaten only the ship. During one of the worst storms, John Howland was swept overboard and into the Atlantic, surviving only because he managed to seize a trailing rope until the crew pulled him back aboard. It was a brief moment, but it captured the truth of the voyage: survival often hung by almost nothing.</p>
+        <p>The sea didn't threaten only the ship. During one of the worst storms, John Howland was swept overboard and into the Atlantic. He survived only because he managed to seize a trailing rope until the crew pulled him back aboard. It was a brief moment, but it captured the truth of the voyage, survival often hung by almost nothing.</p>
 
         <h2>Chapter 5: The Starving Time</h2>
-
-        <p>They arrived too late in the season, sailing into a New England winter that had already turned harsh and indifferent. The plan had been to build shelter quickly on shore, but nothing about those first weeks worked the way they expected. The ground was frozen hard as stone, the wind cut through wool and leather, and every delay cost them strength they didn't have to spare.</p>
-
-        <p>So they stayed on the ship.</p>
-
-        <p>The Mayflower, once a vessel of passage, became their only shelter. Families, already weakened from the voyage, crowded back into the same dark, low-ceilinged space they had barely survived crossing the Atlantic in. Illnesses consistent with scurvy, pneumonia, and severe gastrointestinal disease spread through the cramped quarters, worsened by cold, damp clothing that never fully dried.</p>
-
-        <p>At the lowest point, there were only a handful of people — maybe six or seven — well enough to move between the sick, tending fires, fetching water, and trying to keep the weakest alive. Everyone else lay where they had fallen, too weak to stand, too cold to recover, waiting through long nights that seemed to stretch without end.</p>
-
-        <p>By the time spring broke, the cost was staggering. Of the 102 passengers who had stepped off the Mayflower, 52 were dead. More than half the colony had vanished in a single season.</p>
-
-        <p>The losses weren't abstract. Every surviving person carried an absence. Whole families were broken apart, parents buried children, spouses were left alone in a land that still felt foreign and unforgiving. The dead were taken to Cole's Hill and buried in unmarked graves — the work done quickly and quietly, often at night, without ceremony or markers.</p>
-
-        <p>There is a long-held account that the graves were leveled and planted over with corn, not out of disrespect, but out of necessity. If the local Wampanoag people saw how few of them remained, the settlers feared it might reveal just how vulnerable they were. Survival, even in grief, still required caution.</p>
+        <p>They arrived too late in the season and sailed into a New England winter that had already turned harsh. The ground was frozen hard as stone and every delay cost them strength they didn't have to spare. So they stayed on the ship. The Mayflower became their only shelter. Illnesses consistent with scurvy, pneumonia, and gastrointestinal disease spread through the cramped quarters. At the lowest point, there were only six or seven people well enough to move between the sick. By the time spring broke, 52 of the 102 passengers were dead. More than half the colony had vanished in a single season.</p>
 
         <h2>Chapter 6: Land Ho! The Bitter Arrival</h2>
+        <p>The first sight of land on November 9, 1620, was not a joyous occasion, it was a moment of sheer survival. They had reached shore at last, but not the shore they had planned for. Captain Jones tried to turn the ship south toward the Hudson River, but the attempt nearly ended in disaster. The Mayflower ran into the roaring breakers of Pollock Rip, which threatened to tear the hull open. Jones turned the ship back north to the relative safety of Cape Cod Bay.</p>
 
-        <p>The first sight of land on November 9, 1620, was not the joyous occasion we see in bright museum paintings. It was a moment of sheer, cold survival. After sixty-six days in a damp, dark hold, the cry of "Land!" did not bring celebration so much as a desperate calculation. They had reached Cape Cod, but they were hundreds of miles north of their intended destination in Virginia. Their patent did not cover this place.</p>
-
-        <p>Captain Jones tried to turn the ship south toward the Hudson River, but the attempt nearly ended in disaster. The Mayflower ran into the roaring breakers of Pollock Rip, a maze of shifting sandbars and white water that threatened to tear the hull open so close to the end of the voyage. Terrified of shipwreck after coming so far, Jones turned the ship back north to the relative safety of Cape Cod Bay.</p>
+        <div class="image-frame">
+            <img src="images/Mayflower-in riptide off-Monomoy-point.jpg" alt="Mayflower off Monomoy Point">
+            <div class="image-caption">
+                <strong>Mayflower Almost Shipwrecked Off Cape Cod.</strong> Catching a riptide, they were nearly shipwrecked on the shallow sand banks south of the Cape at Monomoy Point.
+            </div>
+        </div>
 
         <h3>The First Loss and Near Drowning</h3>
-
-        <p>The danger did not end when the Mayflower found shelter in Provincetown Harbor. That truth became painfully clear with the death of Dorothy Bradford. While William Bradford was away with one of the exploring parties searching for a place to settle, Dorothy fell overboard from the anchored Mayflower and drowned in the freezing harbor. Her death cast a dark shadow over the arrival — after surviving the Atlantic crossing, a passenger could still die within sight of land, in a harbor that looked, from a distance, like safety.</p>
-
-        <p>The men soon learned that danger waited beyond the ship as well. During one of their discovery expeditions in the small shallop, a violent storm nearly shattered the boat. The mast broke into pieces, and they came dangerously close to being driven onto the rocks in darkness and surf. Only skill and luck kept the party from ending in disaster.</p>
-
-        <h3>The Birth and the Burial</h3>
-
-        <p>Life and death were happening at the same time aboard the crowded ship. While the men were out scouting the frozen coastline, Susanna White gave birth to a son, Peregrine White, traditionally remembered as the first English child born to the Plymouth settlers in New England. Even that small sign of beginnings arrived in the middle of uncertainty, hunger, and gathering illness.</p>
-
-        <p>But the moment offered only a brief lift. By the time they finally chose the site for Plymouth, the General Sickness had already begun to spread through the company. When they finally began to move ashore and build the first Common House, many were so reduced that even simple labor became a trial. Men who had crossed an ocean could barely swing an axe.</p>
+        <p>The danger did not end when the Mayflower found shelter in Provincetown Harbor. That truth became painfully clear with the death of Dorothy Bradford. While William Bradford was away with one of the exploring parties searching for a place to settle, Dorothy fell overboard from the anchored Mayflower and drowned in the freezing harbor. Her death cast a dark shadow over the arrival, after surviving the Atlantic crossing, a passenger could still die within sight of land.</p>
 
         <h2>Chapter 7: An Unlikely Alliance</h2>
+        <p>The colony didn't survive on its own strength. It survived because of Tisquantum, known as Squanto, who showed the settlers how to survive in a land that wasn't theirs. He taught them to plant corn using fish as fertilizer and guided them to eel runs. He also served as the crucial link in negotiations with Massasoit, the leader of the Wampanoag Confederacy. By the autumn of 1621, the colony was no longer on the brink of collapse. They shared a three-day feast that would later be remembered as the first Thanksgiving.</p>
 
-        <p>The colony didn't survive on its own strength. It survived because of a man who had already endured more loss than most of them could imagine. Tisquantum, known to the English as Squanto, had once been part of the Patuxet people, a coastal community within the broader Wampanoag world. Years before the Mayflower ever set sail, he'd been captured by English traders, taken across the Atlantic, and sold into slavery. He eventually made his way to England, learned the language, and after years away, managed to return home — only to find his village erased by disease. The Patuxet were gone. He came back to an empty homeland.</p>
+        <h2>Chapter 8: The Living Legacy</h2>
 
-        <p>That absence is what made everything that followed possible.</p>
-
-        <p>The Wampanoag Confederacy, led by Massasoit, was not a single village but a network of allied communities navigating their own fragile reality. Epidemics, likely introduced by earlier European contact, had devastated their population in the years just before 1620, leaving them vulnerable to rival tribes like the Narragansett. An alliance with the newcomers wasn't simply kindness. It was a strategy.</p>
-
-        <p>Tisquantum stood at the center of that fragile intersection. He spoke their language. He understood both worlds. He showed the settlers how to survive in a land that wasn't theirs. He taught them to plant corn in mounded earth, using fish as fertilizer. He guided them to eel runs and showed them which plants would sustain them and which would harm them. And he served as the crucial link in negotiations with Massasoit, helping establish a mutual defense agreement that held, uneasily but effectively, for decades.</p>
-
-        <p>By the autumn of 1621, the colony was still small, still uncertain, but no longer on the brink of collapse. Of the original passengers, only 53 had survived that first brutal year. When the harvest came in, it was enough. Massasoit arrived with around 90 Wampanoag men, and for three days, they shared food, games, and cautious goodwill. Deer, wild fowl, corn, and whatever else the land had offered filled the tables.</p>
-
-        <p>It would later be remembered as the first Thanksgiving, though nothing about it resembled the neat tradition it would become. It was something more raw, more necessary. A pause in a hard and uncertain world — a brief alignment of interests, survival, and humanity that allowed the colony to take root, even as the deeper tensions of two very different worlds remained just beneath the surface.</p>
-
-        <hr class="article-divider">
-
-        <blockquote>Plymouth was the beginning, not the boundary. Over the generations, the descendants of that fragile colony moved outward through marriage, migration, and the restless search for land and livelihood. The lines that began in a storm-tossed ship and an uncertain settlement did not stay in New England. They spread with the country itself, until they reached the river valleys, uplands, and Gulf-facing communities of the South — including Alabama.<br><br>Because the Mayflower was never just a ship that reached land. It was the beginning of something that would move far beyond the shoreline of Plymouth, carrying its people, their conflicts, their beliefs, and their descendants into places they could never have imagined.</blockquote>
-
-        <hr class="article-divider">
-
-        <h2>Chapter 8: The Living Legacy — From Plymouth Rock to Alabama</h2>
-
-        <p>The Mayflower didn't just carry passengers, furniture, tools and supplies. It carried a small colony's hopes for survival, self-government, and continuity. While the colony itself was eventually absorbed into Massachusetts in 1692, the "Pilgrim Spirit" refused to be contained. The real story didn't end in the 17th century. It expanded across the Appalachians, through the river valleys, and eventually into the heart of the Deep South.</p>
-
-        <p>History books often focus on a few famous names, but the legacy belongs to everyone on that deck. We must remember the servants and the children who are often left out of the narrative, yet they are the literal ancestors of millions. Every person aboard played a part in the survival of the colony. The 102 passengers were a cross-section of 17th-century life. Some were wealthy, many were poor, and nearly a third were under the age of 18. They were bound together by a "Civil Body Politick" before they even stepped onto the shore.</p>
-
-        <h3>The Passengers</h3>
-
-        <p>The 102 passengers aboard the Mayflower were not a single class of people, but a mixed company of families, servants, tradesmen, laborers, children, and hired men joined in a venture none of them could fully control. Some were Separatists from Leiden, others were London merchants, craftsmen, or laborers, but all were bound together by the same uncertain crossing and the same fragile settlement.</p>
-
-        <p>A fuller directory of the passengers appears in the Passenger Portal, where the company is expanded into households and family groups with added context on survival, lineage, and the roles these men, women, children, and servants played in the colony's story. What follows here is a brief grouping of the people who made the voyage.</p>
-
-        <p><strong>Leiden families and Separatists:</strong> John and Katherine Carver; Desire Minter; John Howland; Roger Wilder; William Latham; Jasper More; William and Dorothy Bradford; William and Mary Brewster; Love and Wrestling Brewster; Richard and Mary More; Edward and Elizabeth Winslow; George Soule; Isaac and Mary Allerton; Bartholomew, Remember, and Mary Allerton; John Hooke; Samuel Fuller; William and Susanna White; Resolved and Peregrine White; Thomas and Joseph Rogers; Degory Priest; Thomas Williams; and Gilbert Winslow.</p>
-
-        <p><strong>London families, tradesmen, and other passengers:</strong> William, Alice, Priscilla, and Joseph Mullins; Stephen and Elizabeth Hopkins; Giles, Constance, Damaris, and Oceanus Hopkins; Edward Doty; Edward Leister; John, Eleanor, John Jr., and Francis Billington; John, Joan, and Elizabeth Tilley; Edward and Ann Tilley; Francis and John Cooke; Richard Warren; Myles and Rose Standish; John Alden; Christopher and Mary Martin; Solomon Prower; Nathaniel Martin; Thomas Tinker; John and Alice Rigsdale; James, Mrs. Chilton, and Mary Chilton; Edward and Mrs. Fuller; Samuel Fuller; John Turner and his two sons; Francis, Sarah, and Samuel Eaton; Peter Browne; Edmund Margesson; Richard Britteridge; Richard Clarke; and Richard Gardiner.</p>
-
-        <p><strong>Sailors and hired men left with the colony:</strong> John Allerton and Thomas English were among those hired to remain. John Alden also counted among the 102, while most of the remaining crew — including Captain Christopher Jones — stayed aboard the ship through the first winter and returned to England in the spring of 1621.</p>
-
-        <h3>An Unbroken Chain to Alabama</h3>
-
-        <p>FamilySearch, citing the General Society of Mayflower Descendants, says there may be as many as 35 million living descendants worldwide and about 10 million in the United States — or roughly 3 percent of the population. Imagine three percent of the American population descending from a group so small they could fit on a modern city bus.</p>
-
-        <p>This legacy didn't stay in New England. It traveled with families as they moved south, seeking new land and new opportunities. Our own Alabama Society was founded in Birmingham on December 6, 1952, because the descendants here recognized that distance doesn't diminish heritage.</p>
-
-        <p>Whether one's ancestor was a leader like Bradford or a servant such as John Howland or George Soule, their descendants are found across Alabama today. From the Tennessee Valley to the Gulf Coast, that lineage remains part of the state's historical and family story.</p>
+        <div class="highlight-box" id="legacy">
+            <h3>An Unbroken Chain to Alabama</h3>
+            <p>FamilySearch, citing the General Society of Mayflower Descendants, says there may be as many as 35 million living descendants worldwide and about 10 million in the United States, or roughly 3 percent of the population using 2018 figures. Imagine three percent of the American population descending from a group so small they could fit on a modern city bus.</p>
+            <p>This legacy didn't stay in New England. It traveled with families as they moved south, seeking new land and new opportunities. Our own Alabama Society was founded in Birmingham on December 6, 1952, because the descendants here recognized that distance doesn't diminish heritage.</p>
+            <p>Whether one’s ancestor was a leader like Bradford or a servant such as John Howland or George Soule, their descendants are found across Alabama today. From the Tennessee Valley to the Gulf Coast, that lineage remains part of the state’s historical and family story.</p>
+        </div>
 
         <h3>Why We Research</h3>
-
         <p>We don't just track these names to fill out a chart. We do it to honor a group of people who stood on the edge of a vast wilderness and chose to build something together instead of giving up. Every time we help a new member prove their lineage, we're rescuing a piece of that 1620 story from being forgotten.</p>
 
         <blockquote>The Mayflower is still sailing. It sails through every descendant who values religious liberty and every Alabamian who honors the courage of their ancestors.</blockquote>
 
-        <hr class="article-divider">
+        <div class="sources-notes-section">
+            <h3>Sources and Historical Notes</h3>
+            <p>Because no original plans or measured drawings of the 1620 Mayflower survive, statements about the ship’s dimensions rely on modern historical reconstruction. See “Mayflower II (Brixham, 1957),” Voyaging through History, University of Exeter, accessed April 8, 2026, <a href="https://humanities-research.exeter.ac.uk/voyagingthroughhistory/items/show/141" target="_blank">https://humanities-research.exeter.ac.uk/voyagingthroughhistory/items/show/141</a></p>
+            <p>Scurvy is a disease caused by a severe, prolonged deficiency of vitamin C (ascorbic acid), necessary for collagen synthesis, resulting in weakened connective tissues, gum disease, bleeding, and fatigue. <br><a href="https://my.clevelandclinic.org/health/diseases/24318-scurvy" target="_blank">https://my.clevelandclinic.org/health/diseases/24318-scurvy</a></p>
+        </div>
 
-        <h3>Sources and Historical Notes</h3>
-
-        <p>Because no original plans or measured drawings of the 1620 Mayflower survive, statements about the ship's dimensions rely on modern historical reconstruction. See "Mayflower II (Brixham, 1957)," <em>Voyaging through History</em>, University of Exeter, accessed April 8, 2026: <a href="https://humanities-research.exeter.ac.uk/voyagingthroughhistory/items/show/141" target="_blank" rel="noopener" style="color: var(--royal-blue);">humanities-research.exeter.ac.uk</a></p>
-
-        <p>Scurvy is a disease caused by a severe, prolonged deficiency of vitamin C (ascorbic acid), necessary for collagen synthesis, resulting in weakened connective tissues, gum disease, bleeding, and fatigue. See: <a href="https://my.clevelandclinic.org/health/diseases/24318-scurvy" target="_blank" rel="noopener" style="color: var(--royal-blue);">Cleveland Clinic — Scurvy</a></p>
-
-        <hr class="article-divider">
-
-        <!-- Passenger Portal CTA -->
         <div class="portal-cta">
             <h3>Meet the Passengers</h3>
             <p>Explore our narrative directory of the men, women, and children who made the voyage aboard the Mayflower in 1620.</p>
@@ -341,20 +314,26 @@
                     <p>Preserving the legacy of the Mayflower Pilgrims since 1952</p>
                     <div class="social-links" style="margin-top: 1.5rem;">
                         <a href="https://www.facebook.com/groups/AlabamaMayflowerSociety" target="_blank" rel="noopener" style="display: inline-block; text-decoration: none;">
-                            <span style="background: white; color: var(--navy-blue); width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; border-radius: 4px; font-family: sans-serif; font-weight: bold; font-size: 22px;">f</span>
+                            <span style="background: white; color: #002147; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; border-radius: 4px; font-family: sans-serif; font-weight: bold; font-size: 22px;">f</span>
                         </a>
                     </div>
                 </div>
+
                 <div class="footer-section">
                     <h3>Quick Links</h3>
                     <ul>
                         <li><a href="about-us.html">About Us</a></li>
                         <li><a href="our-history.html">Our History</a></li>
+                        <li><a href="membership.html">Membership</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="news.html">News</a></li>
                         <li><a href="wewillplymouthrockyouweekend.html">2026 Conference</a></li>
+                        <li><a href="useful-links.html">Useful Links</a></li>
                         <li><a href="MayflowerSaga.html">The Mayflower Saga</a></li>
-                        <li><a href="PassengerPortal.html">Passenger Portal</a></li>
+                        <li><a href="PassengerPortal.html">The Passengers: Narrative Directory</a></li>
                     </ul>
                 </div>
+
                 <div class="footer-section">
                     <h3>Our Colonies</h3>
                     <ul style="list-style: none; padding: 0;">
@@ -364,6 +343,7 @@
                         <li>Tennessee Valley Colony<br><small>Huntsville Area</small></li>
                     </ul>
                 </div>
+
                 <div class="footer-section">
                     <h3>Contact</h3>
                     <ul style="list-style: none; padding: 0;">
@@ -372,10 +352,13 @@
                     </ul>
                 </div>
             </div>
+
             <div class="footer-bottom" style="text-align: center; padding-top: 2rem;">
-                <p>&copy; 2026 Alabama Society of Mayflower Descendants | All Rights Reserved | <a href="privacy-policy.html" style="color: var(--gold);">Privacy Policy</a></p>
+                <p>&copy; 2026 Alabama Society of Mayflower Descendants | All Rights Reserved | <a href="privacy-policy.html" style="color: #c5a059;">Privacy Policy</a></p>
             </div>
         </div>
     </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
