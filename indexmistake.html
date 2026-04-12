@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>We Will Plymouth Rock You Weekend | Alabama SMD</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/logo-fix.css">
+    <link rel="icon" type="image/png" href="images/LOGO001.png?v=3">
+    <style>
+        .conference-hero {
+            background: linear-gradient(135deg, var(--navy-blue), var(--royal-blue));
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+            color: white;
+        }
+        .conference-hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--gold), var(--bronze));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .conference-date {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--gold), var(--bronze));
+            padding: 1.5rem 3rem;
+            border-radius: 50px;
+            font-size: clamp(1.3rem, 3vw, 2rem);
+            font-weight: 700;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            margin-top: 1rem;
+        }
+        .flyers-grid, .videos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .video-card {
+            background: var(--cream);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .video-card video { 
+            width: 100%; 
+            display: block; 
+            background: #000;
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+        }
+        .subtitle { font-size: 1.5rem; opacity: 0.9; margin-bottom: 2rem; }
+        
+        @keyframes pulse-red {
+            0%   { box-shadow: 0 0 0 0 rgba(200, 30, 30, 0.7), 0 8px 24px rgba(200,30,30,0.4); transform: scale(1); }
+            50%  { box-shadow: 0 0 0 18px rgba(200, 30, 30, 0), 0 12px 32px rgba(200,30,30,0.3); transform: scale(1.03); }
+            100% { box-shadow: 0 0 0 0 rgba(200, 30, 30, 0), 0 8px 24px rgba(200,30,30,0.4); transform: scale(1); }
+        }
+        .waitlist-btn {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.3rem;
+            background: linear-gradient(135deg, #cc1a1a, #a80000);
+            color: white;
+            padding: 1.3rem 3rem;
+            border-radius: 50px;
+            font-family: inherit;
+            cursor: pointer;
+            animation: pulse-red 2s ease-in-out infinite;
+            transition: background 0.2s;
+            text-decoration: none;
+        }
+        .waitlist-btn:hover {
+            background: linear-gradient(135deg, #e02020, #c00000);
+            animation: none;
+            transform: scale(1.05);
+            box-shadow: 0 12px 32px rgba(200,30,30,0.5);
+        }
+        .waitlist-top {
+            font-size: 1rem;
+            font-weight: 600;
+            opacity: 0.92;
+            letter-spacing: 0.02em;
+        }
+        .waitlist-main {
+            font-size: 1.6rem;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+        }
+
+        .gov-address-container {
+            max-width: 800px; 
+            margin: 0 auto; 
+            background: white; 
+            border-radius: 15px; 
+            overflow: hidden; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .gov-address-container video {
+            width: 100%;
+            height: auto;
+            display: block;
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <header id="mainHeader">
+        <nav>
+            <a href="index.html" class="logo">
+                <img src="images/LOGO002.png" alt="Alabama Mayflower Society" class="logo-img">
+            </a>
+            <ul class="nav-links">
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="our-history.html">Our History</a></li>
+                <li><a href="membership.html">Membership</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="wewillplymouthrockyouweekend.html">2026 Conference</a></li>
+                <li><a href="useful-links.html">Useful Links</a></li>
+                <li><a href="contact_submit.html">Contact Us</a></li>
+                <li><img src="images/LOGO001.png" alt="Mayflower Society" style="height: 45px; width: auto; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));"></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="conference-hero">
+        <h1>"We Will Plymouth Rock You!" Weekend</h1>
+        <p class="subtitle">The Society of Mayflower Descendants in the State of <em>(Sweet Home)</em> Alabama</p>
+        <div class="conference-date">April 24 & 25, 2026</div>
+    </section>
+
+    <section style="background: var(--cream); padding: 4rem 2rem; text-align: center;">
+        <div class="gov-address-container">
+            <video controls poster="images/Kev_Talk.jpg">
+                <source src="images/Governors_AddressV7.mp4" type="video/mp4">
+            </video>
+            <div style="padding: 2rem;">
+                <h3 style="margin-bottom: 0.5rem;">Governor's Message</h3>
+                <p style="font-style: italic; color: #666;">Please watch in FULL SCREEN.</p>
+            </div>
+        </div>
+    </section>
+
+    <section style="padding: 4rem 2rem;">
+        <h2 style="text-align: center; color: var(--navy-blue); margin-bottom: 0.5rem;">Event Flyers</h2>
+        <p style="text-align: center; font-size: 1.2rem; margin-bottom: 3rem;">Just click or tap on a flyer image to open up a printable version in a new tab or window</p>
+        <div class="flyers-grid">
+            <a href="images/Welcome Dinner flyer.pdf" target="_blank"><img src="images/WelcomeDinner_flyer2026.jpg" alt="Welcome Dinner Flyer" style="width:100%; border-radius: 15px;"></a>
+            <a href="images/Saturday_Night_flyer.pdf" target="_blank"><img src="images/Saturday_Night_flyer.jpg" alt="Saturday Night Flyer" style="width:100%; border-radius: 15px;"></a>
+            <a href="images/SMDAL_Spring_Conference_flyer.pdf" target="_blank"><img src="images/SMDAL_Spring_Conference_flyer.jpg" alt="Conference Flyer" style="width:100%; border-radius: 15px;"></a>
+            <a href="images/Tom Begley Bio.pdf" target="_blank"><img src="images/TomBegley_flyer2026.jpg" alt="Tom Begley - Featured Speaker" style="width:100%; border-radius: 15px;"></a>
+        </div>
+    </section>
+
+    <section style="background: white; padding: 4rem 2rem;">
+        <h2 style="text-align: center; color: var(--navy-blue); margin-bottom: 0.5rem;">EVENT VIDEOS</h2>
+        <p style="text-align: center; font-size: 1.2rem; margin-bottom: 3rem;">Watch these videos and be sure to view each FULL SCREEN.</p>
+        <div class="videos-grid">
+            <div class="video-card">
+                <video controls><source src="images/2026_Rish_Conversations_Ad.mp4" type="video/mp4"></video>
+                <div style="padding: 1.5rem; text-align: center;"><h3>Plimoth-Patuxent Ad</h3></div>
+            </div>
+            <div class="video-card">
+                <video controls><source src="images/Tom Begley__Alabama_Promo.mp4" type="video/mp4"></video>
+                <div style="padding: 1.5rem; text-align: center;"><h3>Featured Speaker: Tom Begley</h3></div>
+            </div>
+            <div class="video-card">
+                <video controls><source src="images/National_Maritime_Museum_Movie.mp4" type="video/mp4"></video>
+                <div style="padding: 1.5rem; text-align: center;"><h3>National Maritime Museum</h3></div>
+            </div>
+        </div>
+    </section>
+
+<section style="background: var(--cream); padding: 4rem 2rem; text-align: center;">
+    <a href="http://PaySMDAL.today" target="_blank" class="waitlist-btn" style="text-decoration: none;">
+        <span class="waitlist-top">Go Register Right Now</span>
+        <span class="waitlist-main">PaySMDAL.today</span>
+    </a>
+    
+    <div style="margin-top: 3rem;">
+        <h3>Plan Your Trip to Mobile</h3>
+        <p style="font-size: 1.1rem; margin-top: 0.5rem; color: #555;">(including where to stay)</p>
+        <p style="font-size: 1.1rem; color: #555;">Click or Tap on the image below.</p>
+        <a href="https://mobile.org" target="_blank">
+            <img src="images/Mobile_CMYK_transparent.png" alt="Visit Mobile" style="max-width: 300px; margin-top: 1rem;">
+        </a>
+    </div>
+</section>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <img src="images/LOGO002.png" alt="Alabama Mayflower Society" class="footer-logo">
+                    <p>Preserving the legacy of the Mayflower Pilgrims since 1952</p>
+                    <div class="social-links" style="margin-top: 1.5rem;">
+                        <a href="https://www.facebook.com/groups/AlabamaMayflowerSociety" target="_blank" rel="noopener" style="display: inline-block; text-decoration: none;">
+                            <span style="background: white; color: var(--navy-blue); width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; border-radius: 4px; font-family: sans-serif; font-weight: bold; font-size: 22px;">f</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="our-history.html">Our History</a></li>
+                        <li><a href="wewillplymouthrockyouweekend.html">2026 Conference</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Our Colonies</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 1rem;">Cahaba River Colony<br><small>Birmingham Area</small></li>
+                        <li style="margin-bottom: 1rem;">Capital Colony<br><small>Montgomery Area</small></li>
+                        <li style="margin-bottom: 1rem;">Gulf Coast Colony<br><small>Mobile Area</small></li>
+                        <li>Tennessee Valley Colony<br><small>Huntsville Area</small></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 1rem;"><a href="mailto:SMDAL.Info@gmail.com">info@alabamasmd.org</a></li>
+                        <li><a href="https://themayflowersociety.org" target="_blank" rel="noopener">General Society of Mayflower Descendants</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom" style="text-align: center; padding-top: 2rem;">
+                <p>&copy; 2026 Alabama Society of Mayflower Descendants | All Rights Reserved | <a href="privacy-policy.html" style="color: var(--gold);">Privacy Policy</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
