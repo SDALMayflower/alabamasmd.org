@@ -3,174 +3,220 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Mayflower Compact | Alabama Society of Mayflower Descendants</title>
+    <meta name="description" content="The Mayflower Compact — history, full text, signers, and sources. Alabama Society of Mayflower Descendants.">
+    <title>The Mayflower Compact | Alabama Mayflower Society</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/compact-page.css">
     <link rel="icon" type="image/png" href="images/LOGO001.png?v=3">
     <style>
-        :root {
-            --navy-blue: #002147;
-            --royal-blue: #003366;
-            --gold: #d4af37;
-            --bronze: #cd7f32;
-            --cream: #fdfaf2;
-        }
-
-        body, html {
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Arial, sans-serif;
-            scroll-behavior: smooth;
-            background-color: #f4f4f4;
-        }
-
-        /* Fixed Navigation Header */
-        header {
-            background: rgba(0, 0, 0, 0.4);
-            position: absolute;
-            top: 0;
-            width: 100%;
-            z-index: 100;
-            backdrop-filter: blur(5px);
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 2rem;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            transition: color 0.2s;
-        }
-
-        .nav-links a:hover {
-            color: var(--gold);
-        }
-
-        /* Hero Section */
-        .hero-section {
-            background: linear-gradient(135deg, var(--navy-blue), var(--royal-blue));
-            padding: 10rem 2rem 6rem;
+        /* ── Article Hero ──────────────────────────────────────────── */
+        .article-hero {
+            background: linear-gradient(135deg, #002147 0%, #1a3a5c 60%, #002147 100%);
+            padding: 8rem 2rem 5rem;
             text-align: center;
-            color: white;
-        }
-
-        .hero-section h1 {
-            font-size: clamp(2.5rem, 6vw, 4.5rem);
-            margin-bottom: 1rem;
-            background: linear-gradient(135deg, var(--gold), var(--bronze));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: 800;
-        }
-
-        /* Compact Content Section */
-        .compact-container {
-            max-width: 1000px;
-            margin: -4rem auto 4rem;
-            background: white;
-            padding: 4rem;
-            border-radius: 15px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
             position: relative;
+            overflow: hidden;
         }
-
-        .compact-text-box {
-            background: var(--cream);
-            border: 1px solid #e0d0b0;
-            padding: 3rem;
-            border-radius: 8px;
-            line-height: 1.9;
-            font-family: 'Georgia', serif;
-            margin-top: 2rem;
-            color: #2c3e50;
+        .article-hero::before {
+            content: '';
+            position: absolute; inset: 0;
+            background: url('images/Mayflower_Compact_Hero.png') center/cover no-repeat;
+            opacity: 0.14;
         }
-
-        .signers-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 12px;
-            font-size: 0.85rem;
-            margin-top: 2rem;
-            border-top: 1px solid #e0d0b0;
-            padding-top: 1.5rem;
+        .article-hero .hero-label {
+            position: relative;
+            display: inline-block;
+            background: linear-gradient(135deg, #c5a059, #b08d44);
+            color: #002147;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            padding: 0.35rem 1.2rem;
+            border-radius: 50px;
+            margin-bottom: 1.5rem;
         }
-
-        /* Footer Section */
-        footer {
-            background: var(--navy-blue);
+        .article-hero h1 {
+            position: relative;
             color: white;
-            padding: 5rem 2rem 2rem;
+            font-size: clamp(2.2rem, 5vw, 3.8rem);
+            line-height: 1.15;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 12px rgba(0,0,0,0.5);
         }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 4rem;
-            max-width: 1200px;
+        .article-hero .hero-subtitle {
+            position: relative;
+            color: rgba(255,255,255,0.75);
+            font-size: 1.15rem;
+            font-style: italic;
+            max-width: 640px;
             margin: 0 auto;
         }
 
-        .footer-section h3 {
-            color: var(--gold);
-            margin-bottom: 1.5rem;
-            font-size: 1.1rem;
-            text-transform: uppercase;
+        /* ── Article Body ──────────────────────────────────────────── */
+        .article-body {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 4rem 2rem 6rem;
+        }
+        .article-body p {
+            font-size: 1.15rem;
+            line-height: 1.9;
+            color: #333;
+            margin-bottom: 1.8rem;
+        }
+        .article-body h2 {
+            font-size: 2rem;
+            color: #002147;
+            margin: 3.5rem 0 1.25rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #c5a059;
+            display: inline-block;
+        }
+        .article-body h3 {
+            font-size: 1.5rem;
+            color: #002147;
+            margin: 2.5rem 0 1rem;
         }
 
-        .footer-section ul {
+        /* ── Image Frame ───────────────────────────────────────────── */
+        .image-frame {
+            text-align: center;
+            margin: 3.5rem 0;
+            padding: 1.5rem;
+            background: #f8f8f8;
+            border: 1px solid #eee;
+            border-radius: 8px;
+        }
+        .image-frame img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .image-caption {
+            font-size: 1.05rem;
+            color: #555;
+            font-style: italic;
+            line-height: 1.6;
+        }
+
+        /* ── Full Text Block ───────────────────────────────────────── */
+        .compact-text {
+            background: #fcfaf5;
+            border-left: 5px solid #c5a059;
+            border-radius: 0 8px 8px 0;
+            padding: 2rem 2.5rem;
+            margin: 2rem 0 3rem;
+            font-size: 1.1rem;
+            line-height: 2;
+            color: #2a2a2a;
+            font-style: italic;
+        }
+
+        /* ── Signers List ──────────────────────────────────────────── */
+        .signers-list {
+            background: #f0f4f8;
+            border-left: 8px solid #002147;
+            border-radius: 0 8px 8px 0;
+            padding: 2rem 2.5rem;
+            margin: 2rem 0 3rem;
+            font-size: 1.05rem;
+            line-height: 2;
+            color: #333;
+        }
+
+        /* ── Sources ───────────────────────────────────────────────── */
+        .sources-section {
+            background: #fff9ed;
+            border: 1px solid #c5a059;
+            border-radius: 8px;
+            padding: 2.5rem;
+            margin-top: 4rem;
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+        .sources-section h3 {
+            margin-top: 0;
+            color: #002147;
+            text-transform: uppercase;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+            border-bottom: 2px solid #c5a059;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.25rem;
+        }
+        .sources-section ul {
             list-style: none;
             padding: 0;
+            margin: 0;
+        }
+        .sources-section ul li {
+            margin-bottom: 0.9rem;
+            padding-left: 1.2rem;
+            border-left: 3px solid #c5a059;
+            padding-left: 1rem;
+        }
+        .sources-section ul li a {
+            color: #1e40af;
+            word-break: break-all;
         }
 
-        .footer-section li { margin-bottom: 0.8rem; }
-
-        .footer-section a {
-            color: white;
-            text-decoration: none;
-            opacity: 0.8;
-            transition: opacity 0.2s;
-        }
-
-        .footer-section a:hover { opacity: 1; color: var(--gold); }
-
-        .footer-logo { height: 85px; margin-bottom: 1.5rem; }
-
-        .footer-bottom {
-            border-top: 1px solid rgba(255,255,255,0.1);
-            margin-top: 4rem;
-            padding-top: 2.5rem;
+        /* ── Feature Links CTA ─────────────────────────────────────── */
+        .features-cta {
+            background: linear-gradient(135deg, #002147, #1e40af);
+            border-radius: 16px;
+            padding: 3rem 2.5rem;
             text-align: center;
-            font-size: 0.85rem;
-            opacity: 0.6;
+            margin: 4rem 0 0;
+            color: white;
+        }
+        .features-cta h3 {
+            color: #d4af37;
+            font-size: 1.6rem;
+            margin-bottom: 0.75rem;
+        }
+        .features-cta p {
+            color: rgba(255,255,255,0.8);
+            font-size: 1rem;
+            margin-bottom: 1.75rem;
+        }
+        .features-cta .cta-links {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .features-cta a.cta-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #d4af37, #cd7f32);
+            color: #002147;
+            font-weight: 700;
+            font-size: 0.95rem;
+            padding: 0.85rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            letter-spacing: 0.05em;
+            box-shadow: 0 4px 18px rgba(212,175,55,0.4);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .features-cta a.cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 28px rgba(212,175,55,0.5);
         }
     </style>
 </head>
 <body>
-
-    <header>
+    <header id="mainHeader">
         <nav>
-            <a href="index.html">
-                <img src="images/LOGO002.png" alt="Alabama Mayflower" style="height: 65px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));">
+            <a href="index.html" class="logo">
+                <img src="images/LOGO002.png" alt="Alabama Mayflower Society" class="logo-img">
             </a>
-            <ul class="nav-links">
+            <button class="menu-toggle" onclick="document.getElementById('navLinks').classList.toggle('active')">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
                 <li><a href="about-us.html">About Us</a></li>
                 <li><a href="our-history.html">Our History</a></li>
                 <li><a href="membership.html">Membership</a></li>
@@ -178,89 +224,123 @@
                 <li><a href="news.html">News</a></li>
                 <li><a href="wewillplymouthrockyouweekend.html">2026 Conference</a></li>
                 <li><a href="useful-links.html">Useful Links</a></li>
+                <li class="has-dropdown">
+                    <a href="MayflowerSaga.html" style="color: var(--gold);">Features</a>
+                    <ul class="dropdown">
+                        <li><a href="MayflowerSaga.html">The Mayflower Saga</a></li>
+                        <li><a href="PassengerPortal.html">The Passengers: Narrative Directory</a></li>
+                        <li><a href="compact.html">The Mayflower Compact</a></li>
+                    </ul>
+                </li>
                 <li><a href="contact_submit.html">Contact Us</a></li>
-                <li><img src="images/LOGO001.png" alt="General Society" style="height: 50px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));"></li>
+                <li><a href="index.html"><img src="images/LOGO001.png" alt="Mayflower Society" style="height: 45px; width: auto; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3)); background: none;"></a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="hero-section">
+    <!-- Hero -->
+    <section class="article-hero">
+        <div class="hero-label">Feature Article</div>
         <h1>The Mayflower Compact</h1>
-        <p style="font-size: 1.4rem; opacity: 0.9; font-weight: 300;">The Foundation of American Self-Governance (1620)</p>
+        <p class="hero-subtitle">November 11, 1620 &mdash; The founding civil agreement of Plymouth Colony</p>
     </section>
 
-    <div class="compact-container">
-        <h2 style="color: var(--navy-blue); margin-top: 0;">Preserving the Pilgrim Legacy</h2>
-        <p>Before coming to the New World, the Pilgrims lived in Leyden, Holland from 1608 to 1620. As the passengers aboard the Mayflower journeyed across the Atlantic, it became apparent that they needed to consent voluntarily to a cooperative form of government for their survival in an alien land.</p>
+    <!-- Article Body -->
+    <article class="article-body">
 
-        <div class="compact-text-box">
-            <h3 style="text-align: center; text-decoration: underline; margin-top: 0;">THE AGREEMENT</h3>
-            <p>"In the name of God, Amen. We, whose names are underwritten, the Loyal Subjects of our dread Sovereign Lord, King James... do by these presents, solemnly and mutually in the Presence of God and one of another, covenant and combine ourselves together into a civil Body Politick, for our better ordering and Preservation, and Furtherance of the Ends aforesaid..."</p>
-            
-            <p style="text-align: center; font-weight: bold; margin-top: 2.5rem; letter-spacing: 0.1em;">SIGNERS</p>
-            <div class="signers-grid">
-                <div>John Carver</div><div>Edward Tilley</div><div>Degory Priest</div>
-                <div>William Bradford</div><div>John Tilley</div><div>Thomas Williams</div>
-                <div>Edward Winslow</div><div>Francis Cooke</div><div>Gilbert Winslow</div>
-                <div>William Brewster</div><div>Thomas Rogers</div><div>Edmund Margesson</div>
-                <div>Isaac Allerton</div><div>Thomas Tinker</div><div>Peter Brown</div>
-                <div>Myles Standish</div><div>John Rigsdale</div><div>Richard Britteridge</div>
-                <div>John Alden</div><div>Edward Fuller</div><div>George Soule</div>
-            </div>
+        <p>When the Mayflower anchored at Cape Cod in November 1620, the settlers realized they were outside the land covered by their original patent. They needed a way to keep order while they waited for a new legal agreement, so the male passengers wrote and signed the Mayflower Compact on November 11, 1620. They pledged to form a "civil body politick" for their "better ordering and preservation" and agreed to create "just and equal laws" for the good of the whole colony.</p>
 
-            <div style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #e0d0b0;">
-                <img src="images/compact_colorozed.jpg" alt="The Signing of the Mayflower Compact" style="max-width: 100%; height: auto; border-radius: 4px; box-shadow: 0 8px 20px rgba(0,0,0,0.2);">
-                <p style="font-size: 0.9rem; font-style: italic; margin-top: 15px; color: #444;">The Signing of the Mayflower Compact, 1620</p>
-            </div>
-            </div> </div>
+        <p>The term <em>civil body politick</em> is a key part of the document. The settlers used it because it was a common legal phrase for an organized community acting together under lawful authority, and it helped define their new union as a civil government instead of just a religious group. The Compact was not merely a promise to stand by one another. It was a clear statement that they were a political community capable of making laws together.</p>
+
+        <p>The real strength of the Compact is how simple and practical it was. It was not a long, complicated constitution, but a short agreement that bound the signers to obey the government and legal system they would establish in Plymouth Colony. In a time of deep uncertainty — before they had houses ashore or a secure legal footing — the Compact gave them a shared promise of order and survival.</p>
+
+        <div class="image-frame">
+            <img src="images/Compact_Facsimile.jpg" alt="Facsimile of the Mayflower Compact">
+            <div class="image-caption">Facsimile image of the Mayflower Compact tradition.</div>
+        </div>
+
+        <h2>Full Text of the Compact</h2>
+
+        <div class="compact-text">
+            In the name of God, Amen. We whose names are underwritten, the loyal subjects of our dread sovereign Lord, King James, by the grace of God, of Great Britain, France, and Ireland king, defender of the faith, etc., having undertaken, for the glory of God and advancement of the Christian faith and honor of our king and country, a voyage to plant the first colony in the northern parts of Virginia, do by these presents solemnly and mutually in the presence of God and one of another, covenant and combine ourselves together into a civil body politick, for our better ordering and preservation and furtherance of the ends aforesaid; and by virtue hereof to enact, constitute, and frame such just and equal laws, ordinances, acts, constitutions, and officers, from time to time, as shall be thought most meet and convenient for the general good of the colony, unto which we promise all due submission and obedience. In witness whereof we have hereunder subscribed our names at Cape Cod the 11th of November, in the year of the reign of our sovereign lord, King James, of England, France, and Ireland the eighteenth, and of Scotland the fifty-fourth, Anno Domini 1620.
+        </div>
+
+        <h2>The Signers</h2>
+
+        <div class="signers-list">
+            John Carver; William Bradford; Edward Winslow; William Brewster; Isaac Allerton; Myles Standish; John Alden; Samuel Fuller; Christopher Martin; William Mullins; William White; Richard Warren; John Howland; Stephen Hopkins; Edward Tilley; John Tilley; Francis Cooke; Thomas Rogers; Thomas Tinker; John Rigsdale; Edward Fuller; John Turner; Francis Eaton; James Chilton; John Craxton; John Billington; Joses Fletcher; John Goodman; Digory Priest; Thomas Williams; Gilbert Winslow; Edmund Margesson; Peter Browne; Richard Britteridge; George Soule; Richard Clarke; Richard Gardiner; John Allerton; Thomas English; Edward Doty; Edward Leister.
+        </div>
+
+        <h2>Textual Note</h2>
+
+        <p>The original Mayflower Compact is lost, but the text survives in three early versions. These copies are associated with Edward Winslow's <em>Mourt's Relation</em> (1622), William Bradford's <em>Of Plimoth Plantation</em> (1646), and Nathaniel Morton's 1669 account. Morton's version is especially important because it includes the names of the 41 men who may have signed the document.</p>
+
+        <div class="sources-section">
+            <h3>Selected Sources</h3>
+            <ul>
+                <li>Massachusetts Government, "The Mayflower Compact."<br><a href="https://www.mass.gov/news/the-mayflower-compact" target="_blank" rel="noopener">https://www.mass.gov/news/the-mayflower-compact</a></li>
+                <li>General Society of Mayflower Descendants, "The Mayflower Compact."<br><a href="https://themayflowersociety.org/history/the-mayflower-compact/" target="_blank" rel="noopener">https://themayflowersociety.org/history/the-mayflower-compact/</a></li>
+                <li>Avalon Project, Yale Law School, "Mayflower Compact : 1620."<br><a href="https://avalon.law.yale.edu/17th_century/mayflower.asp" target="_blank" rel="noopener">https://avalon.law.yale.edu/17th_century/mayflower.asp</a></li>
+                <li>Library of Congress, "A Civil Body Politic: The Mayflower Compact and 17th-Century Corporations."<br><a href="https://blogs.loc.gov/law/2021/11/a-civil-body-politic-the-mayflower-compact-and-17th-century-corporations/" target="_blank" rel="noopener">https://blogs.loc.gov/law/2021/11/a-civil-body-politic-the-mayflower-compact-and-17th-century-corporations/</a></li>
+                <li>Plimoth Patuxent Museums, "Mayflower and Mayflower Compact."<br><a href="https://plimoth.org/for-students/homework-help/mayflower-and-mayflower-compact" target="_blank" rel="noopener">https://plimoth.org/for-students/homework-help/mayflower-and-mayflower-compact</a></li>
+            </ul>
+        </div>
+
+        <div class="features-cta">
+            <h3>Explore More Features</h3>
+            <p>Dive deeper into the Mayflower story and meet the passengers who made the voyage.</p>
+            <div class="cta-links">
+                <a href="MayflowerSaga.html" class="cta-btn">The Mayflower Saga &rarr;</a>
+                <a href="PassengerPortal.html" class="cta-btn">Passenger Portal &rarr;</a>
             </div>
         </div>
-    </div>
 
-    <footer>
-        <div class="footer-grid">
-            <div class="footer-section">
-                <img src="images/LOGO002.png" alt="Alabama Mayflower Society" class="footer-logo">
-                <p>Preserving the legacy of the Mayflower Pilgrims since 1952</p>
-                <div style="margin-top: 1.5rem;">
-                    <a href="https://www.facebook.com/groups/AlabamaMayflowerSociety" target="_blank" style="background: white; color: var(--navy-blue); width: 32px; height: 32px; display: inline-flex; align-items: center; justify-content: center; border-radius: 4px; font-weight: bold; font-size: 20px;">f</a>
+    </article>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <img src="images/LOGO002.png" alt="Alabama Mayflower Society" class="footer-logo">
+                    <p>Preserving the legacy of the Mayflower Pilgrims since 1952</p>
+                    <div class="social-links" style="margin-top: 1.5rem;">
+                        <a href="https://www.facebook.com/groups/AlabamaMayflowerSociety" target="_blank" rel="noopener" style="display: inline-block; text-decoration: none;">
+                            <span style="background: white; color: #002147; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; border-radius: 4px; font-family: sans-serif; font-weight: bold; font-size: 22px;">f</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="our-history.html">Our History</a></li>
+                        <li><a href="wewillplymouthrockyouweekend.html">2026 Conference</a></li>
+                        <li><a href="MayflowerSaga.html">The Mayflower Saga</a></li>
+                        <li><a href="PassengerPortal.html">Passenger Portal</a></li>
+                        <li><a href="compact.html">The Mayflower Compact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Our Colonies</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 1rem;">Cahaba River Colony<br><small>Birmingham Area</small></li>
+                        <li style="margin-bottom: 1rem;">Capital Colony<br><small>Montgomery Area</small></li>
+                        <li style="margin-bottom: 1rem;">Gulf Coast Colony<br><small>Mobile Area</small></li>
+                        <li>Tennessee Valley Colony<br><small>Huntsville Area</small></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 1rem;"><a href="mailto:SMDAL.Info@gmail.com">info@alabamasmd.org</a></li>
+                        <li><a href="https://themayflowersociety.org" target="_blank" rel="noopener">General Society of Mayflower Descendants</a></li>
+                    </ul>
                 </div>
             </div>
-
-            <div class="footer-section">
-                <h3>Explore</h3>
-                <ul>
-                    <li><a href="about-us.html">About Us</a></li>
-                    <li><a href="our-history.html">Our History</a></li>
-                    <li><a href="wewillplymouthrockyouweekend.html">2026 Conference</a></li>
-                    <li><a href="membership.html">Membership</a></li>
-                </ul>
+            <div class="footer-bottom" style="text-align: center; padding-top: 2rem;">
+                <p>&copy; 2026 Alabama Society of Mayflower Descendants | All Rights Reserved | <a href="privacy-policy.html" style="color: var(--gold);">Privacy Policy</a></p>
             </div>
-
-            <div class="footer-section">
-                <h3>Our Colonies</h3>
-                <ul>
-                    <li>Cahaba River <small>(Birmingham)</small></li>
-                    <li>Capital <small>(Montgomery)</small></li>
-                    <li>Gulf Coast <small>(Mobile)</small></li>
-                    <li>Tennessee Valley <small>(Huntsville)</small></li>
-                </ul>
-            </div>
-
-            <div class="footer-section">
-                <h3>Contact</h3>
-                <ul>
-                    <li><a href="mailto:SMDAL.Info@gmail.com">info@alabamasmd.org</a></li>
-                    <li><a href="https://themayflowersociety.org" target="_blank">General Society</a></li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="footer-bottom">
-            <p>&copy; 2026 Alabama Society of Mayflower Descendants | All Rights Reserved</p>
-            <p>Webmaster: Barrett Lee Owens</p>
         </div>
     </footer>
-
 </body>
 </html>
