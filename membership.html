@@ -231,8 +231,9 @@
                 <p>Fill out starting with the name of your Pilgrim ancestor. On the next line, enter his/her son or daughter, and who they married. Then list the next son or daughter and their spouse. Continue through the generations down to yourself.</p>
                 <p>We will compare your proposed lineage with the lineage papers in our files to determine what portion of your line may already be documented. You will receive an email message on the findings with instructions on how to proceed.</p>
 
-                <form name="lineage-submission" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/lineage-submission-success.html" class="lineage-form">
+                <form name="lineage-submission" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/lineage-submission-success.html" class="lineage-form" id="lineage-form">
                     <input type="hidden" name="form-name" value="lineage-submission">
+                    <input type="hidden" name="email" id="reply-to-email">
                     <p class="visually-hidden">
                         <label>Don't fill this out if you're human: <input name="bot-field"></label>
                     </p>
@@ -422,6 +423,14 @@
 
                     <button type="submit" class="btn btn-primary" style="margin-top: 2rem;">Submit Lineage Form</button>
                 </form>
+                <script>
+                    // Mirror the E-Mail Address field into a hidden "email" field so Netlify
+                    // auto-populates Reply-To on the notification email, letting reviewers
+                    // just hit "Reply" instead of copying the address out of the message body.
+                    document.getElementById('lineage-form').addEventListener('submit', function () {
+                        document.getElementById('reply-to-email').value = document.getElementById('email').value;
+                    });
+                </script>
             </div>
 
             <div class="separator-container page-separator">
