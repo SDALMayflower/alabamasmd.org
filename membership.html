@@ -172,6 +172,40 @@
                 grid-template-columns: 1fr;
             }
         }
+        .required-mark {
+            color: var(--deep-red);
+        }
+        .radio-options {
+            display: flex;
+            gap: 2rem;
+            margin-top: 0.5rem;
+        }
+        .radio-option {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 400;
+            cursor: pointer;
+        }
+        .radio-option input[type="radio"] {
+            width: auto;
+        }
+        .checkbox-field {
+            margin-top: 1rem;
+        }
+        .checkbox-option {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            font-weight: 400;
+            cursor: pointer;
+            line-height: 1.5;
+        }
+        .checkbox-option input[type="checkbox"] {
+            width: auto;
+            margin-top: 0.3rem;
+            flex-shrink: 0;
+        }
     </style>
 </head>
 <body>
@@ -240,6 +274,24 @@
                     <p class="visually-hidden">
                         <label>Don't fill this out if you're human: <input type="text" name="_gotcha"></label>
                     </p>
+
+                    <div class="form-section-heading">Before You Begin</div>
+                    <div class="form-grid">
+                        <div class="form-field full-width">
+                            <label>Do you understand that this ASMD request is not an application for membership? <span class="required-mark">*</span></label>
+                            <div class="radio-options">
+                                <label class="radio-option"><input type="radio" name="Do you understand that this ASMD request is not an application for membership?" value="Yes" required> Yes</label>
+                                <label class="radio-option"><input type="radio" name="Do you understand that this ASMD request is not an application for membership?" value="No" required> No</label>
+                            </div>
+                        </div>
+                        <div class="form-field full-width">
+                            <label>If you have a potential valid line, are you interested in pursuing membership in Alabama Society of Mayflower Descendants? <span class="required-mark">*</span></label>
+                            <div class="radio-options">
+                                <label class="radio-option"><input type="radio" name="If you have a potential valid line, are you interested in pursuing membership in Alabama Society of Mayflower Descendants?" value="Yes" required> Yes</label>
+                                <label class="radio-option"><input type="radio" name="If you have a potential valid line, are you interested in pursuing membership in Alabama Society of Mayflower Descendants?" value="No" required> No</label>
+                            </div>
+                        </div>
+                    </div>
 
                     <div class="form-section-heading">Your Information</div>
                     <div class="form-grid">
@@ -422,6 +474,25 @@
                     <div class="form-field full-width">
                         <label for="message-reviewer">Message for Reviewer <span class="char-limit">(Limit 250 characters)</span></label>
                         <textarea id="message-reviewer" name="Message for Reviewer" maxlength="250" rows="4"></textarea>
+                    </div>
+
+                    <div class="form-field full-width" style="margin-top: 1.5rem;">
+                        <label for="applicant-signature">Applicant Signature</label>
+                        <input type="text" id="applicant-signature" name="Applicant Signature" required>
+                    </div>
+
+                    <div class="form-field full-width checkbox-field">
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="I understand that any information or evidence submitted to become a member becomes the property of the General Society of Mayflower Descendants." required>
+                            I understand that any information or evidence submitted to become a member becomes the property of the General Society of Mayflower Descendants.
+                        </label>
+                    </div>
+
+                    <div class="form-field full-width checkbox-field">
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="I agree that my electronic signature (typed name) is the legal equivalent of my manual/handwritten signature on this document." required>
+                            I agree that my <strong>electronic signature(typed name)</strong> is the legal equivalent of my manual/handwritten signature on this document. <strong>Boxes must be checked.</strong>
+                        </label>
                     </div>
 
                     <button type="submit" class="btn btn-primary" style="margin-top: 2rem;">Submit Lineage Form</button>
