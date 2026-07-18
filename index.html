@@ -282,4 +282,12 @@
     <script>
         function playConferenceVideo(event) {
             event.preventDefault();
-            
+            event.stopPropagation();
+            const video = document.getElementById('conferenceVideo');
+            const overlay = document.getElementById('conferencePlayOverlay');
+            video.play();
+            overlay.classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
