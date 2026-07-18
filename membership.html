@@ -234,11 +234,12 @@
                 <p>Fill out starting with the name of your Pilgrim ancestor. On the next line, enter his/her son or daughter, and who they married. Then list the next son or daughter and their spouse. Continue through the generations down to yourself.</p>
                 <p>We will compare your proposed lineage with the lineage papers in our files to determine what portion of your line may already be documented. You will receive an email message on the findings with instructions on how to proceed.</p>
 
-                <form name="lineage-submission" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/lineage-submission-success.html" class="lineage-form" id="lineage-form">
-                    <input type="hidden" name="form-name" value="lineage-submission">
+                <form name="lineage-submission" method="POST" action="https://formspree.io/f/xkodrrnd" class="lineage-form" id="lineage-form">
+                    <input type="hidden" name="_next" value="https://alabamasmd.org/lineage-submission-success.html">
+                    <input type="hidden" name="_subject" value="New Lineage Submission - Alabama SMD">
                     <input type="hidden" name="email" id="reply-to-email">
                     <p class="visually-hidden">
-                        <label>Don't fill this out if you're human: <input name="bot-field"></label>
+                        <label>Don't fill this out if you're human: <input type="text" name="_gotcha"></label>
                     </p>
 
                     <div class="form-section-heading">Your Information</div>
