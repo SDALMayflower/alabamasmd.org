@@ -235,7 +235,6 @@
                 <p>We will compare your proposed lineage with the lineage papers in our files to determine what portion of your line may already be documented. You will receive an email message on the findings with instructions on how to proceed.</p>
 
                 <form name="lineage-submission" method="POST" action="https://formspree.io/f/xkodrrnd" class="lineage-form" id="lineage-form">
-                    <input type="hidden" name="_next" value="https://alabamasmd.org/lineage-submission-success.html">
                     <input type="hidden" name="_subject" value="New Lineage Submission - Alabama SMD">
                     <input type="hidden" name="email" id="reply-to-email">
                     <p class="visually-hidden">
@@ -428,11 +427,38 @@
                     <button type="submit" class="btn btn-primary" style="margin-top: 2rem;">Submit Lineage Form</button>
                 </form>
                 <script>
-                    // Mirror the E-Mail Address field into a hidden "email" field so Netlify
-                    // auto-populates Reply-To on the notification email, letting reviewers
-                    // just hit "Reply" instead of copying the address out of the message body.
-                    document.getElementById('lineage-form').addEventListener('submit', function () {
+                    // Submit via AJAX instead of a plain page POST. This lets us control the
+                    // post-submission redirect ourselves (Formspree's own custom "Thank You"
+                    // redirect is a paid-plan feature) and mirrors the E-Mail Address field
+                    // into a hidden "email" field so Formspree auto-populates Reply-To on the
+                    // notification email, letting reviewers just hit "Reply."
+                    document.getElementById('lineage-form').addEventListener('submit', function (e) {
+                        e.preventDefault();
+                        var form = e.target;
                         document.getElementById('reply-to-email').value = document.getElementById('email').value;
+                        var submitBtn = form.querySelector('button[type="submit"]');
+                        submitBtn.disabled = true;
+                        submitBtn.textContent = 'Submitting…';
+                        fetch(form.action, {
+                            method: 'POST',
+                            body: new FormData(form),
+                            headers: { 'Accept': 'application/json' }
+                        }).then(function (response) {
+                            if (response.ok) {
+                                window.location.href = 'https://alabamasmd.org/lineage-submission-success.html';
+                            } else {
+                                return response.json().then(function (body) {
+                                    var msg = (body && body.errors)
+                                        ? body.errors.map(function (err) { return err.message; }).join(', ')
+                                        : 'There was a problem submitting the form. Please try again or email SMDAL.Info@gmail.com directly.';
+                                    throw new Error(msg);
+                                });
+                            }
+                        }).catch(function (err) {
+                            alert(err.message || 'There was a problem submitting the form. Please try again or email SMDAL.Info@gmail.com directly.');
+                            submitBtn.disabled = false;
+                            submitBtn.textContent = 'Submit Lineage Form';
+                        });
                     });
 
                     // Auto-format phone fields as xxx-xxx-xxxx while the user types digits only.
