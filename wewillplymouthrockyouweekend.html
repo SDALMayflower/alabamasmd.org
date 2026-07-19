@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="css/logo-fix.css">
     <link rel="icon" type="image/png" href="images/LOGO001.png?v=3">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ultra&display=swap');
+
         .conference-hero {
             background: linear-gradient(135deg, var(--navy-blue), var(--royal-blue));
             padding: 8rem 2rem 4rem;
@@ -26,9 +28,18 @@
         .conference-hero h1 {
             font-size: clamp(2.5rem, 6vw, 4.5rem);
             margin-bottom: 1rem;
-            background: linear-gradient(135deg, var(--gold), var(--bronze));
+            font-family: 'Ultra', Georgia, serif;
+            font-weight: 400;
+            letter-spacing: 1px;
+            color: var(--gold);
+            background: linear-gradient(180deg, #f6e7a8 0%, #d4af37 45%, #a3791f 100%);
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
+            text-shadow:
+                -1px -1px 0 rgba(255, 244, 200, 0.55),
+                1px 1px 1px rgba(60, 30, 0, 0.65),
+                2px 4px 10px rgba(0, 0, 0, 0.55);
         }
         .conference-date {
             display: inline-block;
