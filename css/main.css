@@ -328,20 +328,19 @@ nav img {
 }
 
 .hero h1 {
+    color: white;
     margin-bottom: 1.5rem;
     line-height: 1.1;
-    font-family: 'Ultra', Georgia, serif;
-    font-weight: 400;
-    letter-spacing: 1px;
-    color: var(--gold);
-    background: linear-gradient(180deg, #f6e7a8 0%, #d4af37 45%, #a3791f 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
     text-shadow:
-        -1px -1px 0 rgba(255, 244, 200, 0.55),
-        1px 1px 1px rgba(60, 30, 0, 0.65),
-        2px 4px 10px rgba(0, 0, 0, 0.55);
+        0 4px 20px rgba(0, 0, 0, 0.3),
+        0.6px 0 0 var(--gold),
+        -0.6px 0 0 var(--gold),
+        0 0.6px 0 var(--gold),
+        0 -0.6px 0 var(--gold),
+        0.5px 0.5px 0 var(--gold),
+        -0.5px -0.5px 0 var(--gold),
+        0.5px -0.5px 0 var(--gold),
+        -0.5px 0.5px 0 var(--gold);
 }
 
 .hero-subtitle {
