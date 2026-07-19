@@ -28,6 +28,17 @@
     <link rel="stylesheet" href="css/logo-fix.css">
     <link rel="icon" type="image/png" href="images/LOGO001.png?v=3">
     <style>
+        /* Homepage hero background — slow one-time zoom-in (distance to
+           near), plays once on load and holds on the final zoomed frame */
+        @keyframes homeHeroZoomIn {
+            from { background-size: 110%; }
+            to { background-size: 135%; }
+        }
+        #homeHero {
+            background-size: 110%;
+            animation: homeHeroZoomIn 20s ease-out 1 forwards;
+        }
+
         /* Inline Video with Play Button Overlay */
         .video-wrapper {
             position: relative;
@@ -153,7 +164,7 @@
         </nav>
     </header>
 
-    <section class="hero" style="background-image: url('images/Mobile_Bay_Mayflower.jpg'); background-size: cover; background-position: center;">
+    <section class="hero" id="homeHero" style="background-image: url('images/hero_ship.png'); background-position: center;">
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <div class="hero-badge">⚓ Since 1952</div>
