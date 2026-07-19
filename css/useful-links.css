@@ -1,0 +1,27 @@
+/* Useful Links page - hero header override
+   Fixes low-contrast navy-on-dark-photo header text; swaps in Ultra
+   (an ultra-bold wood-type-inspired slab serif, the closest free
+   web font to Goudy Stout, which has no free/web license) in soft gold. */
+@import url('https://fonts.googleapis.com/css2?family=Ultra&display=swap');
+
+.page-hero h1 {
+    font-family: 'Ultra', Georgia, serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+
+    /* Fallback solid gold for browsers without background-clip: text support */
+    color: var(--gold);
+
+    /* Metallic gold gradient fill for an embossed, raised-metal look */
+    background: linear-gradient(180deg, #f6e7a8 0%, #d4af37 45%, #a3791f 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    /* Emboss (light edge top-left, dark groove bottom-right) plus a
+       slight soft drop shadow to lift the text off the photo */
+    text-shadow:
+        -1px -1px 0 rgba(255, 244, 200, 0.55),
+        1px 1px 1px rgba(60, 30, 0, 0.65),
+        2px 4px 10px rgba(0, 0, 0, 0.55);
+}

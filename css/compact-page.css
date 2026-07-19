@@ -1,5 +1,20 @@
 /* Mayflower Compact Page Styles */
 
+@import url('https://fonts.googleapis.com/css2?family=Ultra&display=swap');
+
+/* These tokens are referenced throughout this file below but were never
+   defined anywhere, silently breaking styling on every page that loads
+   this stylesheet (lead-paragraph highlight box, article h2 underlines,
+   compact.html's document border, CTA box, back-link colors). Aliased
+   here to the site's actual design tokens from main.css. */
+:root {
+    --primary-color: var(--navy-blue);
+    --accent-color: var(--gold);
+    --text-light: #ffffff;
+    --text-dark: var(--slate);
+    --bg-light: var(--light-gray);
+}
+
 .page-hero {
     position: relative;
     height: 60vh;
@@ -35,7 +50,25 @@
 .page-hero h1 {
     font-size: clamp(2.5rem, 5vw, 4rem);
     margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    font-family: 'Ultra', Georgia, serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+
+    /* Fallback solid gold for browsers without background-clip: text support */
+    color: var(--accent-color);
+
+    /* Metallic gold gradient fill for an embossed, raised-metal look */
+    background: linear-gradient(180deg, #f6e7a8 0%, #d4af37 45%, #a3791f 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    /* Emboss (light edge top-left, dark groove bottom-right) plus a
+       slight soft drop shadow to lift the text off the photo */
+    text-shadow:
+        -1px -1px 0 rgba(255, 244, 200, 0.55),
+        1px 1px 1px rgba(60, 30, 0, 0.65),
+        2px 4px 10px rgba(0, 0, 0, 0.55);
 }
 
 .subtitle {
