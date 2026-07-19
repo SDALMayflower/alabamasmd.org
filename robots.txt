@@ -1,2 +1,13 @@
 User-agent: *
 Disallow: /member-docs/
+Disallow: /index_older.html
+Disallow: /indexmistake.html
+Disallow: /MayflowerSaga-save.html
+Disallow: /passengers-old.html
+Disallow: /news_preview.html
+Disallow: /images/index.html
+Disallow: /images/wewillplymouthrockyouweekend.html
+Disallow: /images/wewillplymouthrockyouweekend_new.html
+Disallow: /contact-us.html
+
+Sitemap: https://alabamasmd.org/sitemap.xml
