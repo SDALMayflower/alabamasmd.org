@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8R17FZY7H9"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-8R17FZY7H9');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Members Only - Alabama Society of Mayflower Descendants">
+    <title>Members Only | Alabama Society of Mayflower Descendants</title>
+    <link rel="canonical" href="https://alabamasmd.org/members-only.html">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/compact-page.css">
+    <link rel="icon" type="image/png" href="images/LOGO001.png?v=3">
+    <style>
+        /* ── Members Only: Lock Screen ──────────────────────────── */
+        .lock-screen {
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            background: linear-gradient(135deg, var(--navy-blue), #050f1f);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+        }
+
+        .lock-card {
+            background: white;
+            border-radius: 16px;
+            max-width: 420px;
+            width: 100%;
+            padding: 2.75rem 2.25rem;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+            border-top: 4px solid var(--gold);
+        }
+
+        .lock-card img {
+            height: 64px;
+            width: auto;
+            margin-bottom: 1.25rem;
+        }
+
+        .lock-card h1 {
+            font-size: 1.5rem;
+            color: var(--navy-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        .lock-card p.lock-subtitle {
+            color: #667;
+            font-size: 0.92rem;
+            margin-bottom: 1.75rem;
+            line-height: 1.5;
+        }
+
+        .lock-form input[type="password"] {
+            width: 100%;
+            padding: 0.85rem 1rem;
+            border: 1.5px solid #d8dde4;
+            border-radius: 8px;
+            font-size: 1rem;
+            margin-bottom: 0.85rem;
+            box-sizing: border-box;
+        }
+
+        .lock-form input[type="password"]:focus {
+            outline: none;
+            border-color: var(--gold);
+        }
+
+        .lock-form button {
+            width: 100%;
+            border: none;
+        }
+
+        .lock-error {
+            display: none;
+            color: #b3261e;
+            font-size: 0.85rem;
+            margin-top: 0.85rem;
+        }
+
+        .lock-error.visible {
+            display: block;
+        }
+
+        .lock-footnote {
+            margin-top: 1.75rem;
+            font-size: 0.78rem;
+            color: #99a;
+        }
+
+        /* ── Members Content (hidden until unlocked) ────────────── */
+        #membersContent {
+            display: none;
+        }
+
+        /* ── Placeholder sections ───────────────────────────────── */
+        .members-section {
+            padding: 4rem 2rem 5rem;
+        }
+
+        .members-section.alt-bg {
+            background: #f5f6f8;
+        }
+
+        .members-section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 3rem;
+        }
+
+        .members-section-header h2 {
+            color: var(--navy-blue);
+            font-size: clamp(1.7rem, 3.5vw, 2.4rem);
+            margin-bottom: 0.6rem;
+        }
+
+        .members-section-header p {
+            color: #777;
+            font-style: italic;
+            font-size: 1.05rem;
+        }
+
+        .placeholder-card {
+            max-width: 820px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            padding: 2.5rem;
+            box-shadow: 0 3px 18px rgba(0,0,0,0.07);
+            border-left: 4px solid var(--gold);
+            text-align: center;
+            color: #667;
+        }
+
+        .placeholder-card strong {
+            color: var(--navy-blue);
+        }
+
+        .placeholder-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1.5rem;
+            text-align: left;
+        }
+
+        .placeholder-table th, .placeholder-table td {
+            padding: 0.7rem 0.9rem;
+            border-bottom: 1px solid #e7e9ee;
+            font-size: 0.92rem;
+            color: #556;
+        }
+
+        .placeholder-table th {
+            color: var(--navy-blue);
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 0.05em;
+        }
+
+        .placeholder-doc-list {
+            list-style: none;
+            padding: 0;
+            max-width: 820px;
+            margin: 0 auto;
+        }
+
+        .placeholder-doc-list li {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: white;
+            border-radius: 10px;
+            padding: 1.1rem 1.5rem;
+            margin-bottom: 0.85rem;
+            box-shadow: 0 3px 18px rgba(0,0,0,0.06);
+            border-left: 4px solid var(--gold);
+        }
+
+        .placeholder-doc-list .doc-name {
+            color: var(--navy-blue);
+            font-weight: 600;
+        }
+
+        .placeholder-doc-list .doc-tag {
+            font-size: 0.72rem;
+            color: #99a;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ── Lock Screen ───────────────────────────────────────── -->
+    <div class="lock-screen" id="lockScreen">
+        <div class="lock-card">
+            <img src="images/LOGO002.png" alt="Alabama Mayflower Society">
+            <h1 class="serif">Members Only</h1>
+            <p class="lock-subtitle">This section is reserved for current members of the Alabama Society of Mayflower Descendants. Enter the members-only password to continue.</p>
+            <form class="lock-form" id="lockForm">
+                <input type="password" id="lockPassword" placeholder="Enter password" autocomplete="off" required>
+                <button type="submit" class="btn btn-primary">Enter</button>
+                <p class="lock-error" id="lockError">That password isn't correct. Please check your latest renewal email, or contact us.</p>
+            </form>
+            <p class="lock-footnote">Not a member? <a href="membership.html">Learn about joining</a>.</p>
+        </div>
+    </div>
+
+    <!-- ── Members Content ───────────────────────────────────── -->
+    <div id="membersContent">
+
+        <!-- ── Header / Nav ──────────────────────────────────── -->
+        <header id="mainHeader">
+            <nav>
+                <a href="index.html" class="logo">
+                    <img src="images/LOGO002.png" alt="Alabama Mayflower Society" class="logo-img">
+                </a>
+
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="our-history.html">Our History</a></li>
+                    <li><a href="membership.html">Membership</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="useful-links.html">Useful Links</a></li>
+                    <li class="has-dropdown">
+                        <a href="MayflowerSaga.html">Features</a>
+                        <ul class="dropdown">
+                            <li><a href="MayflowerSaga.html">The Mayflower Saga</a></li>
+                            <li><a href="PassengerPortal.html">The Passengers: Narrative Directory</a></li>
+                            <li><a href="compact.html">The Mayflower Compact</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact_submit.html">Contact Us</a></li>
+                    <li><a href="support.html"><img src="images/LOGO001.png" alt="Mayflower Society" style="height: 45px; width: auto; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3)); background: none;"></a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- ── Hero ──────────────────────────────────────────── -->
+        <section class="page-hero" style="background-image: url('images/Mayflower_Collage_Hero.png'); background-size: cover; background-position: center top;">
+            <div class="hero-overlay"></div>
+            <div class="container">
+                <h1 class="serif">Members Only</h1>
+                <p class="subtitle" style="color: rgba(255,255,255,0.88); margin-top: 0.75rem;">Directory and resources for current members of the Alabama Society of Mayflower Descendants</p>
+            </div>
+        </section>
+
+        <!-- ── Separator ─────────────────────────────────────── -->
+        <div class="separator-container" style="background: #f5f6f8;">
+            <img src="images/Mayflower_separator_line.png" alt="Separator" class="mayflower-separator">
+        </div>
+
+        <!-- ── Member Directory (placeholder) ──────────────────── -->
+        <section class="members-section alt-bg">
+            <div class="members-section-header">
+                <h2>Member Directory</h2>
+                <p>A directory of current SMDAL members</p>
+            </div>
+            <div class="placeholder-card">
+                <p><strong>Directory coming soon.</strong></p>
+                <p>This section will list current members once the directory is finalized. Below is a placeholder showing how entries will be formatted.</p>
+                <table class="placeholder-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Colony</th>
+                            <th>Mayflower Ancestor</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Placeholder Member</td>
+                            <td>Cahaba River Colony</td>
+                            <td>Placeholder Ancestor</td>
+                        </tr>
+                        <tr>
+                            <td>Placeholder Member</td>
+                            <td>Gulf Coast Colony</td>
+                            <td>Placeholder Ancestor</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- ── Meeting Materials (placeholder) ─────────────────── -->
+        <section class="members-section">
+            <div class="members-section-header">
+                <h2>Meeting Materials</h2>
+                <p>Minutes, agendas, and documents from Society meetings</p>
+            </div>
+            <ul class="placeholder-doc-list">
+                <li>
+                    <span class="doc-name">Placeholder — Annual Meeting Minutes</span>
+                    <span class="doc-tag">Coming Soon</span>
+                </li>
+                <li>
+                    <span class="doc-name">Placeholder — Board of Assistants Agenda</span>
+                    <span class="doc-tag">Coming Soon</span>
+                </li>
+                <li>
+                    <span class="doc-name">Placeholder — Colony Meeting Notes</span>
+                    <span class="doc-tag">Coming Soon</span>
+                </li>
+            </ul>
+        </section>
+
+        <!-- ── Footer ────────────────────────────────────────── -->
+        <footer id="contact">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-section">
+                        <img src="images/LOGO002.png" alt="Alabama Mayflower Society" class="footer-logo">
+                        <p>Preserving the legacy of the Mayflower Pilgrims since 1952</p>
+                        <div class="social-links" style="margin-top: 1.5rem;">
+                            <a href="https://www.facebook.com/groups/AlabamaMayflowerSociety" target="_blank" rel="noopener" style="display: inline-block; text-decoration: none;">
+                                <span style="background: white; color: var(--navy-blue); width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; border-radius: 4px; font-family: sans-serif; font-weight: bold; font-size: 22px;">f</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="footer-section">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="about-us.html">About Us</a></li>
+                            <li><a href="our-history.html">Our History</a></li>
+                            <li><a href="membership.html">Membership</a></li>
+                            <li><a href="events.html">Events</a></li>
+                            <li><a href="news.html">News</a></li>
+                            <li><a href="useful-links.html">Useful Links</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-section">
+                        <h3>Our Colonies</h3>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="margin-bottom: 1rem;">Cahaba River Colony<br><small>Birmingham Area</small></li>
+                            <li style="margin-bottom: 1rem;">Capital Colony<br><small>Montgomery Area</small></li>
+                            <li style="margin-bottom: 1rem;">Gulf Coast Colony<br><small>Mobile Area</small></li>
+                            <li>Tennessee Valley Colony<br><small>Huntsville Area</small></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-section">
+                        <h3>Contact</h3>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="margin-bottom: 1rem;"><a href="mailto:SMDAL.Info@gmail.com">info@alabamasmd.org</a></li>
+                            <li><a href="https://themayflowersociety.org" target="_blank" rel="noopener">General Society of Mayflower Descendants</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-bottom" style="text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 2rem;">
+                    <p>&copy; 2026 Alabama Society of Mayflower Descendants | All Rights Reserved | <a href="privacy-policy.html" style="color: var(--gold);">Privacy Policy</a></p>
+                </div>
+            </div>
+        </footer>
+
+    </div><!-- /membersContent -->
+
+    <script src="js/main.js"></script>
+    <script>
+        // ── Members-Only Password Gate ──────────────────────────
+        // NOTE: This is a client-side placeholder gate, not real security.
+        // Change MEMBERS_PASSWORD each membership renewal cycle and
+        // distribute the new password via MailChimp to current members only.
+        (function () {
+            var MEMBERS_PASSWORD = "MayflowerAL2026"; // TODO: change before go-live and each renewal cycle
+            var SESSION_KEY = "smdal_members_unlocked";
+
+            var lockScreen = document.getElementById("lockScreen");
+            var membersContent = document.getElementById("membersContent");
+            var lockForm = document.getElementById("lockForm");
+            var lockPassword = document.getElementById("lockPassword");
+            var lockError = document.getElementById("lockError");
+
+            function unlock() {
+                lockScreen.style.display = "none";
+                membersContent.style.display = "block";
+            }
+
+            if (sessionStorage.getItem(SESSION_KEY) === "true") {
+                unlock();
+            }
+
+            lockForm.addEventListener("submit", function (e) {
+                e.preventDefault();
+                if (lockPassword.value === MEMBERS_PASSWORD) {
+                    sessionStorage.setItem(SESSION_KEY, "true");
+                    lockError.classList.remove("visible");
+                    unlock();
+                } else {
+                    lockError.classList.add("visible");
+                    lockPassword.value = "";
+                    lockPassword.focus();
+                }
+            });
+        })();
+    </script>
+</body>
+</html>
