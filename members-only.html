@@ -18,90 +18,6 @@
     <link rel="stylesheet" href="css/compact-page.css">
     <link rel="icon" type="image/png" href="images/LOGO001.png?v=3">
     <style>
-        /* ── Members Only: Lock Screen ──────────────────────────── */
-        .lock-screen {
-            position: fixed;
-            inset: 0;
-            z-index: 9999;
-            background: linear-gradient(135deg, var(--navy-blue), #050f1f);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 1.5rem;
-        }
-
-        .lock-card {
-            background: white;
-            border-radius: 16px;
-            max-width: 420px;
-            width: 100%;
-            padding: 2.75rem 2.25rem;
-            text-align: center;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.4);
-            border-top: 4px solid var(--gold);
-        }
-
-        .lock-card img {
-            height: 64px;
-            width: auto;
-            margin-bottom: 1.25rem;
-        }
-
-        .lock-card h1 {
-            font-size: 1.5rem;
-            color: var(--navy-blue);
-            margin-bottom: 0.5rem;
-        }
-
-        .lock-card p.lock-subtitle {
-            color: #667;
-            font-size: 0.92rem;
-            margin-bottom: 1.75rem;
-            line-height: 1.5;
-        }
-
-        .lock-form input[type="password"] {
-            width: 100%;
-            padding: 0.85rem 1rem;
-            border: 1.5px solid #d8dde4;
-            border-radius: 8px;
-            font-size: 1rem;
-            margin-bottom: 0.85rem;
-            box-sizing: border-box;
-        }
-
-        .lock-form input[type="password"]:focus {
-            outline: none;
-            border-color: var(--gold);
-        }
-
-        .lock-form button {
-            width: 100%;
-            border: none;
-        }
-
-        .lock-error {
-            display: none;
-            color: #b3261e;
-            font-size: 0.85rem;
-            margin-top: 0.85rem;
-        }
-
-        .lock-error.visible {
-            display: block;
-        }
-
-        .lock-footnote {
-            margin-top: 1.75rem;
-            font-size: 0.78rem;
-            color: #99a;
-        }
-
-        /* ── Members Content (hidden until unlocked) ────────────── */
-        #membersContent {
-            display: none;
-        }
-
         /* ── Placeholder sections ───────────────────────────────── */
         .members-section {
             padding: 4rem 2rem 5rem;
@@ -201,25 +117,7 @@
 </head>
 <body>
 
-    <!-- ── Lock Screen ───────────────────────────────────────── -->
-    <div class="lock-screen" id="lockScreen">
-        <div class="lock-card">
-            <img src="images/LOGO002.png" alt="Alabama Mayflower Society">
-            <h1 class="serif">Members Only</h1>
-            <p class="lock-subtitle">This section is reserved for current members of the Alabama Society of Mayflower Descendants. Enter the members-only password to continue.</p>
-            <form class="lock-form" id="lockForm">
-                <input type="password" id="lockPassword" placeholder="Enter password" autocomplete="off" required>
-                <button type="submit" class="btn btn-primary">Enter</button>
-                <p class="lock-error" id="lockError">That password isn't correct. Please check your latest renewal email, or contact us.</p>
-            </form>
-            <p class="lock-footnote">Not a member? <a href="membership.html">Learn about joining</a>.</p>
-        </div>
-    </div>
-
-    <!-- ── Members Content ───────────────────────────────────── -->
-    <div id="membersContent">
-
-        <!-- ── Header / Nav ──────────────────────────────────── -->
+    <!-- ── Header / Nav ──────────────────────────────────── -->
         <header id="mainHeader">
             <nav>
                 <a href="index.html" class="logo">
@@ -373,46 +271,6 @@
             </div>
         </footer>
 
-    </div><!-- /membersContent -->
-
     <script src="js/main.js"></script>
-    <script>
-        // ── Members-Only Password Gate ──────────────────────────
-        // NOTE: This is a client-side placeholder gate, not real security.
-        // Change MEMBERS_PASSWORD each membership renewal cycle and
-        // distribute the new password via MailChimp to current members only.
-        (function () {
-            var MEMBERS_PASSWORD = "MayflowerAL2026"; // TODO: change before go-live and each renewal cycle
-            var SESSION_KEY = "smdal_members_unlocked";
-
-            var lockScreen = document.getElementById("lockScreen");
-            var membersContent = document.getElementById("membersContent");
-            var lockForm = document.getElementById("lockForm");
-            var lockPassword = document.getElementById("lockPassword");
-            var lockError = document.getElementById("lockError");
-
-            function unlock() {
-                lockScreen.style.display = "none";
-                membersContent.style.display = "block";
-            }
-
-            if (sessionStorage.getItem(SESSION_KEY) === "true") {
-                unlock();
-            }
-
-            lockForm.addEventListener("submit", function (e) {
-                e.preventDefault();
-                if (lockPassword.value === MEMBERS_PASSWORD) {
-                    sessionStorage.setItem(SESSION_KEY, "true");
-                    lockError.classList.remove("visible");
-                    unlock();
-                } else {
-                    lockError.classList.add("visible");
-                    lockPassword.value = "";
-                    lockPassword.focus();
-                }
-            });
-        })();
-    </script>
 </body>
 </html>
