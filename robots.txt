@@ -9,5 +9,7 @@ Disallow: /images/index.html
 Disallow: /images/wewillplymouthrockyouweekend.html
 Disallow: /images/wewillplymouthrockyouweekend_new.html
 Disallow: /contact-us.html
+Disallow: /contact-error.html
+Disallow: /mayflower-compact.html
 
 Sitemap: https://alabamasmd.org/sitemap.xml
