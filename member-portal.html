@@ -11,21 +11,30 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Newsletter of the Alabama Society of Mayflower Descendants — updates, events, and news for members.">
-    <title>Newsletter | Alabama Mayflower Society</title>
-    <link rel="canonical" href="https://alabamasmd.org/newsletter.html">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Alabama Society of Mayflower Descendants">
-    <meta property="og:title" content="Newsletter | Alabama Mayflower Society">
-    <meta property="og:description" content="Newsletter of the Alabama Society of Mayflower Descendants — updates, events, and news for members.">
-    <meta property="og:url" content="https://alabamasmd.org/newsletter.html">
-    <meta property="og:image" content="https://alabamasmd.org/images/pilgrims001.jpg">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Newsletter | Alabama Mayflower Society">
-    <meta name="twitter:description" content="Newsletter of the Alabama Society of Mayflower Descendants — updates, events, and news for members.">
-    <meta name="twitter:image" content="https://alabamasmd.org/images/pilgrims001.jpg">
+    <meta name="robots" content="noindex, follow">
+    <meta name="description" content="The Alabama Society of Mayflower Descendants Member Portal is coming soon.">
+    <title>Member Portal | Alabama Mayflower Society</title>
+    <link rel="canonical" href="https://alabamasmd.org/member-portal.html">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/compact-page.css">
+    <style>
+        .portal-status { max-width: 560px; margin: 2rem auto; background: var(--navy-blue); border-radius: 12px; padding: 1.75rem 1.5rem 1.25rem; }
+        .portal-status-track { position: relative; height: 70px; }
+        .portal-status-svg { position: absolute; top: 0; left: 0; }
+        .portal-ship { position: absolute; top: 20px; left: 0; font-size: 15px; animation: portal-sail 6s ease-in-out infinite alternate; }
+        .portal-ping { transform-origin: 200px 35px; animation: portal-ping 2.2s ease-out infinite; }
+        .portal-status-labels { display: flex; justify-content: space-between; margin: 0 0.5rem; font-size: 12px; color: #8ba3c2; }
+        .portal-status-labels span { flex: 1; text-align: center; }
+        .portal-status-labels span:first-child { text-align: left; }
+        .portal-status-labels span:last-child { text-align: right; }
+        .portal-status-labels .is-done { color: var(--gold); }
+        .portal-status-labels .is-current { color: #ffffff; font-weight: 600; }
+        @keyframes portal-sail { 0% { left: 0; } 100% { left: calc(100% - 15px); } }
+        @keyframes portal-ping { 0% { transform: scale(0.8); opacity: 0.6; } 70% { transform: scale(1.6); opacity: 0; } 100% { opacity: 0; } }
+        @media (prefers-reduced-motion: reduce) {
+            .portal-ship, .portal-ping { animation: none; }
+        }
+    </style>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -49,10 +58,9 @@
         <nav>
             <a href="index.html" class="logo">
                 <img src="images/LOGO002.png" alt="Alabama Mayflower Society" class="logo-img">
-                
             </a>
             <button class="menu-toggle" id="menuToggle"><span></span><span></span><span></span></button>
-                        <ul class="nav-links" id="navLinks">
+            <ul class="nav-links" id="navLinks">
                 <li><a href="about-us.html">About Us</a></li>
                 <li><a href="our-history.html">Our History</a></li>
                 <li><a href="membership.html">Membership</a></li>
@@ -76,16 +84,39 @@
 
     <section class="page-hero" style="background-image: url('images/pilgrims001.jpg'); background-size: cover; background-position: center;">
         <div class="hero-overlay"></div>
-        <div class="container"><h1 class="serif">Newsletter</h1></div>
+        <div class="container"><h1 class="serif">Member Portal</h1></div>
     </section>
 
     <article class="compact-article">
         <div class="container">
             <div class="separator-container"><img src="images/Mayflower_separator_line.jpg" alt="Separator" class="mayflower-separator"></div>
             <div class="article-content">
-                <section class="content-section">
+                <section class="content-section" style="text-align: center;">
                     <h2>Coming Soon</h2>
-                    <p>Content for this page is being developed.</p>
+                    <p>We're building a dedicated Member Portal for verified members of the Alabama Society of Mayflower Descendants — a private space for member resources, directories, and Society communications.</p>
+
+                    <div class="portal-status">
+                        <div class="portal-status-track">
+                            <svg width="100%" height="70" viewBox="0 0 560 70" preserveAspectRatio="none" class="portal-status-svg">
+                                <line x1="40" y1="35" x2="520" y2="35" stroke="var(--royal-blue)" stroke-width="2" stroke-dasharray="1 10" stroke-linecap="round"/>
+                                <circle cx="40" cy="35" r="6" fill="var(--gold)"/>
+                                <circle cx="200" cy="35" r="6" fill="#ffffff"/>
+                                <circle cx="200" cy="35" r="10" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.5" class="portal-ping"/>
+                                <circle cx="360" cy="35" r="6" fill="var(--navy-blue)" stroke="#3d5a86" stroke-width="1.5"/>
+                                <circle cx="520" cy="35" r="6" fill="var(--navy-blue)" stroke="#3d5a86" stroke-width="1.5"/>
+                            </svg>
+                            <div class="portal-ship" aria-hidden="true">⛵</div>
+                        </div>
+                        <div class="portal-status-labels">
+                            <span class="is-done">Developing</span>
+                            <span class="is-current">Testing</span>
+                            <span>Loading member directory</span>
+                            <span>Launch</span>
+                        </div>
+                    </div>
+
+                    <p>Please check back soon, or watch our <a href="newsletter.html" style="color: var(--royal-blue); text-decoration: underline;">Newsletter</a> and <a href="news.html" style="color: var(--royal-blue); text-decoration: underline;">News</a> page for updates on when it becomes available.</p>
+                    <p>In the meantime, if you have a question, please reach out through our <a href="contact_submit.html" style="color: var(--royal-blue); text-decoration: underline;">Contact form</a> or email <a href="mailto:SMDAL.Info@gmail.com" style="color: var(--royal-blue); text-decoration: underline;">info@alabamasmd.org</a>.</p>
                 </section>
                 <div class="back-link"><a href="index.html">← Back to Home</a></div>
             </div>
