@@ -872,6 +872,9 @@ footer {
         flex-direction: column;
         background: linear-gradient(135deg, var(--navy-blue), var(--royal-blue));
         width: 100%;
+        max-height: calc(100vh - 80px);
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
         padding: 3rem 2rem;
         transition: left 0.4s ease;
         align-items: flex-start;
