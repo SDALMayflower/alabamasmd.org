@@ -50,6 +50,22 @@
         .placeholder-card strong {
             color: var(--navy-blue);
         }
+
+        .portal-status { max-width: 460px; margin: 1.75rem auto 0.5rem; background: var(--navy-blue); border-radius: 12px; padding: 1.5rem 1.25rem 1.1rem; }
+        .portal-status-track { position: relative; height: 60px; }
+        .portal-status-svg { position: absolute; top: 0; left: 0; }
+        .portal-ship { position: absolute; top: 16px; left: 0; font-size: 15px; animation: portal-sail 6s ease-in-out infinite alternate; }
+        .portal-ping { transform-origin: 120px 30px; animation: portal-ping 2.2s ease-out infinite; }
+        .portal-status-labels { display: flex; justify-content: space-between; margin: 0 0.5rem; font-size: 12px; color: #8ba3c2; }
+        .portal-status-labels span { flex: 1; text-align: center; }
+        .portal-status-labels span:first-child { text-align: left; }
+        .portal-status-labels span:last-child { text-align: right; }
+        .portal-status-labels .is-current { color: #ffffff; font-weight: 600; }
+        @keyframes portal-sail { 0% { left: 0; } 100% { left: calc(100% - 15px); } }
+        @keyframes portal-ping { 0% { transform: scale(0.8); opacity: 0.6; } 70% { transform: scale(1.6); opacity: 0; } 100% { opacity: 0; } }
+        @media (prefers-reduced-motion: reduce) {
+            .portal-ship, .portal-ping { animation: none; }
+        }
     </style>
 </head>
 <body>
@@ -57,7 +73,7 @@
     <!-- ── Header / Nav ──────────────────────────────────── -->
         <header id="mainHeader">
             <nav>
-                <a href="../index.html" class="logo">
+                <a href="../members-only.html" class="logo">
                     <img src="../images/LOGO002.png" alt="Alabama Mayflower Society" class="logo-img">
                 </a>
 
@@ -68,23 +84,18 @@
                 </button>
 
                 <ul class="nav-links" id="navLinks">
-                    <li><a href="../about-us.html">About Us</a></li>
-                    <li><a href="../our-history.html">Our History</a></li>
-                    <li><a href="../membership.html">Membership</a></li>
                     <li><a href="../events.html">Events</a></li>
                     <li><a href="../news.html">News</a></li>
-                    <li><a href="../useful-links.html">Useful Links</a></li>
-                    <li class="has-dropdown">
-                        <a href="../MayflowerSaga.html">Features</a>
-                        <ul class="dropdown">
-                            <li><a href="../MayflowerSaga.html">The Mayflower Saga</a></li>
-                            <li><a href="../PassengerPortal.html">The Passengers: Narrative Directory</a></li>
-                            <li><a href="../compact.html">The Mayflower Compact</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="../member-portal.html">Member Portal</a></li>
                     <li><a href="../contact_submit.html">Contact Us</a></li>
-                    <li><a href="../support.html"><img src="../images/LOGO001.png" alt="Mayflower Society" style="height: 45px; width: auto; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3)); background: none;"></a></li>
+                    <li>
+                        <a href="?logout=1" class="logout-btn" title="Remember to log out when using a shared or public computer">
+                            <span class="logout-icon-wrap">
+                                <span class="logout-ring"></span>
+                                <span class="logout-icon">&#128682;</span>
+                            </span>
+                            Log Out
+                        </a>
+                    </li>
                 </ul>
             </nav>
         </header>
@@ -109,6 +120,22 @@
             <div class="placeholder-card">
                 <p><strong>Coming soon.</strong></p>
                 <p>The Society's bylaws will be posted here once finalized for online distribution.</p>
+
+                <div class="portal-status">
+                    <div class="portal-status-track">
+                        <svg width="100%" height="60" viewBox="0 0 460 60" preserveAspectRatio="none" class="portal-status-svg">
+                            <line x1="30" y1="30" x2="430" y2="30" stroke="var(--royal-blue)" stroke-width="2" stroke-dasharray="1 10" stroke-linecap="round"/>
+                            <circle cx="120" cy="30" r="6" fill="#ffffff"/>
+                            <circle cx="120" cy="30" r="10" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.5" class="portal-ping"/>
+                            <circle cx="400" cy="30" r="6" fill="var(--navy-blue)" stroke="#3d5a86" stroke-width="1.5"/>
+                        </svg>
+                        <div class="portal-ship" aria-hidden="true">&#9973;</div>
+                    </div>
+                    <div class="portal-status-labels">
+                        <span class="is-current">Coming Soon</span>
+                        <span>Posted</span>
+                    </div>
+                </div>
             </div>
         </section>
 

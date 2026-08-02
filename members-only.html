@@ -90,6 +90,22 @@
             font-size: 1.4rem;
             flex-shrink: 0;
         }
+
+        .shared-device-notice {
+            max-width: 720px;
+            margin: 0 auto 2.5rem;
+            background: #fff9ec;
+            border-left: 4px solid var(--gold);
+            border-radius: 8px;
+            padding: 1rem 1.4rem;
+            text-align: center;
+            color: #665a3a;
+            font-size: 0.95rem;
+        }
+
+        .shared-device-notice strong {
+            color: var(--navy-blue);
+        }
     </style>
 </head>
 <body>
@@ -97,7 +113,7 @@
     <!-- ── Header / Nav ──────────────────────────────────── -->
         <header id="mainHeader">
             <nav>
-                <a href="index.html" class="logo">
+                <a href="members-only.html" class="logo">
                     <img src="images/LOGO002.png" alt="Alabama Mayflower Society" class="logo-img">
                 </a>
 
@@ -108,23 +124,18 @@
                 </button>
 
                 <ul class="nav-links" id="navLinks">
-                    <li><a href="about-us.html">About Us</a></li>
-                    <li><a href="our-history.html">Our History</a></li>
-                    <li><a href="membership.html">Membership</a></li>
                     <li><a href="events.html">Events</a></li>
                     <li><a href="news.html">News</a></li>
-                    <li><a href="useful-links.html">Useful Links</a></li>
-                    <li class="has-dropdown">
-                        <a href="MayflowerSaga.html">Features</a>
-                        <ul class="dropdown">
-                            <li><a href="MayflowerSaga.html">The Mayflower Saga</a></li>
-                            <li><a href="PassengerPortal.html">The Passengers: Narrative Directory</a></li>
-                            <li><a href="compact.html">The Mayflower Compact</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="member-portal.html">Member Portal</a></li>
                     <li><a href="contact_submit.html">Contact Us</a></li>
-                    <li><a href="support.html"><img src="images/LOGO001.png" alt="Mayflower Society" style="height: 45px; width: auto; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3)); background: none;"></a></li>
+                    <li>
+                        <a href="?logout=1" class="logout-btn" title="Remember to log out when using a shared or public computer">
+                            <span class="logout-icon-wrap">
+                                <span class="logout-ring"></span>
+                                <span class="logout-icon">&#128682;</span>
+                            </span>
+                            Log Out
+                        </a>
+                    </li>
                 </ul>
             </nav>
         </header>
@@ -145,6 +156,9 @@
 
         <!-- ── Members Menu ─────────────────────────────────── -->
         <section class="members-section">
+            <div class="shared-device-notice">
+                <strong>On a shared or public computer?</strong> Please log out when you're finished so the next person can't access this page.
+            </div>
             <div class="members-section-header">
                 <h2>What would you like to do?</h2>
                 <p>Select an item below</p>

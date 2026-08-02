@@ -169,6 +169,61 @@ nav img {
     transform: translateY(-2px);
 }
 
+/* ── Members Log Out Button ───────────────────────────────────── */
+.logout-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logout-icon-wrap {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logout-ring {
+    position: absolute;
+    inset: -6px;
+    border-radius: 50%;
+    border: 1px dashed rgba(212, 175, 55, 0.6);
+    animation: logoutRingSpin 20s linear infinite;
+}
+
+.logout-ring::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: var(--gold);
+    border-radius: 50%;
+    box-shadow: 0 0 6px var(--gold);
+    transform: translateX(-50%);
+}
+
+.logout-icon {
+    position: relative;
+    font-size: 13px;
+    line-height: 1;
+}
+
+@keyframes logoutRingSpin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .logout-ring,
+    .logout-ring::after {
+        animation: none;
+    }
+}
+
 /* ── Features Dropdown ──────────────────────────────────────── */
 .has-dropdown {
     position: relative;
