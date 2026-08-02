@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8R17FZY7H9"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-8R17FZY7H9');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="description" content="Supplemental Lineage Review Form - Alabama Society of Mayflower Descendants">
+    <title>Supplemental Lineage Review Form | Alabama Society of Mayflower Descendants</title>
+    <link rel="canonical" href="https://alabamasmd.org/members-only/lineage-form.html">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/compact-page.css">
+    <link rel="icon" type="image/png" href="../images/LOGO001.png?v=3">
+    <style>
+        .members-section {
+            padding: 4rem 2rem 5rem;
+        }
+
+        .members-section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 3rem;
+        }
+
+        .members-section-header h2 {
+            color: var(--navy-blue);
+            font-size: clamp(1.7rem, 3.5vw, 2.4rem);
+            margin-bottom: 0.6rem;
+        }
+
+        .members-section-header p {
+            color: #777;
+            font-style: italic;
+            font-size: 1.05rem;
+        }
+
+        .back-to-menu {
+            max-width: 820px;
+            margin: 0 auto 1.5rem;
+            text-align: center;
+        }
+
+        .back-to-menu a {
+            color: var(--royal-blue);
+            text-decoration: underline;
+            font-size: 0.95rem;
+        }
+
+        /* ── Supplemental Lineage Review Form ────────────────────── */
+        .lineage-form {
+            margin-top: 2rem;
+            background: #f9f9f9;
+            border-left: 4px solid var(--gold);
+            padding: 2rem;
+            border-radius: 4px;
+        }
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            clip: rect(0 0 0 0);
+            white-space: nowrap;
+        }
+        .form-section-heading {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--navy-blue);
+            border-bottom: 2px solid var(--gold);
+            padding-bottom: 0.4rem;
+            margin: 2rem 0 1rem;
+        }
+        .form-section-heading:first-of-type {
+            margin-top: 0;
+        }
+        .lineage-note {
+            font-style: italic;
+            color: var(--slate);
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.25rem 1.5rem;
+        }
+        .form-field {
+            display: flex;
+            flex-direction: column;
+        }
+        .form-field.full-width {
+            grid-column: 1 / -1;
+        }
+        fieldset.form-field {
+            border: none;
+            margin: 0;
+            padding: 0;
+        }
+        .form-field label {
+            font-weight: 600;
+            color: var(--navy-blue);
+            margin-bottom: 0.35rem;
+            font-size: 0.95rem;
+        }
+        .form-field legend {
+            font-weight: 600;
+            color: var(--navy-blue);
+            margin-bottom: 0.35rem;
+            font-size: 0.95rem;
+            padding: 0;
+            width: 100%;
+        }
+        .form-field .char-limit {
+            font-weight: 400;
+            font-size: 0.85rem;
+            color: var(--slate);
+        }
+        .form-field input,
+        .form-field textarea {
+            font-family: inherit;
+            font-size: 1rem;
+            padding: 0.65rem 0.75rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background: white;
+            color: var(--navy-blue);
+        }
+        .form-field input:focus,
+        .form-field textarea:focus {
+            outline: none;
+            border-color: var(--gold);
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
+        }
+        .form-field textarea {
+            resize: vertical;
+        }
+        @media (max-width: 640px) {
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .required-mark {
+            color: var(--deep-red);
+        }
+        .radio-options {
+            display: flex;
+            gap: 2rem;
+            margin-top: 0.5rem;
+        }
+        .radio-option {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 400;
+            cursor: pointer;
+        }
+        .radio-option input[type="radio"] {
+            width: auto;
+        }
+        .checkbox-field {
+            margin-top: 1rem;
+        }
+        .checkbox-option {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            font-weight: 400;
+            cursor: pointer;
+            line-height: 1.5;
+        }
+        .checkbox-option input[type="checkbox"] {
+            width: auto;
+            margin-top: 0.3rem;
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ── Header / Nav ──────────────────────────────────── -->
+        <header id="mainHeader">
+            <nav>
+                <a href="../index.html" class="logo">
+                    <img src="../images/LOGO002.png" alt="Alabama Mayflower Society" class="logo-img">
+                </a>
+
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="../about-us.html">About Us</a></li>
+                    <li><a href="../our-history.html">Our History</a></li>
+                    <li><a href="../membership.html">Membership</a></li>
+                    <li><a href="../events.html">Events</a></li>
+                    <li><a href="../news.html">News</a></li>
+                    <li><a href="../useful-links.html">Useful Links</a></li>
+                    <li class="has-dropdown">
+                        <a href="../MayflowerSaga.html">Features</a>
+                        <ul class="dropdown">
+                            <li><a href="../MayflowerSaga.html">The Mayflower Saga</a></li>
+                            <li><a href="../PassengerPortal.html">The Passengers: Narrative Directory</a></li>
+                            <li><a href="../compact.html">The Mayflower Compact</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../member-portal.html">Member Portal</a></li>
+                    <li><a href="../contact_submit.html">Contact Us</a></li>
+                    <li><a href="../support.html"><img src="../images/LOGO001.png" alt="Mayflower Society" style="height: 45px; width: auto; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3)); background: none;"></a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- ── Hero ──────────────────────────────────────────── -->
+        <section class="page-hero" style="background-image: url('../images/Mayflower_Collage_Hero.png'); background-size: cover; background-position: center top;">
+            <div class="hero-overlay"></div>
+            <div class="container">
+                <h1 class="serif">Supplemental Lineage Review Form</h1>
+                <p class="subtitle" style="color: rgba(255,255,255,0.88); margin-top: 0.75rem;">For current members submitting an additional (supplemental) Mayflower lineage</p>
+            </div>
+        </section>
+
+        <!-- ── Separator ─────────────────────────────────────── -->
+        <div class="separator-container" style="background: #f5f6f8;">
+            <img src="../images/Mayflower_separator_line.png" alt="Separator" class="mayflower-separator">
+        </div>
+
+        <!-- ── Supplemental Lineage Review Form ────────────────── -->
+        <section class="members-section">
+            <div class="back-to-menu"><a href="../members-only.html">&larr; Back to Members Only menu</a></div>
+            <div style="max-width: 820px; margin: 0 auto;">
+                <p>Use this form to submit a supplemental lineage for review by the Historian. This is separate from the Preliminary Lineage Review used by first-time applicants — it's only for members who already belong to SMDAL and are documenting an additional Mayflower ancestor.</p>
+
+                <form name="supplemental-lineage-submission" method="POST" action="https://formspree.io/f/xkodrrnd" class="lineage-form" id="supplemental-lineage-form">
+                    <input type="hidden" name="_subject" value="New Supplemental Lineage Submission - Alabama SMD">
+                    <input type="hidden" name="email" id="supp-reply-to-email">
+                    <p class="visually-hidden">
+                        <label>Don't fill this out if you're human: <input type="text" name="_gotcha" autocomplete="off" tabindex="-1" aria-hidden="true"></label>
+                    </p>
+
+                    <div class="form-section-heading">Before You Begin</div>
+                    <div class="form-grid">
+                        <fieldset class="form-field full-width">
+                            <legend>If the supplemental lineage you are submitting turns out to be valid, do you intend to pay the "Supplemental Fee for Additional Lineages" and have the Historian submit it to GSMD for certification? <span class="required-mark">*</span></legend>
+                            <div class="radio-options">
+                                <label class="radio-option"><input type="radio" name="If the supplemental lineage you are submitting turns out to be valid, do you intend to pay the Supplemental Fee for Additional Lineages and have the Historian submit it to GSMD for certification?" value="Yes" required> Yes</label>
+                                <label class="radio-option"><input type="radio" name="If the supplemental lineage you are submitting turns out to be valid, do you intend to pay the Supplemental Fee for Additional Lineages and have the Historian submit it to GSMD for certification?" value="No" required> No</label>
+                            </div>
+                            <p class="lineage-note">You can pay the fee at <a href="http://PaySMDAL.today" target="_blank" rel="noopener">PaySMDAL.today</a>, but please do not do so until the Historian notifies you of the validity of your proposed supplemental lineage.</p>
+                        </fieldset>
+                    </div>
+
+                    <div class="form-section-heading">Your Information</div>
+                    <div class="form-grid">
+                        <div class="form-field">
+                            <label for="supp-date-submitted">Date You Submitted This Form:</label>
+                            <input type="date" id="supp-date-submitted" name="Date You Submitted This Form" required>
+                        </div>
+                        <div class="form-field">
+                            <label for="supp-your-name">Your Name:</label>
+                            <input type="text" id="supp-your-name" name="Your Name" autocomplete="name" required>
+                        </div>
+                        <div class="form-field">
+                            <label for="supp-gsmd">GSMD #:</label>
+                            <input type="text" id="supp-gsmd" name="GSMD #" required>
+                        </div>
+                        <div class="form-field">
+                            <label for="supp-smdal">SMDAL #:</label>
+                            <input type="text" id="supp-smdal" name="SMDAL #" required>
+                        </div>
+                        <div class="form-field">
+                            <label for="supp-email">E-Mail Address:</label>
+                            <input type="email" id="supp-email" name="E-Mail Address" autocomplete="email" required>
+                        </div>
+                        <div class="form-field">
+                            <label for="supp-cell-phone">Cell Phone #:</label>
+                            <input type="tel" id="supp-cell-phone" name="Cell Phone #" placeholder="xxx-xxx-xxxx" maxlength="12" inputmode="numeric" autocomplete="tel">
+                        </div>
+                        <div class="form-field full-width">
+                            <label for="supp-full-name-birth">Your FULL NAME at Birth (plus married surname(s) for the ladies):</label>
+                            <input type="text" id="supp-full-name-birth" name="Your FULL NAME at Birth (plus married surname(s) for the ladies)" autocomplete="off" required>
+                        </div>
+                    </div>
+
+                    <div class="form-section-heading">Lineage from Mayflower Passenger</div>
+                    <p class="lineage-note">Your name should be last.</p>
+                    <div class="form-grid">
+                        <div class="form-field full-width">
+                            <label for="supp-ancestor">1. Name of your Mayflower Pilgrim Ancestor:</label>
+                            <input type="text" id="supp-ancestor" name="1. Name of your Mayflower Pilgrim Ancestor">
+                        </div>
+                        <div class="form-field">
+                            <label for="supp-gen2-sd">2. Son/Daughter:</label>
+                            <input type="text" id="supp-gen2-sd" name="2. Son/Daughter">
+                        </div>
+                        <div class="form-field">
+                            <label for="supp-gen2-m">Married:</label>
+                            <input type="text" id="supp-gen2-m" name="2. Married">
+                        </div>
+                        <div class="form-field">
+                            <label for="supp-gen3-sd">3. Son/Daughter:</label>
+                            <input type="text" id="supp-gen3-sd" name="3. Son/Daughter">
+                        </div>
+                        <div class="form-field">
+                            <label for="supp-gen3-m">Married:</label>
+                            <input type="text" id="supp-gen3-m" name="3. Married">
+                        </div>
+                        <div class="form-field">
+                            <label for="supp-gen4-sd">4. Son/Daughter:</label>
+                            <input type="text" id="supp-gen4-sd" name="4. Son/Daughter">
+                        </div>
+                        <div class="form-field">
+                            <label for="supp-gen4-m">Married:</label>
+                            <input type="text" id="supp-gen4-m" name="4. Married">
+                        </div>
+                        <div class="form-field">
+                            <label for="supp-gen5-sd">5. Son/Daughter:</label>
+                            <input type="text" id="supp-gen5-sd" name="5. Son/Daughter">
+                        </div>
+                        <div class="form-field">
+                            <label for="supp-gen5-m">Married:</label>
+                            <input type="text" id="supp-gen5-m" name="5. Married">
+                        </div>
+                        <div class="form-field">
+                            <label for="supp-gen6-sd">6. Son/Daughter:</label>
+                            <input type="text" id="supp-gen6-sd" name="6. Son/Daughter">
+                        </div>
+                        <div class="form-field">
+                            <label for="supp-gen6-m">Married:</label>
+                            <input type="text" id="supp-gen6-m" name="6. Married">
+                        </div>
+                        <div class="form-field">
+                            <label for="supp-gen7-sd">7. Son/Daughter:</label>
+                            <input type="text" id="supp-gen7-sd" name="7. Son/Daughter">
+                        </div>
+                        <div class="form-field">
+                            <label for="supp-gen7-m">Married:</label>
+                            <input type="text" id="supp-gen7-m" name="7. Married">
+                        </div>
+                        <div class="form-field">
+                            <label for="supp-gen8-sd">8. Son/Daughter:</label>
+                            <input type="text" id="supp-gen8-sd" name="8. Son/Daughter">
+                        </div>
+                        <div class="form-field">
+                            <label for="supp-gen8-m">Married:</label>
+                            <input type="text" id="supp-gen8-m" name="8. Married">
+                        </div>
+                        <div class="form-field">
+                            <label for="supp-gen9-sd">9. Son/Daughter:</label>
+                            <input type="text" id="supp-gen9-sd" name="9. Son/Daughter">
+                        </div>
+                        <div class="form-field">
+                            <label for="supp-gen9-m">Married:</label>
+                            <input type="text" id="supp-gen9-m" name="9. Married">
+                        </div>
+                        <div class="form-field">
+                            <label for="supp-gen10-sd">10. Son/Daughter:</label>
+                            <input type="text" id="supp-gen10-sd" name="10. Son/Daughter">
+                        </div>
+                        <div class="form-field">
+                            <label for="supp-gen10-m">Married:</label>
+                            <input type="text" id="supp-gen10-m" name="10. Married">
+                        </div>
+                        <div class="form-field">
+                            <label for="supp-gen11-sd">11. Son/Daughter:</label>
+                            <input type="text" id="supp-gen11-sd" name="11. Son/Daughter">
+                        </div>
+                        <div class="form-field">
+                            <label for="supp-gen11-m">Married:</label>
+                            <input type="text" id="supp-gen11-m" name="11. Married">
+                        </div>
+                        <div class="form-field">
+                            <label for="supp-gen12-sd">12. Son/Daughter:</label>
+                            <input type="text" id="supp-gen12-sd" name="12. Son/Daughter">
+                        </div>
+                        <div class="form-field">
+                            <label for="supp-gen12-m">Married:</label>
+                            <input type="text" id="supp-gen12-m" name="12. Married">
+                        </div>
+                        <div class="form-field">
+                            <label for="supp-gen13-sd">13. Son/Daughter:</label>
+                            <input type="text" id="supp-gen13-sd" name="13. Son/Daughter">
+                        </div>
+                        <div class="form-field">
+                            <label for="supp-gen13-m">Married:</label>
+                            <input type="text" id="supp-gen13-m" name="13. Married">
+                        </div>
+                        <div class="form-field">
+                            <label for="supp-gen14-sd">14. Son/Daughter:</label>
+                            <input type="text" id="supp-gen14-sd" name="14. Son/Daughter">
+                        </div>
+                        <div class="form-field">
+                            <label for="supp-gen14-m">Married:</label>
+                            <input type="text" id="supp-gen14-m" name="14. Married">
+                        </div>
+                        <div class="form-field">
+                            <label for="supp-gen15-sd">15. Son/Daughter:</label>
+                            <input type="text" id="supp-gen15-sd" name="15. Son/Daughter">
+                        </div>
+                        <div class="form-field">
+                            <label for="supp-gen15-m">Married:</label>
+                            <input type="text" id="supp-gen15-m" name="15. Married">
+                        </div>
+                        <div class="form-field">
+                            <label for="supp-gen16-sd">16. Son/Daughter:</label>
+                            <input type="text" id="supp-gen16-sd" name="16. Son/Daughter">
+                        </div>
+                        <div class="form-field">
+                            <label for="supp-gen16-m">Married:</label>
+                            <input type="text" id="supp-gen16-m" name="16. Married">
+                        </div>
+                    </div>
+
+                    <div class="form-section-heading">Additional Information</div>
+                    <div class="form-field full-width">
+                        <label for="supp-message-reviewer">Message for Reviewer <span class="char-limit">(Limit 250 characters)</span></label>
+                        <textarea id="supp-message-reviewer" name="Message for Reviewer" maxlength="250" rows="4"></textarea>
+                    </div>
+
+                    <div class="form-field full-width" style="margin-top: 1.5rem;">
+                        <label for="supp-applicant-signature">Applicant Signature</label>
+                        <input type="text" id="supp-applicant-signature" name="Applicant Signature" autocomplete="off" required>
+                    </div>
+
+                    <div class="form-field full-width checkbox-field">
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="I understand that any information or evidence submitted becomes the property of the General Society of Mayflower Descendants." required>
+                            <span>I understand that any information or evidence submitted to become a member becomes the property of the General Society of Mayflower Descendants.</span>
+                        </label>
+                    </div>
+
+                    <div class="form-field full-width checkbox-field">
+                        <label class="checkbox-option">
+                            <input type="checkbox" name="I agree that my electronic signature (typed name) is the legal equivalent of my manual/handwritten signature on this document." required>
+                            <span>I agree that my <strong>electronic signature (typed name)</strong> is the legal equivalent of my manual/handwritten signature on this document. <strong>Boxes must be checked.</strong></span>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="margin-top: 2rem;">Submit Supplemental Lineage Form</button>
+                </form>
+                <script>
+                    document.getElementById('supplemental-lineage-form').addEventListener('submit', function (e) {
+                        e.preventDefault();
+                        var form = e.target;
+                        document.getElementById('supp-reply-to-email').value = document.getElementById('supp-email').value;
+                        var submitBtn = form.querySelector('button[type="submit"]');
+                        submitBtn.disabled = true;
+                        submitBtn.textContent = 'Submitting…';
+                        fetch(form.action, {
+                            method: 'POST',
+                            body: new FormData(form),
+                            headers: { 'Accept': 'application/json' }
+                        }).then(function (response) {
+                            if (response.ok) {
+                                window.location.href = 'https://alabamasmd.org/lineage-submission-success.html';
+                            } else {
+                                return response.json().then(function (body) {
+                                    var msg = (body && body.errors)
+                                        ? body.errors.map(function (err) { return err.message; }).join(', ')
+                                        : 'There was a problem submitting the form. Please try again or email SMDAL.Info@gmail.com directly.';
+                                    throw new Error(msg);
+                                });
+                            }
+                        }).catch(function (err) {
+                            alert(err.message || 'There was a problem submitting the form. Please try again or email SMDAL.Info@gmail.com directly.');
+                            submitBtn.disabled = false;
+                            submitBtn.textContent = 'Submit Supplemental Lineage Form';
+                        });
+                    });
+
+                    function formatSuppPhone(value) {
+                        var digits = value.replace(/\D/g, '').slice(0, 10);
+                        if (digits.length > 6) {
+                            return digits.slice(0, 3) + '-' + digits.slice(3, 6) + '-' + digits.slice(6);
+                        } else if (digits.length > 3) {
+                            return digits.slice(0, 3) + '-' + digits.slice(3);
+                        }
+                        return digits;
+                    }
+                    var suppCellField = document.getElementById('supp-cell-phone');
+                    suppCellField.addEventListener('input', function () {
+                        suppCellField.value = formatSuppPhone(suppCellField.value);
+                    });
+                </script>
+            </div>
+        </section>
+
+        <!-- ── Footer ────────────────────────────────────────── -->
+        <footer id="contact">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-section">
+                        <img src="../images/LOGO002.png" alt="Alabama Mayflower Society" class="footer-logo">
+                        <p>Preserving the legacy of the Mayflower Pilgrims since 1952</p>
+                        <div class="social-links" style="margin-top: 1.5rem;">
+                            <a href="https://www.facebook.com/groups/AlabamaMayflowerSociety" target="_blank" rel="noopener" style="display: inline-block; text-decoration: none;">
+                                <span style="background: white; color: var(--navy-blue); width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; border-radius: 4px; font-family: sans-serif; font-weight: bold; font-size: 22px;">f</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="footer-section">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="../about-us.html">About Us</a></li>
+                            <li><a href="../our-history.html">Our History</a></li>
+                            <li><a href="../membership.html">Membership</a></li>
+                            <li><a href="../events.html">Events</a></li>
+                            <li><a href="../news.html">News</a></li>
+                            <li><a href="../useful-links.html">Useful Links</a></li>
+                            <li><a href="../support.html">FAQ / Support</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-section">
+                        <h3>Our Colonies</h3>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="margin-bottom: 1rem;">Cahaba River Colony<br><small>Birmingham Metro Area</small></li>
+                            <li style="margin-bottom: 1rem;">Capital Colony<br><small>Montgomery Metro Area</small></li>
+                            <li style="margin-bottom: 1rem;">Gulf Coast Colony<br><small>Mobile Bay Metro Area</small></li>
+                            <li>Tennessee Valley Colony<br><small>Huntsville Metro Area</small></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-section">
+                        <h3>Contact</h3>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="margin-bottom: 1rem;"><a href="mailto:SMDAL.Info@gmail.com">info@alabamasmd.org</a></li>
+                            <li><a href="https://themayflowersociety.org" target="_blank" rel="noopener">General Society of Mayflower Descendants</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-bottom" style="text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 2rem;">
+                    <p>&copy; 2026 The Society of Mayflower Descendants in the State of <i>(Sweet Home)</i> Alabama | All Rights Reserved | <a href="../privacy-policy.html" style="color: var(--gold);">Privacy Policy</a></p>
+                </div>
+            </div>
+        </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
