@@ -96,6 +96,7 @@
             margin: 0 auto;
             padding: 2.5rem 0;
             border-top: 1px solid #e2e2e2;
+            scroll-margin-top: 110px;
         }
         .top12-item:first-of-type {
             border-top: none;
@@ -149,6 +150,58 @@
             color: #999;
             font-style: italic;
             margin: 0;
+        }
+        .top12-thankyou {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            background: #f9f9f9;
+            border-left: 4px solid var(--gold);
+            border-radius: 4px;
+            padding: 1.5rem 1.75rem;
+            margin: 2rem 0 0;
+        }
+        .top12-thankyou img {
+            width: 100px;
+            height: auto;
+            border-radius: 8px;
+            flex-shrink: 0;
+        }
+        .top12-thankyou p {
+            margin: 0;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        .top12-thankyou strong {
+            color: var(--navy-blue);
+        }
+        @media (max-width: 560px) {
+            .top12-thankyou {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+        .top12-schedule-box {
+            background: #f9f9f9;
+            border: 1px solid #e2e2e2;
+            border-radius: 6px;
+            padding: 1.25rem 1.5rem;
+            margin: 0 0 1.5rem;
+        }
+        .top12-schedule-box .top12-schedule-label {
+            margin: 0 0 0.75rem;
+            color: var(--navy-blue);
+            font-weight: 700;
+            font-size: 1rem;
+        }
+        .top12-schedule-box ul {
+            margin: 0;
+        }
+        .top12-schedule-box li {
+            margin-bottom: 0.35rem;
+        }
+        .top12-schedule-box li:last-child {
+            margin-bottom: 0;
         }
     </style>
 </head>
@@ -238,11 +291,11 @@
                     <li>Alternate Contact - Email</li>
                     <li>Alternate Contact - Relationship to You</li>
                 </ul>
-                <p>We will first reach out via email, then phone number(s). We will only contact them via postal mail as a last resort. It is important that their phone number(s) and email address are different from yours — if we are reaching out to them, we have already been unsuccessful at contacting you at your own phone number(s) and email address.</p>
+                <p>We will first reach out via email, then phone number(s). We will only contact them via postal mail as a last resort. It is important that their phone number(s) and email address are different from yours. If we are reaching out to them, we have already been unsuccessful at contacting you at your own phone number(s) and email address.</p>
                 <p>To submit this info, just type it into an email message and send it to <a href="mailto:SMDAL.Info@gmail.com">SMDAL.Info@gmail.com</a> with the subject: <em>Alternate Contact Info for YOUR NAME</em>. You can also update or change your Alternate Contact person or any of their contact information at any time. Thank you for taking the time to provide this important information to SMDAL.</p>
 
                 <h4>Send Us a Headshot Photo for the Membership Directory</h4>
-                <p>Sending us a head-shot photo could not be simpler in this day and age — just have someone take your photo with a smartphone. We offer two ways to send us your photo, from the smartphone that took it:</p>
+                <p>Sending us a head-shot photo could not be simpler in this day and age. Just have someone take your photo with a smartphone. We offer two ways to send us your photo, from the smartphone that took it:</p>
                 <ol class="top12-sublist">
                     <li>Email the image to <a href="mailto:SMDAL.Info@gmail.com">SMDAL.Info@gmail.com</a> (don't leave out the dot between SMDAL and Info)</li>
                     <li>Text the image to 251-510-8302</li>
@@ -252,7 +305,7 @@
                 <ul>
                     <li>Pay attention to the lighting in the area where you are taking the photo. We want to see your face, not shadows.</li>
                     <li>Pay attention to what is in the background. This image is supposed to glorify you, not your china cabinet.</li>
-                    <li>Don't get too close. Have plenty of room around your face — we can crop, but we can't expand. The final result we want is a square image, so give us room to edit.</li>
+                    <li>Don't get too close. Have plenty of room around your face. We can crop, but we can't expand. The final result we want is a square image, so give us room to edit.</li>
                     <li>We prefer a recent photo of you, but if that just does not sit well with you, consider sending a younger picture of yourself as an adult.</li>
                 </ul>
                 <p>Tell us your full name if not provided earlier:</p>
@@ -261,7 +314,12 @@
                     <li>Ladies: First - Middle(s) - (Birth Surname) - Married Surname(s)</li>
                 </ul>
                 <p>Tell us if you have a nickname by typing it in "quotes" after your middle name(s), or, if you go by your middle name, underline your middle name. We address you by your first name, your nickname, or your middle name (if it's underlined) and your Birth Surname (for gentlemen) or married surname (for ladies) when we send you emails. We list you by your full/formal name in our Membership Roster and Membership Directory.</p>
-                <p>Keep all your information current with us throughout the calendar year — we have to notify Plymouth in a timely manner of any changes to your contact information and/or status.</p>
+                <p>Keep all your information current with us throughout the calendar year. We have to notify Plymouth in a timely manner of any changes to your contact information and/or status.</p>
+
+                <div class="top12-thankyou">
+                    <img src="../images/Kevin-okay.jpg" alt="Kevin, SMDAL Governor, giving an OK sign">
+                    <p><strong>Thank you!</strong> Keeping your information current with us helps us reach you (and your family, if we ever need to) when it matters most. Questions about any of this? <a href="../contact_submit.html">Contact us</a> and we're happy to help.</p>
+                </div>
 
                 <img src="../images/Mayflower_separator_line.png" alt="" class="top12-item-separator">
             </div>
@@ -274,8 +332,13 @@
                     <li>Put <a href="mailto:SMDAL.Info@gmail.com">SMDAL.Info@gmail.com</a> into your email contacts under the name Alabama Mayflower Society.</li>
                     <li>Put the telephone number 251-426-1888 into your cell phone contacts with the name AL-Mayflower.</li>
                 </ul>
-                <p>We all live in a day and age when we each receive a ton of unsolicited email and text messages — it is imperative that you, as a member of this Society, receive and read messages we send to you. We would appreciate you doing these two things right away to make sure you receive and view email and SMS messages from SMDAL. We don't want to get dismissed with the spam you receive.</p>
+                <p>We all live in a day and age when we each receive a ton of unsolicited email and text messages. It is imperative that you, as a member of this Society, receive and read messages we send to you. We would appreciate you doing these two things right away to make sure you receive and view email and SMS messages from SMDAL. We don't want to get dismissed with the spam you receive.</p>
                 <p>Email and SMS (text) messages are the ways we regularly keep in touch with our members. We occasionally reach out to individual members via telephone calls and voice mails. Please do not unsubscribe from the email list or opt out of the SMS list as long as you are a current member.</p>
+
+                <div class="top12-thankyou">
+                    <img src="../images/Kevin-okay.jpg" alt="Kevin, SMDAL Governor, giving an OK sign">
+                    <p><strong>Thank you!</strong> Taking a minute to add us to your contacts means our messages about events, news, and important Society business actually reach you. Need a hand? <a href="../contact_submit.html">Contact us</a>.</p>
+                </div>
 
                 <img src="../images/Mayflower_separator_line.png" alt="" class="top12-item-separator">
             </div>
@@ -293,10 +356,10 @@
                     <li>Invitations to Society events, such as the Triennial Congress held every three years in Plymouth, the annual General Board of Assistants Conference held in various cities around the country, and the annual Hereditary Fortnight Breakfast.</li>
                     <li>Access to the exclusive Members Only area of the GSMD website, with reports from committees, updates from the Governor General, Society resources, and more.</li>
                     <li>The Mayflower Quarterly Magazine delivered to your mailbox and available online in the members-only area of the site.</li>
-                    <li>Exclusive access to FreeWill, an online service that guides you through the process of creating your will or trust — use it on its own, or to document your wishes before finalizing your plans with an attorney.</li>
+                    <li>Exclusive access to FreeWill, an online service that guides you through the process of creating your will or trust. Use it on its own, or to document your wishes before finalizing your plans with an attorney.</li>
                     <li>A 15% discount on Storyworth (using the link in the Members Only section of the GSMD website), which helps you or your loved ones capture life stories through voice recordings or email and preserve them in a keepsake book with unlimited photos.</li>
-                    <li>Discounts to attractions in the Plymouth, Massachusetts area — including a See Plymouth visitor package (restaurant and event discounts, a map of Plymouth, and a special "Plymouth Rock" squeezy toy), a 10% discount at Hotel 1620 across from Plymouth Harbor, and a special membership discount for Plimoth-Patuxet Museums plus a special edition print of the Mayflower II under sail.</li>
-                    <li>Mayflower Tours — organized trips through The Mayflower Society to historic Pilgrim sites in the U.S., Canada, England, and Holland.</li>
+                    <li>Discounts to attractions in the Plymouth, Massachusetts area, including a See Plymouth visitor package (restaurant and event discounts, a map of Plymouth, and a special "Plymouth Rock" squeezy toy), a 10% discount at Hotel 1620 across from Plymouth Harbor, and a special membership discount for Plimoth-Patuxet Museums plus a special edition print of the Mayflower II under sail.</li>
+                    <li>Mayflower Tours: organized trips through The Mayflower Society to historic Pilgrim sites in the U.S., Canada, England, and Holland.</li>
                     <li>Members-only jewelry, insignia, and grave markers available in the online store.</li>
                     <li>Scholarship eligibility for children and grandchildren of members.</li>
                     <li>Free tours of the historic Mayflower Society House (built by the great-grandson of Pilgrim Edward Winslow in 1754) and free admission to the Genealogical Research Center (by appointment).</li>
@@ -313,7 +376,7 @@
                     <li>The annual "We Will Plymouth Rock You!" Spring Conference Weekend, held in rotating cities around the state.</li>
                     <li>The annual Compact Day Commemoration Event and State Society Anniversary Celebration, held in mid-autumn in various cities around the state.</li>
                     <li>The opportunity to attend Colony Group events: water cruises; trips to historical and family attractions around Alabama; Mayflower Cousins luncheons and dinners; Pilgrim Families Reunions with food, games, and photos; and Mayflower Meet-and-Greets for newbies.</li>
-                    <li>Plus so much camaraderie, food, and fun — all while learning and living your Mayflower lineage and family history.</li>
+                    <li>Plus so much camaraderie, food, and fun, all while learning and living your Mayflower lineage and family history.</li>
                 </ul>
 
                 <img src="../images/Mayflower_separator_line.png" alt="" class="top12-item-separator">
@@ -323,8 +386,8 @@
             <div class="top12-item" id="item4">
                 <img src="../images/ship-button-trans.png" alt="" class="top12-item-icon">
                 <h3>4. Preparing for Your Death</h3>
-                <p>When you die, it can be an extremely stressful ordeal for your loved ones if they then have to begin the process of handling all the details of what must occur once you pass — legal things, funeral things, notifications, account cancellations, possible probate, your will, and more. Consider preparing for as many of these details as you can while you can take care of them.</p>
-                <p>Perhaps due, in part, to the transition of paper newspapers to online newspapers, one thing that often gets overlooked is one's obituary. Consider writing, or working with someone else to write, the "life story synopsis" part of your obituary — chances are many of your family members and friends are not aware of all the happenings and events in your life. You, and whoever is helping you, can learn more about writing effective obituaries by viewing the results of an internet search, which can be viewed <a href="https://duckduckgo.com/?hps=1&q=writing+your+own+obituary&atb=v397-1&ia=web" target="_blank" rel="noopener">here</a>.</p>
+                <p>When you die, it can be an extremely stressful ordeal for your loved ones if they then have to begin the process of handling all the details of what must occur once you pass: legal things, funeral things, notifications, account cancellations, possible probate, your will, and more. Consider preparing for as many of these details as you can while you can take care of them.</p>
+                <p>Perhaps due, in part, to the transition of paper newspapers to online newspapers, one thing that often gets overlooked is one's obituary. Consider writing, or working with someone else to write, the "life story synopsis" part of your obituary. Chances are many of your family members and friends are not aware of all the happenings and events in your life. You, and whoever is helping you, can learn more about writing effective obituaries by viewing the results of an internet search, which can be viewed <a href="https://duckduckgo.com/?hps=1&q=writing+your+own+obituary&atb=v397-1&ia=web" target="_blank" rel="noopener">here</a>.</p>
                 <p>Be sure a quality digital "forever photo" of (just) you is made available in .jpg or .png format. Obituaries can be submitted to:</p>
                 <ul>
                     <li>Appropriate newspapers, and/or their online equivalent website(s)</li>
@@ -333,13 +396,18 @@
                 </ul>
                 <p>As a member of SMDAL, here are other items you should consider taking care of while you still can:</p>
                 <p>Download, print out, and legibly fill out <a href="https://mcusercontent.com/56f7ff7be12476b74b140e194/files/4a265bc9-ee6b-ccbf-3282-dd659a7706b8/UPON_MY_DEATH.pdf" target="_blank" rel="noopener">SMDAL's "Upon My Death" form</a>, and put it where your family will find it. Even better, make them aware of it before you file it away with your other final papers. It will direct your loved ones to notify, and how to notify, SMDAL of your passing, and will provide the information the Society needs to properly memorialize you as a current or former member.</p>
-                <p>While you are still a living and breathing member — and, therefore, have access to the Members-Only section of the Mayflower Store on the <a href="https://themayflowersociety.org" target="_blank" rel="noopener">GSMD website</a> — you can purchase bronze grave marker medallions for yourself and for your direct-line Mayflower ancestors. There is one marker for those who are or were members of the Society, and one for those who were not members.</p>
+                <p>While you are still a living and breathing member, and therefore have access to the Members-Only section of the Mayflower Store on the <a href="https://themayflowersociety.org" target="_blank" rel="noopener">GSMD website</a>, you can purchase bronze grave marker medallions for yourself and for your direct-line Mayflower ancestors. There is one marker for those who are or were members of the Society, and one for those who were not members.</p>
                 <ul>
-                    <li>You cannot purchase these markers for your children, cousins, siblings, aunts, or uncles — only for yourself and your ancestors who directly carry your Mayflower lineage(s) (and not their spouses, unless the spouse is also a direct-line ancestor to a Mayflower passenger).</li>
+                    <li>You cannot purchase these markers for your children, cousins, siblings, aunts, or uncles: only for yourself and your ancestors who directly carry your Mayflower lineage(s) (and not their spouses, unless the spouse is also a direct-line ancestor to a Mayflower passenger).</li>
                     <li>Only a current member of the Mayflower Society can make these purchases.</li>
                     <li>These markers should be attached to your tombstone or grave marker by a professional.</li>
                 </ul>
                 <p>Consider including a bequest to SMDAL in the final distribution of your estate. The Society of Mayflower Descendants in the State of Alabama (SMDAL) is a 501(c)3 nonprofit organization, Federal Tax ID# 63-1225350. Your attorney can help you design an estate plan that protects your family, preserves your property, and benefits SMDAL. You can bequeath a percentage of your estate or a specified dollar amount to SMDAL. After signing a new will that names SMDAL as a beneficiary, please be sure to inform us.</p>
+
+                <div class="top12-thankyou">
+                    <img src="../images/Kevin-okay.jpg" alt="Kevin, SMDAL Governor, giving an OK sign">
+                    <p><strong>Thank you!</strong> Taking time to plan ahead is a real gift to the people who love you, and it helps SMDAL properly honor your membership when the time comes. Questions about the Upon My Death form or anything else here? <a href="../contact_submit.html">Contact us</a>. We're here to help.</p>
+                </div>
 
                 <img src="../images/Mayflower_separator_line.png" alt="" class="top12-item-separator">
             </div>
@@ -362,12 +430,17 @@
                 <h3>7. Supplemental Lineages</h3>
                 <p>Once you've proven your lineal descent from an ancestor who arrived on the Mayflower, what if you find you have more Mayflower passengers in your direct lineal ancestry?</p>
                 <p>Submitting an application documenting your descent from any additional Mayflower passenger is referred to as a "Supplemental Lineage Application." The process is very similar to an original application; however, depending on your relationship to any additional passenger ancestors, you may need less research and documentation.</p>
-                <p>For example, if the ancestor on your original application was John Alden, you are eligible to submit a Supplemental Application for Priscilla Mullins, his wife, and William Mullins, her father — congratulations!</p>
+                <p>For example, if the ancestor on your original application was John Alden, you are eligible to submit a Supplemental Application for Priscilla Mullins, his wife, and William Mullins, her father. Congratulations!</p>
                 <p>Perhaps you descend multiple times from the same passenger ancestor? Because The Mayflower Society is a lineage society, you may submit a Supplemental Application for each path from which you can prove your descent.</p>
                 <p>If you know the lineal path to another Mayflower passenger ancestor, you can submit it for evaluation by the SMDAL Historian. Just fill out and submit the <a href="lineage-form.html">Supplemental Lineage Review Form</a> in the Members Portal area of this website.</p>
-                <p>The cost for any supplemental lineage is the same as the cost for the first one you submitted in order to gain membership in The Mayflower Society. You do not get "another" membership — you are getting additional lineage certifications. The current price for each Supplemental Lineage Application that SMDAL sends to Plymouth is a one-time payment of $200.00. This fee can be paid with a credit card using our Pilgrim Payment Portal at <a href="http://PaySMDAL.today" target="_blank" rel="noopener">PaySMDAL.today</a>, or by sending a check in the mail — if you intend to mail a check, please contact us at <a href="mailto:SMDAL.Info@gmail.com">SMDAL.Info@gmail.com</a> so we can provide you with a current postal address.</p>
+                <p>The cost for any supplemental lineage is the same as the cost for the first one you submitted in order to gain membership in The Mayflower Society. You do not get "another" membership. You are getting additional lineage certifications. The current price for each Supplemental Lineage Application that SMDAL sends to Plymouth is a one-time payment of $200.00. This fee can be paid with a credit card using our Pilgrim Payment Portal at <a href="http://PaySMDAL.today" target="_blank" rel="noopener">PaySMDAL.today</a>, or by sending a check in the mail. If you intend to mail a check, please contact us at <a href="mailto:SMDAL.Info@gmail.com">SMDAL.Info@gmail.com</a> so we can provide you with a current postal address.</p>
                 <p><strong>Please do not pay this fee until the SMDAL Historian directs you to do so</strong>, which will be when all needed research and documentation has been satisfied.</p>
                 <p>Once the Society receives your payment, the SMDAL Historian will be notified to submit your Supplemental Lineage Application to Plymouth for certification. You will receive another certificate in the mail for each lineage you get certified. Your annual dues or your Life Member status are not affected by having multiple Mayflower-certified lineages. All your certified lineages to Mayflower passengers are listed as part of your profile in the SMDAL Membership Directory.</p>
+
+                <div class="top12-thankyou">
+                    <img src="../images/Kevin-okay.jpg" alt="Kevin, SMDAL Governor, giving an OK sign">
+                    <p><strong>Thank you!</strong> We love seeing members explore an additional Mayflower lineage. If you have questions about the process or the Supplemental Lineage Review Form, <a href="../contact_submit.html">contact us</a>. We're happy to help.</p>
+                </div>
 
                 <img src="../images/Mayflower_separator_line.png" alt="" class="top12-item-separator">
             </div>
@@ -403,63 +476,71 @@
 
                 <h4>GSMD National Events</h4>
                 <p>The General Congress is held every three years, always in Plymouth. The General Board of Assistants (GBoA) meets in the intervening years, with the location moving around the country.</p>
-                <p><strong>Congress and GBoA Schedule</strong></p>
-                <ul>
-                    <li>Congress 2026 – Plymouth: September 11–16, 2026</li>
-                    <li>GBoA 2027 – Atlanta, Georgia: September 9–12, 2027</li>
-                    <li>GBoA 2028 – California: September 7–10, 2028</li>
-                    <li>Congress 2029 – Plymouth: September 7–11, 2029</li>
-                    <li>GBoA 2030 – Virginia: September 5–8, 2030</li>
-                </ul>
+                <div class="top12-schedule-box">
+                    <p class="top12-schedule-label">Congress and GBoA Schedule</p>
+                    <ul>
+                        <li>Congress 2026 – Plymouth: September 11–16, 2026</li>
+                        <li>GBoA 2027 – Atlanta, Georgia: September 9–12, 2027</li>
+                        <li>GBoA 2028 – California: September 7–10, 2028</li>
+                        <li>Congress 2029 – Plymouth: September 7–11, 2029</li>
+                        <li>GBoA 2030 – Virginia: September 5–8, 2030</li>
+                    </ul>
+                </div>
 
                 <h4>SMDAL State Events</h4>
-                <p><strong>"We Will Plymouth Rock You!" Spring Conference Weekend / Alabama Destinations Event</strong> — a Friday night welcome dinner or reception, Saturday's SMDAL Annual Business Meeting (with Board of Assistants elections every 3rd year), a Mayflower Cousins Luncheon, a featured speaker presentation, and fun group activities at our destination location for all attendees. Plan a vacation week or weekend in the area around our schedule — bring all your Mayflower-descended family and friends (plus spouses or partners)! We are exploring Alabama's destinations.</p>
-                <p><strong>Spring Conference Schedule</strong></p>
-                <ul>
-                    <li>2026 – Gulf Coast Colony (National Maritime Museum of the Gulf in Mobile) — Done</li>
-                    <li>2027 – Tennessee Valley Colony (Huntsville Space and Rocket Center) — GSMD Governor General visit, BoA elections and installation</li>
-                    <li>2028 – Cahaba River Colony (Vulcan Park in Birmingham)</li>
-                    <li>2029 – Capital Colony (The Alabama Shakespeare Festival Campus in Montgomery)</li>
-                    <li>2030 – Gulf Coast Colony (OWA in Foley or the Gulf State Park Resort in Gulf Shores) — GSMD Governor General visit, BoA elections and installation</li>
-                    <li>2031 – Tennessee Valley Colony (Fort Payne?)</li>
-                    <li>2032 – Cahaba River Colony (Tuscaloosa?)</li>
-                    <li>2033 – Capital Colony (Alabama Department of Archives and History in Montgomery) — GSMD Governor General visit, BoA elections and installation</li>
-                    <li>2034 – Gulf Coast Colony (Oakleigh Historic Mansion in Mobile)</li>
-                    <li>2035 – Tennessee Valley Colony (Muscle Shoals?)</li>
-                    <li>2036 – Cahaba River Colony — GSMD Governor General visit, BoA elections and installation</li>
-                </ul>
-                <p><strong>Compact Day Commemoration Event / SMDAL Anniversary Celebration</strong> — a Friday night welcome dinner or reception, Saturday's Members Business Meeting, a Mayflower Cousins Luncheon with anniversary cake for dessert, and a featured speaker presentation. A bit more formal than our Spring event — dress up!</p>
-                <p><strong>Compact Day Commemoration Schedule</strong></p>
-                <ul>
-                    <li>2026 – Cahaba River Colony (Nov 21 @ Mountain Brook Country Club) — 74th Anniversary</li>
-                    <li>2027 – Capital Colony — 75th Anniversary</li>
-                    <li>2028 – Gulf Coast Colony — 76th Anniversary</li>
-                    <li>2029 – Tennessee Valley Colony (The Ledges Golf Club) — 77th Anniversary</li>
-                    <li>2030 – Cahaba River Colony — 78th Anniversary</li>
-                    <li>2031 – Capital Colony — 79th Anniversary</li>
-                    <li>2032 – Gulf Coast Colony — 80th Anniversary</li>
-                    <li>2033 – Tennessee Valley Colony — 81st Anniversary</li>
-                    <li>2034 – Cahaba River Colony — 82nd Anniversary</li>
-                    <li>2035 – Capital Colony — 83rd Anniversary</li>
-                    <li>2036 – Gulf Coast Colony — 84th Anniversary</li>
-                </ul>
+                <p><strong>"We Will Plymouth Rock You!" Spring Conference Weekend / Alabama Destinations Event:</strong> a Friday night welcome dinner or reception, Saturday's SMDAL Annual Business Meeting (with Board of Assistants elections every 3rd year), a Mayflower Cousins Luncheon, a featured speaker presentation, and fun group activities at our destination location for all attendees. Plan a vacation week or weekend in the area around our schedule. Bring all your Mayflower-descended family and friends (plus spouses or partners)! We are exploring Alabama's destinations.</p>
+                <div class="top12-schedule-box">
+                    <p class="top12-schedule-label">Spring Conference Schedule</p>
+                    <ul>
+                        <li>2026 – Gulf Coast Colony (National Maritime Museum of the Gulf in Mobile), Done</li>
+                        <li>2027 – Tennessee Valley Colony (Huntsville Space and Rocket Center); GSMD Governor General visit, BoA elections and installation</li>
+                        <li>2028 – Cahaba River Colony (Vulcan Park in Birmingham)</li>
+                        <li>2029 – Capital Colony (The Alabama Shakespeare Festival Campus in Montgomery)</li>
+                        <li>2030 – Gulf Coast Colony (OWA in Foley or the Gulf State Park Resort in Gulf Shores); GSMD Governor General visit, BoA elections and installation</li>
+                        <li>2031 – Tennessee Valley Colony (Fort Payne?)</li>
+                        <li>2032 – Cahaba River Colony (Tuscaloosa?)</li>
+                        <li>2033 – Capital Colony (Alabama Department of Archives and History in Montgomery); GSMD Governor General visit, BoA elections and installation</li>
+                        <li>2034 – Gulf Coast Colony (Oakleigh Historic Mansion in Mobile)</li>
+                        <li>2035 – Tennessee Valley Colony (Muscle Shoals?)</li>
+                        <li>2036 – Cahaba River Colony; GSMD Governor General visit, BoA elections and installation</li>
+                    </ul>
+                </div>
+                <p><strong>Compact Day Commemoration Event / SMDAL Anniversary Celebration:</strong> a Friday night welcome dinner or reception, Saturday's Members Business Meeting, a Mayflower Cousins Luncheon with anniversary cake for dessert, and a featured speaker presentation. A bit more formal than our Spring event. Dress up!</p>
+                <div class="top12-schedule-box">
+                    <p class="top12-schedule-label">Compact Day Commemoration Schedule</p>
+                    <ul>
+                        <li>2026 – Cahaba River Colony (Nov 21 @ Mountain Brook Country Club), 74th Anniversary</li>
+                        <li>2027 – Capital Colony, 75th Anniversary</li>
+                        <li>2028 – Gulf Coast Colony, 76th Anniversary</li>
+                        <li>2029 – Tennessee Valley Colony (The Ledges Golf Club), 77th Anniversary</li>
+                        <li>2030 – Cahaba River Colony, 78th Anniversary</li>
+                        <li>2031 – Capital Colony, 79th Anniversary</li>
+                        <li>2032 – Gulf Coast Colony, 80th Anniversary</li>
+                        <li>2033 – Tennessee Valley Colony, 81st Anniversary</li>
+                        <li>2034 – Cahaba River Colony, 82nd Anniversary</li>
+                        <li>2035 – Capital Colony, 83rd Anniversary</li>
+                        <li>2036 – Gulf Coast Colony, 84th Anniversary</li>
+                    </ul>
+                </div>
                 <p>The effect of this schedule is that every 2 years, each Colony will host one or the other of the two State Events.</p>
 
                 <h4>Colony Events</h4>
-                <p><strong>Mayflower Families Reunion / Colony Anniversary Party</strong></p>
-                <ul>
-                    <li>2026 – Capital Colony (Apr 7) and Tennessee Valley Colony (Oct 21)</li>
-                    <li>2027 – Cahaba River Colony (Feb 18) and Gulf Coast Colony (Apr 26)</li>
-                    <li>2028 – Capital Colony (Apr 7) and Tennessee Valley Colony (Oct 21)</li>
-                    <li>2029 – Cahaba River Colony (Feb 18) and Gulf Coast Colony (Apr 26)</li>
-                    <li>2030 – Capital Colony (Apr 7) and Tennessee Valley Colony (Oct 21)</li>
-                    <li>2031 – Cahaba River Colony (Feb 18) and Gulf Coast Colony (Apr 26)</li>
-                    <li>2032 – Capital Colony (Apr 7) and Tennessee Valley Colony (Oct 21)</li>
-                    <li>2033 – Cahaba River Colony (Feb 18) and Gulf Coast Colony (Apr 26)</li>
-                    <li>2034 – Capital Colony (Apr 7) and Tennessee Valley Colony (Oct 21)</li>
-                    <li>2035 – Cahaba River Colony (Feb 18) and Gulf Coast Colony (Apr 26)</li>
-                    <li>2036 – Capital Colony (Apr 7) and Tennessee Valley Colony (Oct 21)</li>
-                </ul>
+                <div class="top12-schedule-box">
+                    <p class="top12-schedule-label">Mayflower Families Reunion / Colony Anniversary Party</p>
+                    <ul>
+                        <li>2026 – Capital Colony (Apr 7) and Tennessee Valley Colony (Oct 21)</li>
+                        <li>2027 – Cahaba River Colony (Feb 18) and Gulf Coast Colony (Apr 26)</li>
+                        <li>2028 – Capital Colony (Apr 7) and Tennessee Valley Colony (Oct 21)</li>
+                        <li>2029 – Cahaba River Colony (Feb 18) and Gulf Coast Colony (Apr 26)</li>
+                        <li>2030 – Capital Colony (Apr 7) and Tennessee Valley Colony (Oct 21)</li>
+                        <li>2031 – Cahaba River Colony (Feb 18) and Gulf Coast Colony (Apr 26)</li>
+                        <li>2032 – Capital Colony (Apr 7) and Tennessee Valley Colony (Oct 21)</li>
+                        <li>2033 – Cahaba River Colony (Feb 18) and Gulf Coast Colony (Apr 26)</li>
+                        <li>2034 – Capital Colony (Apr 7) and Tennessee Valley Colony (Oct 21)</li>
+                        <li>2035 – Cahaba River Colony (Feb 18) and Gulf Coast Colony (Apr 26)</li>
+                        <li>2036 – Capital Colony (Apr 7) and Tennessee Valley Colony (Oct 21)</li>
+                    </ul>
+                </div>
                 <p>The effect of this schedule is that in the years a Colony does not host a state event, it will hold a Mayflower Families Reunion in that Colony's anniversary month. The dates in parentheses are that Colony's founding date, not the date of their party.</p>
                 <p>All events will be publicized on the <a href="../events.html">Events</a> page of this website.</p>
 
