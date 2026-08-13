@@ -64,8 +64,13 @@ document.addEventListener('DOMContentLoaded', function() {
             const target = document.querySelector(href);
             if (target) {
                 const headerHeight = header.offsetHeight;
-                const targetPosition = target.offsetTop - headerHeight - 20;
-                
+                // Use getBoundingClientRect() + scrollY rather than offsetTop.
+                // offsetTop is relative to the nearest positioned ancestor, not
+                // the page, so it gives the wrong position on pages where the
+                // target sits inside a `position: relative` container (e.g.
+                // .members-section on the Members Portal pages).
+                const targetPosition = target.getBoundingClientRect().top + window.scrollY - headerHeight - 20;
+
                 window.scrollTo({
                     top: targetPosition,
                     behavior: 'smooth'
