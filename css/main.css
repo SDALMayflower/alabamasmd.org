@@ -224,6 +224,40 @@ nav img {
     }
 }
 
+/* ── Return to Main Site Button (members-only pages) ─────────── */
+.main-site-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: var(--gold);
+    color: var(--navy-blue) !important;
+    font-weight: 600;
+    padding: 0.4rem 0.9rem;
+    border-radius: 999px;
+    animation: mainSitePulse 2s ease-out infinite;
+}
+
+.main-site-btn:hover {
+    color: var(--navy-blue) !important;
+    transform: none !important;
+}
+
+.main-site-btn:hover::before {
+    display: none;
+}
+
+@keyframes mainSitePulse {
+    0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.55); }
+    70% { box-shadow: 0 0 0 8px rgba(212, 175, 55, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .main-site-btn {
+        animation: none;
+    }
+}
+
 /* ── Features Dropdown ──────────────────────────────────────── */
 .has-dropdown {
     position: relative;
