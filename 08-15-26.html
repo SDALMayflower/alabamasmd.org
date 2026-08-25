@@ -59,6 +59,50 @@
         .placeholder-card strong {
             color: var(--navy-blue);
         }
+
+        /* ── Chyron caption (test) ───────────────────────────────── */
+        .chyron {
+            overflow: hidden;
+            white-space: nowrap;
+            background: var(--navy-blue);
+            border-radius: 0 0 12px 12px;
+            padding: 0.55rem 0;
+        }
+
+        .chyron-track {
+            display: inline-block;
+            animation: chyron-scroll 16s linear infinite;
+        }
+
+        .chyron-track span {
+            color: var(--gold);
+            font-weight: 600;
+            font-size: 0.92rem;
+            letter-spacing: 0.02em;
+            padding-right: 3rem;
+        }
+
+        @keyframes chyron-scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .chyron-track {
+                animation: none;
+            }
+            .chyron {
+                white-space: normal;
+                text-align: center;
+                padding: 0.75rem 1rem;
+            }
+            .chyron-track span:last-child {
+                display: none;
+            }
+            .chyron-track span {
+                padding-right: 0;
+            }
+        }
     </style>
 </head>
 <body>
@@ -124,10 +168,20 @@
 
         <div style="max-width: 900px; margin: 2.5rem auto 0; padding: 0 1rem; display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center;">
             <div style="flex: 1 1 380px; max-width: 420px;">
-                <img src="images/2026-08-15_Governors_Luncheon_1.jpg" alt="L to R: Susan Hobson, Rich Hobson, Alan Davis, Kevin Sellew, Janet Gardner, Karen Hamilton" style="width: 100%; height: auto; border-radius: 14px; box-shadow: 0 8px 24px rgba(0,0,0,0.15); border: 2px solid var(--gold);">
+                <img src="images/2026-08-15_Governors_Luncheon_1.jpg" alt="L to R: Susan Hobson, Rich Hobson, Alan Davis, Kevin Sellew, Janet Gardner, Karen Hamilton" style="width: 100%; height: auto; border-radius: 14px 14px 0 0; box-shadow: 0 8px 24px rgba(0,0,0,0.15); border: 2px solid var(--gold); border-bottom: none; display: block;">
+                <div class="chyron">
+                    <div class="chyron-track">
+                        <span>L&nbsp;TO&nbsp;R: SUSAN HOBSON &bull; RICH HOBSON &bull; ALAN DAVIS &bull; KEVIN SELLEW &bull; JANET GARDNER &bull; KAREN HAMILTON</span><span>L&nbsp;TO&nbsp;R: SUSAN HOBSON &bull; RICH HOBSON &bull; ALAN DAVIS &bull; KEVIN SELLEW &bull; JANET GARDNER &bull; KAREN HAMILTON</span>
+                    </div>
+                </div>
             </div>
             <div style="flex: 1 1 380px; max-width: 420px;">
-                <img src="images/2026-08-15_Governors_Luncheon_2.jpg" alt="Four SMDAL Governors: Former Governor Rich Hobson, Former Governor Mary Helen Mahan, Governor Kevin Sellew, Former Governor and Deputy Governor General Alan Davis" style="width: 100%; height: auto; border-radius: 14px; box-shadow: 0 8px 24px rgba(0,0,0,0.15); border: 2px solid var(--gold);">
+                <img src="images/2026-08-15_Governors_Luncheon_2.jpg" alt="Four SMDAL Governors: Former Governor Rich Hobson, Former Governor Mary Helen Mahan, Governor Kevin Sellew, Former Governor and Deputy Governor General Alan Davis" style="width: 100%; height: auto; border-radius: 14px 14px 0 0; box-shadow: 0 8px 24px rgba(0,0,0,0.15); border: 2px solid var(--gold); border-bottom: none; display: block;">
+                <div class="chyron">
+                    <div class="chyron-track">
+                        <span>FOUR SMDAL GOVERNORS: FG RICH HOBSON &bull; FG MARY HELEN MAHAN &bull; GOV KEVIN SELLEW &bull; FG/DGG ALAN DAVIS</span><span>FOUR SMDAL GOVERNORS: FG RICH HOBSON &bull; FG MARY HELEN MAHAN &bull; GOV KEVIN SELLEW &bull; FG/DGG ALAN DAVIS</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
