@@ -1,1 +1,15 @@
-.tmp.driveupload/ 
+.tmp.driveupload/
+
+# Internal working files - never publish these to the live site
+xx workspace only xx/
+documemts/
+CLAUDE.md
+Barrett-Writing-Style.md
+SDAL_MAYFLOWER_Session_Handoff.md
+SMDAL_Website_Technical_Archive_Note-Windows11.md
+SMDAL TOP 12 LIST OF THINGS ALL MEMBERS NEED TO KNOW - content sections 1, 2, 3 and 12.docx
+Supplemental Lineage Applications.docx
+sync.ffs_db
+image.png
+index-hero-seal-mockup-220px.html
+index-hero-seal-mockup-330px.html
