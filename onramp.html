@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8R17FZY7H9"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-8R17FZY7H9');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Research On-Ramp: How to begin exploring, documenting, and proving a direct lineage connection to the 1620 Mayflower passengers.">
+    <title>Research On-Ramp | Alabama Society of Mayflower Descendants</title>
+    <link rel="canonical" href="https://alabamasmd.org/onramp.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Alabama Society of Mayflower Descendants">
+    <meta property="og:title" content="Research On-Ramp | Alabama Society of Mayflower Descendants">
+    <meta property="og:description" content="Begin your Mayflower lineage research with clear steps, evidence standards, and guidance.">
+    <meta property="og:url" content="https://alabamasmd.org/onramp.html">
+    <meta property="og:image" content="https://alabamasmd.org/images/OnRamp16-9.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Research On-Ramp | Alabama Society of Mayflower Descendants">
+    <meta name="twitter:description" content="Begin your Mayflower lineage research with clear steps, evidence standards, and guidance.">
+    <meta name="twitter:image" content="https://alabamasmd.org/images/OnRamp16-9.jpg">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/logo-fix.css">
+    <link rel="icon" type="image/png" href="images/LOGO001.png?v=3">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ultra&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@600;700;900&family=Inter:wght@300;400;500;600;700&display=swap');
+
+        /* ── On-Ramp Hero with Left-Aligned Copy ──────────────────── */
+        .onramp-hero {
+            position: relative;
+            background: linear-gradient(90deg, rgba(10, 37, 64, 0.92) 0%, rgba(10, 37, 64, 0.75) 45%, rgba(10, 37, 64, 0.2) 100%),
+                        url('images/OnRamp16-9.jpg');
+            background-size: cover;
+            background-position: center right;
+            padding: 9rem 2rem 5rem;
+            margin-top: 70px;
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-text-wrap {
+            max-width: 650px;
+            color: white;
+            text-align: left;
+        }
+
+        .onramp-hero h1 {
+            font-size: clamp(2.3rem, 5vw, 4.2rem);
+            margin-bottom: 1rem;
+            font-family: 'Ultra', Georgia, serif;
+            font-weight: 400;
+            letter-spacing: 1px;
+            color: var(--gold);
+            background: linear-gradient(180deg, #f6e7a8 0%, #d4af37 45%, #a3791f 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow:
+                -1px -1px 0 rgba(255, 244, 200, 0.55),
+                1px 1px 1px rgba(60, 30, 0, 0.65),
+                2px 4px 10px rgba(0, 0, 0, 0.55);
+            line-height: 1.15;
+        }
+
+        .onramp-hero .subtitle {
+            font-size: clamp(1.15rem, 2.2vw, 1.45rem);
+            color: var(--cream);
+            font-weight: 400;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .onramp-hero .intro-copy {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        /* ── Article Layout & Typography ─────────────────────────── */
+        .onramp-article {
+            padding: 3rem 2rem 5rem;
+            background: white;
+        }
+
+        .article-content {
+            max-width: 950px;
+            margin: 0 auto;
+            line-height: 1.8;
+            font-size: 1.12rem;
+            color: #333;
+        }
+
+        .article-content h2 {
+            color: var(--navy-blue);
+            font-size: 1.85rem;
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--gold);
+            padding-bottom: 0.4rem;
+            display: inline-block;
+        }
+
+        .article-content p {
+            margin-bottom: 1.3rem;
+        }
+
+        /* ── Boundary Callout Box ─────────────────────────────────── */
+        .boundary-box {
+            background: var(--light-gray);
+            border-left: 5px solid var(--gold);
+            border-radius: 8px;
+            padding: 1.75rem 2rem;
+            margin: 2rem 0 3rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .boundary-box h3 {
+            font-size: 1.25rem;
+            color: var(--navy-blue);
+            margin-bottom: 0.5rem;
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+        }
+
+        .boundary-box p {
+            margin: 0;
+            font-size: 1.05rem;
+            color: var(--slate);
+        }
+
+        /* ── Method Step Cards ───────────────────────────────────── */
+        .method-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .method-card {
+            background: var(--light-gray);
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .method-number {
+            display: inline-block;
+            width: 38px;
+            height: 38px;
+            line-height: 38px;
+            background: var(--navy-blue);
+            color: var(--gold);
+            font-weight: 700;
+            border-radius: 50%;
+            margin-bottom: 0.75rem;
+            font-size: 1.1rem;
+        }
+
+        .method-card h4 {
+            font-size: 1.1rem;
+            color: var(--navy-blue);
+            margin-bottom: 0.5rem;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+        }
+
+        .method-card p {
+            font-size: 0.92rem;
+            color: var(--slate);
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        /* ── Comparison Table ────────────────────────────────────── */
+        .comparison-wrap {
+            margin: 2rem 0 3rem;
+            overflow-x: auto;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+        }
+
+        .comparison-table th {
+            padding: 1rem 1.25rem;
+            font-size: 1rem;
+            font-weight: 700;
+            text-align: left;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .comparison-table th.col-clue {
+            background: #e2e8f0;
+            color: var(--navy-blue);
+            width: 45%;
+        }
+
+        .comparison-table th.col-proof {
+            background: var(--navy-blue);
+            color: white;
+            width: 55%;
+        }
+
+        .comparison-table td {
+            padding: 1rem 1.25rem;
+            font-size: 0.98rem;
+            border-bottom: 1px solid #edf2f7;
+            vertical-align: top;
+        }
+
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .comparison-table td.clue-cell {
+            background: #f8fafc;
+            color: var(--slate);
+        }
+
+        .comparison-table td.proof-cell {
+            background: white;
+            color: #1a202c;
+            font-weight: 500;
+        }
+
+        /* ── FAQ Accordion ───────────────────────────────────────── */
+        .faq-accordion {
+            margin: 2rem 0 3.5rem;
+        }
+
+        .faq-item {
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            background: white;
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 1.2rem 1.5rem;
+            background: var(--light-gray);
+            border: none;
+            text-align: left;
+            font-family: 'Inter', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--navy-blue);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.2s ease;
+        }
+
+        .faq-question:hover {
+            background: #eef2f6;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.3rem;
+            font-weight: 400;
+            color: var(--bronze);
+            transition: transform 0.2s ease;
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '−';
+            color: var(--navy-blue);
+        }
+
+        .faq-answer {
+            display: none;
+            padding: 1.25rem 1.5rem;
+            background: white;
+            border-top: 1px solid #e2e8f0;
+            font-size: 1rem;
+            color: var(--slate);
+            line-height: 1.7;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        /* ── Triage Pathways (Final Panel) ───────────────────────── */
+        .triage-section {
+            margin-top: 4rem;
+            padding: 3rem 2rem;
+            background: linear-gradient(135deg, var(--light-gray), var(--cream));
+            border-radius: 16px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .triage-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .triage-header h3 {
+            font-size: 2rem;
+            color: var(--navy-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        .triage-header p {
+            color: var(--slate);
+            font-size: 1.1rem;
+            margin: 0;
+        }
+
+        .triage-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 2rem;
+        }
+
+        .triage-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2.2rem 1.75rem;
+            box-shadow: 0 6px 25px rgba(0,0,0,0.06);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: center;
+            border-top: 4px solid var(--navy-blue);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .triage-card.highlight {
+            border-top: 4px solid var(--gold);
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
+        }
+
+        .triage-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.12);
+        }
+
+        .triage-card h4 {
+            font-size: 1.35rem;
+            color: var(--navy-blue);
+            margin-bottom: 0.75rem;
+        }
+
+        .triage-card p {
+            font-size: 0.98rem;
+            color: var(--slate);
+            line-height: 1.6;
+            margin-bottom: 1.75rem;
+            flex-grow: 1;
+        }
+
+        .triage-card .btn {
+            width: 100%;
+            justify-content: center;
+            font-size: 0.95rem;
+            padding: 0.9rem 1.2rem;
+        }
+
+        @media (max-width: 768px) {
+            .onramp-hero {
+                padding: 7rem 1.5rem 4rem;
+                background-position: center;
+            }
+            .hero-text-wrap {
+                max-width: 100%;
+                text-align: center;
+            }
+            .article-content h2 {
+                font-size: 1.5rem;
+            }
+            .triage-section {
+                padding: 2rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header id="mainHeader">
+        <nav>
+            <a href="index.html" class="logo">
+                <img src="images/LOGO002.png" alt="Alabama Mayflower Society" class="logo-img">
+            </a>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="our-history.html">Our History</a></li>
+                <li><a href="membership.html">Membership</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="useful-links.html">Useful Links</a></li>
+                <li><a href="members-only.html">Member Portal</a></li>
+                <li class="has-dropdown">
+                    <a href="MayflowerSaga.html" style="color: var(--gold);">Features</a>
+                    <ul class="dropdown">
+                        <li><a href="onramp.html" style="color: var(--gold); font-weight: 600;">Research On-Ramp</a></li>
+                        <li><a href="PassengerPortal.html">The Passengers: Narrative Directory</a></li>
+                        <li><a href="MayflowerSaga.html">The Mayflower Saga</a></li>
+                        <li><a href="compact.html">The Mayflower Compact</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact_submit.html">Contact Us</a></li>
+                <li><a href="support.html"><img src="images/LOGO001.png" alt="Mayflower Society" style="height: 55px; width: auto; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3)); background: none;"></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="onramp-hero">
+        <div class="container">
+            <div class="hero-text-wrap">
+                <h1>Research On-Ramp</h1>
+                <p class="subtitle">Think you may have a Mayflower connection? Begin where you stand, build backward one generation at a time, and let evidence guide the journey.</p>
+                <p class="intro-copy">Many people begin with a treasured family tradition, a familiar surname, or an online tree. That spark of curiosity is where the journey starts, but proving a lineage requires stepping aboard a methodical path of documented parent-to-child links.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="separator-container page-separator">
+        <img src="images/Mayflower_separator_line.png" alt="Separator" class="mayflower-separator">
+    </div>
+
+    <article class="onramp-article">
+        <div class="article-content">
+
+            <div class="boundary-box">
+                <h3>Orientation & Guidance Notice</h3>
+                <p>This page provides educational guidance for researchers exploring a potential Mayflower connection. It does not determine membership eligibility and is not an application for membership. Official lineage verification requires direct documentary evidence for every generation, formally reviewed through the a Society Historian and certified by the General Society in Plymouth.</p>
+            </div>
+
+            <section class="content-section">
+                <h2>1. Begin Where You Stand</h2>
+                <p>The single most common mistake in Mayflower genealogy is starting at 1620 and trying to work forward. With hundreds of thousands of living descendants, working downward quickly turns into an unmanageable thicket.</p>
+                <p>Instead, <strong>work strictly from the present backward</strong>. Document yourself first, then your parents, your grandparents, and earlier ancestors generation by generation. Never jump over a missing generation or assume a link based solely on a matching surname.</p>
+
+                <div class="method-grid">
+                    <div class="method-card">
+                        <span class="method-number">1</span>
+                        <h4>Identify</h4>
+                        <p>Full names, birth dates, death dates, and marriage dates for each ancestor.</p>
+                    </div>
+                    <div class="method-card">
+                        <span class="method-number">2</span>
+                        <h4>Locate</h4>
+                        <p>Exact towns and counties where vital events took place.</p>
+                    </div>
+                    <div class="method-card">
+                        <span class="method-number">3</span>
+                        <h4>Document</h4>
+                        <p>Primary vital records, probate files, land deeds, and church registers.</p>
+                    </div>
+                    <div class="method-card">
+                        <span class="method-number">4</span>
+                        <h4>Link</h4>
+                        <p>Explicit evidence connecting child to biological parents for each step.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2>2. Distinguish Clues from Proof</h2>
+                <p>Genealogical clues are valuable because they suggest where to look next, but clues alone cannot establish membership. Understanding the difference between a research lead and primary proof saves hours of frustration.</p>
+
+                <div class="comparison-wrap">
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th class="col-clue">Useful Clues (Starting Points)</th>
+                                <th class="col-proof">Acceptable Proof (Documentation)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="clue-cell">A family story or tradition passed down orally</td>
+                                <td class="proof-cell">Certified birth, marriage, and death records naming parents</td>
+                            </tr>
+		            <tr>
+                               <td class="clue-cell">Autosomal DNA matches, shared cM estimates, or genetic cousin clusters</td>
+                               <td class="proof-cell">Contemporaneous documentary paper trail proving direct parent-to-child                                                    biological descent</td>
+            </tr>
+                            <tr>
+                                <td class="clue-cell">Unverified trees on Ancestry, FamilySearch, MyHeritage, 23andMe, or WikiTree, etc.</td>
+                                <td class="proof-cell">Contemporaneous wills, probate distributions, and land deeds</td>
+                            </tr>
+                            <tr>
+                                <td class="clue-cell">A shared surname (e.g., Bradford, Brewster, Cooke, Warren)</td>
+                                <td class="proof-cell">Church baptisms, marriage registers, and town clerk record books</td>
+                            </tr>
+                            <tr>
+                                <td class="clue-cell">Undocumented family Bibles or unsourced county histories</td>
+                                <td class="proof-cell">Federal/state census records paired with direct parentage documentation</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2>3. Bridging the Middle Generations</h2>
+                <p>For most modern applicants, proving the line down from 1620 is already handled for the first five generations through the published scholarship of the General Society (known as the <em>Silver Books</em>). Proving your recent three or four generations is straightforward using modern civil vital records.</p>
+                <p>The real challenge of Mayflower research almost always lies in the <strong>middle generations (Generations 5 through 9)</strong>, spanning the late 1700s and 1800s as families migrated westward. This is where you will focus your search on wills, deeds, tax records, and court documents to connect your 19th-century ancestors back to known colonial lines.</p>
+                <p>To explore the original families and their early descendants, you can review our <a href="PassengerPortal.html" style="color: var(--royal-blue); font-weight: 600;">Passenger Narrative Directory</a>.</p>
+            </section>
+
+            <section class="content-section">
+                <h2>4. Frequently Asked Questions</h2>
+                <div class="faq-accordion">
+                    <div class="faq-item">
+                        <button class="faq-question" type="button">Does an autosomal DNA test (like AncestryDNA or 23andMe) prove Mayflower descent?</button>
+                        <div class="faq-answer">
+                            No. While DNA testing is an extraordinary tool for finding genetic cousins and confirming recent parentage, the General Society requires paper-trail evidence (vital, land, probate, and church records) linking every parent and child back to 1620.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" type="button">What is the Mayflower Lineage Match service?</button>
+                        <div class="faq-answer">
+                            Offered directly by the General Society in Plymouth, the Lineage Match service compares your proposed lineage against previously verified and approved member applications. It tells you which portion of your line is already documented in Plymouth's files and where your documentation needs to begin.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" type="button">Can I qualify through a Mayflower crew member?</button>
+                        <div class="faq-answer">
+                            No. Membership eligibility is strictly limited to direct lineal descendants of the passengers aboard the Mayflower voyage that terminated at Plymouth in December 1620.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" type="button">When is the right time to contact the State Historian?</button>
+                        <div class="faq-answer">
+                            The best time to submit a Preliminary Lineage Review is after you have documented your recent generations (yourself, parents, grandparents) and have identified a plausible candidate line connecting into a known Mayflower descendant family.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ── Triage / Self-Sort Action Panel ───────────────── -->
+            <div class="triage-section">
+                <div class="triage-header">
+                    <h3>Choose Your Next Step</h3>
+                    <p>Select the pathway that matches where you currently are in your research.</p>
+                </div>
+                <div class="triage-grid">
+                    <div class="triage-card">
+                        <h4>Just Exploring</h4>
+                        <p>You are curious about the voyage, the passengers, and the families who established Plymouth Colony.</p>
+                        <a href="PassengerPortal.html" class="btn btn-secondary" style="background: var(--navy-blue); color: white;">Explore Passenger Directory</a>
+                    </div>
+
+                    <div class="triage-card">
+                        <h4>Have a Lead</h4>
+                        <p>You have an unverified line or tree and want to see if your line matches files already approved in Plymouth.</p>
+                        <a href="https://themayflowersociety.org/genealogy/lineage-match/" target="_blank" rel="noopener" class="btn btn-secondary" style="background: var(--royal-blue); color: white;">GSMD Lineage Match ↗</a>
+                    </div>
+
+                    <div class="triage-card highlight">
+                        <h4>Ready for Review</h4>
+                        <p>You have documented your lineage back through several generations and are ready for Alabama evaluation.</p>
+                        <a href="membership.html#lineage-form" class="btn btn-primary">Preliminary Lineage Review</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </article>
+
+    <div class="separator-container page-separator">
+        <img src="images/Mayflower_separator_line.png" alt="Separator" class="mayflower-separator">
+    </div>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <img src="images/LOGO002.png" alt="Alabama Mayflower Society" class="footer-logo">
+                    <p>Preserving the legacy of the Mayflower Pilgrims since 1952</p>
+                    <div class="social-links" style="margin-top: 1.5rem;">
+                        <a href="https://www.facebook.com/groups/AlabamaMayflowerSociety" target="_blank" rel="noopener" style="display: inline-block; text-decoration: none;">
+                            <span style="background: white; color: var(--navy-blue); width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; border-radius: 4px; font-family: sans-serif; font-weight: bold; font-size: 22px;">f</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="our-history.html">Our History</a></li>
+                        <li><a href="membership.html">Membership</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="useful-links.html">Useful Links</a></li>
+                        <li><a href="support.html">FAQ / Support</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Our Colonies</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 1rem;">Cahaba River Colony<br><small>Birmingham Metro Area</small></li>
+                        <li style="margin-bottom: 1rem;">Capital Colony<br><small>Montgomery Metro Area</small></li>
+                        <li style="margin-bottom: 1rem;">Gulf Coast Colony<br><small>Mobile Bay Metro Area</small></li>
+                        <li>Tennessee Valley Colony<br><small>Huntsville Metro Area</small></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 1rem;"><a href="mailto:SMDAL.Info@gmail.com">info@alabamasmd.org</a></li>
+                        <li><a href="https://themayflowersociety.org" target="_blank" rel="noopener">General Society of Mayflower Descendants</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 The Society of Mayflower Descendants in the State of <i>(Sweet Home)</i> Alabama | All Rights Reserved | <a href="privacy-policy.html" style="color: var(--gold);">Privacy Policy</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js?v=2"></script>
+    <script>
+        // Simple FAQ accordion toggle
+        document.querySelectorAll('.faq-question').forEach(function(button) {
+            button.addEventListener('click', function() {
+                var item = this.parentElement;
+                item.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

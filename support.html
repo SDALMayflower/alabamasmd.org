@@ -16,6 +16,73 @@
     <link rel="canonical" href="https://alabamasmd.org/support.html">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/compact-page.css">
+    <link rel="stylesheet" href="css/logo-fix.css">
+    <link rel="icon" type="image/png" href="images/LOGO001.png?v=3">
+    <style>
+        /* ── Native HTML5 Accordion for Support Page ─────────────── */
+        .faq-accordion {
+            margin: 2rem 0 2.5rem;
+        }
+
+        .faq-item {
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            margin-bottom: 0.75rem;
+            overflow: hidden;
+            background: white;
+        }
+
+        .faq-question {
+            padding: 1.1rem 1.25rem;
+            background: var(--light-gray);
+            font-family: 'Inter', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--navy-blue);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            list-style: none;
+            user-select: none;
+            transition: background 0.2s ease;
+        }
+
+        .faq-question::-webkit-details-marker {
+            display: none;
+        }
+
+        .faq-question:hover {
+            background: #eef2f6;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.35rem;
+            font-weight: 600;
+            color: var(--bronze);
+            margin-left: 1rem;
+            flex-shrink: 0;
+        }
+
+        .faq-item[open] .faq-question::after {
+            content: '−';
+            color: var(--navy-blue);
+        }
+
+        .faq-answer {
+            padding: 1.25rem 1.4rem;
+            background: white;
+            border-top: 1px solid #e2e8f0;
+            font-size: 1rem;
+            color: var(--slate);
+            line-height: 1.7;
+        }
+
+        .faq-answer p:last-child {
+            margin-bottom: 0;
+        }
+    </style>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -40,7 +107,7 @@
             <a href="index.html" class="logo">
                 <img src="images/LOGO002.png" alt="Alabama Mayflower Society" class="logo-img">
             </a>
-            <button class="menu-toggle" id="menuToggle"><span></span><span></span><span></span></button>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
             <ul class="nav-links" id="navLinks">
                 <li><a href="about-us.html">About Us</a></li>
                 <li><a href="our-history.html">Our History</a></li>
@@ -52,8 +119,9 @@
                 <li class="has-dropdown">
                     <a href="MayflowerSaga.html">Features</a>
                     <ul class="dropdown">
-                        <li><a href="MayflowerSaga.html">The Mayflower Saga</a></li>
+                        <li><a href="onramp.html">Research On-Ramp</a></li>
                         <li><a href="PassengerPortal.html">The Passengers: Narrative Directory</a></li>
+                        <li><a href="MayflowerSaga.html">The Mayflower Saga</a></li>
                         <li><a href="compact.html">The Mayflower Compact</a></li>
                     </ul>
                 </li>
@@ -70,27 +138,51 @@
 
     <article class="compact-article">
         <div class="container">
-            <div class="separator-container"><img src="images/Mayflower_separator_line.jpg" alt="Separator" class="mayflower-separator"></div>
+            <div class="separator-container"><img src="images/Mayflower_separator_line.png" alt="Separator" class="mayflower-separator"></div>
             <div class="article-content">
-                <section class="content-section">
+                <div class="content-section">
                     <h2>Frequently Asked Questions</h2>
                     <p>This page is still growing — here's what we can answer today, with more on the way. If you don't see your question below, reach out through our <a href="contact_submit.html" style="color: var(--royal-blue); text-decoration: underline;">Contact form</a> and we'll get back to you directly.</p>
 
-                    <h3>How do I become a member?</h3>
-                    <p>Membership is open to those who can document direct descent from a passenger of the Mayflower's 1620 voyage to Plymouth. Visit our <a href="membership.html" style="color: var(--royal-blue); text-decoration: underline;">Membership</a> page for an overview, or head straight to the <a href="application-process.html" style="color: var(--royal-blue); text-decoration: underline;">Application Process</a> page for a step-by-step guide.</p>
+                    <div class="faq-accordion">
+                        <details class="faq-item" open>
+                            <summary class="faq-question">How do I research or verify my Mayflower lineage?</summary>
+                            <div class="faq-answer">
+                                <p>If you are exploring a family tradition or learning how to bridge your lines backward, visit our <a href="onramp.html" style="color: var(--royal-blue); font-weight: 700; text-decoration: underline;">Research On-Ramp</a>. It provides a step-by-step guide on how to work from yourself backward one generation at a time and distinguish research clues from primary evidence.</p>
+                                <p style="margin-top: 0.75rem;">If you already have your lineage documented back through your middle generations, you can submit a <a href="membership.html#lineage-form" style="color: var(--royal-blue); text-decoration: underline;">Preliminary Lineage Review</a> directly on our Membership page. Our <a href="useful-links.html" style="color: var(--royal-blue); text-decoration: underline;">Useful Links</a> page also has a curated list of research resources.</p>
+                            </div>
+                        </details>
 
-                    <h3>How do I research or verify my Mayflower lineage?</h3>
-                    <p>Not sure where your line connects? Submit a <a href="membership.html#lineage-form" style="color: var(--royal-blue); text-decoration: underline;">Preliminary Lineage Review</a> through the form on our Membership page, and we'll let you know what's needed. Our <a href="useful-links.html" style="color: var(--royal-blue); text-decoration: underline;">Useful Links</a> page also has a curated list of genealogy research resources, including Ancestry, FamilySearch, and WikiTree.</p>
+                        <details class="faq-item">
+                            <summary class="faq-question">How do I become a member?</summary>
+                            <div class="faq-answer">
+                                <p>Membership is open to those who can document direct descent from a passenger of the Mayflower's 1620 voyage to Plymouth. Visit our <a href="membership.html" style="color: var(--royal-blue); text-decoration: underline;">Membership</a> page for an overview of eligibility, dues, benefits, and the five-step application process.</p>
+                            </div>
+                        </details>
 
-                    <h3>How do I contact the Society?</h3>
-                    <p>Use our <a href="contact_submit.html" style="color: var(--royal-blue); text-decoration: underline;">Contact form</a> to send a message directly to our officers, or email us at <a href="mailto:SMDAL.Info@gmail.com" style="color: var(--royal-blue); text-decoration: underline;">SMDAL.Info@gmail.com</a>.</p>
+                        <details class="faq-item">
+                            <summary class="faq-question">How do I contact the Society?</summary>
+                            <div class="faq-answer">
+                                <p>Use our <a href="contact_submit.html" style="color: var(--royal-blue); text-decoration: underline;">Contact form</a> to send a message directly to our officers, or email us directly at <a href="mailto:SMDAL.Info@gmail.com" style="color: var(--royal-blue); text-decoration: underline;">SMDAL.Info@gmail.com</a>.</p>
+                            </div>
+                        </details>
 
-                    <h3>What are the local colonies?</h3>
-                    <p>The Alabama Society is organized into four local colonies: Cahaba River Colony (Birmingham Metro area), Capital Colony (Montgomery Metro area), Gulf Coast Colony (Mobile Bay Metro area), and Tennessee Valley Colony (Huntsville Metro area).</p>
+                        <details class="faq-item">
+                            <summary class="faq-question">What are the local colonies?</summary>
+                            <div class="faq-answer">
+                                <p>The Alabama Society is organized into four local colonies: Cahaba River Colony (Birmingham Metro area), Capital Colony (Montgomery Metro area), Gulf Coast Colony (Mobile Bay Metro area), and Tennessee Valley Colony (Huntsville Metro area).</p>
+                            </div>
+                        </details>
 
-                    <h3>Where can I find upcoming events?</h3>
-                    <p>Visit our <a href="events.html" style="color: var(--royal-blue); text-decoration: underline;">Events</a> page for our conference, meetings, and other upcoming gatherings.</p>
-                </section>
+                        <details class="faq-item">
+                            <summary class="faq-question">Where can I find upcoming events?</summary>
+                            <div class="faq-answer">
+                                <p>Visit our <a href="events.html" style="color: var(--royal-blue); text-decoration: underline;">Events</a> page for our annual Spring Conference, Compact Day commemoration, and other upcoming gatherings across Alabama.</p>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+
                 <div class="back-link"><a href="index.html">← Back to Home</a></div>
             </div>
         </div>
