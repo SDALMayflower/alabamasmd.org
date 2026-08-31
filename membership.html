@@ -281,6 +281,44 @@
                 transition: none;
             }
         }
+
+        /* ── Find Your Passenger CTA (bobbing ship) ──────────────── */
+        .find-passenger-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            font-family: 'Inter', sans-serif;
+            background: var(--navy-blue);
+            color: var(--cream);
+            text-decoration: none;
+            padding: 0.85rem 1.75rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            font-weight: 700;
+            font-size: 0.85rem;
+            margin: 0.5rem 0 1.5rem;
+        }
+
+        .find-passenger-btn img {
+            width: 28px;
+            height: 28px;
+            filter: invert(1);
+            animation: gentleBob 3.2s ease-in-out infinite;
+        }
+
+        @keyframes gentleBob {
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-5px) rotate(-2deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .find-passenger-btn img {
+                animation: none;
+            }
+        }
     </style>
     <script type="application/ld+json">
     {
@@ -527,10 +565,22 @@
 
                     <div class="form-section-heading">Lineage from Mayflower Passenger</div>
                     <p class="lineage-note">Your name should be last.</p>
+
+                    <a href="onramp.html#find-your-passenger" target="_blank" rel="noopener" class="find-passenger-btn">
+                        <img src="images/ship-button-trans.png" alt="">
+                        Find your passenger
+                    </a>
+
                     <div class="form-grid">
                         <div class="form-field full-width">
                             <label for="ancestor">1. Name of your Mayflower Pilgrim Ancestor:</label>
-                            <input type="text" id="ancestor" name="1. Name of your Mayflower Pilgrim Ancestor">
+                            <select id="ancestor" name="1. Name of your Mayflower Pilgrim Ancestor" required>
+                                <option value="">Select a passenger...</option>
+                            </select>
+                        </div>
+                        <div class="form-field full-width" id="ancestor-other-wrap" style="display:none;">
+                            <label for="ancestor-other">If not listed above, please specify:</label>
+                            <input type="text" id="ancestor-other" name="1a. If Not Listed, Please Specify">
                         </div>
                         <div class="form-field">
                             <label for="gen2-sd">2. Son/Daughter:</label>
@@ -823,6 +873,71 @@
                 });
             }, { threshold: 0.3 });
             els.forEach(function (el) { observer.observe(el); });
+        })();
+    </script>
+    <script>
+        // Mayflower Passenger dropdown (GSMD public list, 26 families / 51 named passengers)
+        (function () {
+            var families = [
+                ["Alden", ["John Alden"]],
+                ["Allerton", ["Bartholomew Allerton", "Isaac Allerton", "Mary (Norris) Allerton", "Mary Allerton", "Remember Allerton"]],
+                ["Billington", ["Elinor Billington", "Francis Billington", "John Billington"]],
+                ["Bradford", ["William Bradford"]],
+                ["Brewster", ["Love Brewster", "Mary Brewster", "William Brewster"]],
+                ["Browne", ["Peter Browne"]],
+                ["Chilton", ["James Chilton", "Mrs. James Chilton", "Mary Chilton"]],
+                ["Cooke", ["Francis Cooke", "John Cooke"]],
+                ["Doty", ["Edward Doty"]],
+                ["Eaton", ["Francis Eaton", "Samuel Eaton", "Sarah Eaton"]],
+                ["Fletcher", ["Moses Fletcher"]],
+                ["Edward Fuller", ["Edward Fuller", "Mrs. Edward Fuller", "Samuel Fuller (son of Edward)"]],
+                ["Samuel Fuller", ["Samuel Fuller"]],
+                ["Hopkins", ["Constance Hopkins", "Elizabeth (Fisher) Hopkins", "Giles Hopkins", "Stephen Hopkins"]],
+                ["Howland", ["John Howland"]],
+                ["More", ["Richard More"]],
+                ["Mullins", ["Priscilla Mullins", "William Mullins"]],
+                ["Priest", ["Degory Priest"]],
+                ["Rogers", ["Joseph Rogers", "Thomas Rogers"]],
+                ["Samson", ["Henry Samson"]],
+                ["Soule", ["George Soule"]],
+                ["Standish", ["Myles Standish"]],
+                ["Tilley", ["Elizabeth Tilley", "John Tilley", "Joan (Hurst) Tilley"]],
+                ["Warren", ["Richard Warren"]],
+                ["White", ["Peregrine White", "Resolved White", "Susanna (Jackson) White", "William White"]],
+                ["Winslow", ["Edward Winslow"]]
+            ];
+
+            var sel = document.getElementById('ancestor');
+            if (!sel) return;
+
+            families.forEach(function (f) {
+                var og = document.createElement('optgroup');
+                og.label = f[0];
+                f[1].forEach(function (name) {
+                    var o = document.createElement('option');
+                    o.value = name;
+                    o.textContent = name;
+                    og.appendChild(o);
+                });
+                sel.appendChild(og);
+            });
+            var other = document.createElement('option');
+            other.value = 'Other / Not Listed Above';
+            other.textContent = 'Other / not listed above';
+            sel.appendChild(other);
+
+            sel.addEventListener('change', function () {
+                var wrap = document.getElementById('ancestor-other-wrap');
+                var otherInput = document.getElementById('ancestor-other');
+                if (sel.value === 'Other / Not Listed Above') {
+                    wrap.style.display = '';
+                    otherInput.required = true;
+                } else {
+                    wrap.style.display = 'none';
+                    otherInput.required = false;
+                    otherInput.value = '';
+                }
+            });
         })();
     </script>
 </body>

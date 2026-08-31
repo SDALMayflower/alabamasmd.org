@@ -389,6 +389,65 @@
                 padding: 2rem 1rem;
             }
         }
+
+        /* ── Passenger Eligibility Checker ────────────────────────── */
+        .passenger-check {
+            background: var(--light-gray);
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 1.75rem 2rem;
+            margin: 1.75rem 0 0;
+        }
+
+        .passenger-check h4 {
+            font-size: 1.15rem;
+            color: var(--navy-blue);
+            margin: 0 0 0.5rem;
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+        }
+
+        .passenger-check-intro {
+            font-size: 0.98rem;
+            color: var(--slate);
+            margin: 0 0 1rem;
+        }
+
+        .passenger-select {
+            width: 100%;
+            padding: 0.7rem 0.9rem;
+            font-size: 1rem;
+            font-family: 'Inter', sans-serif;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            background: white;
+            color: #1a202c;
+        }
+
+        .passenger-result {
+            margin-top: 1rem;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            border-radius: 6px;
+            padding: 0.9rem 1.1rem;
+        }
+
+        .passenger-result.found {
+            background: #ecfdf5;
+            border-left: 4px solid #059669;
+            color: #065f46;
+        }
+
+        .passenger-result.notfound {
+            background: white;
+            border: 1px solid #e2e8f0;
+            color: var(--slate);
+        }
+
+        .passenger-result a {
+            color: var(--royal-blue);
+            font-weight: 600;
+        }
     </style>
 </head>
 <body>
@@ -521,6 +580,15 @@
                 <p>For most modern applicants, proving the line down from 1620 is already handled for the first five generations through the published scholarship of the General Society (known as the <em>Silver Books</em>). Proving your recent three or four generations is straightforward using modern civil vital records.</p>
                 <p>The real challenge of Mayflower research almost always lies in the <strong>middle generations (Generations 5 through 9)</strong>, spanning the late 1700s and 1800s as families migrated westward. This is where you will focus your search on wills, deeds, tax records, and court documents to connect your 19th-century ancestors back to known colonial lines.</p>
                 <p>To explore the original families and their early descendants, you can review our <a href="PassengerPortal.html" style="color: var(--royal-blue); font-weight: 600;">Passenger Narrative Directory</a>.</p>
+
+                <div class="passenger-check" id="find-your-passenger">
+                    <h4>Explore Eligible Mayflower Passenger Lines</h4>
+                    <p class="passenger-check-intro">GSMD's public list identifies 26 Mayflower passenger families with documented descendants. Select a passenger to see whether they appear on that list and view their published family profile. This does not confirm your own descent from that passenger &mdash; only that the passenger themselves has a documented descendant line recognized by GSMD.</p>
+                    <select class="passenger-select" id="passengerSelect">
+                        <option value="">Select a passenger...</option>
+                    </select>
+                    <div id="passengerResult"></div>
+                </div>
             </section>
 
             <section class="content-section">
@@ -647,6 +715,71 @@
                 item.classList.toggle('active');
             });
         });
+    </script>
+    <script>
+        // Passenger Eligibility Checker (GSMD public list, 26 families / 51 named passengers)
+        (function () {
+            var families = [
+                ["Alden", [["John Alden", "https://themayflowersociety.org/passenger-profile/passenger-profiles/the-alden-family/"]]],
+                ["Allerton", [["Bartholomew Allerton", "https://themayflowersociety.org/passenger-profile/passenger-profiles/allerton-family/"], ["Isaac Allerton", "https://themayflowersociety.org/passenger-profile/passenger-profiles/allerton-family/"], ["Mary (Norris) Allerton", "https://themayflowersociety.org/passenger-profile/passenger-profiles/allerton-family/"], ["Mary Allerton", "https://themayflowersociety.org/passenger-profile/passenger-profiles/allerton-family/"], ["Remember Allerton", "https://themayflowersociety.org/passenger-profile/passenger-profiles/allerton-family/"]]],
+                ["Billington", [["Elinor Billington", "https://themayflowersociety.org/passenger-profile/passenger-profiles/the-billington-family/"], ["Francis Billington", "https://themayflowersociety.org/passenger-profile/passenger-profiles/the-billington-family/"], ["John Billington", "https://themayflowersociety.org/passenger-profile/passenger-profiles/the-billington-family/"]]],
+                ["Bradford", [["William Bradford", "https://themayflowersociety.org/passenger-profile/passenger-profiles/the-bradford-family/"]]],
+                ["Brewster", [["Love Brewster", "https://themayflowersociety.org/passenger-profile/passenger-profiles/the-brewster-family/"], ["Mary Brewster", "https://themayflowersociety.org/passenger-profile/passenger-profiles/the-brewster-family/"], ["William Brewster", "https://themayflowersociety.org/passenger-profile/passenger-profiles/the-brewster-family/"]]],
+                ["Browne", [["Peter Browne", "https://themayflowersociety.org/passenger-profile/passenger-profiles/peter-browne/"]]],
+                ["Chilton", [["James Chilton", "https://themayflowersociety.org/passenger-profile/passenger-profiles/the-chilton-family/"], ["Mrs. James Chilton", "https://themayflowersociety.org/passenger-profile/passenger-profiles/the-chilton-family/"], ["Mary Chilton", "https://themayflowersociety.org/passenger-profile/passenger-profiles/the-chilton-family/"]]],
+                ["Cooke", [["Francis Cooke", "https://themayflowersociety.org/passenger-profile/passenger-profiles/the-cooke-family/"], ["John Cooke", "https://themayflowersociety.org/passenger-profile/passenger-profiles/the-cooke-family/"]]],
+                ["Doty", [["Edward Doty", "https://themayflowersociety.org/passenger-profile/passenger-profiles/edward-doty/"]]],
+                ["Eaton", [["Francis Eaton", "https://themayflowersociety.org/passenger-profile/passenger-profiles/the-eaton-family/"], ["Samuel Eaton", "https://themayflowersociety.org/passenger-profile/passenger-profiles/the-eaton-family/"], ["Sarah Eaton", "https://themayflowersociety.org/passenger-profile/passenger-profiles/the-eaton-family/"]]],
+                ["Fletcher", [["Moses Fletcher", "https://themayflowersociety.org/passenger-profile/passenger-profiles/the-fletcher-family/"]]],
+                ["Edward Fuller", [["Edward Fuller", "https://themayflowersociety.org/passenger-profile/passenger-profiles/the-edward-fuller-family/"], ["Mrs. Edward Fuller", "https://themayflowersociety.org/passenger-profile/passenger-profiles/the-edward-fuller-family/"], ["Samuel Fuller (son of Edward)", "https://themayflowersociety.org/passenger-profile/passenger-profiles/the-edward-fuller-family/"]]],
+                ["Samuel Fuller", [["Samuel Fuller", "https://themayflowersociety.org/passenger-profile/passenger-profiles/the-samuel-fuller-family/"]]],
+                ["Hopkins", [["Constance Hopkins", "https://themayflowersociety.org/passenger-profiles/the-hopkins-family/"], ["Elizabeth (Fisher) Hopkins", "https://themayflowersociety.org/passenger-profiles/the-hopkins-family/"], ["Giles Hopkins", "https://themayflowersociety.org/passenger-profiles/the-hopkins-family/"], ["Stephen Hopkins", "https://themayflowersociety.org/passenger-profiles/the-hopkins-family/"]]],
+                ["Howland", [["John Howland", "https://themayflowersociety.org/passenger-profile/passenger-profiles/the-howland-family/"]]],
+                ["More", [["Richard More", "https://themayflowersociety.org/passenger-profile/passenger-profiles/the-more-family"]]],
+                ["Mullins", [["Priscilla Mullins", "https://themayflowersociety.org/passenger-profile/passenger-profiles/the-mullins-family/"], ["William Mullins", "https://themayflowersociety.org/passenger-profile/passenger-profiles/the-mullins-family/"]]],
+                ["Priest", [["Degory Priest", "https://themayflowersociety.org/passenger-profile/passenger-profiles/the-priest-family/"]]],
+                ["Rogers", [["Joseph Rogers", "https://themayflowersociety.org/passenger-profile/passenger-profiles/the-rogers-family/"], ["Thomas Rogers", "https://themayflowersociety.org/passenger-profile/passenger-profiles/the-rogers-family/"]]],
+                ["Samson", [["Henry Samson", "https://themayflowersociety.org/passenger-profile/passenger-profiles/the-samson-family/"]]],
+                ["Soule", [["George Soule", "https://themayflowersociety.org/passenger-profile/passenger-profiles/the-soule-family/"]]],
+                ["Standish", [["Myles Standish", "https://themayflowersociety.org/passenger-profile/passenger-profiles/the-standish-family/"]]],
+                ["Tilley", [["Elizabeth Tilley", "https://themayflowersociety.org/passenger-profile/passenger-profiles/the-tilley-family/"], ["John Tilley", "https://themayflowersociety.org/passenger-profile/passenger-profiles/the-tilley-family/"], ["Joan (Hurst) Tilley", "https://themayflowersociety.org/passenger-profile/passenger-profiles/the-tilley-family/"]]],
+                ["Warren", [["Richard Warren", "https://themayflowersociety.org/passenger-profile/passenger-profiles/the-warren-family/"]]],
+                ["White", [["Peregrine White", "https://themayflowersociety.org/passenger-profile/passenger-profiles/the-white-family/"], ["Resolved White", "https://themayflowersociety.org/passenger-profile/passenger-profiles/the-white-family/"], ["Susanna (Jackson) White", "https://themayflowersociety.org/passenger-profile/passenger-profiles/the-white-family/"], ["William White", "https://themayflowersociety.org/passenger-profile/passenger-profiles/the-white-family/"]]],
+                ["Winslow", [["Edward Winslow", "https://themayflowersociety.org/passenger-profile/passenger-profiles/the-winslow-family-2/"]]]
+            ];
+
+            var sel = document.getElementById('passengerSelect');
+            if (!sel) return;
+
+            families.forEach(function (f) {
+                var og = document.createElement('optgroup');
+                og.label = f[0];
+                f[1].forEach(function (p) {
+                    var o = document.createElement('option');
+                    o.value = p[1];
+                    o.textContent = p[0];
+                    og.appendChild(o);
+                });
+                sel.appendChild(og);
+            });
+            var notSure = document.createElement('option');
+            notSure.value = 'notsure';
+            notSure.textContent = 'Not sure / not listed here';
+            sel.appendChild(notSure);
+
+            sel.addEventListener('change', function () {
+                var box = document.getElementById('passengerResult');
+                if (!sel.value) { box.innerHTML = ''; box.className = ''; return; }
+                if (sel.value === 'notsure') {
+                    box.className = 'passenger-result notfound';
+                    box.innerHTML = 'This passenger is not currently listed as having documented descendants. <a href="https://themayflowersociety.org/passenger-profile/passenger-profiles/no-descent/" target="_blank" rel="noopener">View GSMD\'s list of passengers without proven descent</a>.';
+                    return;
+                }
+                var name = sel.options[sel.selectedIndex].textContent;
+                box.className = 'passenger-result found';
+                box.innerHTML = '<strong>' + name + '</strong> appears on GSMD\'s list of passengers with documented descendants. <a href="' + sel.value + '" target="_blank" rel="noopener">View their family profile</a> to begin tracing whether your own line connects.';
+            });
+        })();
     </script>
 </body>
 </html>
