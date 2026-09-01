@@ -85,18 +85,41 @@
     .category-card {
       background: white;
       border-radius: 10px;
-      padding: 1.5rem 1.8rem;
+      overflow: hidden;
       box-shadow: 0 3px 18px rgba(0,0,0,0.07);
-      border-left: 4px solid #d4a574;
       text-decoration: none;
       color: inherit;
-      display: block;
-      transition: transform 0.2s ease, box-shadow 0.2s ease, border-left-color 0.2s ease;
+      display: flex;
+      align-items: stretch;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
     .category-card:hover {
       transform: translateY(-2px);
       box-shadow: 0 10px 32px rgba(30, 58, 95, 0.2);
+    }
+    .category-card-covers {
+      display: flex;
+      flex-shrink: 0;
+      background: #1e3a5f;
+    }
+    .category-card-covers img {
+      width: 70px;
+      height: 140px;
+      object-fit: cover;
+      display: block;
+    }
+    .category-card-body {
+      padding: 1.5rem 1.8rem;
+      border-left: 4px solid #d4a574;
+      flex: 1;
+      transition: border-left-color 0.2s ease;
+    }
+    .category-card:hover .category-card-body {
       border-left-color: var(--gold);
+    }
+    @media (max-width: 560px) {
+      .category-card { flex-direction: column; }
+      .category-card-covers img { width: 60px; height: 100px; }
     }
 
     .category-tag {
@@ -191,90 +214,151 @@
     </div>
 
     <div class="affiliate-intro">
-      <p>Our curated bookstore features recommended historical works, firsthand journals, passenger directories, and lineage research guides. Purchases made through links on these pages help support the mission and preservation work of the Alabama Society.</p>
-      <p class="affiliate-disclaimer"><strong>Disclosure:</strong> As an Amazon Associate, the Alabama Society of Mayflower Descendants earns from qualifying purchases made through links on these pages.</p>
+      <p>This collection wasn't pulled from a bestseller list. Each title earns its place here because it holds up to genealogical and historical scrutiny, whether it's a firsthand chronicle from the 1620s, a rigorously sourced narrative history, or a reference built for the specific work of documenting a lineage.</p>
+      <p>Purchases made through links on these pages help support the mission and preservation work of the Alabama Society.</p>
+      <p class="affiliate-disclaimer"><strong>Disclosure:</strong> As an Amazon Associate, the Alabama Society of Mayflower Descendants earns from qualifying purchases made through links on these pages. That support never changes which books make this list.</p>
     </div>
 
     <div class="category-card-list">
       
       <!-- Card 1 -->
       <a href="popular-reads.html" class="category-card">
-        <span class="category-tag">Start Here &bull; Bestsellers</span>
-        <h3>Popular Reads &amp; Gateway Histories</h3>
-        <p>New to Mayflower history? Start here with acclaimed narrative histories, bestsellers, and engaging introductions to the Pilgrim story.</p>
-        <span class="category-card-cta">Browse Popular Titles &rarr;</span>
+        <span class="category-card-covers">
+          <img src="images/mayflower-philbrick.jpg" alt="">
+          <img src="images/mayflower-fraser.jpg" alt="">
+        </span>
+        <span class="category-card-body">
+          <span class="category-tag">Start Here &bull; Bestsellers</span>
+          <h3>Popular Reads &amp; Gateway Histories</h3>
+          <p>New to Mayflower history? Start here with acclaimed narrative histories, bestsellers, and engaging introductions to the Pilgrim story.</p>
+          <span class="category-card-cta">Browse Popular Titles &rarr;</span>
+        </span>
       </a>
 
       <!-- Card 2 -->
       <a href="histories.html" class="category-card">
-        <span class="category-tag">General History</span>
-        <h3>Pilgrim &amp; Early Plymouth Histories</h3>
-        <p>Comprehensive narrative histories examining the English background, the Leiden years, the crossing, and the growth of Plymouth Colony.</p>
-        <span class="category-card-cta">Browse General Histories &rarr;</span>
+        <span class="category-card-covers">
+          <img src="images/mayflower-philbrick.jpg" alt="">
+          <img src="images/pilgrim-republic.jpg" alt="">
+        </span>
+        <span class="category-card-body">
+          <span class="category-tag">General History</span>
+          <h3>Pilgrim &amp; Early Plymouth Histories</h3>
+          <p>Comprehensive narrative histories examining the English background, the Leiden years, the crossing, and the growth of Plymouth Colony.</p>
+          <span class="category-card-cta">Browse General Histories &rarr;</span>
+        </span>
       </a>
 
       <!-- Card 3 -->
       <a href="primary-sources.html" class="category-card">
-        <span class="category-tag">Eyewitness Records</span>
-        <h3>Primary Sources &amp; Early Chronicles</h3>
-        <p>Firsthand accounts, treaties, and journals penned directly by Pilgrims like William Bradford and Edward Winslow during Plymouth's earliest decades.</p>
-        <span class="category-card-cta">Browse Primary Sources &rarr;</span>
+        <span class="category-card-covers">
+          <img src="images/good-newes.jpg" alt="">
+          <img src="images/mourts-relation.jpg" alt="">
+        </span>
+        <span class="category-card-body">
+          <span class="category-tag">Eyewitness Records</span>
+          <h3>Primary Sources &amp; Early Chronicles</h3>
+          <p>Firsthand accounts, treaties, and journals penned directly by Pilgrims like William Bradford and Edward Winslow during Plymouth's earliest decades.</p>
+          <span class="category-card-cta">Browse Primary Sources &rarr;</span>
+        </span>
       </a>
 
       <!-- Card 4 -->
       <a href="faith-theology.html" class="category-card">
-        <span class="category-tag">Separatist Heritage</span>
-        <h3>Faith, Theology &amp; Pilgrim Identity</h3>
-        <p>Religious motivations, Separatist theology, works on John Robinson and Robert Browne, and facsimile editions of the Geneva Bible.</p>
-        <span class="category-card-cta">Browse Faith &amp; Theology &rarr;</span>
+        <span class="category-card-covers">
+          <img src="images/geneva-bible.jpg" alt="">
+          <img src="images/john-robinson.jpg" alt="">
+        </span>
+        <span class="category-card-body">
+          <span class="category-tag">Separatist Heritage</span>
+          <h3>Faith, Theology &amp; Pilgrim Identity</h3>
+          <p>Religious motivations, Separatist theology, works on John Robinson and Robert Browne, and facsimile editions of the Geneva Bible.</p>
+          <span class="category-card-cta">Browse Faith &amp; Theology &rarr;</span>
+        </span>
       </a>
 
       <!-- Card 5 -->
       <a href="passenger-biographies.html" class="category-card">
-        <span class="category-tag">Biographical Reference</span>
-        <h3>Passenger Lists &amp; Biographical Compilations</h3>
-        <p>Exhaustive biographical dictionaries, passenger profiles, and works documenting the lives, origins, and families of the 1620 voyagers.</p>
-        <span class="category-card-cta">Browse Passenger Compilations &rarr;</span>
+        <span class="category-card-covers">
+          <img src="images/english-ancestors-pilgrim-fathers.jpg" alt="">
+          <img src="images/mayflower-passenger-references.jpg" alt="">
+        </span>
+        <span class="category-card-body">
+          <span class="category-tag">Biographical Reference</span>
+          <h3>Passenger Lists &amp; Biographical Compilations</h3>
+          <p>Exhaustive biographical dictionaries, passenger profiles, and works documenting the lives, origins, and families of the 1620 voyagers.</p>
+          <span class="category-card-cta">Browse Passenger Compilations &rarr;</span>
+        </span>
       </a>
 
       <!-- Card 6 -->
       <a href="genealogy.html" class="category-card">
-        <span class="category-tag">Lineage Aid</span>
-        <h3>Genealogy &amp; Lineage Research Guides</h3>
-        <p>Authoritative methodology handbooks, New England record resources, and guidance for documenting direct descent for lineage applications.</p>
-        <span class="category-card-cta">Browse Genealogy Reference &rarr;</span>
+        <span class="category-card-covers">
+          <img src="images/evidence-explained.jpg" alt="">
+          <img src="images/genealogical-standards.jpg" alt="">
+        </span>
+        <span class="category-card-body">
+          <span class="category-tag">Lineage Aid</span>
+          <h3>Genealogy &amp; Lineage Research Guides</h3>
+          <p>Authoritative methodology handbooks, New England record resources, and guidance for documenting direct descent for lineage applications.</p>
+          <span class="category-card-cta">Browse Genealogy Reference &rarr;</span>
+        </span>
       </a>
 
       <!-- Card 7 -->
       <a href="town-histories.html" class="category-card">
-        <span class="category-tag">Local Heritage</span>
-        <h3>Plymouth Colony Town &amp; Local Histories</h3>
-        <p>Focused local histories of towns where Mayflower families settled, including Duxbury, Marshfield, Scituate, Middleborough, and Cape Cod.</p>
-        <span class="category-card-cta">Browse Town Histories &rarr;</span>
+        <span class="category-card-covers">
+          <img src="images/history-of-cape-cod.jpg" alt="">
+          <img src="images/history-of-duxbury.jpg" alt="">
+        </span>
+        <span class="category-card-body">
+          <span class="category-tag">Local Heritage</span>
+          <h3>Plymouth Colony Town &amp; Local Histories</h3>
+          <p>Focused local histories of towns where Mayflower families settled, including Duxbury, Marshfield, Scituate, Middleborough, and Cape Cod.</p>
+          <span class="category-card-cta">Browse Town Histories &rarr;</span>
+        </span>
       </a>
 
       <!-- Card 8 -->
       <a href="archaeology.html" class="category-card">
-        <span class="category-tag">Material Culture</span>
-        <h3>Archaeology &amp; Everyday Pilgrim Life</h3>
-        <p>Studies of artifacts, probate inventories, colonial domestic architecture, clothing, and the material culture of early New England settlers.</p>
-        <span class="category-card-cta">Browse Archaeology &amp; Material Culture &rarr;</span>
+        <span class="category-card-covers">
+          <img src="images/framing-the-past.jpg" alt="">
+          <img src="images/in-small-things-forgotten.jpg" alt="">
+        </span>
+        <span class="category-card-body">
+          <span class="category-tag">Material Culture</span>
+          <h3>Archaeology &amp; Everyday Pilgrim Life</h3>
+          <p>Studies of artifacts, probate inventories, colonial domestic architecture, clothing, and the material culture of early New England settlers.</p>
+          <span class="category-card-cta">Browse Archaeology &amp; Material Culture &rarr;</span>
+        </span>
       </a>
 
       <!-- Card 9 -->
       <a href="native-perspectives.html" class="category-card">
-        <span class="category-tag">Indigenous History</span>
-        <h3>Native Perspectives &amp; Wampanoag History</h3>
-        <p>Contextual histories of the Pokanoket and Wampanoag people, diplomatic alliances, and indigenous perspectives on seventeenth-century New England.</p>
-        <span class="category-card-cta">Browse Native Perspectives &rarr;</span>
+        <span class="category-card-covers">
+          <img src="images/keepunumuk.jpg" alt="">
+          <img src="images/king-philips-war.jpg" alt="">
+        </span>
+        <span class="category-card-body">
+          <span class="category-tag">Indigenous History</span>
+          <h3>Native Perspectives &amp; Wampanoag History</h3>
+          <p>Contextual histories of the Pokanoket and Wampanoag people, diplomatic alliances, and indigenous perspectives on seventeenth-century New England.</p>
+          <span class="category-card-cta">Browse Native Perspectives &rarr;</span>
+        </span>
       </a>
 
       <!-- Card 10 -->
       <a href="youth-education.html" class="category-card">
-        <span class="category-tag">Schools &amp; Families</span>
-        <h3>Children, Youth &amp; Family History</h3>
-        <p>Picture books for young readers, middle-grade historical narratives, and hands-on family tree activity journals for children and grandchildren.</p>
-        <span class="category-card-cta">Browse Youth &amp; Family Books &rarr;</span>
+        <span class="category-card-covers">
+          <img src="images/my-family-tree-workbook.jpg" alt="">
+          <img src="images/sarah-mortons-day.jpg" alt="">
+        </span>
+        <span class="category-card-body">
+          <span class="category-tag">Schools &amp; Families</span>
+          <h3>Children, Youth &amp; Family History</h3>
+          <p>Picture books for young readers, middle-grade historical narratives, and hands-on family tree activity journals for children and grandchildren.</p>
+          <span class="category-card-cta">Browse Youth &amp; Family Books &rarr;</span>
+        </span>
       </a>
 
     </div>
