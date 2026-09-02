@@ -25,10 +25,14 @@
         .colony-banner {
             background: var(--navy-blue);
             padding: 2rem 1.5rem;
+        }
+        .colony-banner-inner {
+            max-width: 700px;
+            margin: 0 auto;
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            gap: 1rem;
+            justify-content: center;
+            gap: 3rem;
             flex-wrap: wrap;
         }
         .colony-banner-badge {
@@ -107,9 +111,11 @@
 <body>
 
     <div class="colony-banner">
-        <img src="images/SMDAL-Logo-2-V1-transparent.png" alt="Alabama Society of Mayflower Descendants" class="colony-banner-badge">
-        <img src="images/SMDAL-Seal-Color-HighContrast-transparent.png" alt="Society of Mayflower Descendants seal, Plymouth 1620, Alabama 1952" class="colony-banner-seal">
-        <img src="images/Colonies_Map-transparent.png" alt="Map of Alabama showing the four SMDAL colonies: Tennessee Valley, Cahaba River, Capital, and Gulf Coast" class="colony-banner-badge">
+        <div class="colony-banner-inner">
+            <img src="images/SMDAL-Logo-2-V1-transparent.png" alt="Alabama Society of Mayflower Descendants" class="colony-banner-badge">
+            <img src="images/SMDAL-Seal-Color-HighContrast-transparent.png" alt="Society of Mayflower Descendants seal, Plymouth 1620, Alabama 1952" class="colony-banner-seal">
+            <img src="images/Colonies_Map-transparent.png" alt="Map of Alabama showing the four SMDAL colonies: Tennessee Valley, Cahaba River, Capital, and Gulf Coast" class="colony-banner-badge">
+        </div>
     </div>
 
     <section class="colony-hero">
