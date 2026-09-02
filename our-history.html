@@ -105,6 +105,24 @@
             display: inline-block;
         }
 
+        /* ── Colony visual row ────────────────────────────────────── */
+        .colony-visual-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        .colony-map-img {
+            width: 260px;
+            height: auto;
+            flex-shrink: 0;
+            margin: 0 auto;
+        }
+        .colony-visual-row .colony-table {
+            flex: 1 1 380px;
+            margin: 0;
+        }
+
         /* ── Colony table ─────────────────────────────────────────── */
         .colony-table {
             width: 100%;
@@ -229,37 +247,40 @@
                 <div class="content-section">
                     <h2>Local Homes for a Historic Mission</h2>
                     <p>To better serve our members across the state, we have established four distinct colony charters. These colonies are where our history meets our daily lives. They represent the most personal level of the Mayflower narrative, allowing descendants to gather, share research, and participate in community service.</p>
-                    <table class="colony-table">
-                        <thead>
-                            <tr>
-                                <th>Colony Name</th>
-                                <th>Founding Date</th>
-                                <th>Role in the Alabama Narrative</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="colony-name">Gulf Coast</td>
-                                <td>April 26, 1986</td>
-                                <td>Preserving maritime and colonial history along the Alabama coast.</td>
-                            </tr>
-                            <tr>
-                                <td class="colony-name">Capital</td>
-                                <td>April 7, 1990</td>
-                                <td>Engaging with state leadership and historical archives in Montgomery.</td>
-                            </tr>
-                            <tr>
-                                <td class="colony-name">Tennessee Valley</td>
-                                <td>October 21, 1991</td>
-                                <td>Bringing the Pilgrim spirit to the communities of North Alabama.</td>
-                            </tr>
-                            <tr>
-                                <td class="colony-name">Cahaba River</td>
-                                <td>February 18, 2016</td>
-                                <td>Serving as a modern hub for genealogical excellence in Birmingham.</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div class="colony-visual-row">
+                        <img src="images/Colonies_Map-transparent.png" alt="Map of Alabama showing the four SMDAL colonies: Tennessee Valley, Cahaba River, Capital, and Gulf Coast" class="colony-map-img">
+                        <table class="colony-table">
+                            <thead>
+                                <tr>
+                                    <th>Colony Name</th>
+                                    <th>Founding Date</th>
+                                    <th>Role in the Alabama Narrative</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="colony-name">Gulf Coast</td>
+                                    <td>April 26, 1986</td>
+                                    <td>Preserving maritime and colonial history along the Alabama coast.</td>
+                                </tr>
+                                <tr>
+                                    <td class="colony-name">Capital</td>
+                                    <td>April 7, 1990</td>
+                                    <td>Engaging with state leadership and historical archives in Montgomery.</td>
+                                </tr>
+                                <tr>
+                                    <td class="colony-name">Tennessee Valley</td>
+                                    <td>October 21, 1991</td>
+                                    <td>Bringing the Pilgrim spirit to the communities of North Alabama.</td>
+                                </tr>
+                                <tr>
+                                    <td class="colony-name">Cahaba River</td>
+                                    <td>February 18, 2016</td>
+                                    <td>Serving as a modern hub for genealogical excellence in Birmingham.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
 
                 <div class="content-section">
