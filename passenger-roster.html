@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8R17FZY7H9"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-8R17FZY7H9');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mayflower passengers with documented descendants and their spouses, per GSMD's published passenger profiles.">
+    <title>Mayflower Passengers & Their Spouses | Alabama Society of Mayflower Descendants</title>
+    <link rel="canonical" href="https://alabamasmd.org/passenger-roster.html">
+    <meta name="robots" content="noindex, follow">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/logo-fix.css">
+    <link rel="icon" type="image/png" href="images/LOGO001.png?v=3">
+    <style>
+        body {
+            background: var(--light-gray);
+        }
+        .roster-compass-wrap {
+            background: var(--navy-blue);
+            padding: 2rem 1rem 1.75rem;
+            text-align: center;
+        }
+        .roster-compass-wrap.roster-compass-bottom {
+            padding: 2.5rem 1rem 3rem;
+        }
+        .roster-compass-link {
+            display: inline-block;
+            text-decoration: none;
+        }
+        .roster-compass-link svg {
+            display: block;
+            margin: 0 auto;
+        }
+        .roster-compass-label {
+            display: block;
+            color: var(--cream);
+            font-size: 0.8rem;
+            letter-spacing: 0.04em;
+            margin-top: 0.6rem;
+        }
+        .roster-compass-needle {
+            transform-origin: 100px 100px;
+            animation: roster-settle 2.4s cubic-bezier(.2,.9,.3,1) 1 both,
+                       roster-drift 6s ease-in-out infinite 2.4s;
+        }
+        @keyframes roster-settle {
+            0% { transform: rotate(38deg); }
+            14% { transform: rotate(-14deg); }
+            28% { transform: rotate(6deg); }
+            40% { transform: rotate(-3deg); }
+            50% { transform: rotate(1.5deg); }
+            100% { transform: rotate(0deg); }
+        }
+        @keyframes roster-drift {
+            0%, 100% { transform: rotate(0deg); }
+            50% { transform: rotate(-1.5deg); }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .roster-compass-needle { animation: none; }
+        }
+        .roster-intro {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.5rem 1.5rem 1rem;
+        }
+        .roster-intro h1 {
+            color: var(--navy-blue);
+            font-size: 1.7rem;
+            margin-bottom: 0.75rem;
+        }
+        .roster-intro p {
+            color: var(--slate);
+            line-height: 1.6;
+        }
+        .roster-source-note {
+            background: #fff;
+            border-left: 3px solid var(--gold);
+            padding: 0.9rem 1.1rem;
+            font-size: 0.92rem;
+            color: var(--slate);
+            margin: 1.25rem 0;
+        }
+        .roster-list {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 0 1.5rem 3rem;
+        }
+        .roster-family {
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            margin-bottom: 0.75rem;
+            overflow: hidden;
+        }
+        .roster-family summary {
+            cursor: pointer;
+            padding: 0.9rem 1.2rem;
+            font-weight: 600;
+            color: var(--navy-blue);
+            list-style: none;
+        }
+        .roster-family summary::-webkit-details-marker { display: none; }
+        .roster-family summary::before {
+            content: "\25B8";
+            color: var(--gold);
+            margin-right: 0.6rem;
+        }
+        .roster-family[open] summary::before {
+            content: "\25BE";
+        }
+        .roster-family-body {
+            padding: 0 1.2rem 1.1rem;
+            border-top: 1px solid #f1f5f9;
+        }
+        .roster-family-body p {
+            margin: 0.6rem 0 0;
+            color: var(--slate);
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        .roster-family-body a {
+            color: var(--royal-blue);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="roster-compass-wrap">
+        <a class="roster-compass-link" href="onramp.html#find-your-passenger" aria-label="Back to the Research On-Ramp">
+            <svg viewBox="0 0 200 200" width="86" height="86" role="img" aria-hidden="true">
+                <circle cx="100" cy="100" r="92" fill="#0a2540"/>
+                <g opacity="0.12" fill="#fef6e4">
+                    <path d="M 62 108 Q 100 122 138 108 L 132 118 Q 100 130 68 118 Z"/>
+                    <rect x="98" y="62" width="2.5" height="46"/>
+                    <path d="M 100 64 L 122 78 L 100 90 Z"/>
+                    <path d="M 100 64 L 82 82 L 100 92 Z"/>
+                </g>
+                <circle cx="100" cy="100" r="92" fill="none" stroke="#d4af37" stroke-width="2"/>
+                <circle cx="100" cy="100" r="78" fill="none" stroke="#d4af37" stroke-width="0.75" opacity="0.55"/>
+                <text x="100" y="46" text-anchor="middle" fill="#fef6e4" font-size="17" font-weight="600">N</text>
+                <text x="100" y="164" text-anchor="middle" fill="#fef6e4" font-size="17" font-weight="600">S</text>
+                <text x="164" y="105" text-anchor="middle" fill="#fef6e4" font-size="17" font-weight="600">E</text>
+                <text x="36" y="105" text-anchor="middle" fill="#fef6e4" font-size="17" font-weight="600">W</text>
+                <g class="roster-compass-needle">
+                    <polygon points="100,58 110,100 100,142 90,100" fill="#d4af37"/>
+                    <polygon points="100,58 110,100 100,100" fill="#cd7f32"/>
+                    <polygon points="100,142 90,100 100,100" fill="#cd7f32"/>
+                </g>
+                <circle cx="100" cy="100" r="7" fill="#fef6e4"/>
+            </svg>
+            <span class="roster-compass-label">Back to the Research On-Ramp</span>
+        </a>
+    </div>
+
+    <div class="roster-intro">
+        <h1>Mayflower passengers &amp; their spouses</h1>
+        <p>Below is the full list of the 26 Mayflower passenger families GSMD identifies as having documented descendants, with the spouse married to each passenger. This is names only &mdash; no dates &mdash; and covers only the marriage(s) that connect directly to the passenger. If a passenger's spouse survived them and later remarried someone who was not a Mayflower passenger, that later marriage is not included here, since it does not carry the passenger's own Mayflower descent.</p>
+        <div class="roster-source-note">
+            Compiled from GSMD's published <a href="https://themayflowersociety.org/passenger-profiles/" target="_blank" rel="noopener">Mayflower Passenger Profiles</a>, current as of September 2026. For full family narratives, children, and sourcing, visit GSMD's site directly &mdash; the link for each family below goes straight to their profile.
+        </div>
+    </div>
+
+    <div class="roster-list">
+
+        <details class="roster-family">
+            <summary>Alden</summary>
+            <div class="roster-family-body">
+                <p>John Alden &mdash; married Priscilla Mullins (fellow Mayflower passenger)</p>
+                <p><a href="https://themayflowersociety.org/passenger-profile/passenger-profiles/the-alden-family/" target="_blank" rel="noopener">View the Alden family profile on GSMD's site</a></p>
+            </div>
+        </details>
+
+        <details class="roster-family">
+            <summary>Allerton</summary>
+            <div class="roster-family-body">
+                <p>Isaac Allerton &mdash; married Mary Norris</p>
+                <p>Mary (Norris) Allerton &mdash; married Isaac Allerton</p>
+                <p>Bartholomew Allerton &mdash; married Margaret, later Sarah Fairfax</p>
+                <p>Mary Allerton &mdash; married Thomas Cushman</p>
+                <p>Remember Allerton &mdash; married Moses Maverick</p>
+                <p><a href="https://themayflowersociety.org/passenger-profile/passenger-profiles/allerton-family/" target="_blank" rel="noopener">View the Allerton family profile on GSMD's site</a></p>
+            </div>
+        </details>
+
+        <details class="roster-family">
+            <summary>Billington</summary>
+            <div class="roster-family-body">
+                <p>John Billington &mdash; married Elinor</p>
+                <p>Elinor Billington &mdash; married John Billington</p>
+                <p>Francis Billington &mdash; married Christian (Penn) Eaton</p>
+                <p><a href="https://themayflowersociety.org/passenger-profile/passenger-profiles/the-billington-family/" target="_blank" rel="noopener">View the Billington family profile on GSMD's site</a></p>
+            </div>
+        </details>
+
+        <details class="roster-family">
+            <summary>Bradford</summary>
+            <div class="roster-family-body">
+                <p>William Bradford &mdash; married Dorothy May, later Alice (Carpenter) Southworth</p>
+                <p><a href="https://themayflowersociety.org/passenger-profile/passenger-profiles/the-bradford-family/" target="_blank" rel="noopener">View the Bradford family profile on GSMD's site</a></p>
+            </div>
+        </details>
+
+        <details class="roster-family">
+            <summary>Brewster</summary>
+            <div class="roster-family-body">
+                <p>William Brewster &mdash; married Mary</p>
+                <p>Mary Brewster &mdash; married William Brewster</p>
+                <p>Love Brewster &mdash; married Sarah Collier</p>
+                <p><a href="https://themayflowersociety.org/passenger-profile/passenger-profiles/the-brewster-family/" target="_blank" rel="noopener">View the Brewster family profile on GSMD's site</a></p>
+            </div>
+        </details>
+
+        <details class="roster-family">
+            <summary>Browne</summary>
+            <div class="roster-family-body">
+                <p>Peter Browne &mdash; married Martha (Ford), later Mary</p>
+                <p><a href="https://themayflowersociety.org/passenger-profile/passenger-profiles/peter-browne/" target="_blank" rel="noopener">View the Browne family profile on GSMD's site</a></p>
+            </div>
+        </details>
+
+        <details class="roster-family">
+            <summary>Chilton</summary>
+            <div class="roster-family-body">
+                <p>James Chilton &mdash; wife's name not recorded</p>
+                <p>Mrs. James Chilton &mdash; married James Chilton</p>
+                <p>Mary Chilton &mdash; married John Winslow (arrived on the <em>Fortune</em>, brother of Mayflower passengers Edward and Gilbert Winslow)</p>
+                <p><a href="https://themayflowersociety.org/passenger-profile/passenger-profiles/the-chilton-family/" target="_blank" rel="noopener">View the Chilton family profile on GSMD's site</a></p>
+            </div>
+        </details>
+
+        <details class="roster-family">
+            <summary>Cooke</summary>
+            <div class="roster-family-body">
+                <p>Francis Cooke &mdash; married Hester Mahieu</p>
+                <p>John Cooke &mdash; married Sarah Warren (daughter of fellow passenger Richard Warren)</p>
+                <p><a href="https://themayflowersociety.org/passenger-profile/passenger-profiles/the-cooke-family/" target="_blank" rel="noopener">View the Cooke family profile on GSMD's site</a></p>
+            </div>
+        </details>
+
+        <details class="roster-family">
+            <summary>Doty</summary>
+            <div class="roster-family-body">
+                <p>Edward Doty &mdash; married a first wife whose name is not recorded, later Faith Clarke</p>
+                <p><a href="https://themayflowersociety.org/passenger-profile/passenger-profiles/edward-doty/" target="_blank" rel="noopener">View the Doty family profile on GSMD's site</a></p>
+            </div>
+        </details>
+
+        <details class="roster-family">
+            <summary>Eaton</summary>
+            <div class="roster-family-body">
+                <p>Francis Eaton &mdash; married Sarah, later Dorothy, later Christian Penn</p>
+                <p>Samuel Eaton &mdash; married Elizabeth, later Martha Billington (fellow passenger's daughter)</p>
+                <p>Sarah Eaton &mdash; married Francis Eaton</p>
+                <p><a href="https://themayflowersociety.org/passenger-profile/passenger-profiles/the-eaton-family/" target="_blank" rel="noopener">View the Eaton family profile on GSMD's site</a></p>
+            </div>
+        </details>
+
+        <details class="roster-family">
+            <summary>Fletcher</summary>
+            <div class="roster-family-body">
+                <p>Moses Fletcher &mdash; married Mary Evans, later Sarah Denby (traveled alone on the Mayflower; neither wife made the voyage)</p>
+                <p><a href="https://themayflowersociety.org/passenger-profile/passenger-profiles/the-fletcher-family/" target="_blank" rel="noopener">View the Fletcher family profile on GSMD's site</a></p>
+            </div>
+        </details>
+
+        <details class="roster-family">
+            <summary>Edward Fuller</summary>
+            <div class="roster-family-body">
+                <p>Edward Fuller &mdash; wife's name not recorded</p>
+                <p>Mrs. Edward Fuller &mdash; married Edward Fuller</p>
+                <p>Samuel Fuller (son of Edward) &mdash; married Jane Lothrop</p>
+                <p><a href="https://themayflowersociety.org/passenger-profile/passenger-profiles/the-edward-fuller-family/" target="_blank" rel="noopener">View the Edward Fuller family profile on GSMD's site</a></p>
+            </div>
+        </details>
+
+        <details class="roster-family">
+            <summary>Samuel Fuller</summary>
+            <div class="roster-family-body">
+                <p>Samuel Fuller &mdash; married Alice Glascock, later Agnes Carpenter, later Bridget Lee</p>
+                <p><a href="https://themayflowersociety.org/passenger-profile/passenger-profiles/the-samuel-fuller-family/" target="_blank" rel="noopener">View the Samuel Fuller family profile on GSMD's site</a></p>
+            </div>
+        </details>
+
+        <details class="roster-family">
+            <summary>Hopkins</summary>
+            <div class="roster-family-body">
+                <p>Stephen Hopkins &mdash; married Mary Kent, later Elizabeth Fisher</p>
+                <p>Elizabeth (Fisher) Hopkins &mdash; married Stephen Hopkins</p>
+                <p>Constance Hopkins &mdash; married Nicholas Snow</p>
+                <p>Giles Hopkins &mdash; married Katherine Whelden</p>
+                <p><a href="https://themayflowersociety.org/passenger-profile/passenger-profiles/the-hopkins-family/" target="_blank" rel="noopener">View the Hopkins family profile on GSMD's site</a></p>
+            </div>
+        </details>
+
+        <details class="roster-family">
+            <summary>Howland</summary>
+            <div class="roster-family-body">
+                <p>John Howland &mdash; married Elizabeth Tilley (fellow Mayflower passenger)</p>
+                <p><a href="https://themayflowersociety.org/passenger-profile/passenger-profiles/the-howland-family/" target="_blank" rel="noopener">View the Howland family profile on GSMD's site</a></p>
+            </div>
+        </details>
+
+        <details class="roster-family">
+            <summary>More</summary>
+            <div class="roster-family-body">
+                <p>Richard More &mdash; married Christian Hunt, later Jane Crumton</p>
+                <p><a href="https://themayflowersociety.org/passenger-profile/passenger-profiles/the-more-family" target="_blank" rel="noopener">View the More family profile on GSMD's site</a></p>
+            </div>
+        </details>
+
+        <details class="roster-family">
+            <summary>Mullins</summary>
+            <div class="roster-family-body">
+                <p>William Mullins &mdash; married Alice</p>
+                <p>Priscilla Mullins &mdash; married John Alden (fellow Mayflower passenger)</p>
+                <p><a href="https://themayflowersociety.org/passenger-profile/passenger-profiles/the-mullins-family/" target="_blank" rel="noopener">View the Mullins family profile on GSMD's site</a></p>
+            </div>
+        </details>
+
+        <details class="roster-family">
+            <summary>Priest</summary>
+            <div class="roster-family-body">
+                <p>Degory Priest &mdash; married Sarah Allerton (sister of fellow passenger Isaac Allerton)</p>
+                <p><a href="https://themayflowersociety.org/passenger-profile/passenger-profiles/the-priest-family/" target="_blank" rel="noopener">View the Priest family profile on GSMD's site</a></p>
+            </div>
+        </details>
+
+        <details class="roster-family">
+            <summary>Rogers</summary>
+            <div class="roster-family-body">
+                <p>Thomas Rogers &mdash; married Alice Cosford (did not emigrate)</p>
+                <p>Joseph Rogers &mdash; married a wife whose name at marriage is unknown; later records name her Hannah</p>
+                <p><a href="https://themayflowersociety.org/passenger-profile/passenger-profiles/the-rogers-family/" target="_blank" rel="noopener">View the Rogers family profile on GSMD's site</a></p>
+            </div>
+        </details>
+
+        <details class="roster-family">
+            <summary>Samson</summary>
+            <div class="roster-family-body">
+                <p>Henry Samson &mdash; married Ann Plummer</p>
+                <p><a href="https://themayflowersociety.org/passenger-profile/passenger-profiles/the-samson-family/" target="_blank" rel="noopener">View the Samson family profile on GSMD's site</a></p>
+            </div>
+        </details>
+
+        <details class="roster-family">
+            <summary>Soule</summary>
+            <div class="roster-family-body">
+                <p>George Soule &mdash; married Mary Bucket</p>
+                <p><a href="https://themayflowersociety.org/passenger-profile/passenger-profiles/the-soule-family/" target="_blank" rel="noopener">View the Soule family profile on GSMD's site</a></p>
+            </div>
+        </details>
+
+        <details class="roster-family">
+            <summary>Standish</summary>
+            <div class="roster-family-body">
+                <p>Myles Standish &mdash; married Rose, later Barbara</p>
+                <p><a href="https://themayflowersociety.org/passenger-profile/passenger-profiles/the-standish-family/" target="_blank" rel="noopener">View the Standish family profile on GSMD's site</a></p>
+            </div>
+        </details>
+
+        <details class="roster-family">
+            <summary>Tilley</summary>
+            <div class="roster-family-body">
+                <p>John Tilley &mdash; married Joan Hurst</p>
+                <p>Joan (Hurst) Tilley &mdash; married John Tilley</p>
+                <p>Elizabeth Tilley &mdash; married John Howland (fellow Mayflower passenger)</p>
+                <p><a href="https://themayflowersociety.org/passenger-profile/passenger-profiles/the-tilley-family/" target="_blank" rel="noopener">View the Tilley family profile on GSMD's site</a></p>
+            </div>
+        </details>
+
+        <details class="roster-family">
+            <summary>Warren</summary>
+            <div class="roster-family-body">
+                <p>Richard Warren &mdash; married Elizabeth Walker</p>
+                <p><a href="https://themayflowersociety.org/passenger-profile/passenger-profiles/the-warren-family/" target="_blank" rel="noopener">View the Warren family profile on GSMD's site</a></p>
+            </div>
+        </details>
+
+        <details class="roster-family">
+            <summary>White</summary>
+            <div class="roster-family-body">
+                <p>William White &mdash; married Susanna Jackson</p>
+                <p>Susanna (Jackson) White &mdash; married William White, later Edward Winslow (fellow Mayflower passenger, after William's death)</p>
+                <p>Resolved White &mdash; married Judith Vassall, later Abigail Lord</p>
+                <p>Peregrine White &mdash; married Sarah Bassett</p>
+                <p><a href="https://themayflowersociety.org/passenger-profile/passenger-profiles/the-white-family/" target="_blank" rel="noopener">View the White family profile on GSMD's site</a></p>
+            </div>
+        </details>
+
+        <details class="roster-family">
+            <summary>Winslow</summary>
+            <div class="roster-family-body">
+                <p>Edward Winslow &mdash; married Elizabeth Barker, later Susanna (Jackson) White (fellow Mayflower passenger, widow of William White)</p>
+                <p><a href="https://themayflowersociety.org/passenger-profile/passenger-profiles/the-winslow-family-2/" target="_blank" rel="noopener">View the Winslow family profile on GSMD's site</a></p>
+            </div>
+        </details>
+
+    </div>
+
+    <div class="roster-compass-wrap roster-compass-bottom">
+        <a class="roster-compass-link" href="onramp.html#find-your-passenger" aria-label="Back to the Research On-Ramp">
+            <svg viewBox="0 0 200 200" width="64" height="64" role="img" aria-hidden="true">
+                <circle cx="100" cy="100" r="92" fill="#0a2540"/>
+                <circle cx="100" cy="100" r="92" fill="none" stroke="#d4af37" stroke-width="2"/>
+                <text x="100" y="46" text-anchor="middle" fill="#fef6e4" font-size="17" font-weight="600">N</text>
+                <text x="100" y="164" text-anchor="middle" fill="#fef6e4" font-size="17" font-weight="600">S</text>
+                <text x="164" y="105" text-anchor="middle" fill="#fef6e4" font-size="17" font-weight="600">E</text>
+                <text x="36" y="105" text-anchor="middle" fill="#fef6e4" font-size="17" font-weight="600">W</text>
+                <polygon points="100,58 110,100 100,142 90,100" fill="#d4af37"/>
+                <polygon points="100,58 110,100 100,100" fill="#cd7f32"/>
+                <polygon points="100,142 90,100 100,100" fill="#cd7f32"/>
+                <circle cx="100" cy="100" r="7" fill="#fef6e4"/>
+            </svg>
+            <span class="roster-compass-label">Back to the Research On-Ramp</span>
+        </a>
+    </div>
+
+</body>
+</html>
