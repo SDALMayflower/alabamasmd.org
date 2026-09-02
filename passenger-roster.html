@@ -172,7 +172,7 @@
 
     <div class="roster-compass-wrap roster-compass-top">
         <a href="index.html"><img src="images/LOGO002.png" alt="Alabama Society of Mayflower Descendants" class="roster-header-badge"></a>
-        <a class="roster-compass-link" href="onramp.html#find-your-passenger" aria-label="Back to the Research On-Ramp">
+        <a class="roster-compass-link" id="compassTop" href="onramp.html#find-your-passenger" aria-label="Back to the Research On-Ramp">
             <svg viewBox="0 0 200 200" width="86" height="86" role="img" aria-hidden="true">
                 <circle cx="100" cy="100" r="92" fill="#0a2540"/>
                 <g opacity="0.12" fill="#fef6e4">
@@ -450,7 +450,7 @@
     </div>
 
     <div class="roster-compass-wrap roster-compass-bottom">
-        <a class="roster-compass-link" href="onramp.html#find-your-passenger" aria-label="Back to the Research On-Ramp">
+        <a class="roster-compass-link" id="compassBottom" href="onramp.html#find-your-passenger" aria-label="Back to the Research On-Ramp">
             <svg viewBox="0 0 200 200" width="64" height="64" role="img" aria-hidden="true">
                 <circle cx="100" cy="100" r="92" fill="#0a2540"/>
                 <circle cx="100" cy="100" r="92" fill="none" stroke="#d4af37" stroke-width="2"/>
@@ -467,5 +467,22 @@
         </a>
     </div>
 
+    <script>
+        (function () {
+            var params = new URLSearchParams(window.location.search);
+            if (params.get('from') === 'membership') {
+                var dest = 'membership.html';
+                var label = 'Back to Membership';
+                ['compassTop', 'compassBottom'].forEach(function (id) {
+                    var link = document.getElementById(id);
+                    if (!link) return;
+                    link.setAttribute('href', dest);
+                    link.setAttribute('aria-label', label);
+                    var span = link.querySelector('.roster-compass-label');
+                    if (span) span.textContent = label;
+                });
+            }
+        })();
+    </script>
 </body>
 </html>
