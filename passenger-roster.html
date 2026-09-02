@@ -27,8 +27,23 @@
             padding: 2rem 1rem 1.75rem;
             text-align: center;
         }
+        .roster-compass-wrap.roster-compass-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .roster-header-badge {
+            height: 55px;
+            width: auto;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+        }
         .roster-compass-wrap.roster-compass-bottom {
             padding: 2.5rem 1rem 3rem;
+        }
+        @media (max-width: 560px) {
+            .roster-header-badge { height: 40px; }
         }
         .roster-compass-link {
             display: inline-block;
@@ -155,7 +170,8 @@
 </head>
 <body>
 
-    <div class="roster-compass-wrap">
+    <div class="roster-compass-wrap roster-compass-top">
+        <a href="index.html"><img src="images/LOGO002.png" alt="Alabama Society of Mayflower Descendants" class="roster-header-badge"></a>
         <a class="roster-compass-link" href="onramp.html#find-your-passenger" aria-label="Back to the Research On-Ramp">
             <svg viewBox="0 0 200 200" width="86" height="86" role="img" aria-hidden="true">
                 <circle cx="100" cy="100" r="92" fill="#0a2540"/>
@@ -180,6 +196,7 @@
             </svg>
             <span class="roster-compass-label">Back to the Research On-Ramp</span>
         </a>
+        <a href="support.html"><img src="images/LOGO001.png" alt="Mayflower Society" class="roster-header-badge"></a>
     </div>
 
     <section class="member-society-section">
