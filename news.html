@@ -160,6 +160,46 @@
             box-shadow: 0 8px 24px rgba(212,175,55,0.5);
             color: #0a2540;
         }
+
+        /* ── Brief announcement (lighter format) ─────────────────── */
+        .news-item-brief {
+            background: white;
+            border-left: 4px solid var(--gold);
+            border-radius: 8px;
+            padding: 1.5rem 2rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+
+        .news-item-brief .news-meta {
+            padding: 0;
+            border-bottom: none;
+            margin-bottom: 0.85rem;
+        }
+
+        .news-item-brief h3 {
+            color: var(--navy-blue);
+            font-size: 1.3rem;
+            margin-bottom: 0.6rem;
+        }
+
+        .news-item-brief p {
+            color: #444;
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 0.8rem;
+        }
+
+        .news-cta-plain {
+            color: var(--royal-blue);
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+
+        .news-cta-plain:hover {
+            text-decoration: underline;
+        }
     </style>
     <script type="application/ld+json">
     {
@@ -260,36 +300,27 @@
 
             </a>
 
-            <a href="wewillplymouthrockyouweekend.html" class="news-card">
-
-                <!-- Dark hero banner with title -->
-                <div class="news-card-hero">
-                    <h2>"We Will Plymouth Rock You!" Weekend</h2>
-                    <p class="hero-sub">The Society of Mayflower Descendants in the State of <em>(Sweet Home)</em> Alabama &mdash; April 24 &amp; 25, 2026</p>
-                </div>
-
-                <!-- Badge + date -->
+            <!-- ── Brief: New Feature ───────────────────────────── -->
+            <div class="news-item-brief">
                 <div class="news-meta">
-                    <span class="news-badge">Event Recap</span>
-                    <span class="news-date">Posted March 2026</span>
+                    <span class="news-badge">New Feature</span>
+                    <span class="news-date">Posted September 2026</span>
                 </div>
+                <h3>New: Mayflower Passenger &amp; Spouse Roster</h3>
+                <p>We've added a new resource alongside the Research On-Ramp: a full roster of all 26 GSMD-documented Mayflower passenger families with descendants, along with the spouse married to each passenger. Names only, sourced and dated, with links straight to GSMD's own family profiles for anyone who wants the full story.</p>
+                <a href="passenger-roster.html" target="_blank" rel="noopener" class="news-cta-plain">View the passenger roster &rarr;</a>
+            </div>
 
-                <!-- Article body -->
-                <div class="news-card-body">
-                    <p>As we approached our Society's 75th Anniversary in 2027, we were determined to make <strong>2026 a landmark year</strong> for the Alabama Society of Mayflower Descendants, and it began this April in Mobile.</p>
-
-                    <hr class="news-divider">
-
-                    <p><span class="event-day">Friday, April 24</span> &mdash; Launch the weekend with a Welcome Dinner at Mobile's iconic T.P. Crockmier's restaurant in the heart of the downtown entertainment district.</p>
-
-                    <p><span class="event-day">Saturday, April 25</span> &mdash; Our 2026 Spring Conference at the National Maritime Museum of the Gulf on the Mobile River, featuring a members meeting, a luncheon, and our featured speaker <strong>Tom Begley</strong>, Executive Director of Plimoth Patuxent Museums in Plymouth, Massachusetts.</p>
-
-                    <p>It was one weekend nobody who attended will forget.</p>
-
-                    <span class="news-cta">Full Conference Details &rarr;</span>
+            <!-- ── Brief: Leadership ────────────────────────────── -->
+            <div class="news-item-brief">
+                <div class="news-meta">
+                    <span class="news-badge">Leadership</span>
+                    <span class="news-date">Posted September 2026</span>
                 </div>
-
-            </a>
+                <h3>Congratulations to Sarah Curtis, TVC's New Lt. Governor</h3>
+                <p>Please join us in congratulating <strong>Sarah Curtis</strong> of Madison County, Alabama, who was nominated, elected, and installed as the Tennessee Valley Colony's new Lieutenant Governor on May 23. We're grateful for her willingness to serve.</p>
+                <a href="05-23-26.html" class="news-cta-plain">Read the full TVC Luncheon recap &rarr;</a>
+            </div>
 
         </div>
     </section>
