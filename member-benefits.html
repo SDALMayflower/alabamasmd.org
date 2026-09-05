@@ -19,55 +19,75 @@
     <meta property="og:title" content="Member Benefits | Alabama Mayflower Society">
     <meta property="og:description" content="Benefits of membership in the Alabama Society of Mayflower Descendants, including genealogical resources, colony events, and the national Mayflower Society network.">
     <meta property="og:url" content="https://alabamasmd.org/member-benefits.html">
-    <meta property="og:image" content="https://alabamasmd.org/images/Mayflower_Collage_Hero.png">
+    <meta property="og:image" content="https://alabamasmd.org/images/benefits_banner.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Member Benefits | Alabama Mayflower Society">
     <meta name="twitter:description" content="Benefits of membership in the Alabama Society of Mayflower Descendants, including genealogical resources, colony events, and the national Mayflower Society network.">
-    <meta name="twitter:image" content="https://alabamasmd.org/images/Mayflower_Collage_Hero.png">
+    <meta name="twitter:image" content="https://alabamasmd.org/images/benefits_banner.jpg">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/logo-fix.css">
+    <link rel="icon" type="image/png" href="images/LOGO001.png?v=3">
     <style>
-        .coming-soon-container {
-            min-height: 100vh;
+        @import url('https://fonts.googleapis.com/css2?family=Ultra&display=swap');
+
+        .benefits-hero {
+            background: linear-gradient(rgba(0, 32, 91, 0.55), rgba(0, 32, 91, 0.65)), url('images/benefits_banner.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 12rem 2rem 8rem;
+            text-align: center;
+            color: white;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(135deg, var(--gold), var(--bronze));
-            padding: 2rem;
-            text-align: center;
+            min-height: 50vh;
+            width: 100%;
+            box-sizing: border-box;
         }
-        .coming-soon-content {
-            max-width: 800px;
-            background: white;
-            border-radius: 20px;
-            padding: 4rem 3rem;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-        }
-        .coming-soon-content h1 {
-            color: var(--navy-blue);
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            margin-bottom: 1rem;
-        }
-        .coming-soon-content h2 {
+        .benefits-hero h1 {
+            font-family: 'Ultra', Georgia, serif;
+            font-weight: 400;
+            letter-spacing: 1px;
             color: var(--gold);
-            font-size: clamp(2rem, 4vw, 3rem);
-            margin: 2rem 0;
+            background: linear-gradient(180deg, #f6e7a8 0%, #d4af37 45%, #a3791f 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow:
+                -1px -1px 0 rgba(255, 244, 200, 0.55),
+                1px 1px 1px rgba(60, 30, 0, 0.65),
+                2px 4px 10px rgba(0, 0, 0, 0.55);
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
         }
-        .back-button {
-            display: inline-block;
-            margin-top: 2rem;
-            padding: 1rem 2.5rem;
-            background: var(--navy-blue);
-            color: white;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 600;
-            transition: all 0.3s ease;
+        .benefits-article {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
         }
-        .back-button:hover {
-            background: var(--royal-blue);
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        .benefits-article .content-section {
+            margin-bottom: 2.5rem;
+        }
+        .benefits-article h2 {
+            color: var(--navy-blue);
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+        }
+        .benefits-article h3 {
+            color: var(--royal-blue);
+            font-size: 1.4rem;
+            margin: 1.5rem 0 0.75rem;
+        }
+        .benefits-article p, .benefits-article li {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #333;
+        }
+        .benefits-article ul {
+            padding-left: 1.5rem;
+        }
+        .benefits-article li {
+            margin-bottom: 0.75rem;
         }
     </style>
     <script type="application/ld+json">
@@ -89,18 +109,113 @@
     </script>
 </head>
 <body>
-    <div class="coming-soon-container">
-        <div class="coming-soon-content">
-            <h1>Member Benefits</h1>
-            <div class="separator-container">
-                <img src="images/Mayflower_separator_line.jpg" alt="Separator" class="mayflower-separator" style="max-width: 300px;">
-            </div>
-            <h2>COMING SOON</h2>
-            <p style="font-size: 1.2rem; color: var(--slate); line-height: 1.8;">
-                Detailed information about member benefits will be available soon!
-            </p>
-            <a href="membership.html" class="back-button">← Back to Membership</a>
+    <header id="mainHeader">
+        <nav>
+            <a href="index.html" class="logo">
+                <img src="images/LOGO002.png" alt="Alabama Mayflower Society" class="logo-img">
+            </a>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+                <li class="has-dropdown">
+                    <a href="about-us.html">About Us</a>
+                    <ul class="dropdown">
+                        <li><a href="our-history.html">Our History</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="membership.html">Membership</a>
+                    <ul class="dropdown">
+                        <li><a href="member-benefits.html" style="color: var(--gold);">Member Benefits</a></li>
+                        <li><a href="application-process.html">Application Process</a></li>
+                        <li><a href="onramp.html">Research On-Ramp</a></li>
+                        <li><a href="passenger-roster.html">Passenger Roster</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="events.html">Events</a>
+                    <ul class="dropdown">
+                        <li><a href="news.html">News</a></li>
+                    </ul>
+                </li>
+                <li><a href="members-only.html">Member Portal</a></li>
+                <li class="has-dropdown">
+                    <a href="MayflowerSaga.html">Features</a>
+                    <ul class="dropdown">
+                        <li><a href="MayflowerSaga.html">The Mayflower Saga</a></li>
+                        <li><a href="PassengerPortal.html">The Passengers: Narrative Directory</a></li>
+                        <li><a href="compact.html">The Mayflower Compact</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="support.html">FAQ</a>
+                    <ul class="dropdown">
+                        <li><a href="useful-links.html">Useful Links</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact_submit.html">Contact Us</a></li>
+                <li><img src="images/LOGO001.png" alt="Mayflower Society" style="height: 45px; width: auto; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));"></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="benefits-hero">
+        <h1>Member Benefits</h1>
+        <p style="font-size: 1.5rem; color: var(--gold); font-weight: 700; text-shadow: 1px 1px 5px rgba(0,0,0,0.5);">What You Gain as a Mayflower Descendant Member</p>
+    </section>
+
+    <div class="separator-container">
+        <img src="images/Mayflower_separator_line.png" alt="Separator" class="mayflower-separator">
+    </div>
+
+    <article class="benefits-article">
+        <div class="content-section">
+            <h3>General Society Benefits</h3>
+            <p>For lineage-certified members, benefits include:</p>
+            <ul>
+                <li>Official verification and certification of your lineage(s) to one or more Mayflower passengers, and an official Mayflower Society Membership Certificate for each approved lineage.</li>
+                <li>Preservation of your family's lineage(s) and documentation.</li>
+                <li>Invitations to Society events, such as the Triennial Congress held every three years in Plymouth, the annual General Board of Assistants Conference held in various cities around the country, and the annual Hereditary Fortnight Breakfast.</li>
+                <li>Access to the exclusive Members Only area of the GSMD website, with reports from committees, updates from the Governor General, Society resources, and more.</li>
+                <li>The Mayflower Quarterly Magazine delivered to your mailbox and available online in the members-only area of the site.</li>
+                <li>Exclusive access to FreeWill, an online service that guides you through the process of creating your will or trust. Use it on its own, or to document your wishes before finalizing your plans with an attorney.</li>
+                <li>A 15% discount on Storyworth (using the link in the Members Only section of the GSMD website), which helps you or your loved ones capture life stories through voice recordings or email and preserve them in a keepsake book with unlimited photos.</li>
+                <li>Discounts to attractions in the Plymouth, Massachusetts area, including a See Plymouth visitor package (restaurant and event discounts, a map of Plymouth, and a special "Plymouth Rock" squeezy toy), a 10% discount at Hotel 1620 across from Plymouth Harbor, and a special membership discount for Plimoth-Patuxet Museums plus a special edition print of the Mayflower II under sail.</li>
+                <li>Mayflower Tours: organized trips through The Mayflower Society to historic Pilgrim sites in the U.S., Canada, England, and Holland.</li>
+                <li>Members-only jewelry, insignia, and grave markers available in the online store.</li>
+                <li>Scholarship eligibility for children and grandchildren of members.</li>
+                <li>Free tours of the historic Mayflower Society House (built by the great-grandson of Pilgrim Edward Winslow in 1754) and free admission to the Genealogical Research Center (by appointment).</li>
+                <li>A discounted subscription to the NEHGS website, AmericanAncestors.org.</li>
+                <li>Information about Family Society partners.</li>
+                <li>Opportunities to serve in Colony, State Society, and General Society officer positions.</li>
+                <li>Members are the first to know about new Mayflower Society publications and new items in the Mayflower Shop.</li>
+            </ul>
         </div>
+
+        <div class="content-section">
+            <h3>Alabama Society Benefits</h3>
+            <p>For lineage-certified members and supporters, benefits include:</p>
+            <ul>
+                <li>The opportunity to attend State Society events held in Alabama (some in-person, some virtual, and some both).</li>
+                <li>The annual "We Will Plymouth Rock You!" Spring Conference Weekend, held in rotating cities around the state.</li>
+                <li>The annual Compact Day Commemoration Event and State Society Anniversary Celebration, held in mid-autumn in various cities around the state.</li>
+                <li>The opportunity to attend Colony Group events: water cruises; trips to historical and family attractions around Alabama; Mayflower Cousins luncheons and dinners; Pilgrim Families Reunions with food, games, and photos; and Mayflower Meet-and-Greets for newbies.</li>
+                <li>Plus so much camaraderie, food, and fun, all while learning and living your Mayflower lineage and family history.</li>
+            </ul>
+        </div>
+
+        <p style="text-align: center; margin-top: 2rem;">
+            <a href="membership.html" style="color: var(--royal-blue); font-weight: 700; text-decoration: underline;">&larr; Back to Membership</a>
+        </p>
+    </article>
+
+    <div class="separator-container">
+        <img src="images/Mayflower_separator_line.png" alt="Separator" class="mayflower-separator">
     </div>
 
     <footer id="contact">
@@ -158,6 +273,7 @@
             </div>
         </div>
     </footer>
+
     <script src="js/main.js?v=2"></script>
 </body>
 </html>
