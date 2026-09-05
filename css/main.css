@@ -799,6 +799,12 @@ footer {
     margin: 0 auto 3rem;
 }
 
+@media (min-width: 1100px) {
+    .footer-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
 .footer-section h3 {
     color: var(--gold);
     margin-bottom: 1.5rem;
