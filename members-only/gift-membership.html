@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8R17FZY7H9"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-8R17FZY7H9');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="description" content="Gift a Mayflower Society membership to your child, grandchild, or great-grandchild - Alabama Society of Mayflower Descendants">
+    <title>Gift a Membership | Alabama Society of Mayflower Descendants</title>
+    <link rel="canonical" href="https://alabamasmd.org/members-only/gift-membership.html">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/compact-page.css">
+    <link rel="icon" type="image/png" href="../images/LOGO001.png?v=3">
+    <style>
+        .gift-hero {
+            position: relative;
+            margin-top: 70px;
+            background: linear-gradient(rgba(0, 32, 91, 0.25), rgba(0, 32, 91, 0.35)), url('../images/gift_membership_hero.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 5rem 2rem;
+            text-align: center;
+            color: white;
+        }
+        .gift-hero h1 {
+            font-family: 'Ultra', Georgia, serif;
+            font-weight: 400;
+            letter-spacing: 1px;
+            color: var(--gold);
+            background: linear-gradient(180deg, #f6e7a8 0%, #d4af37 45%, #a3791f 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow:
+                -1px -1px 0 rgba(255, 244, 200, 0.55),
+                1px 1px 1px rgba(60, 30, 0, 0.65),
+                2px 4px 10px rgba(0, 0, 0, 0.55);
+            font-size: clamp(2.2rem, 5.5vw, 3.8rem);
+            margin-bottom: 0.6rem;
+        }
+        .gift-hero .subtitle {
+            font-size: clamp(1.1rem, 2.2vw, 1.4rem);
+            color: rgba(255,255,255,0.95);
+            text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+        }
+        .gift-article {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 3.5rem 2rem 1rem;
+        }
+        .gift-article h2 {
+            color: var(--navy-blue);
+            font-size: 1.6rem;
+            margin: 2rem 0 1rem;
+        }
+        .gift-article p {
+            font-size: 1.1rem;
+            line-height: 1.75;
+            color: #333;
+            margin-bottom: 1.1rem;
+        }
+        .gift-closing-line {
+            font-style: italic;
+            color: var(--navy-blue);
+            font-size: 1.15rem;
+            border-left: 3px solid var(--gold);
+            padding-left: 1rem;
+            margin: 1.5rem 0 2rem;
+        }
+        .gift-form-wrap {
+            max-width: 700px;
+            margin: 1rem auto 4rem;
+            padding: 0 2rem;
+        }
+        .gift-form {
+            background: #f9f9f9;
+            border-left: 4px solid var(--gold);
+            padding: 2rem;
+            border-radius: 4px;
+        }
+        .gift-form-intro {
+            font-size: 1.1rem;
+            color: var(--navy-blue);
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.25rem 1.5rem;
+        }
+        .form-field {
+            display: flex;
+            flex-direction: column;
+        }
+        .form-field.full-width {
+            grid-column: 1 / -1;
+        }
+        .form-field label {
+            font-weight: 600;
+            color: var(--navy-blue);
+            margin-bottom: 0.35rem;
+            font-size: 0.95rem;
+        }
+        .form-field input {
+            font-family: inherit;
+            font-size: 1rem;
+            padding: 0.65rem 0.75rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background: white;
+        }
+        .form-field input:focus {
+            outline: none;
+            border-color: var(--gold);
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
+        }
+        .gift-count-row {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .gift-count-row input[type="number"] {
+            width: 70px;
+            flex: none;
+        }
+        .gift-count-row label {
+            margin-bottom: 0;
+            font-weight: 500;
+            color: var(--slate);
+        }
+        .gift-thankyou {
+            display: none;
+            text-align: center;
+            padding: 2rem;
+        }
+        .gift-thankyou h3 {
+            color: var(--navy-blue);
+            margin-bottom: 0.75rem;
+        }
+        .required-mark {
+            color: var(--deep-red);
+        }
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+        @media (max-width: 640px) {
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "NGO",
+      "name": "Alabama Society of Mayflower Descendants",
+      "alternateName": "Alabama Mayflower Society",
+      "url": "https://alabamasmd.org",
+      "logo": "https://alabamasmd.org/images/LOGO002.png",
+      "description": "Alabama Society of Mayflower Descendants - Preserving the legacy of the Mayflower Pilgrims since 1952",
+      "foundingDate": "1952",
+      "email": "info@alabamasmd.org",
+      "nonprofitStatus": "https://schema.org/Nonprofit501c3",
+      "areaServed": { "@type": "State", "name": "Alabama" },
+      "memberOf": { "@type": "Organization", "name": "General Society of Mayflower Descendants", "url": "https://themayflowersociety.org" },
+      "sameAs": ["https://www.facebook.com/groups/AlabamaMayflowerSociety"]
+    }
+    </script>
+</head>
+<body>
+    <header id="mainHeader">
+        <nav>
+            <a href="../members-only.html" class="logo">
+                <img src="../images/LOGO002.png" alt="Alabama Mayflower Society" class="logo-img">
+            </a>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+                <li class="has-dropdown">
+                    <a href="../events.html">Events</a>
+                    <ul class="dropdown">
+                        <li><a href="../news.html">News</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="../support.html">FAQ</a>
+                    <ul class="dropdown">
+                        <li><a href="../useful-links.html">Useful Links</a></li>
+                    </ul>
+                </li>
+                <li><a href="../contact_submit.html">Contact Us</a></li>
+                <li><a href="../index.html" class="main-site-btn" title="Leave the members-only area and return to the public website">Main Site &#8599;</a></li>
+                <li>
+                    <a href="/members-only/mo-signout" class="logout-btn" title="Remember to log out when using a shared or public computer">
+                        <span class="logout-icon-wrap">
+                            <span class="logout-ring"></span>
+                            <span class="logout-icon">&#128682;</span>
+                        </span>
+                        Log Out
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="gift-hero">
+        <h1>Pass the Story Forward</h1>
+        <p class="subtitle">A gift from one Mayflower family member to another</p>
+    </section>
+
+    <article class="gift-article">
+        <p>You have already carried your family's Mayflower story further than anyone before you, all the way to a certified, permanent place in the Society's records. Your child or grandchild may not think much about where they came from today; most people don't, until they do. Whenever that day comes, next year or thirty years from now, the record will already be there, waiting for them.</p>
+
+        <h2>How It Works</h2>
+        <p>Because your own lineage is already proven and on file, gifting membership to your child or grandchild is far simpler than a standard application. The Historian only needs to document the most recent generation connecting you to them, not retrace your entire line back to the Mayflower. You cover the one-time application fee to begin the process; an official Membership Certificate becomes part of your family's permanent record, something to hand down and grow into over the years. Whether they continue as an annual member afterward is entirely their own choice.</p>
+
+        <p class="gift-closing-line">You spent years doing the proving. Those years are part of you, and they're part of this gift too.</p>
+    </article>
+
+    <div class="gift-form-wrap">
+        <div class="gift-form">
+            <p class="gift-form-intro">Ready to give this gift? Let us know below, and our Historian will follow up directly to help get things started.</p>
+
+            <form name="gift-membership" method="POST" action="https://formspree.io/f/xzdngbkb" id="gift-membership-form">
+                <input type="hidden" name="_subject" value="New Gift Membership Request - Alabama SMD">
+                <p class="visually-hidden">
+                    <label>Don't fill this out if you're human: <input type="text" name="_gotcha" autocomplete="off" tabindex="-1" aria-hidden="true"></label>
+                </p>
+
+                <div class="form-grid">
+                    <div class="form-field">
+                        <label for="gift-name">Your Name <span class="required-mark">*</span></label>
+                        <input type="text" id="gift-name" name="Your Name" autocomplete="name" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="gift-email">Email Address on File with SMDAL <span class="required-mark">*</span></label>
+                        <input type="email" id="gift-email" name="Email Address on File with SMDAL" autocomplete="email" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="gift-phone">Cell Phone # on File with SMDAL</label>
+                        <input type="tel" id="gift-phone" name="Cell Phone Number on File with SMDAL" placeholder="xxx-xxx-xxxx" maxlength="12" inputmode="numeric" autocomplete="tel">
+                    </div>
+                    <div class="form-field">
+                        <label for="gift-gsmd">GSMD Member #</label>
+                        <input type="text" id="gift-gsmd" name="GSMD Member Number" autocomplete="off">
+                    </div>
+                    <div class="form-field">
+                        <label for="gift-smdal">SMDAL Member #</label>
+                        <input type="text" id="gift-smdal" name="SMDAL Member Number" autocomplete="off">
+                    </div>
+
+                    <div class="form-field full-width">
+                        <label style="margin-bottom: 0.75rem;">I want to give a membership to my (enter a number for each that applies):</label>
+                        <div class="gift-count-row" style="margin-bottom: 0.6rem;">
+                            <input type="number" id="gift-children" name="Number of Children (age 18 or over)" min="0" value="0">
+                            <label for="gift-children">Child(ren), age 18 or over</label>
+                        </div>
+                        <div class="gift-count-row" style="margin-bottom: 0.6rem;">
+                            <input type="number" id="gift-grandchildren" name="Number of Grandchildren (age 18 or over)" min="0" value="0">
+                            <label for="gift-grandchildren">Grandchild(ren), age 18 or over</label>
+                        </div>
+                        <div class="gift-count-row">
+                            <input type="number" id="gift-greatgrandchildren" name="Number of Great-Grandchildren (age 18 or over)" min="0" value="0">
+                            <label for="gift-greatgrandchildren">Great-Grandchild(ren), age 18 or over</label>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="margin-top: 1.5rem;">Submit</button>
+            </form>
+
+            <div class="gift-thankyou" id="gift-thankyou">
+                <h3>Thank You</h3>
+                <p>Our Historian will be in touch directly to help get things started. If you don't hear from us within a few days, feel free to reach out at <a href="mailto:SMDAL.Info@gmail.com">SMDAL.Info@gmail.com</a>.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <img src="../images/LOGO002.png" alt="Alabama Mayflower Society" class="footer-logo">
+                    <p>Preserving the legacy of the Mayflower Pilgrims since 1952</p>
+                    <div class="social-links" style="margin-top: 1.5rem;">
+                        <a href="https://www.facebook.com/groups/AlabamaMayflowerSociety" target="_blank" rel="noopener" style="display: inline-block; text-decoration: none;">
+                            <span style="background: white; color: var(--navy-blue); width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; border-radius: 4px; font-family: sans-serif; font-weight: bold; font-size: 22px;">f</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../about-us.html">About Us</a></li>
+                        <li><a href="../our-history.html">Our History</a></li>
+                        <li><a href="../membership.html">Membership</a></li>
+                        <li><a href="../events.html">Events</a></li>
+                        <li><a href="../news.html">News</a></li>
+                        <li><a href="../useful-links.html">Useful Links</a></li>
+                        <li><a href="../support.html">FAQ / Support</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Our Colonies</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 1rem;"><a href="../cahaba-river-colony.html">Cahaba River Colony</a><br><small>Birmingham Metro Area</small></li>
+                        <li style="margin-bottom: 1rem;"><a href="../capital-colony.html">Capital Colony</a><br><small>Montgomery Metro Area</small></li>
+                        <li style="margin-bottom: 1rem;"><a href="../gulf-coast-colony.html">Gulf Coast Colony</a><br><small>Mobile Bay Metro Area</small></li>
+                        <li><a href="../tennessee-valley-colony.html">Tennessee Valley Colony</a><br><small>Huntsville Metro Area</small></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Pilgrim Payment Portal</h3>
+                    <p style="margin-bottom: 0.75rem;"><a href="http://PaySMDAL.today" target="_blank" rel="noopener">PaySMDAL.today</a></p>
+                    <p style="font-size: 0.9rem; opacity: 0.85;">for Event Registrations, Memberships, Annual Dues, Various Fees, and Donations</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 1rem;"><a href="mailto:SMDAL.Info@gmail.com">SMDAL.Info@gmail.com</a></li>
+                        <li><a href="https://themayflowersociety.org" target="_blank" rel="noopener">General Society of Mayflower Descendants</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom" style="text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 2rem;">
+                <p>&copy; 2026 The Society of Mayflower Descendants in the State of <i>(Sweet Home)</i> Alabama | All Rights Reserved | <a href="../privacy-policy.html" style="color: var(--gold);">Privacy Policy</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js?v=2"></script>
+    <script>
+        document.getElementById('gift-membership-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            var form = e.target;
+            var submitBtn = form.querySelector('button[type="submit"]');
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Sending…';
+            fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form),
+                headers: { 'Accept': 'application/json' }
+            }).then(function (response) {
+                if (response.ok) {
+                    form.style.display = 'none';
+                    document.getElementById('gift-thankyou').style.display = 'block';
+                } else {
+                    return response.json().then(function (body) {
+                        var msg = (body && body.errors)
+                            ? body.errors.map(function (err) { return err.message; }).join(', ')
+                            : 'There was a problem sending this. Please try again or email SMDAL.Info@gmail.com directly.';
+                        throw new Error(msg);
+                    });
+                }
+            }).catch(function (err) {
+                alert(err.message || 'There was a problem sending this. Please try again or email SMDAL.Info@gmail.com directly.');
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Submit';
+            });
+        });
+    </script>
+</body>
+</html>
