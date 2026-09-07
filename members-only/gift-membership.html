@@ -20,16 +20,12 @@
     <link rel="icon" type="image/png" href="../images/LOGO001.png?v=3">
     <style>
         .gift-hero {
-            margin-top: 100px;
-            text-align: center;
-            padding: 0;
-        }
-        .gift-hero img {
+            background: url('../images/GiftOfHeritage.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 12rem 2rem 8rem;
+            min-height: 50vh;
             width: 100%;
-            max-width: 1200px;
-            height: auto;
-            display: block;
-            margin: 0 auto;
         }
         .gift-article {
             max-width: 760px;
@@ -103,19 +99,39 @@
             border-color: var(--gold);
             box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
         }
-        .gift-count-row {
+        .gift-relation-options {
             display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+        }
+        .gift-relation-btn {
+            position: relative;
+            display: inline-flex;
             align-items: center;
-            gap: 0.75rem;
+            padding: 0.6rem 1.15rem;
+            border: 2px solid #ccc;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: var(--navy-blue);
+            background: white;
+            transition: background 0.15s, border-color 0.15s, box-shadow 0.15s;
+            user-select: none;
         }
-        .gift-count-row input[type="number"] {
-            width: 70px;
-            flex: none;
+        .gift-relation-btn input {
+            position: absolute;
+            opacity: 0;
+            width: 0;
+            height: 0;
         }
-        .gift-count-row label {
-            margin-bottom: 0;
-            font-weight: 500;
-            color: var(--slate);
+        .gift-relation-btn:hover {
+            border-color: var(--gold);
+        }
+        .gift-relation-btn.active {
+            background: var(--gold);
+            border-color: var(--gold);
+            box-shadow: 0 2px 8px rgba(212,175,55,0.4);
         }
         .gift-thankyou {
             display: none;
@@ -217,9 +233,7 @@
         </nav>
     </header>
 
-    <section class="gift-hero">
-        <img src="../images/GiftOfHeritage.jpg" alt="Give the Gift of Heritage - Alabama Society of Mayflower Descendants gift membership program">
-    </section>
+    <section class="gift-hero"></section>
 
     <article class="gift-article">
         <p>You have already carried your family's Mayflower story further than anyone before you, all the way to a certified, permanent place in the Society's records. Your child or grandchild may not think much about where they came from today; most people don't, until they do. Whenever that day comes, next year or thirty years from now, the record will already be there, waiting for them.</p>
@@ -263,18 +277,32 @@
                     </div>
 
                     <div class="form-field full-width">
-                        <label style="margin-bottom: 0.75rem;">I want to give a membership to my (enter a number for each that applies):</label>
-                        <div class="gift-count-row" style="margin-bottom: 0.6rem;">
-                            <input type="number" id="gift-children" name="Number of Children (age 18 or over)" min="0" value="0">
-                            <label for="gift-children">Child(ren), age 18 or over</label>
-                        </div>
-                        <div class="gift-count-row" style="margin-bottom: 0.6rem;">
-                            <input type="number" id="gift-grandchildren" name="Number of Grandchildren (age 18 or over)" min="0" value="0">
-                            <label for="gift-grandchildren">Grandchild(ren), age 18 or over</label>
-                        </div>
-                        <div class="gift-count-row">
-                            <input type="number" id="gift-greatgrandchildren" name="Number of Great-Grandchildren (age 18 or over)" min="0" value="0">
-                            <label for="gift-greatgrandchildren">Great-Grandchild(ren), age 18 or over</label>
+                        <label style="margin-bottom: 0.75rem;">Who would you like to give a membership to? Check all that apply, all must be age 18 or over. <span class="required-mark">*</span></label>
+                        <div class="gift-relation-options" id="gift-relation-options">
+                            <label class="gift-relation-btn">
+                                <input type="checkbox" name="Relation - Child" value="Child">
+                                <span>Child</span>
+                            </label>
+                            <label class="gift-relation-btn">
+                                <input type="checkbox" name="Relation - Grandchild" value="Grandchild">
+                                <span>Grandchild</span>
+                            </label>
+                            <label class="gift-relation-btn">
+                                <input type="checkbox" name="Relation - Great-Grandchild" value="Great-Grandchild">
+                                <span>Great-Grandchild</span>
+                            </label>
+                            <label class="gift-relation-btn">
+                                <input type="checkbox" name="Relation - Sibling" value="Sibling">
+                                <span>Sibling</span>
+                            </label>
+                            <label class="gift-relation-btn">
+                                <input type="checkbox" name="Relation - Niece" value="Niece">
+                                <span>Niece</span>
+                            </label>
+                            <label class="gift-relation-btn">
+                                <input type="checkbox" name="Relation - Nephew" value="Nephew">
+                                <span>Nephew</span>
+                            </label>
                         </div>
                     </div>
                 </div>
@@ -351,9 +379,20 @@
 
     <script src="../js/main.js?v=2"></script>
     <script>
+        document.querySelectorAll('#gift-relation-options .gift-relation-btn input[type="checkbox"]').forEach(function (cb) {
+            cb.addEventListener('change', function () {
+                this.closest('.gift-relation-btn').classList.toggle('active', this.checked);
+            });
+        });
+
         document.getElementById('gift-membership-form').addEventListener('submit', function (e) {
             e.preventDefault();
             var form = e.target;
+            var anyRelationChecked = form.querySelectorAll('#gift-relation-options input[type="checkbox"]:checked').length > 0;
+            if (!anyRelationChecked) {
+                alert('Please select at least one relationship above before submitting.');
+                return;
+            }
             var submitBtn = form.querySelector('button[type="submit"]');
             submitBtn.disabled = true;
             submitBtn.textContent = 'Sending…';
