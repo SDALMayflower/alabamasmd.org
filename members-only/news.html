@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8R17FZY7H9"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-8R17FZY7H9');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="description" content="Members-only news and announcements from the Alabama Society of Mayflower Descendants">
+    <title>Members News | Alabama Society of Mayflower Descendants</title>
+    <link rel="canonical" href="https://alabamasmd.org/members-only/news.html">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/compact-page.css">
+    <link rel="icon" type="image/png" href="../images/LOGO001.png?v=3">
+    <style>
+        /* ── News Card ───────────────────────────────────────────── */
+        .news-section {
+            padding: 3rem 2rem 5rem;
+            background: #f5f6f8;
+        }
+
+        .news-container {
+            max-width: 860px;
+            margin: 0 auto;
+        }
+
+        .news-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .news-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 36px rgba(0,0,0,0.15);
+        }
+
+        /* Dark hero banner — mimics Gulf Shores style */
+        .news-card-hero {
+            position: relative;
+            background: linear-gradient(135deg, #0a2540 0%, #1e40af 60%, #0a2540 100%);
+            padding: 3rem 2.5rem 2.5rem;
+            overflow: hidden;
+        }
+
+        .news-card-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url('../images/Mayflower_Collage_Hero.png') center/cover no-repeat;
+            opacity: 0.18;
+        }
+
+        .news-card-hero h2 {
+            position: relative;
+            color: white;
+            font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+            line-height: 1.25;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+        }
+
+        .news-card-hero .hero-sub {
+            position: relative;
+            color: rgba(255,255,255,0.85);
+            font-size: 1.05rem;
+            font-style: italic;
+        }
+
+        /* Badge + date bar */
+        .news-meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 0.9rem 2rem;
+            border-bottom: 1px solid #eee;
+            background: white;
+        }
+
+        .news-badge {
+            display: inline-block;
+            background: transparent;
+            border: 2px solid #0a2540;
+            color: #0a2540;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 0.2rem 0.85rem;
+            border-radius: 50px;
+            white-space: nowrap;
+        }
+
+        .news-date {
+            color: #888;
+            font-size: 0.88rem;
+            font-style: italic;
+        }
+
+        /* Article body */
+        .news-card-body {
+            padding: 2rem 2.5rem 2rem;
+        }
+
+        .news-card-body p {
+            color: #444;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 1.1rem;
+        }
+
+        .news-card-body .event-day {
+            font-weight: 700;
+            color: #0a2540;
+        }
+
+        .news-divider {
+            border: none;
+            border-top: 1px solid #e8e0d0;
+            margin: 1.5rem 0;
+        }
+
+        .news-cta {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--gold), var(--bronze));
+            color: #0a2540;
+            font-weight: 700;
+            font-size: 0.95rem;
+            padding: 0.85rem 2.2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            letter-spacing: 0.05em;
+            margin-top: 0.5rem;
+            transition: all 0.25s ease;
+            box-shadow: 0 4px 16px rgba(212,175,55,0.35);
+        }
+
+        .news-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(212,175,55,0.5);
+            color: #0a2540;
+        }
+
+        /* ── Brief announcement (lighter format) ─────────────────── */
+        .news-item-brief {
+            background: white;
+            border-left: 4px solid var(--gold);
+            border-radius: 8px;
+            padding: 1.5rem 2rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+
+        .news-item-brief .news-meta {
+            padding: 0;
+            border-bottom: none;
+            margin-bottom: 0.85rem;
+        }
+
+        .news-item-brief h3 {
+            color: var(--navy-blue);
+            font-size: 1.3rem;
+            margin-bottom: 0.6rem;
+        }
+
+        .news-item-brief p {
+            color: #444;
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 0.8rem;
+        }
+
+        .news-cta-plain {
+            color: var(--royal-blue);
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+
+        .news-cta-plain:hover {
+            text-decoration: underline;
+        }
+
+        .members-only-badge {
+            display: inline-block;
+            background: var(--navy-blue);
+            color: white;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 0.2rem 0.85rem;
+            border-radius: 50px;
+            white-space: nowrap;
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "NGO",
+      "name": "Alabama Society of Mayflower Descendants",
+      "alternateName": "Alabama Mayflower Society",
+      "url": "https://alabamasmd.org",
+      "logo": "https://alabamasmd.org/images/LOGO002.png",
+      "description": "Alabama Society of Mayflower Descendants - Preserving the legacy of the Mayflower Pilgrims since 1952",
+      "foundingDate": "1952",
+      "email": "info@alabamasmd.org",
+      "nonprofitStatus": "https://schema.org/Nonprofit501c3",
+      "areaServed": { "@type": "State", "name": "Alabama" },
+      "memberOf": { "@type": "Organization", "name": "General Society of Mayflower Descendants", "url": "https://themayflowersociety.org" },
+      "sameAs": ["https://www.facebook.com/groups/AlabamaMayflowerSociety"]
+    }
+    </script>
+</head>
+<body>
+
+    <!-- ── Header / Nav ──────────────────────────────────── -->
+        <header id="mainHeader">
+            <nav>
+                <a href="../members-only.html" class="logo">
+                    <img src="../images/LOGO002.png" alt="Alabama Mayflower Society" class="logo-img">
+                </a>
+
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="../events.html">Events</a></li>
+                <li><a href="news.html" style="color: var(--gold);">News</a></li>
+                <li><a href="gift-membership.html">Gift Membership</a></li>
+                <li><a href="../contact_submit.html">Contact Us</a></li>
+                    <li><a href="../index.html" class="main-site-btn" title="Leave the members-only area and return to the public website">Main Site &#8599;</a></li>
+                    <li>
+                        <a href="/members-only/mo-signout" class="logout-btn" title="Remember to log out when using a shared or public computer">
+                            <span class="logout-icon-wrap">
+                                <span class="logout-ring"></span>
+                                <span class="logout-icon">&#128682;</span>
+                            </span>
+                            Log Out
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- ── Hero ─────────────────────────────────────────────── -->
+        <section class="page-hero" style="background-image: url('../images/news-banner.jpg'); background-size: cover; background-position: center; align-items: flex-end; padding-bottom: 2.5rem;">
+            <div class="hero-overlay"></div>
+            <div class="container">
+                <h1 class="serif">Members News</h1>
+                <p class="subtitle" style="color: rgba(255,255,255,0.88); margin-top: 0.75rem;">Everything on the public News page, plus updates just for members</p>
+            </div>
+        </section>
+
+        <!-- ── Separator ────────────────────────────────────────── -->
+        <div class="separator-container">
+            <img src="../images/Mayflower_separator_line.png" alt="Separator" class="mayflower-separator">
+        </div>
+
+        <!-- ── News Card ─────────────────────────────────────────── -->
+        <section class="news-section">
+            <div class="news-container">
+
+                <a href="../members-only.html" class="news-card" style="margin-bottom: 2rem;">
+
+                    <!-- Dark hero banner with title -->
+                    <div class="news-card-hero">
+                        <h2>The New AlabamaSMD.org Is Here: Members Portal Now Open</h2>
+                        <p class="hero-sub">The Society of Mayflower Descendants in the State of <em>(Sweet Home)</em> Alabama</p>
+                    </div>
+
+                    <!-- Badge + date -->
+                    <div class="news-meta">
+                        <span class="news-badge">Announcement</span>
+                        <span class="news-date">Posted August 22, 2026</span>
+                    </div>
+
+                    <!-- Article body -->
+                    <div class="news-card-body">
+                        <p>We're proud to officially unveil the new Alabama Society website, live now at <strong>AlabamaSMD.org</strong>.</p>
+
+                        <hr class="news-divider">
+
+                        <p>The centerpiece of this launch is the new secure Members Portal, built specifically to orient both new and long-time members. Inside you'll find the SMDAL Top 12 List (covering everything from what we need from you, to member benefits, to preparing your estate, to national, state, and colony events), an online Supplemental Lineage Review Form, the current Membership Directory, and the SMDAL Bylaws, with three more sections still under construction.</p>
+
+                        <p>Current members: check your email for portal access details.</p>
+
+                        <p>We've also recently refreshed the public Membership and Events pages. Take a look around.</p>
+
+                        <span class="news-cta">Visit the Member Portal &rarr;</span>
+                    </div>
+
+                </a>
+
+                <!-- ── Brief: Gift Membership (members-only) ────────── -->
+                <div class="news-item-brief">
+                    <div class="news-meta">
+                        <span class="members-only-badge">Members Only</span>
+                        <span class="news-badge">New Feature</span>
+                        <span class="news-date">Posted September 2026</span>
+                    </div>
+                    <h3>New: Gift a Mayflower Membership to Family</h3>
+                    <p>Current members can now gift a Society membership to a child, grandchild, sibling, niece, or nephew age 18 or older. Because your own lineage is already documented and on file, the process is far simpler than a standard application.</p>
+                    <a href="gift-membership.html" class="news-cta-plain">Learn more and get started &rarr;</a>
+                </div>
+
+                <!-- ── Brief: New Feature ───────────────────────────── -->
+                <div class="news-item-brief">
+                    <div class="news-meta">
+                        <span class="news-badge">New Feature</span>
+                        <span class="news-date">Posted September 2026</span>
+                    </div>
+                    <h3>Growing the SMDAL Toolbox: Research On-Ramp &amp; Passenger Roster</h3>
+                    <p>We're steadily building out a toolbox of free resources for members and prospective members working on their lineage. The two newest additions: the <strong>Research On-Ramp</strong>, with a passenger checker tool to confirm whether a Mayflower passenger has documented descendants, and a full <strong>Passenger &amp; Spouse Roster</strong> covering all 26 GSMD-documented passenger families with the spouse married to each one. Names only, sourced and dated, with links straight to GSMD's own family profiles for anyone who wants the full story. More tools are on the way.</p>
+                    <a href="../onramp.html" class="news-cta-plain">Explore the Research On-Ramp &rarr;</a>
+                    &nbsp;&bull;&nbsp;
+                    <a href="../passenger-roster.html" target="_blank" rel="noopener" class="news-cta-plain">View the passenger roster &rarr;</a>
+                </div>
+
+                <!-- ── Brief: Leadership ────────────────────────────── -->
+                <div class="news-item-brief">
+                    <div class="news-meta">
+                        <span class="news-badge">Leadership</span>
+                        <span class="news-date">Posted September 2026</span>
+                    </div>
+                    <h3>Congratulations to Sarah Curtis, TVC's New Lt. Governor</h3>
+                    <p>Please join us in congratulating <strong>Sarah Curtis</strong> of Madison County, Alabama, who was nominated, elected, and installed as the Tennessee Valley Colony's new Lieutenant Governor on May 23. We're grateful for her willingness to serve.</p>
+                    <a href="../05-23-26.html" class="news-cta-plain">Read the full TVC Luncheon recap &rarr;</a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ── Footer ────────────────────────────────────────── -->
+        <footer id="contact">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-section">
+                        <img src="../images/LOGO002.png" alt="Alabama Mayflower Society" class="footer-logo">
+                        <p>Preserving the legacy of the Mayflower Pilgrims since 1952</p>
+                        <div class="social-links" style="margin-top: 1.5rem;">
+                            <a href="https://www.facebook.com/groups/AlabamaMayflowerSociety" target="_blank" rel="noopener" style="display: inline-block; text-decoration: none;">
+                                <span style="background: white; color: var(--navy-blue); width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; border-radius: 4px; font-family: sans-serif; font-weight: bold; font-size: 22px;">f</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="footer-section">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="../about-us.html">About Us</a></li>
+                            <li><a href="../our-history.html">Our History</a></li>
+                            <li><a href="../membership.html">Membership</a></li>
+                            <li><a href="../events.html">Events</a></li>
+                            <li><a href="../news.html">News</a></li>
+                            <li><a href="../useful-links.html">Useful Links</a></li>
+                            <li><a href="../support.html">FAQ / Support</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-section">
+                        <h3>Our Colonies</h3>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="margin-bottom: 1rem;"><a href="../cahaba-river-colony.html">Cahaba River Colony</a><br><small>Birmingham Metro Area</small></li>
+                            <li style="margin-bottom: 1rem;"><a href="../capital-colony.html">Capital Colony</a><br><small>Montgomery Metro Area</small></li>
+                            <li style="margin-bottom: 1rem;"><a href="../gulf-coast-colony.html">Gulf Coast Colony</a><br><small>Mobile Bay Metro Area</small></li>
+                            <li><a href="../tennessee-valley-colony.html">Tennessee Valley Colony</a><br><small>Huntsville Metro Area</small></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-section">
+                    <h3>Pilgrim Payment Portal</h3>
+                    <p style="margin-bottom: 0.75rem;"><a href="http://PaySMDAL.today" target="_blank" rel="noopener">PaySMDAL.today</a></p>
+                    <p style="font-size: 0.9rem; opacity: 0.85;">for Event Registrations, Memberships, Annual Dues, Various Fees, and Donations</p>
+                </div>
+                <div class="footer-section">
+                        <h3>Contact</h3>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="margin-bottom: 1rem;"><a href="mailto:SMDAL.Info@gmail.com">SMDAL.Info@gmail.com</a></li>
+                            <li><a href="https://themayflowersociety.org" target="_blank" rel="noopener">General Society of Mayflower Descendants</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-bottom" style="text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 2rem;">
+                    <p>&copy; 2026 The Society of Mayflower Descendants in the State of <i>(Sweet Home)</i> Alabama | All Rights Reserved | <a href="../privacy-policy.html" style="color: var(--gold);">Privacy Policy</a></p>
+                </div>
+            </div>
+        </footer>
+
+    <script src="../js/main.js?v=2"></script>
+</body>
+</html>
