@@ -59,6 +59,49 @@
         .placeholder-card strong {
             color: var(--navy-blue);
         }
+        /* ── Chyron caption ───────────────────────────────── */
+        .chyron {
+            overflow: hidden;
+            white-space: nowrap;
+            background: var(--navy-blue);
+            border-radius: 0 0 12px 12px;
+            padding: 0.55rem 0;
+        }
+
+        .chyron-track {
+            display: inline-block;
+            animation: chyron-scroll 16s linear infinite;
+        }
+
+        .chyron-track span {
+            color: var(--gold);
+            font-weight: 600;
+            font-size: 0.92rem;
+            letter-spacing: 0.02em;
+            padding-right: 3rem;
+        }
+
+        @keyframes chyron-scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .chyron-track {
+                animation: none;
+            }
+            .chyron {
+                white-space: normal;
+                text-align: center;
+                padding: 0.75rem 1rem;
+            }
+            .chyron-track span:last-child {
+                display: none;
+            }
+            .chyron-track span {
+                padding-right: 0;
+            }
+        }
     </style>
 </head>
 <body>
@@ -124,7 +167,7 @@
         <div class="hero-overlay"></div>
         <div class="container">
             <h1 class="serif">TVC 35th Anniversary Mayflower Families Reunion</h1>
-            <p class="subtitle" style="color: rgba(255,255,255,0.88); margin-top: 0.75rem;">Saturday, October 3, 2026 &bull; Doors Open at 2:00 p.m. &bull; Huntsville, Alabama</p>
+            <p class="subtitle" style="color: rgba(255,255,255,0.88); margin-top: 0.75rem;">Saturday, October 3, 2026 &bull; Huntsville, Alabama</p>
         </div>
     </section>
 
@@ -133,25 +176,166 @@
         <img src="images/Mayflower_separator_line.png" alt="Separator" class="mayflower-separator">
     </div>
 
-    <!-- ── Event Details ─────────────────────────────────────── -->
+    <!-- ── Recap ─────────────────────────────────────────────── -->
     <section class="members-section">
         <div class="back-to-menu"><a href="events.html">&larr; Back to Events</a></div>
+        <div style="max-width: 780px; margin: 0 auto 2rem; padding: 0 1rem;">
+            <img src="images/2026-10-03_Mayflower_Families_Reunion_banner.jpg" alt="Mayflower Families Reunion" style="width: 100%; height: auto; border-radius: 14px; box-shadow: 0 8px 24px rgba(0,0,0,0.15); border: 2px solid var(--gold); display: block;">
+        </div>
         <div class="placeholder-card" style="text-align: left; max-width: 780px; color: #444;">
-            <p style="text-align: center; margin-bottom: 1.25rem;"><strong>Saturday, October 3, 2026<br>Faith Presbyterian Church USA Fellowship Hall<br>Huntsville, Alabama</strong></p>
-            <p style="margin-bottom: 1.1rem;">The purpose of this event is to give the members of the Tennessee Valley Colony of Mayflower Descendants <strong>and their families</strong> an opportunity to gather and experience a unique Mayflower event. It&rsquo;s just like a &ldquo;normal&rdquo; family reunion with games, potluck food and photos, but it celebrates the numerous Mayflower Families from whom we all descend.</p>
-            <p style="margin-bottom: 1.1rem;">All Mayflower-descended family members (plus their spouses and partners!) who are <strong>not</strong> members of the Alabama Society of Mayflower Descendants are welcome to come to this party. No meeting. Just food, games and Mayflower Families group photos.</p>
-            <p style="margin-bottom: 1.1rem;">TVC LT GOV Sarah Curtis is determined to entertain the children attending this gathering. She has purchased table displays of educational and interactive materials for children, e.g. &ldquo;Build the Mayflower,&rdquo; maps to label the voyage, Pilgrim costumes, games of Pilgrim children, plus information about Thanksgiving foods, and numerous children&rsquo;s books.</p>
-            <p style="margin-bottom: 1.1rem;">She has also planned generational games of Mayflower Bingo, Pilgrim Riddles and several other activities.</p>
-            <p style="margin-bottom: 1.1rem;">To RSVP for the event, send an email to <strong><a href="mailto:SMDAL.Info+2026-10-03-Headcount@gmail.com">SMDAL.Info+2026-10-03-Headcount@gmail.com</a></strong> listing the names of attendees. Put the word &ldquo;adult&rdquo; next to the name of those 18 and over and the age of anyone under 18 next to their name.</p>
-            <p style="margin-bottom: 1.1rem;">To sign up to bring food for the Potluck, click or tap <strong><a href="https://grow.withlome.com/a/99cdc84d-ae07-40f8-9d44-7afec2aa0627" target="_blank" rel="noopener">THIS LINK</a></strong>.</p>
-            <p>To invite your Mayflower-descended family members to the party, send them to this URL: <a href="https://alabamasmd.org/10-03-26.html">AlabamaSMD.org/10-03-26.html</a></p>
+            <p style="text-align: center; margin-bottom: 1.25rem;"><strong>Saturday, October 3, 2026 &bull; Faith Presbyterian Church USA Fellowship Hall &bull; Huntsville, Alabama</strong></p>
+            <p style="margin-bottom: 1.1rem;">On Saturday, October 3, 2026, TVC members and guests gathered at Faith Presbyterian Church Fellowship Hall in Huntsville for the Colony&rsquo;s first Mayflower Families Reunion. About two dozen people attended, and the event also marked the 35th Anniversary of the founding of the Tennessee Valley Colony.</p>
+            <p style="margin-bottom: 1.1rem;">The purpose of this event was to give the members of the Tennessee Valley Colony of Mayflower Descendants <strong>and their families</strong> an opportunity to gather and experience a uniquely social Mayflower event. Just like a &ldquo;normal&rdquo; family reunion with games, potluck food and photos, but it also celebrates the numerous Mayflower Families from whom we all descend.</p>
+            <p style="margin-bottom: 1.1rem;">All Mayflower-descended family members (plus their spouses and partners!) who are <strong>not</strong> members of the Alabama Society of Mayflower Descendants were welcome to come to this party. No meeting. Just food, games and Mayflower Families group photos.</p>
+            <p style="margin-bottom: 1.1rem;">TVC LT GOV Sarah Curtis was determined to entertain the children attending this gathering. She purchased table displays of educational and interactive materials for children, e.g. &ldquo;Build the Mayflower,&rdquo; maps to label the voyage, Pilgrim costumes, games of Pilgrim children, plus information about Thanksgiving foods, and numerous children&rsquo;s books.</p>
+            <p>She also planned generational games of Mayflower Bingo, Pilgrim Riddles and several other activities.</p>
         </div>
 
-        <div style="max-width: 500px; margin: 2.5rem auto 0; padding: 0 1rem;">
-            <a href="images/2026-10-03 Mayflower Families Reunion flyer.pdf" target="_blank" rel="noopener">
-                <img src="images/2026-10-03_Mayflower_ Families_Reunion_ flyer.png" alt="Tennessee Valley Colony 35th Anniversary Party - Mayflower Families Reunion, Saturday, October 3, 2026, Doors Open at 2:00 p.m., Faith Presbyterian Church USA Fellowship Hall, Huntsville, Alabama. Click for a printable flyer." style="width: 100%; height: auto; border-radius: 14px; box-shadow: 0 8px 24px rgba(0,0,0,0.15); border: 2px solid var(--gold); display: block;">
-            </a>
-            <p style="text-align: center; color: #777; font-size: 0.9rem; margin-top: 0.75rem;">Click on the flyer image for a full-size PDF version.</p>
+        <div style="max-width: 900px; margin: 2.5rem auto 0; padding: 0 1rem; display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center;">
+            <div style="flex: 1 1 380px; max-width: 420px;">
+                <img src="images/2026-10-03_photo-001.jpg" alt="Everybody in attendance" style="width: 100%; height: 300px; object-fit: cover; object-position: center 62%; border-radius: 14px 14px 0 0; box-shadow: 0 8px 24px rgba(0,0,0,0.15); border: 2px solid var(--gold); border-bottom: none; display: block;">
+                <div class="chyron">
+                    <div class="chyron-track">
+                        <span>EVERYBODY IN ATTENDANCE</span><span>EVERYBODY IN ATTENDANCE</span>
+                    </div>
+                </div>
+            </div>
+            <div style="flex: 1 1 380px; max-width: 420px;">
+                <img src="images/2026-10-03_photo-002.jpg" alt="Alden/Mullins family placard: Denise Panter, Deen Rice, Ellie Lienau" style="width: 100%; height: 300px; object-fit: cover; object-position: center 62%; border-radius: 14px 14px 0 0; box-shadow: 0 8px 24px rgba(0,0,0,0.15); border: 2px solid var(--gold); border-bottom: none; display: block;">
+                <div class="chyron">
+                    <div class="chyron-track">
+                        <span>ALDEN/MULLINS: DENISE PANTER &bull; DEEN RICE &bull; ELLIE LIENAU</span><span>ALDEN/MULLINS: DENISE PANTER &bull; DEEN RICE &bull; ELLIE LIENAU</span>
+                    </div>
+                </div>
+            </div>
+            <div style="flex: 1 1 380px; max-width: 420px;">
+                <img src="images/2026-10-03_photo-003.jpg" alt="Allerton family placard: Denise Panter, Phillip Roberts" style="width: 100%; height: 300px; object-fit: cover; object-position: center 62%; border-radius: 14px 14px 0 0; box-shadow: 0 8px 24px rgba(0,0,0,0.15); border: 2px solid var(--gold); border-bottom: none; display: block;">
+                <div class="chyron">
+                    <div class="chyron-track">
+                        <span>ALLERTON: DENISE PANTER &bull; PHILLIP ROBERTS</span><span>ALLERTON: DENISE PANTER &bull; PHILLIP ROBERTS</span>
+                    </div>
+                </div>
+            </div>
+            <div style="flex: 1 1 380px; max-width: 420px;">
+                <img src="images/2026-10-03_photo-004.jpg" alt="Bradford family placard: Regena Dawson" style="width: 100%; height: 300px; object-fit: cover; object-position: center 62%; border-radius: 14px 14px 0 0; box-shadow: 0 8px 24px rgba(0,0,0,0.15); border: 2px solid var(--gold); border-bottom: none; display: block;">
+                <div class="chyron">
+                    <div class="chyron-track">
+                        <span>BRADFORD: REGENA DAWSON</span><span>BRADFORD: REGENA DAWSON</span>
+                    </div>
+                </div>
+            </div>
+            <div style="flex: 1 1 380px; max-width: 420px;">
+                <img src="images/2026-10-03_photo-006.jpg" alt="Brewster family placard: Kevin Sellew, Regena Dawson" style="width: 100%; height: 300px; object-fit: cover; object-position: center 62%; border-radius: 14px 14px 0 0; box-shadow: 0 8px 24px rgba(0,0,0,0.15); border: 2px solid var(--gold); border-bottom: none; display: block;">
+                <div class="chyron">
+                    <div class="chyron-track">
+                        <span>BREWSTER: KEVIN SELLEW &bull; REGENA DAWSON</span><span>BREWSTER: KEVIN SELLEW &bull; REGENA DAWSON</span>
+                    </div>
+                </div>
+            </div>
+            <div style="flex: 1 1 380px; max-width: 420px;">
+                <img src="images/2026-10-03_photo-007.jpg" alt="Brown family placard: Ellie Lienau" style="width: 100%; height: 300px; object-fit: cover; object-position: center 62%; border-radius: 14px 14px 0 0; box-shadow: 0 8px 24px rgba(0,0,0,0.15); border: 2px solid var(--gold); border-bottom: none; display: block;">
+                <div class="chyron">
+                    <div class="chyron-track">
+                        <span>BROWN: ELLIE LIENAU</span><span>BROWN: ELLIE LIENAU</span>
+                    </div>
+                </div>
+            </div>
+            <div style="flex: 1 1 380px; max-width: 420px;">
+                <img src="images/2026-10-03_photo-008.jpg" alt="Chilton family placard: Laura Roberts, Paula Adams, Warren Adams, Jr." style="width: 100%; height: 300px; object-fit: cover; object-position: center 62%; border-radius: 14px 14px 0 0; box-shadow: 0 8px 24px rgba(0,0,0,0.15); border: 2px solid var(--gold); border-bottom: none; display: block;">
+                <div class="chyron">
+                    <div class="chyron-track">
+                        <span>CHILTON: LAURA ROBERTS &bull; PAULA ADAMS &bull; WARREN ADAMS &bull; JR.</span><span>CHILTON: LAURA ROBERTS &bull; PAULA ADAMS &bull; WARREN ADAMS &bull; JR.</span>
+                    </div>
+                </div>
+            </div>
+            <div style="flex: 1 1 380px; max-width: 420px;">
+                <img src="images/2026-10-03_photo-009.jpg" alt="Cooke family placard: Laura Roberts, Denise Panter, Linda Maples, Ellie Lienau" style="width: 100%; height: 300px; object-fit: cover; object-position: center 62%; border-radius: 14px 14px 0 0; box-shadow: 0 8px 24px rgba(0,0,0,0.15); border: 2px solid var(--gold); border-bottom: none; display: block;">
+                <div class="chyron">
+                    <div class="chyron-track">
+                        <span>COOKE: LAURA ROBERTS &bull; DENISE PANTER &bull; LINDA MAPLES &bull; ELLIE LIENAU</span><span>COOKE: LAURA ROBERTS &bull; DENISE PANTER &bull; LINDA MAPLES &bull; ELLIE LIENAU</span>
+                    </div>
+                </div>
+            </div>
+            <div style="flex: 1 1 380px; max-width: 420px;">
+                <img src="images/2026-10-03_photo-010.jpg" alt="Doty family placard: Linda Maples" style="width: 100%; height: 300px; object-fit: cover; object-position: center 62%; border-radius: 14px 14px 0 0; box-shadow: 0 8px 24px rgba(0,0,0,0.15); border: 2px solid var(--gold); border-bottom: none; display: block;">
+                <div class="chyron">
+                    <div class="chyron-track">
+                        <span>DOTY: LINDA MAPLES</span><span>DOTY: LINDA MAPLES</span>
+                    </div>
+                </div>
+            </div>
+            <div style="flex: 1 1 380px; max-width: 420px;">
+                <img src="images/2026-10-03_photo-011.jpg" alt="Fuller family placard: Sarah Curtis, Valerie Reynolds, Ellie Lienau, Linda Maples" style="width: 100%; height: 300px; object-fit: cover; object-position: center 62%; border-radius: 14px 14px 0 0; box-shadow: 0 8px 24px rgba(0,0,0,0.15); border: 2px solid var(--gold); border-bottom: none; display: block;">
+                <div class="chyron">
+                    <div class="chyron-track">
+                        <span>FULLER: SARAH CURTIS &bull; VALERIE REYNOLDS &bull; ELLIE LIENAU &bull; LINDA MAPLES</span><span>FULLER: SARAH CURTIS &bull; VALERIE REYNOLDS &bull; ELLIE LIENAU &bull; LINDA MAPLES</span>
+                    </div>
+                </div>
+            </div>
+            <div style="flex: 1 1 380px; max-width: 420px;">
+                <img src="images/2026-10-03_photo-012.jpg" alt="Hopkins family placard: Kevin Sellew, Nancy Pike, Denise Panter, Susan Field, Linda Maples" style="width: 100%; height: 300px; object-fit: cover; object-position: center 62%; border-radius: 14px 14px 0 0; box-shadow: 0 8px 24px rgba(0,0,0,0.15); border: 2px solid var(--gold); border-bottom: none; display: block;">
+                <div class="chyron">
+                    <div class="chyron-track">
+                        <span>HOPKINS: KEVIN SELLEW &bull; NANCY PIKE &bull; DENISE PANTER &bull; SUSAN FIELD &bull; LINDA MAPLES</span><span>HOPKINS: KEVIN SELLEW &bull; NANCY PIKE &bull; DENISE PANTER &bull; SUSAN FIELD &bull; LINDA MAPLES</span>
+                    </div>
+                </div>
+            </div>
+            <div style="flex: 1 1 380px; max-width: 420px;">
+                <img src="images/2026-10-03_photo-013.jpg" alt="Howland/Hurst/Tilley family placard: Kevin Sellew, Ellie Lienau, Ruth Guertin, Susan Field" style="width: 100%; height: 300px; object-fit: cover; object-position: center 62%; border-radius: 14px 14px 0 0; box-shadow: 0 8px 24px rgba(0,0,0,0.15); border: 2px solid var(--gold); border-bottom: none; display: block;">
+                <div class="chyron">
+                    <div class="chyron-track">
+                        <span>HOWLAND/HURST/TILLEY: KEVIN SELLEW &bull; ELLIE LIENAU &bull; RUTH GUERTIN &bull; SUSAN FIELD</span><span>HOWLAND/HURST/TILLEY: KEVIN SELLEW &bull; ELLIE LIENAU &bull; RUTH GUERTIN &bull; SUSAN FIELD</span>
+                    </div>
+                </div>
+            </div>
+            <div style="flex: 1 1 380px; max-width: 420px;">
+                <img src="images/2026-10-03_photo-014.jpg" alt="Rogers family placard: Nancy Pike" style="width: 100%; height: 300px; object-fit: cover; object-position: center 62%; border-radius: 14px 14px 0 0; box-shadow: 0 8px 24px rgba(0,0,0,0.15); border: 2px solid var(--gold); border-bottom: none; display: block;">
+                <div class="chyron">
+                    <div class="chyron-track">
+                        <span>ROGERS: NANCY PIKE</span><span>ROGERS: NANCY PIKE</span>
+                    </div>
+                </div>
+            </div>
+            <div style="flex: 1 1 380px; max-width: 420px;">
+                <img src="images/2026-10-03_photo-015.jpg" alt="Soule family placard: Denise Panter" style="width: 100%; height: 300px; object-fit: cover; object-position: center 62%; border-radius: 14px 14px 0 0; box-shadow: 0 8px 24px rgba(0,0,0,0.15); border: 2px solid var(--gold); border-bottom: none; display: block;">
+                <div class="chyron">
+                    <div class="chyron-track">
+                        <span>SOULE: DENISE PANTER</span><span>SOULE: DENISE PANTER</span>
+                    </div>
+                </div>
+            </div>
+            <div style="flex: 1 1 380px; max-width: 420px;">
+                <img src="images/2026-10-03_photo-016.jpg" alt="Standish family placard: Denise Panter" style="width: 100%; height: 300px; object-fit: cover; object-position: center 62%; border-radius: 14px 14px 0 0; box-shadow: 0 8px 24px rgba(0,0,0,0.15); border: 2px solid var(--gold); border-bottom: none; display: block;">
+                <div class="chyron">
+                    <div class="chyron-track">
+                        <span>STANDISH: DENISE PANTER</span><span>STANDISH: DENISE PANTER</span>
+                    </div>
+                </div>
+            </div>
+            <div style="flex: 1 1 380px; max-width: 420px;">
+                <img src="images/2026-10-03_photo-017.jpg" alt="White/Jackson family placard: Denise Panter, Brian House" style="width: 100%; height: 300px; object-fit: cover; object-position: center 62%; border-radius: 14px 14px 0 0; box-shadow: 0 8px 24px rgba(0,0,0,0.15); border: 2px solid var(--gold); border-bottom: none; display: block;">
+                <div class="chyron">
+                    <div class="chyron-track">
+                        <span>WHITE/JACKSON: DENISE PANTER &bull; BRIAN HOUSE</span><span>WHITE/JACKSON: DENISE PANTER &bull; BRIAN HOUSE</span>
+                    </div>
+                </div>
+            </div>
+            <div style="flex: 1 1 380px; max-width: 420px;">
+                <img src="images/2026-10-03_photo-018.jpg" alt="Winslow/Jackson family placard: Laura Roberts" style="width: 100%; height: 300px; object-fit: cover; object-position: center 62%; border-radius: 14px 14px 0 0; box-shadow: 0 8px 24px rgba(0,0,0,0.15); border: 2px solid var(--gold); border-bottom: none; display: block;">
+                <div class="chyron">
+                    <div class="chyron-track">
+                        <span>WINSLOW/JACKSON: LAURA ROBERTS</span><span>WINSLOW/JACKSON: LAURA ROBERTS</span>
+                    </div>
+                </div>
+            </div>
+            <div style="flex: 1 1 380px; max-width: 420px;">
+                <img src="images/2026-10-03_photo-019.jpg" alt="Warren family placard: Kevin Sellew, Linda Maples, Scott Field" style="width: 100%; height: 300px; object-fit: cover; object-position: center 62%; border-radius: 14px 14px 0 0; box-shadow: 0 8px 24px rgba(0,0,0,0.15); border: 2px solid var(--gold); border-bottom: none; display: block;">
+                <div class="chyron">
+                    <div class="chyron-track">
+                        <span>WARREN: KEVIN SELLEW &bull; LINDA MAPLES &bull; SCOTT FIELD</span><span>WARREN: KEVIN SELLEW &bull; LINDA MAPLES &bull; SCOTT FIELD</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
