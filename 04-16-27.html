@@ -137,7 +137,66 @@
     <section class="members-section">
         <div class="back-to-menu"><a href="events.html">&larr; Back to Events</a></div>
 
-        <!-- Animated announcement -->
+        <!-- TEMPORARY for Compact Day Nov 21, 2026: click-to-begin welcome screen. After the conference, restore the original player (saved in the comment just below this block). -->
+        <style>
+            .cd-stage { position: relative; max-width: 900px; margin: 0 auto 2.5rem; aspect-ratio: 16 / 9; border-radius: 14px; overflow: hidden; border: 2px solid var(--gold); box-shadow: 0 8px 24px rgba(0,0,0,0.2); background: #0b1530; }
+            .cd-stage video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; background: #000; }
+            .cd-welcome { position: absolute; inset: 0; z-index: 2; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 1rem; color: #fff; background: radial-gradient(ellipse at center, #17407a 0%, #0a2540 60%, #061628 100%); }
+            .cd-welcome img { width: clamp(60px, 11%, 120px); height: auto; margin-bottom: 1rem; }
+            .cd-welcome h2 { font-family: Georgia, 'Times New Roman', serif; font-size: clamp(1.6rem, 5.2vw, 3.6rem); margin: 0; color: #fff; }
+            .cd-welcome .cd-rule { width: 140px; height: 3px; background: var(--gold); margin: 0.9rem auto; }
+            .cd-welcome p { font-family: Georgia, 'Times New Roman', serif; font-style: italic; color: var(--gold); font-size: clamp(1rem, 2.6vw, 1.7rem); margin: 0 0 1.5rem; }
+            .cd-btn { font-family: Georgia, 'Times New Roman', serif; font-weight: 700; font-size: clamp(1.1rem, 2.6vw, 1.8rem); color: #0a2540; background: var(--gold); border: 0; border-radius: 999px; padding: 0.8em 2.2em; cursor: pointer; box-shadow: 0 4px 14px rgba(0,0,0,0.35); }
+            .cd-stage:fullscreen { max-width: none; width: 100vw; height: 100vh; margin: 0; aspect-ratio: auto; border: 0; border-radius: 0; box-shadow: none; background: #000; cursor: none; }
+            .cd-stage:-webkit-full-screen { max-width: none; width: 100vw; height: 100vh; margin: 0; aspect-ratio: auto; border: 0; border-radius: 0; box-shadow: none; background: #000; cursor: none; }
+            .cd-stage:fullscreen .cd-welcome { cursor: default; }
+            .cd-btn:hover { filter: brightness(1.08); }
+            .cd-hint { font-size: clamp(0.75rem, 1.5vw, 1rem); color: #c8d2e1; margin-top: 1rem; font-style: italic; }
+        </style>
+        <div class="cd-stage" id="cdStage">
+            <video id="cdVideo" playsinline preload="auto">
+                <source src="images/Rocket_You_Teaser.mp4" type="video/mp4">
+            </video>
+            <div class="cd-welcome" id="cdWelcome">
+                <img src="images/LOGO002.png" alt="Alabama Mayflower Society">
+                <h2>Welcome to Compact Day</h2>
+                <div class="cd-rule"></div>
+                <p>Looking forward to April 2027 in Huntsville</p>
+                <button type="button" class="cd-btn" id="cdBtn">Click to Begin</button>
+                <div class="cd-hint" id="cdHint">Sound on. The video will fill the screen.</div>
+            </div>
+        </div>
+        <script>
+            (function () {
+                var v = document.getElementById('cdVideo');
+                var w = document.getElementById('cdWelcome');
+                var b = document.getElementById('cdBtn');
+                var h = document.getElementById('cdHint');
+                var stage = document.getElementById('cdStage');
+                function inFs() { return document.fullscreenElement || document.webkitFullscreenElement; }
+                function showWelcome(again) {
+                    w.style.display = 'flex';
+                    b.textContent = again ? 'Watch Again' : 'Click to Begin';
+                    if (again) { h.textContent = 'Press Esc any time to leave full screen.'; }
+                }
+                b.addEventListener('click', function () {
+                    w.style.display = 'none';
+                    v.currentTime = 0;
+                    var req = stage.requestFullscreen || stage.webkitRequestFullscreen;
+                    if (req) { try { var p = req.call(stage); if (p && p.catch) p.catch(function () {}); } catch (e) {} }
+                    var pp = v.play();
+                    if (pp && pp.catch) pp.catch(function () { showWelcome(false); });
+                });
+                v.addEventListener('ended', function () {
+                    if (inFs()) { (document.exitFullscreen || document.webkitExitFullscreen).call(document); }
+                    showWelcome(true);
+                });
+                function onFs() { if (!inFs() && !v.ended && !v.paused) { v.pause(); showWelcome(true); } }
+                document.addEventListener('fullscreenchange', onFs);
+                document.addEventListener('webkitfullscreenchange', onFs);
+            })();
+        </script>
+        <!-- ORIGINAL PLAYER (restore after Nov 21, 2026): replace the whole cd-stage block above with this:
         <div style="max-width: 900px; margin: 0 auto 2.5rem; padding: 0 1rem;">
             <video controls playsinline preload="metadata" poster="images/Rocket_You_Teaser_poster.jpg" style="width: 100%; height: auto; border-radius: 14px; box-shadow: 0 8px 24px rgba(0,0,0,0.2); border: 2px solid var(--gold); display: block; background: #0b1530;">
                 <source src="images/Rocket_You_Teaser.mp4" type="video/mp4">
@@ -145,6 +204,8 @@
             </video>
             <p style="text-align: center; color: #777; font-size: 0.9rem; margin-top: 0.75rem;">Press play, and turn your sound on.</p>
         </div>
+        END ORIGINAL PLAYER -->
+
 
         <div class="placeholder-card" style="max-width: 780px; text-align: left;">
             <p style="margin-bottom: 0.75rem;"><strong>We Will Plymouth Rock-et You!&trade; Weekend &bull; 2027 SMDAL Spring Conference</strong></p>
